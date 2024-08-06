@@ -1,3 +1,8 @@
+"""
+Main script for parsing through a Fragalysis target's directory and extract compound/fragment fingerprints.
+
+Inspired by 
+"""
 from tools import sanitise_mol
 # import pose
 
@@ -258,14 +263,6 @@ class Pose:
 		img = Draw.MolToImage(self.mol)
 		img.show() 
 
-
-	# @mol.setter
-	# def mol(self):
-	# 	"""Set the pose's rdkit.Chem.Mol"""
-	# 	assert self.mol
-	# 	self._mol = sanitise_mol(self.mol)
-	# 	print(Chem.MolToSmiles(self._mol))
-	# 	# self.db.update(table='pose', id=self.id, key='pose_mol', value=m.ToBinary())
 
 class InvalidMolError(Exception):
 	...
