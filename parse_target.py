@@ -3,8 +3,11 @@ Main script for parsing through a Fragalysis target's directory and extract comp
 
 Inspired by 
 """
-from tools import sanitise_mol
-# import pose
+if __name__ == '__main__':
+    # Conditional imports only when running as the main script
+    from tools import sanitise_mol
+else:
+	from .tools import sanitise_mol
 
 import molparse as mp
 from molparse.rdkit.features import FEATURE_FAMILIES, COMPLEMENTARY_FEATURES
