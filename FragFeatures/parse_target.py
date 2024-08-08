@@ -7,22 +7,22 @@ if __name__ == '__main__':
     # Conditional imports only when running as the main script
     from tools import sanitise_mol
 else:
-	from .tools import sanitise_mol
+	from FragFeatures.tools import sanitise_mol
 
 import molparse as mp
 from molparse.rdkit.features import FEATURE_FAMILIES, COMPLEMENTARY_FEATURES
 from molparse.rdkit import draw_mols
-from molparse.list import NamedList
-from molparse.group import AtomGroup
+# from molparse.list import NamedList
+# from molparse.group import AtomGroup
 
-from rdkit import Chem
+# from rdkit import Chem
 from rdkit.Chem import Draw
 import numpy as np
 import pandas as pd
 
-from pathlib import Path
+# from pathlib import Path
 import logging
-logger = logging.getLogger('DUck')
+logger = logging.getLogger('FragFeatures')
 
 
 CUTOFF_PADDING = 1.0
@@ -264,7 +264,10 @@ class Pose:
 		"""Draw the pose's rdkit.Chem.Mol"""
 		
 		img = Draw.MolToImage(self.mol)
-		img.show() 
+		img.show()
+
+        # TODO: Add option to save this image to a file
+    # NOTE: Look into setting a path for when this is all run in a script
 
 
 class InvalidMolError(Exception):
