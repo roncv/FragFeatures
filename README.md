@@ -16,5 +16,5 @@ $ conda activate fragfeatures
 $ conda install -c conda-forge numpy rdkit pandas pyyaml
 $ pip install molparse
 $ cd FragFeatures
-$ python setup.py install
+$ pip install .
 ```
