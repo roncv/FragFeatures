@@ -4,8 +4,8 @@ Main script for parsing through a Fragalysis target's directory and extract comp
 Inspired by 
 """
 if __name__ == '__main__':
-    # Conditional imports only when running as the main script
-    from tools import sanitise_mol
+	# Conditional imports only when running as the main script
+	from tools import sanitise_mol
 else:
 	from FragFeatures.tools import sanitise_mol
 
@@ -48,11 +48,17 @@ class TargetParser:
 		self.target_dir = target_dir
 		self.metadata = pd.read_csv(f'{target_dir}/metadata.csv') #, index_col='Code') # Code is the unique identifier for each compound
 
+	def get_all_compounds(self):
+		"""
+		Return all compounds in the target.
+		"""
+		return self.metadata['Code'].tolist()
 
 	def get_compound(self, code):
 		"""
 		Return a compound's metadata with the given code.
 		"""
+		pass
 
 class Pose:
 	"""
@@ -266,8 +272,8 @@ class Pose:
 		img = Draw.MolToImage(self.mol)
 		img.show()
 
-        # TODO: Add option to save this image to a file
-    # NOTE: Look into setting a path for when this is all run in a script
+		# TODO: Add option to save this image to a file
+	# NOTE: Look into setting a path for when this is all run in a script
 
 
 class InvalidMolError(Exception):
