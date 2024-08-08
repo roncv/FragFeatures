@@ -46,7 +46,7 @@ setup(
     # },
     entry_points={  # Optional: define command-line scripts
         'console_scripts': [
-            'fragfeat=FragFeatures.scripts.frag_features:func_name',
+            'fragfeat=FragFeatures.scripts.frag_features:main',
         ],
     },
 )

@@ -13,7 +13,7 @@ It's recommended that you work in a conda environment. To create a new environme
 $ git clone https://github.com/roncv/FragFeatures.git
 $ conda create -n fragfeatures -c conda-forge python=3.11
 $ conda activate fragfeatures
-$ conda install -c conda-forge numpy rdkit pandas
+$ conda install -c conda-forge numpy rdkit pandas pyyaml
 $ pip install molparse
 $ cd FragFeatures
 $ python setup.py install
