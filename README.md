@@ -2,7 +2,7 @@
 
 # Welcome to FragFeatures
 
-Tool to extract protein-ligand interaction fingerprints from Fragalysis data.
+Tool to extract protein-ligand interaction fingerprints from a Fragalysis target.
 
 ## Installation
 

@@ -30,7 +30,7 @@ var/
 docs/_build/
 
 # # Data output directories
-# */structures/
+*/Experiment/
 # */*_test/
 # structures/
 # structures*/
