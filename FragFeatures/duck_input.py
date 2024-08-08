@@ -9,6 +9,10 @@ if __name__ == '__main__':
 else:
 	from FragFeatures.parse_target import TargetParser, Pose
 
+import os
+import sys
+import shutil
+
 import molparse as mp
 
 import numpy as np
@@ -71,10 +75,12 @@ class DUckInput():
 
 	def get_compound(self, compound_code):
 		"""
-		Return a compound's metadata with the given code.
+		Return a compound's features and metadata from the given compound code.
 		"""
+		compound = Pose(self.target_dir, compound_code)
+		compound.calculate_fingerprint()
 
-		pass
+		return compound
 
 
 	def build_directory_structure(self):
@@ -90,51 +96,71 @@ class DUckInput():
 			compound_dir = experiment_dir / compound_code
 			compound_dir.mkdir(exist_ok=True)
 
+			# Get the compound's features
+			compound = self.get_compound(compound_code)
+
+			# Get the compound's features
+			features = compound.duck_features
+			# Copy necessary files from a given directory using general copy function
+			shutil.copy2(compound.protein_path, compound_dir) # protien pdb
+			shutil.copy2(compound.mol_path, compound_dir) # ligand mol
+
+			# Create subdirectories for the features
+			for feature in features:
+				feature_dir = compound_dir / feature
+				# print(f"Creating feature directory: {feature_dir}")
+				feature_dir.mkdir(exist_ok=True)
+
+				# Generate the input for DUck simulation
+				self.generate_duck_input(compound_code=compound_code,
+							 feature=feature,
+							 protein_pdb_path=f'../{compound_code}_apo.pdb',
+							 ligand_mol_path=f'../{compound_code}_ligand.mol',
+							 output_dir=feature_dir
+							 )
+
 			# Generate the input for DUck simulation
 			# self.generate_duck_input(compound_code)
 
 
-	def generate_duck_input(self, compound_code):
+	def generate_duck_input(self, compound_code, feature, protein_pdb_path, ligand_mol_path, output_dir):
 		"""
 		Generate the input for DUck simulation.
 		"""
 
-		input_file = f"""# DuCK input file for {compound_code} in {self.experiment_name}
-		# Main Arguments
-		interaction : A_MET_9_O
-		receptor_pdb : cx0270a/cx0270a_apo.pdb
-		ligand_mol : cx0270a/cx0270a_ligand.mol
-		gpu_id : 0
+		input_file = f"""# DuCK input file for {feature} feature from {compound_code}\n
+# Main Arguments
+interaction : {feature}
+receptor_pdb : {protein_pdb_path}
+ligand_mol : {ligand_mol_path}
+gpu_id : 0
 
-		# Chunking Arguments
-		do_chunk : True
-		cutoff : 10
-		ignore_buffers : False
+# Chunking Arguments
+do_chunk : True
+cutoff : 10
+ignore_buffers : False
 
-		# Preparation Arguments
-		small_molecule_forcefield : smirnoff
-		protein_forcefield : amber14-all
-		water_model : tip3p
-		ionic_strength : 0.05
-		waters_to_retain : waters_to_retain.pdb
-		solvent_buffer_distance : 15
-		force_constant_eq : 1
+# Preparation Arguments
+small_molecule_forcefield : smirnoff
+protein_forcefield : amber14-all
+water_model : tip3p
+ionic_strength : 0.05
+waters_to_retain : waters_to_retain.pdb
+solvent_buffer_distance : 15
+force_constant_eq : 1
 
-		# Production Arguments
-		smd_cycles : 20
-		md_length : 0.5
-		wqb_threshold : 6
-		init_velocities : 0.00001
-		init_distance : 2.5
-		fix_ligand : True
-		"""
-		print(input_file)
-		
+# Production Arguments
+smd_cycles : 20
+md_length : 0.5
+wqb_threshold : 6
+init_velocities : 0.00001
+init_distance : 2.5
+fix_ligand : True"""
+		# print(input_file)
 
-
-
-
-
+		# Write the input file
+		with open(f'{output_dir}/input.yaml', 'w') as f:
+			f.write(input_file)
 
 
 

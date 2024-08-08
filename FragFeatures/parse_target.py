@@ -87,7 +87,7 @@ class Pose:
 		self._mol = None  # TODO: Why is there an underscore here? Ask Max
 
 
-	def calculate_fingerprint(self):
+	def calculate_fingerprint(self, verbose=False):
 		"""Calculate the pose's interaction fingerprint"""
 		# if self.path.endswith('.pdb'):
 
@@ -179,7 +179,7 @@ class Pose:
 			if len(prot_feature.atoms) > 1:  # protocol if more than one atom for protein feature
 				feature_duck_name = f"{prot_feature.res_chain}_{prot_feature.res_name}_{prot_feature.res_number}_{prot_feature.atoms[0]}" # TODO: implement this properly. 
 				if len(valid_features) >= 1:  # print warning if feature is valid
-					logger.warning(f"More than one atom for pritein feature for {feature_duck_name}: {prot_feature.atoms}")
+					logger.warning(f"More than one atom for pritein feature for {feature_duck_name}: {prot_feature.atoms}") # TODO: Add compound code here
 				else:
 					pass
 			else:
@@ -204,8 +204,10 @@ class Pose:
 		dense_fingerprint_str = '\n'.join([f'{k}: {v}' for k, v in dense_fingerprint.items()])
 		dense_fingerprint_ext_str = '\n'.join([f'{k}: {v}' for k, v in dense_fingerprint_ext.items()])
 
-		print(f"\nFingerprint\n-----------\n{dense_fingerprint_str}")
-		print(f"\nDense Fingerprint\n-----------------\n{dense_fingerprint_ext_str}\n")
+		if verbose:
+			# Print the fingerprint
+			print(f"\nFingerprint\n-----------\n{dense_fingerprint_str}")
+			print(f"\nDense Fingerprint\n-----------------\n{dense_fingerprint_ext_str}\n")
 
 
 	def draw(self, inspirations=True, protein=False, **kwargs):

@@ -29,7 +29,7 @@ var/
 # Sphinx documentation
 docs/_build/
 
-# # Data output directories
+# Data output directories
 */Experiment/
 # */*_test/
 # structures/
