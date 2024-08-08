@@ -127,7 +127,7 @@ class DUckInput():
 		"""
 		Generate the input for DUck simulation.
 		"""
-
+		# TODO: Add more options for the input file
 		input_file = f"""# DuCK input file for {feature} feature from {compound_code}\n
 # Main Arguments
 interaction : {feature}
