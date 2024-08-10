@@ -64,7 +64,7 @@ def args_sanitation(parser, modes):
 			pass
 
 	# PREPARE-DUCK
-	# check if everything is ok
+	# TODO: Type check for compound_selection
 	elif args.mode == 'prepare-duck':
 		print(args.compound_selection, args.experiment_name, args.target_dir)
 		if (args.compound_selection is None) or (args.experiment_name is None) or (args.target_dir is None):
