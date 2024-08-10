@@ -131,7 +131,7 @@ class Pose:
 		sparse_fingerprint_ext = {} # extended sparse fingerprint
 
 		chains = protein_system.chain_names
-		residues = protein_system.res_names
+		# residues = protein_system.res_names
 		# residues_2 = protein_system.residue_names # does the same thing using .append instead of list comprehension 
 		print(f'Chains: {chains}')
 		# print(f'Residues: {residues}')

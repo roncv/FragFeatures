@@ -9,7 +9,7 @@ if __name__ == '__main__':
 	from utils import timeit
 else:
 	from FragFeatures.parse_target import TargetParser, Pose
-	from FragFeatures.utils import timeit
+	from FragFeatures.utils import timeit # NOTE: Necessary?
 
 
 # import os
