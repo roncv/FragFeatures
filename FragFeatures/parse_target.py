@@ -37,6 +37,7 @@ FEATURE_PAIR_CUTOFFS = {
 	'Aromatic Aromatic': 6.0 + CUTOFF_PADDING,
 	'Hydrophobe Hydrophobe': 4.5 + CUTOFF_PADDING,
 }
+# TODO: Evaluate cutoffs and feature selection
 
 class TargetParser:
 	"""
