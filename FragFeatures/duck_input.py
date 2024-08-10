@@ -6,17 +6,20 @@ Inspired by
 if __name__ == '__main__':
 	# Conditional imports only when running as the main script
 	from parse_target import TargetParser, Pose
+	from utils import timeit
 else:
 	from FragFeatures.parse_target import TargetParser, Pose
+	from FragFeatures.utils import timeit
 
-import os
-import sys
+
+# import os
+# import sys
 import shutil
 
-import molparse as mp
+# import molparse as mp
 
-import numpy as np
-import pandas as pd
+# import numpy as np
+# import pandas as pd
 
 from pathlib import Path
 import logging
@@ -38,7 +41,7 @@ class DUckInput():
 		self.target = TargetParser(target_dir)
 		self.compound_codes = self.validate_compounds()
 
-
+	# @timeit
 	def validate_compounds(self):
 		"""
 		Get the validate the given compounds against the target.
@@ -72,7 +75,7 @@ class DUckInput():
 		else:
 			raise ValueError(f"Invalid compound selection: {self.compound_selection}")
 
-
+	# @timeit
 	def get_compound(self, compound_code):
 		"""
 		Return a compound's features and metadata from the given compound code.
@@ -82,10 +85,10 @@ class DUckInput():
 
 		return compound
 
-
-	def build_directory_structure(self):
+	# @timeit
+	def prepare_experiment(self):
 		"""
-		Build the directory structure for the experiment.
+		Build & prepare a directory for the experiment with all files and inputs.
 		"""
 		# Create the experiment directory in current working directory
 		experiment_dir = Path(self.experiment_name)
@@ -119,13 +122,10 @@ class DUckInput():
 							 output_dir=feature_dir
 							 )
 
-			# Generate the input for DUck simulation
-			# self.generate_duck_input(compound_code)
-
-
+	# @timeit
 	def generate_duck_input(self, compound_code, feature, protein_pdb_path, ligand_mol_path, output_dir):
 		"""
-		Generate the input for DUck simulation.
+		Generate the .yaml input for a DUck simulation.
 		"""
 		# TODO: Add more options for the input file
 		input_file = f"""# DuCK input file for {feature} feature from {compound_code}\n
@@ -156,7 +156,6 @@ wqb_threshold : 6
 init_velocities : 0.00001
 init_distance : 2.5
 fix_ligand : True"""
-		# print(input_file)
 
 		# Write the input file
 		with open(f'{output_dir}/input.yaml', 'w') as f:
@@ -166,9 +165,14 @@ fix_ligand : True"""
 
 if __name__ == '__main__':
 	# Testing
-	print('Testing...')
+	# Add some timing
+	import time
+	start_time = time.time()
+
 	duck_input = DUckInput(compound_selection=['cx0270a', 'cx0281a'], experiment_name='Experiment', target_dir='/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac')
-	# duck_input.validate_compounds()
 	print(duck_input.compound_codes)
-	duck_input.build_directory_structure()
-	# pass
+	duck_input.prepare_experiment()
+
+	# Timing
+	end_time = time.time()
+	print(f"Executed in {end_time - start_time:.4f} seconds")
