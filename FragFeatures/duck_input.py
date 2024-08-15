@@ -5,10 +5,12 @@ Inspired by
 """
 if __name__ == '__main__':
 	# Conditional imports only when running as the main script
-	from parse_target import TargetParser, Pose
+	from FragFeatures.target_parser import TargetParser
+	from FragFeatures.pose import Pose
 	from utils import timeit
 else:
-	from FragFeatures.parse_target import TargetParser, Pose
+	from FragFeatures.target_parser import TargetParser
+	from FragFeatures.pose import Pose
 	from FragFeatures.utils import timeit # NOTE: Necessary?
 
 
