@@ -61,6 +61,7 @@ class TargetParser:
 		"""
 		pass
 
+# TODO: Split Pose and TargetParser into separate files
 class Pose:
 	"""
 	Represents a pose of a compound in a target.
@@ -141,7 +142,6 @@ class Pose:
 
 		for prot_feature in protein_features:
 			# print(dir(f))
-			# print(f'Feature: {prot_feature.family} {self.id} {[a.name for a in prot_feature.atoms]} {prot_feature.res_name} {prot_feature.res_chain} {prot_feature.res_number} {prot_feature.position}')
 
 			if prot_feature.res_chain not in chains:
 				print(f'Chain {prot_feature.res_chain} not in chains')
@@ -186,8 +186,8 @@ class Pose:
 			else:
 				feature_duck_name = f"{prot_feature.res_chain}_{prot_feature.res_name}_{prot_feature.res_number}_{prot_feature.atoms[0]}"
 
-			sparse_fingerprint[prot_feature.family_name_number_chain_atoms_str] = (len(valid_features), feature_duck_name)
-			sparse_fingerprint_ext[prot_feature.family_name_number_chain_atoms_str] = (valid_features, feature_duck_name)
+			sparse_fingerprint[prot_feature.family_name_number_chain_atoms_str] = (len(valid_features), feature_duck_name) # just the number of ligand features
+			sparse_fingerprint_ext[prot_feature.family_name_number_chain_atoms_str] = (valid_features, feature_duck_name) # extended: includes feature details
 			# print(fingerprint)
 			# print(prot_feature.family_name_number_chain_atoms_str)
 
