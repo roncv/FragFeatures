@@ -17,6 +17,10 @@ requirements = [
 	# 'MDAnalysis',
 	# 'tqdm',
 	# 'matplotlib'
+    # 'prolif',
+    # 'rdkit',
+    # 'molparse',
+    # 'pandas',
 	]
 
 # TODO: Add long description linked to README.md

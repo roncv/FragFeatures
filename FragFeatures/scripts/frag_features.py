@@ -31,7 +31,6 @@ def prepare_duck_experiment(compound_selection, experiment_name, target_dir):
 	import time
 	start_time = time.time()
 
-
 	# Prepare the input for DUck simulation
 	duck_input = DUckInput(compound_selection=compound_selection,
 						   experiment_name=experiment_name,

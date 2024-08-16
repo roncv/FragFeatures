@@ -87,6 +87,7 @@ class DUckInput():
 
 		return compound
 
+    # TODO: Add parameters to deal with overwriting existing directories
 	# @timeit
 	def prepare_experiment(self):
 		"""

@@ -1,31 +1,51 @@
 """
-Main script for parsing through a Fragalysis target's directory and extract compound/fragment fingerprints.
+Main script for extracting compound/fragment fingerprints.
 
-Inspired by 
+Inspired by https://github.com/mwinokan/HIPPO
 """
 if __name__ == '__main__':
 	# Conditional imports only when running as the main script
 	from tools import sanitise_mol
-	# import FragFeatures.target_parser as TargetParser
 else:
 	from FragFeatures.tools import sanitise_mol
-	# import FragFeatures.target_parser as TargetParser
+
+import os
 
 import molparse as mp
-from molparse.rdkit.features import FEATURE_FAMILIES, COMPLEMENTARY_FEATURES
+# from molparse.rdkit.features import FEATURE_FAMILIES, COMPLEMENTARY_FEATURES
 from molparse.rdkit import draw_mols
-# from molparse.list import NamedList
-# from molparse.group import AtomGroup
 
+# RDKIT imports
 # from rdkit import Chem
+from rdkit import RDConfig
+from rdkit.Chem import AllChem
 from rdkit.Chem import Draw
 import numpy as np
 import pandas as pd
+
+# # ProLIF imports
+# import MDAnalysis as mda
+# import prolif as plf
 
 # from pathlib import Path
 import logging
 logger = logging.getLogger('FragFeatures')
 
+
+FDEF = AllChem.BuildFeatureFactory(os.path.join(RDConfig.RDDataDir, 'BaseFeatures.fdef'))
+FEATURE_FAMILIES = FDEF.GetFeatureFamilies()
+
+# TODO: This can be implemented in a more dynamic way - as a method?
+COMPLEMENTARY_FEATURES = {
+	"Donor": "Acceptor",
+	"Acceptor": "Donor",
+	"NegIonizable": "PosIonizable",
+	"PosIonizable": "NegIonizable",
+	"Aromatic": "Aromatic",
+	"Aromatic": "PosIonizable",
+	"PosIonizable": "Aromatic",
+	"Hydrophobe": "Hydrophobe",
+}
 
 CUTOFF_PADDING = 0.5
 
@@ -163,7 +183,7 @@ class Pose:
 			if len(prot_feature.atoms) > 1:  # protocol if more than one atom for protein feature
 				feature_duck_name = f"{prot_feature.res_chain}_{prot_feature.res_name}_{prot_feature.res_number}_{prot_feature.atoms[0]}" # TODO: implement this properly. 
 				if len(valid_features) >= 1:  # print warning if feature is valid
-					logger.warning(f"More than one atom for pritein feature for {feature_duck_name}: {prot_feature.atoms}") # TODO: Add compound code here
+					logger.warning(f"More than one ligand atom associated with protein feature {feature_duck_name}: {prot_feature.atoms}") # TODO: Add compound code here
 				else:
 					pass
 			else:
@@ -206,6 +226,16 @@ class Pose:
 			mols += [i.mol for i in self.inspirations]
 
 		return draw_mols(mols)
+
+
+	# def calculate_prolif_fp(self):
+	# 	"""
+	# 	Calculate the PProLIF fingerprint for a pose.
+	# 	"""
+	# 	# NOTE: Need to add hydrogens first
+	# 	# Create an MDAnalysis Universe
+	# 	u = mda.Universe(self.protein_path)
+	# 	protein_mol = plf.Molecule.from_mda(self.mol)
 
 
 	@property
@@ -265,3 +295,21 @@ class Pose:
 class InvalidMolError(Exception):
 	...
 
+# Test
+if __name__ == '__main__':
+	# Allow for displaying SVG images
+	
+	from FragFeatures.target_parser import TargetParser
+	target = TargetParser('/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac')
+	# print(target.metadata.head())
+	lig = Pose(target.target_dir, 'cx0294a')
+	# print(lig.mol)
+	#lig.draw_mol()
+	lig.calculate_fingerprint()
+	lig.calculate_prolif_fp()
+	print(lig.duck_features)
+	print(target.target_dir)
+	print(lig.protein_path)
+	print(lig.mol_path)
+
+	# print(lig.fingerprint)
