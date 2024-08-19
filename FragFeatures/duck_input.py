@@ -1,7 +1,5 @@
 """
-Main script for parsing through a Fragalysis target's directory and extract compound/fragment fingerprints.
-
-Inspired by 
+Prepare the input and directories for DUck simulations.
 """
 if __name__ == '__main__':
 	# Conditional imports only when running as the main script
@@ -45,6 +43,7 @@ class DUckInput():
 		self.target_dir = target_dir
 		self.target = TargetParser(target_dir)
 		self.compound_codes = self.validate_compounds()
+		# TODO: Add an option to select all compounds - for script execution
 
 	# @timeit
 	def validate_compounds(self):
@@ -68,10 +67,12 @@ class DUckInput():
 					return self.compound_codes
 
 		elif isinstance(self.compound_selection, list):
+			# FIXME: Temporary fix for selecting all compounds
 			if self.compound_selection == ['all']:
 				self.compound_codes = all_compound_codes
 				print(f"Selected compounds: {self.compound_codes}")
 				return self.compound_codes
+
 			else:
 				# Match given list of compound codes to all compound codes
 				self.compound_codes = [c for c in self.compound_selection if c in all_compound_codes]
@@ -181,7 +182,8 @@ class DUckInput():
 
 
 
-	def generate_feature_metadata(self, feature, expanded_feature, protein_feature, ligand_features, output_dir):
+	def generate_feature_metadata(self, feature, expanded_feature,
+							   protein_feature, ligand_features, output_dir):
 		"""
 		Generate metadata for a feature. Protein -> Multiple liand features.
 		"""
@@ -285,11 +287,14 @@ class DUckInput():
 
 
 	# @timeit
-	def generate_duck_input(self, compound_code, feature, protein_pdb_path, ligand_mol_path, output_dir):
+	def generate_duck_input(self, compound_code, feature, protein_pdb_path,
+						 ligand_mol_path, output_dir):
 		"""
 		Generate the .yaml input for a DUck simulation.
 		"""
 		# TODO: Add more options for the input file
+		# TODO: Work on flexibillity and linking to the openduck repo
+		# TEST: Test with openduck repo - v. quick simulation - or even just setup / prep?
 		input_file = f"""# DuCK input file for {feature} feature from {compound_code}\n
 # Main Arguments
 interaction : {feature}
