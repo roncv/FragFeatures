@@ -7,17 +7,20 @@ if __name__ == '__main__':
 	# Conditional imports only when running as the main script
 	from FragFeatures.target_parser import TargetParser
 	from FragFeatures.pose import Pose
-	from utils import timeit
+	from utils import timeit, dict_to_json
 else:
 	from FragFeatures.target_parser import TargetParser
 	from FragFeatures.pose import Pose
-	from FragFeatures.utils import timeit # NOTE: Necessary?
+	from FragFeatures.utils import timeit, dict_to_json # NOTE: Necessary?
 
 
 # import os
 # import sys
+import numpy as np
 import shutil
-
+import json
+from contextlib import redirect_stdout
+import io
 # import molparse as mp
 
 # import numpy as np
@@ -97,22 +100,53 @@ class DUckInput():
 		experiment_dir = Path(self.experiment_name)
 		experiment_dir.mkdir(exist_ok=True)
 
+		compound_summaries = {}
+		compound_tally = 0
+		feature_tally = 0
+
 		# Create the compound directories in the experiment directory
 		for compound_code in self.compound_codes:
 			compound_dir = experiment_dir / compound_code
 			compound_dir.mkdir(exist_ok=True)
 
 			# Get the compound's features
-			compound = self.get_compound(compound_code)
+			compound = self.get_compound(compound_code) # Run calculate_fingerprint()
 
 			# Get the compound's features
-			features = compound.duck_features
+			feature_names = compound.duck_feature_names
+			expanded_features = compound.fingerprint_ext # Detailed features
+			protein_features = compound.protein_features
+			ligand_features = compound.ligand_features
+
 			# Copy necessary files from a given directory using general copy function
 			shutil.copy2(compound.protein_path, compound_dir) # protien pdb
 			shutil.copy2(compound.mol_path, compound_dir) # ligand mol
 
+			# print(f"\nDUck features: {feature_names}")
+			# print(f"\nProtein features: {protein_features}")
+			# print(f"\nLigand features: {ligand_features}\n")
+
+			# print(f"\nProtein features object: {dir(protein_features[0])}\n")
+			# print(f"\nLigand features object: {dir(ligand_features[0][0])}\n")
+
+			compound_summaries[compound_code] = {
+				'protein_path': compound.protein_path,
+				'ligand_path': compound.mol_path,
+				'features': feature_names,
+				'num_features': len(feature_names)
+			}
+			compound_tally += 1
+			feature_tally += len(feature_names)
+
+			self.generate_compound_metadata(compound=compound,
+									 compound_code=compound_code,
+									 compound_dir=compound_dir)
+
 			# Create subdirectories for the features
-			for feature in features:
+			for (feature,feature_e, prot_feat, lig_feat) in zip(feature_names,
+													   expanded_features,
+													   protein_features,
+													   ligand_features):
 				feature_dir = compound_dir / feature
 				# print(f"Creating feature directory: {feature_dir}")
 				feature_dir.mkdir(exist_ok=True)
@@ -124,6 +158,127 @@ class DUckInput():
 							 ligand_mol_path=f'../{compound_code}_ligand.mol',
 							 output_dir=feature_dir
 							 )
+
+				self.generate_feature_metadata(feature=feature,
+								   expanded_feature=feature_e,
+								   protein_feature=prot_feat,
+								   ligand_features=lig_feat,
+								   output_dir=feature_dir
+								   )
+
+		# Generate metadata for the experiment
+		# TODO: Create a large tsv with a summary of all the features
+		dict_to_json(compound_summaries, f'{experiment_dir}/compound_summarries.json')
+		tallies = {
+			'num_compounds': compound_tally,
+			'num_features': feature_tally
+		}
+		dict_to_json(tallies, f'{experiment_dir}/tallies.json')
+
+
+
+	def generate_feature_metadata(self, feature, expanded_feature, protein_feature, ligand_features, output_dir):
+		"""
+		Generate metadata for a feature. Protein -> Multiple liand features.
+		"""
+		# Feature metadata
+		feature_details = {
+			'DUck_feature': feature,
+			'protein_feature': expanded_feature
+		}
+
+		# Write feature_details dict to a json file in a pythonic way
+		with open(f'{output_dir}/feature_metadata.json', 'w') as f:
+			json.dump(feature_details, f, indent=4)
+
+		# NOTE: Needs to be ready for multiple protein features
+		# Protein feature - not complete (process will need to be reversed)
+		# Protein feature metadata
+		protein_feature_details = {
+			'DUck_feature': feature,
+			'feature_family': protein_feature.family,
+			'residue_name': protein_feature.res_name,
+			'res_num': protein_feature.res_number,
+			'chain': protein_feature.res_chain,
+			'atom_nums': protein_feature.atom_numbers,
+			# 'atoms': protein_feature.atoms,
+			'position_xyz': [protein_feature.x,
+							 protein_feature.y,
+							 protein_feature.z]
+		}
+
+		# # Write protein _eature_details dict to a json file 
+		dict_to_json(protein_feature_details, f'{output_dir}/protein_feature_metadata.json')
+
+
+		# Ligand features
+		for i, ligand_feature in enumerate(ligand_features):
+			# Ligand feature metadata
+			# Calculate the distances between the protein and ligand atoms
+			get_interaction_distance = lambda atom1, atom2: np.linalg.norm(atom1 - atom2) # cartesian distance
+			atom2 = protein_feature.position
+			distances = [get_interaction_distance(atom1.position, atom2) for atom1 in ligand_feature.atoms]
+
+			# Ligand feature summaries - redirect stdout to a string
+			atom_summaries = []
+			for atom in ligand_feature.atoms:
+				with redirect_stdout(io.StringIO()) as f:
+					atom.summary()
+				s = f.getvalue()
+				atom_summaries.append(s)
+
+			ligand_feature_details = {
+				'DUck_feature': feature,
+				'ligand_feature': ligand_feature.__str__(),
+				'feature_family': ligand_feature.family,
+				'atom_nums': ligand_feature.atom_numbers,
+				'atoms_names': [atom.name for atom in ligand_feature.atoms],
+				'atoms_xyz': [[atom.x, atom.y, atom.z] for atom in ligand_feature.atoms],
+				'atom_pdb_idxs': [atom.pdb_index for atom in ligand_feature.atoms],
+				'interaction_distances': distances,
+				'atom_summaries': atom_summaries,
+				'feature_xyz': [ligand_feature.x,
+								 ligand_feature.y,
+								 ligand_feature.z]
+			}
+
+			# Write ligand_feature_details dict to a json file in a pythonic way
+			dict_to_json(ligand_feature_details, f'{output_dir}/ligand_feature_metadata_{i}.json')
+
+
+	# def generate_experiment_metadata(self, experiment_dir):
+	# 	"""
+	# 	Generate metadata for the experiment.
+	# 	"""
+	# 	# Write a file with the metadata for the experiment
+	# 	with open(f'{experiment_dir}/experiment_metadata.txt', 'w') as f:
+	# 		f.write('Code,Feature,Protein,Ligand\n')
+	# 		for compound_code in self.compound_codes:
+	# 			compound = self.get_compound(compound_code)
+	# 			features = compound.duck_features
+	# 			for feature in features:
+	# 				f.write(f"{compound_code},{feature},{compound.protein_path},{compound.mol_path}\n")
+
+
+	def generate_compound_metadata(self, compound, compound_code, compound_dir):
+		"""
+		Generate metadata for the compounds.
+		"""
+		compound_metadata = {
+			'compound_code': compound_code,
+			'protein': compound.protein_path,
+			'ligand': compound.mol_path,
+			'features': compound.duck_feature_names,
+			'num_features': len(compound.duck_feature_names)
+		}
+
+		# Write compound_metadata dict to a json file
+		dict_to_json(compound_metadata, f'{compound_dir}/{compound_code}_metadata.json')
+
+		# Save an RDKit image of the ligand
+		compound.draw_mol3d(f'{compound_dir}/{compound_code}_3d.png')
+		compound.draw_mol(f'{compound_dir}/{compound_code}_2d.png')
+
 
 	# @timeit
 	def generate_duck_input(self, compound_code, feature, protein_pdb_path, ligand_mol_path, output_dir):
@@ -172,7 +327,9 @@ if __name__ == '__main__':
 	import time
 	start_time = time.time()
 
-	duck_input = DUckInput(compound_selection=['cx0270a', 'cx0281a'], experiment_name='Experiment', target_dir='/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac')
+	duck_input = DUckInput(compound_selection=['cx0270a', 'cx0281a'],
+						experiment_name='Experiment',
+						target_dir='/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac')
 	print(duck_input.compound_codes)
 	duck_input.prepare_experiment()
 

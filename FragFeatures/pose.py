@@ -20,6 +20,8 @@ from molparse.rdkit import draw_mols
 from rdkit import RDConfig
 from rdkit.Chem import AllChem
 from rdkit.Chem import Draw
+# import rdkit.Chem as Chem
+from rdkit.Chem import MolFromSmiles
 import numpy as np
 import pandas as pd
 
@@ -74,6 +76,7 @@ class Pose:
 		self.id = compound_code # TODO: for now: what is the id for a pose? Ask Max
 		self.protein_path = f'{target_dir}/aligned_files/{compound_code}/{compound_code}_apo.pdb'
 		self.mol_path = f'{target_dir}/aligned_files/{compound_code}/{compound_code}_ligand.mol'
+		self.smi_path = f'{target_dir}/aligned_files/{compound_code}/{compound_code}_ligand.smi'
 		#self.mol = sanitise_mol(Chem.MolFromMolFile(self.mol_path))
 		# self.mol = Chem.MolFromMolFile(self.mol_path)
 		self.protein_system = mp.parse(self.protein_path, verbosity=False).protein_system
@@ -189,19 +192,22 @@ class Pose:
 			else:
 				feature_duck_name = f"{prot_feature.res_chain}_{prot_feature.res_name}_{prot_feature.res_number}_{prot_feature.atoms[0]}"
 
-			sparse_fingerprint[prot_feature.family_name_number_chain_atoms_str] = (len(valid_features), feature_duck_name) # just the number of ligand features
-			sparse_fingerprint_ext[prot_feature.family_name_number_chain_atoms_str] = (valid_features, feature_duck_name) # extended: includes feature details
+			# TODO: This needs to be made clearer
+			sparse_fingerprint[prot_feature.family_name_number_chain_atoms_str] = (len(valid_features), feature_duck_name) # just the number of ligand atoms + name
+			sparse_fingerprint_ext[prot_feature.family_name_number_chain_atoms_str] = (prot_feature, valid_features, feature_duck_name) # extended: includes feature details
 			# print(fingerprint)
 			# print(prot_feature.family_name_number_chain_atoms_str)
 
 		self.sparse_fingerprint = sparse_fingerprint # TODO: Is this the way to store the fingerprint? Ask Max
 		self.sparse_fingerprint_ext = sparse_fingerprint_ext
 
-		# More useful fingerprint dict with only values > 0
+		# More useful fingerprint dict with only values > 0 == interaction present
 		dense_fingerprint = {k: v for k, v in sparse_fingerprint.items() if v[0] > 0}
-		dense_fingerprint_ext = {k: v for k, v in sparse_fingerprint_ext.items() if len(v[0]) > 0}
+		dense_fingerprint_ext = {k: v for k, v in sparse_fingerprint_ext.items() if len(v[1]) > 0}
 
+		# dict -> {family + protein feature: (ligand atom count, feature_duck_name)}
 		self.fingerprint = dense_fingerprint
+		# dict -> {family + protein feature: (protein_feature, ligand atoms, feature_duck_name)}
 		self.fingerprint_ext = dense_fingerprint_ext
 
 		# List each dictionary key-value pair on a new line for printing
@@ -228,23 +234,31 @@ class Pose:
 		return draw_mols(mols)
 
 
-	# def calculate_prolif_fp(self):
-	# 	"""
-	# 	Calculate the PProLIF fingerprint for a pose.
-	# 	"""
-	# 	# NOTE: Need to add hydrogens first
-	# 	# Create an MDAnalysis Universe
-	# 	u = mda.Universe(self.protein_path)
-	# 	protein_mol = plf.Molecule.from_mda(self.mol)
-
-
 	@property
-	def duck_features(self):
-		"""Return the pose's features in a format suitable for the DUck database"""
-		# return self.fingerprint
+	def duck_feature_names(self):
+		"""Return the pose's protein feature names in a list format suitable for the DUck output"""
 		# Combine only the second index of the dict valies into a LIST for DUck
 		return [v[1] for v in self.fingerprint.values()]
 		# return self.fingerprint_ext
+
+
+	@property
+	def protein_features(self):
+		"""Return the pose's protein features as a list"""
+		return [v[0] for v in self.fingerprint_ext.values()]
+
+
+	@property
+	def ligand_features(self):
+		"""Return the pose's ligand features as a list"""
+		return [v[1] for v in self.fingerprint_ext.values()]
+
+
+	@property
+	def smiles(self):
+		"""Return the pose's SMILES"""
+		with open(self.smi_path, 'r') as f:
+			return f.read().strip()
 
 
 	@property
@@ -283,15 +297,49 @@ class Pose:
 		"""Returns the pose's features"""
 		return mp.rdkit.features_from_mol(self.mol)
 	
-	def draw_mol(self):
-		"""Draw the pose's rdkit.Chem.Mol"""
-		
-		img = Draw.MolToImage(self.mol)
-		img.show()
+	def draw_mol3d(self, filename=None):
+		"""
+		Draw the pose's rdkit.Chem.Mol. This is drawn considering 3D coords.
+		"""
+		if filename:
+			Draw.MolToFile(self.mol, filename)
+		else:
+			img = Draw.MolToImage(self.mol)
+			img.show()
+
+
+	def draw_mol(self, filename=None):
+		"""
+		Draw the pose's rdkit.Chem.Mol. This is drawn considering 2D coords.
+		"""
+		if filename:
+			m = MolFromSmiles(self.smiles)
+			Draw.MolToFile(m, filename)
+		else:
+			m = MolFromSmiles(self.smiles)
+			img = Draw.MolToImage(m, size=(300, 300))
+			img.show()
+
+
 
 		# TODO: Add option to save this image to a file
 	# NOTE: Look into setting a path for when this is all run in a script
-	
+
+
+
+
+	# def calculate_prolif_fp(self):
+	# 	"""
+	# 	Calculate the PProLIF fingerprint for a pose.
+	# 	"""
+	# 	# NOTE: Need to add hydrogens first
+	# 	# Create an MDAnalysis Universe
+	# 	u = mda.Universe(self.protein_path)
+	# 	protein_mol = plf.Molecule.from_mda(self.mol)
+
+
+
+
 class InvalidMolError(Exception):
 	...
 
