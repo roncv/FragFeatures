@@ -95,6 +95,7 @@ def parse_input():
 	prepare_duck.add_argument('-c', '--compound-selection', type=str, nargs='+', default = None, help='Compound selection for the experiment.')
 	prepare_duck.add_argument('-e', '--experiment-name', type=str, default = None, help='Name of the experiment.')
 	prepare_duck.add_argument('-t', '--target-dir', type=str, default = None, help='Path to the Fragalysis target\'s directory.')
+	# prepare_duck.add_argument('-a', '--all-compounds', action='store_true', help='Use all compounds in the target.')
 	prepare_duck.set_defaults(mode='prepare-duck')
 
 	args = args_sanitation(parser, modes)

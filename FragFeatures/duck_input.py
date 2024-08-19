@@ -68,14 +68,18 @@ class DUckInput():
 					return self.compound_codes
 
 		elif isinstance(self.compound_selection, list):
-			# Match given list of compound codes to all compound codes
-			self.compound_codes = [c for c in self.compound_selection if c in all_compound_codes]
-			invalid_compound_codes = [c for c in self.compound_selection if c not in all_compound_codes]
-			print(f"Selected compounds: {self.compound_codes}")
-			if invalid_compound_codes:
-				raise ValueError(f"Invalid compound codes present: {invalid_compound_codes}")
-
-			return self.compound_codes
+			if self.compound_selection == ['all']:
+				self.compound_codes = all_compound_codes
+				print(f"Selected compounds: {self.compound_codes}")
+				return self.compound_codes
+			else:
+				# Match given list of compound codes to all compound codes
+				self.compound_codes = [c for c in self.compound_selection if c in all_compound_codes]
+				invalid_compound_codes = [c for c in self.compound_selection if c not in all_compound_codes]
+				print(f"Selected compounds: {self.compound_codes}")
+				if invalid_compound_codes:
+					raise ValueError(f"Invalid compound codes present: {invalid_compound_codes}")
+				return self.compound_codes
 
 		else:
 			raise ValueError(f"Invalid compound selection: {self.compound_selection}")
@@ -141,7 +145,7 @@ class DUckInput():
 			self.generate_compound_metadata(compound=compound,
 									 compound_code=compound_code,
 									 compound_dir=compound_dir)
-
+			# TODO: Include warning of multiple ligand features
 			# Create subdirectories for the features
 			for (feature,feature_e, prot_feat, lig_feat) in zip(feature_names,
 													   expanded_features,

@@ -48,6 +48,7 @@ COMPLEMENTARY_FEATURES = {
 	"PosIonizable": "Aromatic",
 	"Hydrophobe": "Hydrophobe",
 }
+# TODO: Adjust this to prevent aromatic features from the protein
 
 CUTOFF_PADDING = 0.5
 
@@ -187,6 +188,7 @@ class Pose:
 				feature_duck_name = f"{prot_feature.res_chain}_{prot_feature.res_name}_{prot_feature.res_number}_{prot_feature.atoms[0]}" # TODO: implement this properly. 
 				if len(valid_features) >= 1:  # print warning if feature is valid
 					logger.warning(f"More than one ligand atom associated with protein feature {feature_duck_name}: {prot_feature.atoms}") # TODO: Add compound code here
+					# TODO: Put the warning in the metadata
 				else:
 					pass
 			else:
