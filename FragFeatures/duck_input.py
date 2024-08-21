@@ -173,7 +173,7 @@ class DUckInput():
 
 		# Generate metadata for the experiment
 		# TODO: Create a large tsv with a summary of all the features
-		dict_to_json(compound_summaries, f'{experiment_dir}/compound_summarries.json')
+		dict_to_json(compound_summaries, f'{experiment_dir}/compound_summaries.json')
 		tallies = {
 			'num_compounds': compound_tally,
 			'num_features': feature_tally

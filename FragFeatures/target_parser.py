@@ -36,11 +36,11 @@ class TargetParser:
 		self.target_dir = target_dir
 		self.metadata = pd.read_csv(f'{target_dir}/metadata.csv') #, index_col='Code') # Code is the unique identifier for each compound
 
-	# def get_all_compounds(self):
-	# 	"""
-	# 	Return all compounds in the target.
-	# 	"""
-	# 	return self.metadata['Code'].tolist()
+	def get_all_compounds(self):
+		"""
+		Return all compounds in the target.
+		"""
+		return self.metadata['Code'].tolist()
 
 	def get_compound(self, code):
 		"""

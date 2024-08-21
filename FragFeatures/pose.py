@@ -31,21 +31,30 @@ import pandas as pd
 
 # from pathlib import Path
 import logging
-logger = logging.getLogger('FragFeatures')
+logger = logging.getLogger('FragFeatures') # NOTE: Implement this a bit more
 
 
 FDEF = AllChem.BuildFeatureFactory(os.path.join(RDConfig.RDDataDir, 'BaseFeatures.fdef'))
 FEATURE_FAMILIES = FDEF.GetFeatureFamilies()
 
 # TODO: This can be implemented in a more dynamic way - as a method?
+# COMPLEMENTARY_FEATURES = {
+# 	"Donor": "Acceptor",
+# 	"Acceptor": "Donor",
+# 	"NegIonizable": "PosIonizable",
+# 	"PosIonizable": "NegIonizable",
+# 	"Aromatic": "Aromatic",
+# 	"Aromatic": "PosIonizable",
+# 	"PosIonizable": "Aromatic",
+# 	"Hydrophobe": "Hydrophobe",
+# }
 COMPLEMENTARY_FEATURES = {
 	"Donor": "Acceptor",
 	"Acceptor": "Donor",
 	"NegIonizable": "PosIonizable",
-	"PosIonizable": "NegIonizable",
+	"PosIonizable": ["NegIonizable","Aromatic"],
 	"Aromatic": "Aromatic",
 	"Aromatic": "PosIonizable",
-	"PosIonizable": "Aromatic",
 	"Hydrophobe": "Hydrophobe",
 }
 # TODO: Adjust this to prevent aromatic features from the protein
@@ -66,21 +75,21 @@ FEATURE_PAIR_CUTOFFS = {
 # TODO: Allow for easy mofdiciation of feature type selection
 
 
-# TODO: Split Pose and TargetParser into separate files
+# TODO: Consider a an alternative way to define directory structures
 class Pose:
 	"""
 	Represents a pose of a compound in a target.
 	"""
-	def __init__(self, target_dir, compound_code):
+	def __init__(self, target_dir, compound_code, interaction_types="hbonds+"):
 		self.target_dir = target_dir
 		self.compound_code = compound_code
 		self.id = compound_code # TODO: for now: what is the id for a pose? Ask Max
 		self.protein_path = f'{target_dir}/aligned_files/{compound_code}/{compound_code}_apo.pdb'
 		self.mol_path = f'{target_dir}/aligned_files/{compound_code}/{compound_code}_ligand.mol'
 		self.smi_path = f'{target_dir}/aligned_files/{compound_code}/{compound_code}_ligand.smi'
-		#self.mol = sanitise_mol(Chem.MolFromMolFile(self.mol_path))
-		# self.mol = Chem.MolFromMolFile(self.mol_path)
 		self.protein_system = mp.parse(self.protein_path, verbosity=False).protein_system
+		self.feature_families, self.complementary_features, self.ligand_families = self.define_interaction_types(interaction_types)
+
 		# self.complex_system = None
 		# self.reference = None
 		# self.inspirations = []
@@ -95,26 +104,57 @@ class Pose:
 		self._mol = None  # TODO: Why is there an underscore here? Ask Max
 
 
+	def define_interaction_types(self, selected_interaction_types):
+		"""Define the interaction types for the pose by picking feature families"""
+		# Check if the selected interaction types are valid
+		feature_families = list(FEATURE_FAMILIES)
+		complementary_features = dict(COMPLEMENTARY_FEATURES)
+		
+		valid_interactions = ['hbonds', 'hbonds+', '-aromatic', 'all', ]
+		if selected_interaction_types not in valid_interactions:
+			raise ValueError(f'Invalid interaction types: {selected_interaction_types}. Valid options are: {valid_interactions}')
+		
+		# Define the interaction types
+		if selected_interaction_types == 'hbonds':
+			interaction_types = ['Donor', 'Acceptor']
+		elif selected_interaction_types == 'hbonds+':
+			interaction_types = ['Donor', 'Acceptor', 'NegIonizable', 'PosIonizable', 'PosIonizable']
+		elif selected_interaction_types == '-aromatic':
+			interaction_types = ['Donor', 'Acceptor', 'NegIonizable', 'PosIonizable', 'PosIonizable', 'Hydrophobe']
+		elif selected_interaction_types == 'all':
+			interaction_types = list(FEATURE_FAMILIES) # TODO: Test this properly
+		else:
+			raise NotImplementedError
+		
+		# Modify the feature families list to include only defined interaction types
+		# Allows for duplicates
+		updated_feature_families = [f for f in feature_families for _ in range(interaction_types.count(f))]
+		# print(updated_feature_families)
+
+		# Modify the complementary features dict to include only defined interaction types
+		updated_complementary_features = {f: complementary_features[f] for f in updated_feature_families for _ in range(interaction_types.count(f))}
+		# print(updated_complementary_features)
+
+		# Get relevant feature famillies for the ligand
+		ligand_families = []
+		for sublist in updated_complementary_features.values():
+			if isinstance(sublist, str):
+				ligand_families.append(sublist)
+			else:
+				ligand_families.extend(sublist)  # if a list, unpack
+		# print(ligand_families)
+
+		return updated_feature_families, updated_complementary_features, ligand_families
+
+
+
 	def calculate_fingerprint(self, verbose=False):
 		"""Calculate the pose's interaction fingerprint"""
-		# if self.path.endswith('.pdb'):
+
+		# TODO: Add some error handling, type checking, and logging
 
 		protein_system = self.protein_system
-		# if not self.protein_system:
-		# 	# logger.reading(self.path)
-		# 	protein_system = mp.parse(self.path, verbosity=False).protein_system
-
-		# elif self.path.endswith('.mol') and self.reference:
-
-		# 	logger.debug('fingerprint from .mol and reference pose')
-		# 	protein_system = self.reference.protein_system
-
-		# else:
-
-		# 	logger.debug('calculate_fingerprint()')
-		# 	raise NotImplementedError
-
-		assert protein_system
+		assert protein_system  # NOTE: What exatly is this doing?
 
 		if not self.mol:
 			return
@@ -122,11 +162,24 @@ class Pose:
 		# print(f'\nMol: {self.mol}')
 
 		comp_features = self.features # TODO: What is going on here? Ask Max
+		# print(dir(comp_features[0]))
+		# print(comp_features[0].family)
 
-		comp_features_by_family = {}
-		for family in FEATURE_FAMILIES:
-			comp_features_by_family[family] = [f for f in comp_features if f.family == family]
+		# Remove any features which 
 
+		# print(f"comp_features: {comp_features}")
+		# complementary_family = self.interaction_types[prot_family]
+
+		feature_families = self.feature_families
+		ligand_families = self.ligand_families
+		compound_features_by_family = {}
+		for family in ligand_families: # NOTE: was feature families before
+			compound_features_by_family[family] = [f for f in comp_features if f.family == family]
+
+		# print(f"\nfeature_families: {FEATURE_FAMILIES}")
+		# print(f"\nfeature_families: {self.feature_families}")
+		# print(f'\nligand_families: {self.ligand_families}')
+		# print(f"\ncomp_features_by_family: {compound_features_by_family}")
 		# protein_features = self.target.features
 		# if not protein_features:
 
@@ -145,13 +198,19 @@ class Pose:
 		# print(f'Residues: {residues}')
 		# print(f'Residues 2: {residues_2}')
 
-		print(f'Number of features: {len(protein_features)}\n')
+		# print(f'Number of features: {len(protein_features)}\n')
 
+		# 
 		for prot_feature in protein_features:
 			# print(dir(f))
 
 			if prot_feature.res_chain not in chains:
 				print(f'Chain {prot_feature.res_chain} not in chains')
+				continue
+
+			# Check if the feature is in a user-selected family
+			if prot_feature.family not in self.feature_families:
+				# print('Not in family')
 				continue
 
 			# Get the feature family and residue from the protein_system obj
@@ -177,9 +236,23 @@ class Pose:
 			prot_coords = [a.np_pos for a in prot_atoms if a is not None]
 			prot_coord = np.array(np.sum(prot_coords,axis=0)/len(prot_atoms))
 
-			complementary_family = COMPLEMENTARY_FEATURES[prot_family]
-			complementary_comp_features = comp_features_by_family[complementary_family]
-			cutoff = FEATURE_PAIR_CUTOFFS[f'{prot_family} {complementary_family}']
+			# print(f'prot_feature: {prot_feature}')
+
+			# complementary_family = COMPLEMENTARY_FEATURES[prot_family]
+			complementary_family = self.complementary_features[prot_family]
+			# print(complementary_family)
+			# Check if the family has multiple potential complementary features
+			if isinstance(complementary_family, list):
+				for i in complementary_family:
+					try:
+						# print(i)
+						complementary_comp_features = compound_features_by_family[i]
+						cutoff = FEATURE_PAIR_CUTOFFS[f'{prot_family} {i}']
+					except:
+						pass
+			else:
+				complementary_comp_features = compound_features_by_family[complementary_family]
+				cutoff = FEATURE_PAIR_CUTOFFS[f'{prot_family} {complementary_family}']
 
 			valid_features = [f for f in complementary_comp_features if np.linalg.norm(f - prot_coord) <= cutoff] # TODO: understand this line better
 
@@ -215,6 +288,9 @@ class Pose:
 		# List each dictionary key-value pair on a new line for printing
 		dense_fingerprint_str = '\n'.join([f'{k}: {v}' for k, v in dense_fingerprint.items()])
 		dense_fingerprint_ext_str = '\n'.join([f'{k}: {v}' for k, v in dense_fingerprint_ext.items()])
+
+		print(f'Number of features: {len(dense_fingerprint.items())}\n')
+
 
 		if verbose:
 			# Print the fingerprint
@@ -328,8 +404,6 @@ class Pose:
 	# NOTE: Look into setting a path for when this is all run in a script
 
 
-
-
 	# def calculate_prolif_fp(self):
 	# 	"""
 	# 	Calculate the PProLIF fingerprint for a pose.
@@ -340,10 +414,9 @@ class Pose:
 	# 	protein_mol = plf.Molecule.from_mda(self.mol)
 
 
-
-
 class InvalidMolError(Exception):
 	...
+
 
 # Test
 if __name__ == '__main__':
@@ -356,10 +429,9 @@ if __name__ == '__main__':
 	# print(lig.mol)
 	#lig.draw_mol()
 	lig.calculate_fingerprint()
-	lig.calculate_prolif_fp()
-	print(lig.duck_features)
+	# lig.calculate_prolif_fp()
+	print(lig.duck_feature_names)
 	print(target.target_dir)
 	print(lig.protein_path)
 	print(lig.mol_path)
-
 	# print(lig.fingerprint)
