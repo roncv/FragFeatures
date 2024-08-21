@@ -10,26 +10,17 @@ else:
 	from FragFeatures.core.tools import sanitise_mol
 
 import os
-
 import molparse as mp
 # from molparse.rdkit.features import FEATURE_FAMILIES, COMPLEMENTARY_FEATURES
 from molparse.rdkit import draw_mols
 
 # RDKIT imports
-# from rdkit import Chem
 from rdkit import RDConfig
 from rdkit.Chem import AllChem
 from rdkit.Chem import Draw
-# import rdkit.Chem as Chem
 from rdkit.Chem import MolFromSmiles
 import numpy as np
-import pandas as pd
 
-# # ProLIF imports
-# import MDAnalysis as mda
-# import prolif as plf
-
-# from pathlib import Path
 import logging
 logger = logging.getLogger('FragFeatures') # NOTE: Implement this a bit more
 
@@ -129,11 +120,9 @@ class Pose:
 		# Modify the feature families list to include only defined interaction types
 		# Allows for duplicates
 		updated_feature_families = [f for f in feature_families for _ in range(interaction_types.count(f))]
-		# print(updated_feature_families)
 
 		# Modify the complementary features dict to include only defined interaction types
 		updated_complementary_features = {f: complementary_features[f] for f in updated_feature_families for _ in range(interaction_types.count(f))}
-		# print(updated_complementary_features)
 
 		# Get relevant feature famillies for the ligand
 		ligand_families = []
@@ -142,10 +131,8 @@ class Pose:
 				ligand_families.append(sublist)
 			else:
 				ligand_families.extend(sublist)  # if a list, unpack
-		# print(ligand_families)
 
 		return updated_feature_families, updated_complementary_features, ligand_families
-
 
 
 	def calculate_fingerprint(self, verbose=False):
@@ -158,51 +145,27 @@ class Pose:
 
 		if not self.mol:
 			return
-		
-		# print(f'\nMol: {self.mol}')
 
 		comp_features = self.features # TODO: What is going on here? Ask Max
-		# print(dir(comp_features[0]))
-		# print(comp_features[0].family)
 
-		# Remove any features which 
-
-		# print(f"comp_features: {comp_features}")
-		# complementary_family = self.interaction_types[prot_family]
-
-		feature_families = self.feature_families
+		# feature_families = self.feature_families
 		ligand_families = self.ligand_families
 		compound_features_by_family = {}
 		for family in ligand_families: # NOTE: was feature families before
 			compound_features_by_family[family] = [f for f in comp_features if f.family == family]
 
-		# print(f"\nfeature_families: {FEATURE_FAMILIES}")
-		# print(f"\nfeature_families: {self.feature_families}")
-		# print(f'\nligand_families: {self.ligand_families}')
-		# print(f"\ncomp_features_by_family: {compound_features_by_family}")
-		# protein_features = self.target.features
-		# if not protein_features:
-
 		# Use molparse to get protein features
 		protein_features = self.protein_system.get_protein_features()
-		# print(protein_features)
 
 		sparse_fingerprint = {}
 		sparse_fingerprint_ext = {} # extended sparse fingerprint
 
 		chains = protein_system.chain_names
-		# residues = protein_system.res_names
-		# residues_2 = protein_system.residue_names # does the same thing using .append instead of list comprehension 
 		print(f'\nCompound: {self.compound_code}')
 		print(f'Chains: {chains}')
-		# print(f'Residues: {residues}')
-		# print(f'Residues 2: {residues_2}')
-
-		# print(f'Number of features: {len(protein_features)}\n')
 
 		# 
 		for prot_feature in protein_features:
-			# print(dir(f))
 
 			if prot_feature.res_chain not in chains:
 				print(f'Chain {prot_feature.res_chain} not in chains')
@@ -210,19 +173,14 @@ class Pose:
 
 			# Check if the feature is in a user-selected family
 			if prot_feature.family not in self.feature_families:
-				# print('Not in family')
 				continue
 
 			# Get the feature family and residue from the protein_system obj
 			prot_family = prot_feature.family
 			prot_residue = protein_system.get_chain(prot_feature.res_chain).residues[f'n{prot_feature.res_number}']
-			# print(f'{prot_residue} {prot_family}')
 
 			if not prot_residue:
 				continue
-
-			# # if prot_feature.residue_number == 77:
-			# # 	logger.debug(repr(prot_feature))
 
 			if prot_residue.name != prot_feature.res_name:
 				logger.warning(f'Feature {repr(prot_feature)}')
@@ -230,17 +188,11 @@ class Pose:
 
 			atom_names = [a.name for a in prot_feature.atoms]
 			prot_atoms = [prot_residue.get_atom(a) for a in atom_names]
-			# print(prot_atoms)
-			# print(atom_names)
 
 			prot_coords = [a.np_pos for a in prot_atoms if a is not None]
 			prot_coord = np.array(np.sum(prot_coords,axis=0)/len(prot_atoms))
 
-			# print(f'prot_feature: {prot_feature}')
-
-			# complementary_family = COMPLEMENTARY_FEATURES[prot_family]
 			complementary_family = self.complementary_features[prot_family]
-			# print(complementary_family)
 			# Check if the family has multiple potential complementary features
 			if isinstance(complementary_family, list):
 				for i in complementary_family:
@@ -270,8 +222,6 @@ class Pose:
 			# TODO: This needs to be made clearer
 			sparse_fingerprint[prot_feature.family_name_number_chain_atoms_str] = (len(valid_features), feature_duck_name) # just the number of ligand atoms + name
 			sparse_fingerprint_ext[prot_feature.family_name_number_chain_atoms_str] = (prot_feature, valid_features, feature_duck_name) # extended: includes feature details
-			# print(fingerprint)
-			# print(prot_feature.family_name_number_chain_atoms_str)
 
 		self.sparse_fingerprint = sparse_fingerprint # TODO: Is this the way to store the fingerprint? Ask Max
 		self.sparse_fingerprint_ext = sparse_fingerprint_ext
@@ -290,7 +240,6 @@ class Pose:
 		dense_fingerprint_ext_str = '\n'.join([f'{k}: {v}' for k, v in dense_fingerprint_ext.items()])
 
 		print(f'Number of features: {len(dense_fingerprint.items())}\n')
-
 
 		if verbose:
 			# Print the fingerprint
@@ -399,7 +348,6 @@ class Pose:
 			img.show()
 
 
-
 		# TODO: Add option to save this image to a file
 	# NOTE: Look into setting a path for when this is all run in a script
 
@@ -420,18 +368,11 @@ class InvalidMolError(Exception):
 
 # Test
 if __name__ == '__main__':
-	# Allow for displaying SVG images
-	
 	from FragFeatures.target_parser import TargetParser
 	target = TargetParser('/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac')
-	# print(target.metadata.head())
 	lig = Pose(target.target_dir, 'cx0294a')
-	# print(lig.mol)
-	#lig.draw_mol()
 	lig.calculate_fingerprint()
-	# lig.calculate_prolif_fp()
 	print(lig.duck_feature_names)
 	print(target.target_dir)
 	print(lig.protein_path)
 	print(lig.mol_path)
-	# print(lig.fingerprint)

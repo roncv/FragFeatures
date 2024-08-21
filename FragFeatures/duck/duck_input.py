@@ -11,20 +11,13 @@ else:
 	from FragFeatures.pose import Pose
 	from FragFeatures.utils import timeit, dict_to_json # NOTE: Necessary?
 
-
-# import os
-# import sys
 import numpy as np
 import shutil
 import json
 from contextlib import redirect_stdout
 import io
-# import molparse as mp
-
-# import numpy as np
-# import pandas as pd
-
 from pathlib import Path
+
 import logging
 logger = logging.getLogger('FragFeatures')
 
@@ -126,13 +119,6 @@ class DUckInput():
 			# Copy necessary files from a given directory using general copy function
 			shutil.copy2(compound.protein_path, compound_dir) # protien pdb
 			shutil.copy2(compound.mol_path, compound_dir) # ligand mol
-
-			# print(f"\nDUck features: {feature_names}")
-			# print(f"\nProtein features: {protein_features}")
-			# print(f"\nLigand features: {ligand_features}\n")
-
-			# print(f"\nProtein features object: {dir(protein_features[0])}\n")
-			# print(f"\nLigand features object: {dir(ligand_features[0][0])}\n")
 
 			compound_summaries[compound_code] = {
 				'protein_path': compound.protein_path,
@@ -250,20 +236,6 @@ class DUckInput():
 
 			# Write ligand_feature_details dict to a json file in a pythonic way
 			dict_to_json(ligand_feature_details, f'{output_dir}/ligand_feature_metadata_{i}.json')
-
-
-	# def generate_experiment_metadata(self, experiment_dir):
-	# 	"""
-	# 	Generate metadata for the experiment.
-	# 	"""
-	# 	# Write a file with the metadata for the experiment
-	# 	with open(f'{experiment_dir}/experiment_metadata.txt', 'w') as f:
-	# 		f.write('Code,Feature,Protein,Ligand\n')
-	# 		for compound_code in self.compound_codes:
-	# 			compound = self.get_compound(compound_code)
-	# 			features = compound.duck_features
-	# 			for feature in features:
-	# 				f.write(f"{compound_code},{feature},{compound.protein_path},{compound.mol_path}\n")
 
 
 	def generate_compound_metadata(self, compound, compound_code, compound_dir):
