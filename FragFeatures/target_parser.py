@@ -5,10 +5,10 @@ Relies on the directory structure of a Fragalysis target.
 """
 if __name__ == '__main__':
 	# Conditional imports only when running as the main script
-	from tools import sanitise_mol
+	from FragFeatures.core.tools import sanitise_mol
 	from FragFeatures.pose import Pose
 else:
-	from FragFeatures.tools import sanitise_mol
+	from FragFeatures.core.tools import sanitise_mol
 
 import molparse as mp
 from molparse.rdkit.features import FEATURE_FAMILIES, COMPLEMENTARY_FEATURES

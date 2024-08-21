@@ -5,9 +5,9 @@ Inspired by https://github.com/mwinokan/HIPPO
 """
 if __name__ == '__main__':
 	# Conditional imports only when running as the main script
-	from tools import sanitise_mol
+	from FragFeatures.core.tools import sanitise_mol
 else:
-	from FragFeatures.tools import sanitise_mol
+	from FragFeatures.core.tools import sanitise_mol
 
 import os
 

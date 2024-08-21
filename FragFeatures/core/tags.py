@@ -1,6 +1,8 @@
 # from .db import Database
 from collections.abc import MutableSet
 
+# FIXME: This module is not used in the current version of the codebase
+
 class TagTable:
 	"""Object representing the 'tag' table in the :class:`.Database`."""
 

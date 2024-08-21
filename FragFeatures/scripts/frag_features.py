@@ -26,7 +26,7 @@ def prepare_duck_experiment(compound_selection, experiment_name, target_dir):
 	target_dir : str
 		Path to the Fragalysis target's directory.
 	'''
-	from FragFeatures.duck_input import DUckInput
+	from FragFeatures.io.duck_input import DUckInput
 	# Add some timing
 	import time
 	start_time = time.time()
