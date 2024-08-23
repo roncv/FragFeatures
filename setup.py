@@ -9,6 +9,8 @@ from pathlib import Path
 # 	version_file = path / "VERSION.txt"
 # 	return version_file.read_text().strip()
 
+# TODO: Add versioning
+# TODO: Transition to pyproject.toml for versioningß
 
 # version = _get_version()
 
