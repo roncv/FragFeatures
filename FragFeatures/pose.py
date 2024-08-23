@@ -9,6 +9,8 @@ if __name__ == '__main__':
 else:
 	from FragFeatures.core.tools import sanitise_mol
 
+# TODO: Rename this to ...
+
 import os
 import molparse as mp
 # from molparse.rdkit.features import FEATURE_FAMILIES, COMPLEMENTARY_FEATURES

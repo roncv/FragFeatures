@@ -34,7 +34,7 @@ class DUckInput():
 		self.compound_selection = compound_selection
 		self.experiment_name = experiment_name
 		self.target_dir = target_dir
-		self.target = TargetParser(target_dir)
+		self.target = TargetParser(target_dir)  # Fragalysis
 		self.compound_codes = self.validate_compounds()
 		# TODO: Add an option to select all compounds - for script execution
 
