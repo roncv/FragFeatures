@@ -17,6 +17,7 @@ import json
 from contextlib import redirect_stdout
 import io
 from pathlib import Path
+import pickle
 
 import logging
 logger = logging.getLogger('FragFeatures')
@@ -88,7 +89,7 @@ class DUckInput():
 
 		return compound
 
-    # TODO: Add parameters to deal with overwriting existing directories
+	# TODO: Add parameters to deal with overwriting existing directories
 	# @timeit
 	def prepare_experiment(self):
 		"""
@@ -119,6 +120,10 @@ class DUckInput():
 			# Copy necessary files from a given directory using general copy function
 			shutil.copy2(compound.protein_path, compound_dir) # protien pdb
 			shutil.copy2(compound.mol_path, compound_dir) # ligand mol
+
+			# Save the compound object to a pickle file using pickle library
+			with open(f'{compound_dir}/{compound_code}_compound.pkl', 'wb') as f:
+				pickle.dump(compound, f)
 
 			compound_summaries[compound_code] = {
 				'protein_path': compound.protein_path,

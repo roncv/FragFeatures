@@ -1,9 +1,17 @@
 """
 Process the output of a compound's DUck simulation.
 """
+if __name__ == '__main__':
+	# Conditional imports only when running as the main script
+	from FragFeatures.utils import timeit, dict_to_json
+	from FragFeatures.duck.duck_feature import DUckFeature
+else:
+	from FragFeatures.utils import timeit, dict_to_json
+	from FragFeatures.duck.duck_feature import DUckFeature
 
 import os
 import csv
+import pandas as pd
 
 class DUckCompound():
 	"""
@@ -13,7 +21,7 @@ class DUckCompound():
 			self,
 			experiment_dir,
 			compound_id=None,
-			output_dir='Analysis',
+			output_dir='analysis',
 			wqb_filename='wqb.txt',
 			duck_sim_dirname='duck_runs'
 			):
@@ -29,12 +37,26 @@ class DUckCompound():
 		self.output_dir = output_dir
 		# self.compound_dir = None
 
+		# Create the analysis directory for the compound
+		self.create_analysis_dir()
+
 
 	def validate_simulation(self):
 		"""
 		Validate that the simulation has run.
 		"""
 		pass
+
+
+	def create_analysis_dir(self):
+		"""
+		Create the analysis directory for the compound if it doesn't exist.
+		"""
+		analysis_dir = os.path.join(self.compound_dir, self.output_dir)
+		if not os.path.isdir(analysis_dir):
+			os.mkdir(analysis_dir)
+		
+		self.analysis_dir = analysis_dir
 
 
 	def get_wqb(self, feature_dir):
@@ -57,16 +79,28 @@ class DUckCompound():
 				raise ValueError("No WQB found in the file.")
 
 
-	def get_wqbs(self):
+	def get_summaries(self):
 		"""
 		Return a list of wqb values for all simulations of a compound.
 		"""
-		wqbs = {}
+		summaries = []
 		for feature_dir, feature_name in zip(self.feature_dirs, self.simulation_dirnames):
 			wqb = self.get_wqb(feature_dir=feature_dir)
-			wqbs[feature_name] = wqb
+			duck_feature = DUckFeature(feature_dir)
+			# print(duck_feature.feature_dir)
+			summaries.append({
+				'compound_id': self.compound_id,
+				'Feature Name': feature_name,
+				'WQB': wqb
+			})
 
-		return wqbs
+		# print(summaries)
+		# df_summary = pd.DataFrame(summaries)
+		# print(df_summary)
+		# Save the summaries to a json file in the analysis directory
+		dict_to_json(summaries, os.path.join(self.analysis_dir, 'wqb_summary.json'))
+
+		return summaries
 
 
 	def plot_simulation_overview(self):
@@ -158,4 +192,10 @@ if __name__ == '__main__':
 	# print(duck.simulation_dirnames)
 	# print(duck.feature_dirs)
 	# print('')
-	print(f"\n{duck.get_wqbs()}\n")
+	print(f"\n{duck.get_summaries()}\n")
+
+	import pandas as pd
+	df = pd.read_json('/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac_simulations/Experiment/cx0270a/analysis/wqb_summary.json')
+
+	# Display the DataFrame
+	print(df)
