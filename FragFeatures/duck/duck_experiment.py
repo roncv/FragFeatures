@@ -24,6 +24,15 @@ class DUckExperiment():
 		"""
 		pass
 
+	def get_compounds(self):
+		"""
+		Return a list of all compounds in the experiment.
+		"""
+		# Get all compounds in the experiment directory
+		# Match this against the metadata.csv file in the target directory??
+		pass
+
+
 
 
 
