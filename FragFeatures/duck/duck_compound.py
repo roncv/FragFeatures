@@ -87,11 +87,20 @@ class DUckCompound():
 		for feature_dir, feature_name in zip(self.feature_dirs, self.simulation_dirnames):
 			wqb = self.get_wqb(feature_dir=feature_dir)
 			duck_feature = DUckFeature(feature_dir)
+			duck_feature.get_feature_metadata()
 			# print(duck_feature.feature_dir)
 			summaries.append({
 				'compound_id': self.compound_id,
 				'Feature Name': feature_name,
-				'WQB': wqb
+				'WQB': wqb,
+				'protein_feature_family': duck_feature.protein_feature_family,
+				'ligand_feature_families': duck_feature.ligand_feature_families,
+				'protein_residue': f"{duck_feature.residue_name}{duck_feature.res_num}",
+				'protein_chain': duck_feature.res_chain,
+				'ligand_atom_names': duck_feature.ligand_atom_names,
+				'interaction_types': duck_feature.interaction_types,
+				'mixed': duck_feature.mixed,
+				'interaction_type': duck_feature.interaction_type
 			})
 
 		# print(summaries)
