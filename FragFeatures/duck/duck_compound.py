@@ -103,9 +103,6 @@ class DUckCompound():
 				'interaction_type': duck_feature.interaction_type
 			})
 
-		# print(summaries)
-		# df_summary = pd.DataFrame(summaries)
-		# print(df_summary)
 		# Save the summaries to a json file in the analysis directory
 		dict_to_json(summaries, os.path.join(self.analysis_dir, 'wqb_summary.json'))
 
@@ -184,7 +181,6 @@ class DUckCompound():
 			raise FileNotFoundError(f"No simulation directories found for compound '{self.compound_id}'.")
 
 		return feature_dirs
-
 
 
 

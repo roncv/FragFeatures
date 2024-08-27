@@ -4,6 +4,7 @@ Process the duck output for a feature of a compound.
 import os
 import json
 
+
 INTERACTION_TYPES = {
     frozenset(['Donor', 'Acceptor']): 'H-bond',
     frozenset(['Aromatic', 'Aromatic']): 'Pi-stacking',
@@ -11,6 +12,7 @@ INTERACTION_TYPES = {
     frozenset(['PosIonizable', 'NegIonizable']): 'Salt-bridge',
     frozenset(['PosIonizable', 'Aromatic']): 'Cation-pi',
 }
+
 
 class DUckFeature():
 	"""
@@ -101,8 +103,6 @@ class DUckFeature():
 		Load the features' original `Pose()` object from a pickle file.
 		"""
 		pass
-
-
 
 
 # Test
