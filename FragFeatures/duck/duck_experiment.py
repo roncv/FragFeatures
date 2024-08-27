@@ -18,11 +18,13 @@ class DUckExperiment():
 		"""
 		pass
 
+
 	def summarise_experiment(self):
 		"""
 		Return a json/csv summary of the experiment.
 		"""
 		pass
+
 
 	def get_compounds(self):
 		"""

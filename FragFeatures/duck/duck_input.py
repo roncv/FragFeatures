@@ -172,7 +172,6 @@ class DUckInput():
 		dict_to_json(tallies, f'{experiment_dir}/tallies.json')
 
 
-
 	def generate_feature_metadata(self, feature, expanded_feature,
 							   protein_feature, ligand_features, output_dir):
 		"""
@@ -206,7 +205,6 @@ class DUckInput():
 
 		# # Write protein _eature_details dict to a json file 
 		dict_to_json(protein_feature_details, f'{output_dir}/protein_feature_metadata.json')
-
 
 		# Ligand features
 		for i, ligand_feature in enumerate(ligand_features):

@@ -44,9 +44,6 @@ def prepare_duck_experiment(compound_selection, experiment_name, target_dir):
 	print(f"`prepare_duck_experiment` executed in {end_time - start_time:.4f} seconds")
 
 
-
-
-
 def args_sanitation(parser, modes):
 	'''Sanitize the parser to allow yaml or command line inputs with a proper formating for the rest of the script to work
 	'''
