@@ -13,6 +13,9 @@ import os
 import csv
 import pandas as pd
 
+import logging
+logger = logging.getLogger('FragFeatures') # NOTE: Implement this a bit more
+
 class DUckCompound():
 	"""
 	Process the output of a compound's DUck simulation.
@@ -76,7 +79,8 @@ class DUckCompound():
 
 				return wqb
 			else:
-				raise ValueError("No WQB found in the file.")
+				logger.warning("No WQB found in the file.")
+				# raise ValueError("No WQB found in the file.")
 
 
 	def get_summaries(self):
@@ -84,6 +88,11 @@ class DUckCompound():
 		Return a list of wqb values for all simulations of a compound.
 		"""
 		summaries = []
+		# Check that the compound has simulations
+		if not self.simulation_dirnames:
+			logger.warning(f"No simulations found for compound '{self.compound_id}'.")
+			return summaries
+
 		for feature_dir, feature_name in zip(self.feature_dirs, self.simulation_dirnames):
 			wqb = self.get_wqb(feature_dir=feature_dir)
 			duck_feature = DUckFeature(feature_dir)
@@ -132,6 +141,7 @@ class DUckCompound():
 		# Check that the compound_id directory exists
 		if not os.path.isdir(compound_dir):
 			raise FileNotFoundError(f"Compound directory '{compound_dir}' does not exist.")
+			# logger.warning(f"Compound directory '{compound_dir}' does not exist.")
 
 		return compound_dir
 
@@ -141,12 +151,13 @@ class DUckCompound():
 		"""
 		Return a list of all feature directories for a compound with simulation data.
 		"""
+		# TODO: Differentiate between feature and simulation directories
 		compound_dir = self.compound_dir
 		simulation_dirnames = [d for d in os.listdir(compound_dir) if os.path.isdir(os.path.join(compound_dir, d))]
 		# Check for the presence of a simulation directory
 		simulation_dirnames = [d for d in simulation_dirnames if os.path.isdir(os.path.join(compound_dir, d, self.duck_sim_dirname))]
 		if not simulation_dirnames:
-			raise FileNotFoundError(f"No simulation directories found for compound '{self.compound_id}'.")
+			logger.warning(f"No simulation directories found for compound '{self.compound_id}'.")
 
 		return simulation_dirnames
 
@@ -162,7 +173,7 @@ class DUckCompound():
 		simulation_dirnames = [d for d in simulation_dirnames if os.path.isdir(os.path.join(compound_dir, d, self.duck_sim_dirname))]
 		simulation_dirs = [os.path.join(compound_dir, d, self.duck_sim_dirname) for d in simulation_dirnames]  # full paths
 		if not simulation_dirs:
-			raise FileNotFoundError(f"No simulation directories found for compound '{self.compound_id}'.")
+			logger.warning(f"No simulation directories found for compound '{self.compound_id}'.")
 
 		return simulation_dirs
 
@@ -178,7 +189,7 @@ class DUckCompound():
 		simulation_dirnames = [d for d in simulation_dirnames if os.path.isdir(os.path.join(compound_dir, d, self.duck_sim_dirname))]
 		feature_dirs = [os.path.join(compound_dir, d) for d in simulation_dirnames]  # full paths
 		if not feature_dirs:
-			raise FileNotFoundError(f"No simulation directories found for compound '{self.compound_id}'.")
+			logger.warning(f"No simulation directories found for compound '{self.compound_id}'.")
 
 		return feature_dirs
 
