@@ -30,7 +30,6 @@ logger = logging.getLogger('FragFeatures') # NOTE: Implement this a bit more
 FDEF = AllChem.BuildFeatureFactory(os.path.join(RDConfig.RDDataDir, 'BaseFeatures.fdef'))
 FEATURE_FAMILIES = FDEF.GetFeatureFamilies()
 
-# TODO: This can be implemented in a more dynamic way - as a method?
 # COMPLEMENTARY_FEATURES = {
 # 	"Donor": "Acceptor",
 # 	"Acceptor": "Donor",
@@ -41,6 +40,7 @@ FEATURE_FAMILIES = FDEF.GetFeatureFamilies()
 # 	"PosIonizable": "Aromatic",
 # 	"Hydrophobe": "Hydrophobe",
 # }
+# TODO: Can a frozenset be used here?
 COMPLEMENTARY_FEATURES = {
 	"Donor": "Acceptor",
 	"Acceptor": "Donor",
@@ -50,10 +50,10 @@ COMPLEMENTARY_FEATURES = {
 	"Aromatic": "PosIonizable",
 	"Hydrophobe": "Hydrophobe",
 }
-# TODO: Adjust this to prevent aromatic features from the protein
 
 CUTOFF_PADDING = 0.5
 
+# TODO: Convert the keys to frozensets
 FEATURE_PAIR_CUTOFFS = {
 	'Donor Acceptor': 3.5 + CUTOFF_PADDING,
 	'Acceptor Donor': 3.5 + CUTOFF_PADDING,

@@ -1,8 +1,8 @@
 """
 Process the output directory containing results of DUck simulations for multiple compounds.
 """
-from FragFeatures.duck.duck_feature import DUckFeature
-from FragFeatures.duck.duck_compound import DUckCompound
+from FragFeatures.duck.feature import DUckFeature
+from FragFeatures.duck.compound import DUckCompound
 from FragFeatures.utils import timeit, dict_to_json
 
 import os
