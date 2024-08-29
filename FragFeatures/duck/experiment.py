@@ -88,8 +88,13 @@ class DUckExperiment():
 			raise FileNotFoundError("No compound directories found in the experiment directory.")
 
 		return compound_dirs
-		
 
+
+	def diagnose_experiment(self):
+		"""
+		Diagnose the experiment.
+		"""
+		pass
 
 
 
@@ -108,3 +113,4 @@ if __name__ == '__main__':
 
 	# Display the DataFrame
 	print(df)
+	print(df.columns)

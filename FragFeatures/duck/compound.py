@@ -100,7 +100,7 @@ class DUckCompound():
 			# print(duck_feature.feature_dir)
 			summaries.append({
 				'compound_id': self.compound_id,
-				'Feature Name': feature_name,
+				'feature_name': feature_name,
 				'WQB': wqb,
 				'protein_feature_family': duck_feature.protein_feature_family,
 				'ligand_feature_families': duck_feature.ligand_feature_families,
@@ -109,7 +109,8 @@ class DUckCompound():
 				'ligand_atom_names': duck_feature.ligand_atom_names,
 				'interaction_types': duck_feature.interaction_types,
 				'mixed': duck_feature.mixed,
-				'interaction_type': duck_feature.interaction_type
+				'interaction_type': duck_feature.interaction_type,
+				'ligand_interaction_distances': duck_feature.ligand_interaction_distances
 			})
 
 		# Save the summaries to a json file in the analysis directory

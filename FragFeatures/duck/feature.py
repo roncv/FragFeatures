@@ -53,13 +53,16 @@ class DUckFeature():
 
 		ligand_feature_families = []
 		ligand_atom_names = []
+		ligand_interaction_distances = []
 		for lig_feat in self.get_ligand_feature_files():
 			ligand_features = self.json_to_dict(filename=lig_feat)
 			ligand_feature_families.append(ligand_features['feature_family'])
 			ligand_atom_names.append(ligand_features['atoms_names'])
+			ligand_interaction_distances.append(sum(ligand_features['interaction_distances'])/len(ligand_features['interaction_distances']))
 
 		self.ligand_feature_families = ligand_feature_families
 		self.ligand_atom_names = ligand_atom_names
+		self.ligand_interaction_distances = ligand_interaction_distances
 
 		# Determine what kind of interaction it is from INTERACTION_TYPES
 		interaction_types = []

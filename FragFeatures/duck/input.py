@@ -139,6 +139,8 @@ class DUckInput():
 									 compound_dir=compound_dir)
 			# TODO: Include warning of multiple ligand features
 			# Create subdirectories for the features
+			# TODO: Check if the feature directories already exist and contain simulation data
+			# FIXME: Figure out a new naming scheme for the feature directories
 			for (feature,feature_e, prot_feat, lig_feat) in zip(feature_names,
 													   expanded_features,
 													   protein_features,
@@ -188,6 +190,7 @@ class DUckInput():
 			json.dump(feature_details, f, indent=4)
 
 		# NOTE: Needs to be ready for multiple protein features
+		# TODO: Ensure these are compatible with pandas
 		# Protein feature - not complete (process will need to be reversed)
 		# Protein feature metadata
 		protein_feature_details = {

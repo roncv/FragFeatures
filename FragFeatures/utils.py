@@ -18,6 +18,7 @@ def timeit(func):
 		return result
 	return wrapper
 
+
 def dict_to_json(data, filename, mode='w', indent=4):
 	"""
 	Write a dictionary to a JSON file.
