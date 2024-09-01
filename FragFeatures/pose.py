@@ -143,7 +143,7 @@ class Pose:
 	@timefunction
 	def calculate_fingerprint(self, verbose=False):
 		"""Calculate the pose's interaction fingerprint"""
-
+		#FIXME: Get this working with the protonoted ligand and protein
 		# TODO: Add some error handling, type checking, and logging
 
 		protein_system = self.protein_system
@@ -310,6 +310,17 @@ class Pose:
 		print('\n')
 		interaction_types = df.columns.get_level_values('interaction').T
 		print(interaction_types)
+
+
+		# Get unique protein residues
+		protein_residues = df.columns.get_level_values('protein').unique()
+		protein_residues_list = protein_residues.tolist()
+		print(protein_residues_list)
+
+		# Basically need to combine the ligand and protein residues to get the interactions
+		# Extract resids (parent_indices), distances and angles
+
+
 		# Dictionary to store interactions data for each ligand
 		ligand_interactions = {}
 
