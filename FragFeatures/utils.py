@@ -4,7 +4,7 @@ Various utility functions for FragFeatures.
 
 
 # Decorator to time functions
-def timeit(func):
+def timefunction(func):
 	"""
 	Decorator to time functions.
 	"""

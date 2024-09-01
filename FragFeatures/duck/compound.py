@@ -3,10 +3,10 @@ Process the output of a compound's DUck simulation.
 """
 if __name__ == '__main__':
 	# Conditional imports only when running as the main script
-	from FragFeatures.utils import timeit, dict_to_json
+	from FragFeatures.utils import timefunction, dict_to_json
 	from FragFeatures.duck.feature import DUckFeature
 else:
-	from FragFeatures.utils import timeit, dict_to_json
+	from FragFeatures.utils import timefunction, dict_to_json
 	from FragFeatures.duck.feature import DUckFeature
 
 import os

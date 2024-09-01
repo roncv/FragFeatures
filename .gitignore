@@ -32,6 +32,8 @@ docs/_build/
 # Data output directories
 */Experiment/
 Experiment/
+*/Protein_preparation/
+Protein_preparation/
 # */*_test/
 # structures/
 # structures*/

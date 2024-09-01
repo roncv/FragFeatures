@@ -6,8 +6,10 @@ Inspired by https://github.com/mwinokan/HIPPO
 if __name__ == '__main__':
 	# Conditional imports only when running as the main script
 	from FragFeatures.core.tools import sanitise_mol
+	from FragFeatures.utils import timefunction
 else:
 	from FragFeatures.core.tools import sanitise_mol
+	from FragFeatures.utils import timefunction
 
 # TODO: Rename this to ...
 
@@ -18,12 +20,16 @@ from molparse.rdkit import draw_mols
 
 # RDKIT imports
 from rdkit import RDConfig
+from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Chem import Draw
 from rdkit.Chem import MolFromSmiles
 import numpy as np
+import MDAnalysis as mda
+import prolif as plf
 
 import logging
+logging.getLogger('MDAnalysis').setLevel(logging.WARNING)
 logger = logging.getLogger('FragFeatures') # NOTE: Implement this a bit more
 
 
@@ -66,8 +72,6 @@ FEATURE_PAIR_CUTOFFS = {
 }
 # TODO: Evaluate cutoffs and feature selection
 # TODO: Allow for easy mofdiciation of feature type selection
-
-
 # TODO: Consider a an alternative way to define directory structures
 class Pose:
 	"""
@@ -136,7 +140,7 @@ class Pose:
 
 		return updated_feature_families, updated_complementary_features, ligand_families
 
-
+	@timefunction
 	def calculate_fingerprint(self, verbose=False):
 		"""Calculate the pose's interaction fingerprint"""
 
@@ -247,6 +251,102 @@ class Pose:
 			# Print the fingerprint
 			print(f"\nFingerprint\n-----------\n{dense_fingerprint_str}")
 			print(f"\nDense Fingerprint\n-----------------\n{dense_fingerprint_ext_str}\n")
+
+
+	@timefunction
+	def calculate_prolif_fp(self, output_dir):
+		"""
+		Calculate the ProLIF fingerprint for a pose.
+		"""
+		# Add hydrogens to the protein
+		from FragFeatures.sanitisation.protein_preparation import ProteinPreparation
+
+		protein_prep = ProteinPreparation(protein_path=self.protein_path, output_dir=output_dir)
+		protein_prep.prepare_protein()
+		prepared_protein_path = protein_prep.get_prepared_protein_path()
+		# print(f'Prepared protein path: {prepared_protein_path}')
+
+		u = mda.Universe(prepared_protein_path)
+		protein_mol = plf.Molecule.from_mda(u)
+		print(f"Number of resiudes: {protein_mol.n_residues}")
+
+		# use default interactions
+		# fp = plf.Fingerprint()
+		# TODO: Add option to specify interactions
+		fp = plf.Fingerprint(["HBDonor", "HBAcceptor", "CationPi", "Cationic", "Anionic"])
+
+		ligand_mol = self.ligand_preparation(output_dir=output_dir)
+		ligand = plf.Molecule.from_rdkit(ligand_mol)
+
+		# run on your poses
+		fp.run_from_iterable([ligand], protein_mol)
+
+		# print(fp.interactions)
+		# print(fp.count)
+
+		# print(fp.ifp)
+		# print(len(fp.ifp))
+		# print(type(fp.ifp))
+		# print('\n')
+		# print(fp.ifp[0])
+		# print(type(fp.ifp[0]))
+		# print(dir(fp.ifp[0]))
+		# print('\n')
+
+
+		print('\n')
+		# fp.ifp[0].ResidueId
+		df = fp.to_dataframe()
+		print(df.T)
+
+		print(df.columns)
+		print(df.index)
+		print('\n')
+
+		# Get unique ligand IDs
+		unique_ligands = df.columns.get_level_values('ligand').T
+		print(unique_ligands)
+		# print(dir(unique_ligands[0]))
+		print('\n')
+		interaction_types = df.columns.get_level_values('interaction').T
+		print(interaction_types)
+		# Dictionary to store interactions data for each ligand
+		ligand_interactions = {}
+
+		# Looping through each ligand to extract their interactions
+		for ligand in unique_ligands:
+			ligand_interactions[ligand] = df.xs(ligand, level='ligand', axis=1).T
+
+		print(ligand_interactions)
+
+
+
+	@timefunction
+	def ligand_preparation(self, verbose=False, output_dir=None):
+		"""
+		Prepare the ligand for featrure analysis.
+		"""
+		m = Chem.MolFromMolFile(self.mol_path)
+		# m = AllChem.AssignBondOrdersFromTemplate(m, )
+		if verbose:
+			print(f"NumAtoms: {m.GetNumAtoms()}")
+		# Chem.AllChem.EmbedMolecule(m)
+
+		m = Chem.AddHs(m, addCoords=True)
+		if verbose:
+			print(f"NumAtomswithHs: {m.GetNumAtoms()}")
+		# Embed the 3D structure
+
+		# Write molecule
+		if output_dir:
+			mol_path = os.path.join(output_dir, f'{self.id}_Hs.mol')
+			out = Chem.SDWriter(mol_path)
+			out.write(m)
+			out.close()
+
+		return m
+
+
 
 
 	def draw(self, inspirations=True, protein=False, **kwargs):
@@ -372,9 +472,11 @@ class InvalidMolError(Exception):
 if __name__ == '__main__':
 	from FragFeatures.target_parser import TargetParser
 	target = TargetParser('/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac')
-	lig = Pose(target.target_dir, 'cx0294a')
+	lig = Pose(target.target_dir, 'cx0270a')
 	lig.calculate_fingerprint()
 	print(lig.duck_feature_names)
-	print(target.target_dir)
-	print(lig.protein_path)
-	print(lig.mol_path)
+	# print(target.target_dir)
+	# print(lig.protein_path)
+	# print(lig.mol_path)
+	print('\n')
+	lig.calculate_prolif_fp('/Users/nfo24278/Documents/dphil/diamond/DuCK/code/features/Protein_preparation')

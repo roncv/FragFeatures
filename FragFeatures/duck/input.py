@@ -5,11 +5,11 @@ if __name__ == '__main__':
 	# Conditional imports only when running as the main script
 	from FragFeatures.target_parser import TargetParser
 	from FragFeatures.pose import Pose
-	from utils import timeit, dict_to_json
+	from utils import timefunction, dict_to_json
 else:
 	from FragFeatures.target_parser import TargetParser
 	from FragFeatures.pose import Pose
-	from FragFeatures.utils import timeit, dict_to_json # NOTE: Necessary?
+	from FragFeatures.utils import timefunction, dict_to_json # NOTE: Necessary?
 
 import numpy as np
 import shutil
@@ -134,6 +134,7 @@ class DUckInput():
 			compound_tally += 1
 			feature_tally += len(feature_names)
 
+			# FIXME: Include ligand smiles in the compound metadata
 			self.generate_compound_metadata(compound=compound,
 									 compound_code=compound_code,
 									 compound_dir=compound_dir)

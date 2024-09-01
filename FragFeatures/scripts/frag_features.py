@@ -3,7 +3,7 @@ Console Script for FragFeatures
 """
 import argparse
 # import yaml # NOTE: PyYAML is a dependency??
-from FragFeatures.utils import timeit
+from FragFeatures.utils import timefunction
 
 
 def hello(hello_who=None):
@@ -142,7 +142,7 @@ def parse_input():
 	return args, parser
 
 
-@timeit
+@timefunction
 def main():
 	# Parse and sanitize the inputs
 	args, parser = parse_input()

@@ -3,7 +3,7 @@ Process the output directory containing results of DUck simulations for multiple
 """
 from FragFeatures.duck.feature import DUckFeature
 from FragFeatures.duck.compound import DUckCompound
-from FragFeatures.utils import timeit, dict_to_json
+from FragFeatures.utils import timefunction, dict_to_json
 
 import os
 
