@@ -79,6 +79,7 @@ class DUckInput():
 		else:
 			raise ValueError(f"Invalid compound selection: {self.compound_selection}")
 
+
 	# @timeit
 	def get_compound(self, compound_code):
 		"""
@@ -89,7 +90,16 @@ class DUckInput():
 
 		return compound
 
+
+	def prepare_experiment_prolif(self):
+		"""
+		Build & prepare a directory for the experiment with all files and inputs.
+		"""
+		pass
+
+
 	# TODO: Add parameters to deal with overwriting existing directories
+	# FIXME: Make this morre modular to allow for integration with other tools
 	# @timeit
 	def prepare_experiment(self):
 		"""

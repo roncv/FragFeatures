@@ -42,7 +42,7 @@ class ProteinPreparation:
         self.add_hydrogens(minimize=True)
 
 
-    def add_hydrogens(self, minimize=True):
+    def add_hydrogens(self, minimize=True, pH=7.8):
         """
         Add hydrogens to the protein.
         """
@@ -70,7 +70,7 @@ class ProteinPreparation:
         modeller.deleteWater()
 
         print('Adding hydrogens...')
-        modeller.addHydrogens(forcefield, pH=7.0)
+        modeller.addHydrogens(forcefield, pH=pH)
         system = forcefield.createSystem(modeller.topology, nonbondedMethod=PME)
         integrator = VerletIntegrator(0.001*picoseconds)
         simulation = Simulation(modeller.topology, system, integrator)

@@ -254,82 +254,193 @@ class Pose:
 
 
 	@timefunction
-	def calculate_prolif_fp(self, output_dir):
+	def calculate_prolif_fp(self, output_dir, rdkit_protein=False):
 		"""
 		Calculate the ProLIF fingerprint for a pose.
 		"""
 		# Add hydrogens to the protein
-		from FragFeatures.sanitisation.protein_preparation import ProteinPreparation
+		from FragFeatures.sanitisation.protein_preparation import ProteinPreparation # FIXME: Move this to the top
 
-		protein_prep = ProteinPreparation(protein_path=self.protein_path, output_dir=output_dir)
-		protein_prep.prepare_protein()
-		prepared_protein_path = protein_prep.get_prepared_protein_path()
-		# print(f'Prepared protein path: {prepared_protein_path}')
+		# Add some timing
+		import time
+		start_time = time.time()
 
-		u = mda.Universe(prepared_protein_path)
-		protein_mol = plf.Molecule.from_mda(u)
-		print(f"Number of resiudes: {protein_mol.n_residues}")
+
+		# FIXME: Uncomment this
+		# protein_prep = ProteinPreparation(protein_path=self.protein_path, output_dir=output_dir)
+		# protein_prep.prepare_protein()
+		# prepared_protein_path = protein_prep.get_prepared_protein_path()
+		# # print(f'Prepared protein path: {prepared_protein_path}')
+
+		# TEMPORARY # FIXME: Remove this
+		prepared_protein_path = '/Users/nfo24278/Documents/dphil/diamond/DuCK/code/features/prolif_testing/cx0270a_apo_prepared.pdb'
+
+		if rdkit_protein:
+			from rdkit import Chem
+			rdkit_prot = Chem.MolFromPDBFile(prepared_protein_path, removeHs=False)
+			protein_mol = plf.Molecule(rdkit_prot)
+		else:
+			u = mda.Universe(prepared_protein_path)
+			protein_mol = plf.Molecule.from_mda(u)
+
+
+		# Timing
+		mda_time = time.time()
+		print(f"\nplf protein: {mda_time - start_time:.4f} seconds")
+
+
+		print(f"\nNumber of resiudes: {protein_mol.n_residues}")
+
+		# Timing
+		prolif_time = time.time()
+		print(f"\n`plf.Molecule.from_mda(u)`: {prolif_time - mda_time:.4f} seconds")
 
 		# use default interactions
 		# fp = plf.Fingerprint()
 		# TODO: Add option to specify interactions
-		fp = plf.Fingerprint(["HBDonor", "HBAcceptor", "CationPi", "Cationic", "Anionic"])
+		# fp = plf.Fingerprint(["HBDonor", "HBAcceptor", "CationPi", "Cationic", "Anionic"])
+		fp = plf.Fingerprint() # FIXME: just for testing
+
+		# Timing
+		prolif_fp__time = time.time()
+		print(f"\n`plf.Fingerprint()`: {prolif_fp__time - prolif_time:.4f} seconds")
 
 		ligand_mol = self.ligand_preparation(output_dir=output_dir)
+
+		# Timing
+		ligand__time = time.time()
+		print(f"\n`self.ligand_preparation(output_dir=output_dir)`: {ligand__time - prolif_fp__time:.4f} seconds")
+
 		ligand = plf.Molecule.from_rdkit(ligand_mol)
+
+
+		# Timing
+		ligand_plf__time = time.time()
+		print(f"\n`plf.Molecule.from_rdkit(ligand_mol)`: {ligand_plf__time - ligand__time:.4f} seconds\n")
+
 
 		# run on your poses
 		fp.run_from_iterable([ligand], protein_mol)
 
-		# print(fp.interactions)
-		# print(fp.count)
-
-		# print(fp.ifp)
-		# print(len(fp.ifp))
-		# print(type(fp.ifp))
-		# print('\n')
-		# print(fp.ifp[0])
-		# print(type(fp.ifp[0]))
-		# print(dir(fp.ifp[0]))
-		# print('\n')
+		# Timing
+		fp_iter_time = time.time()
+		print(f"\n`fp.run_from_iterable([ligand], protein_mol)`: {fp_iter_time - ligand_plf__time:.4f} seconds")
 
 
 		print('\n')
 		# fp.ifp[0].ResidueId
 		df = fp.to_dataframe()
-		print(df.T)
+		print(f"\nPlain dataframe (.T)\n{df.T}") # TODO: Save this to a file
 
-		print(df.columns)
-		print(df.index)
-		print('\n')
-
-		# Get unique ligand IDs
-		unique_ligands = df.columns.get_level_values('ligand').T
-		print(unique_ligands)
-		# print(dir(unique_ligands[0]))
-		print('\n')
-		interaction_types = df.columns.get_level_values('interaction').T
-		print(interaction_types)
+		# NOTE: This might be the best approach
+		print(f"\nColumns\n{df.columns.tolist()}")
+		# print(dir(df.columns))
+		print(f"\nIndex\n{df.index}")
 
 
-		# Get unique protein residues
-		protein_residues = df.columns.get_level_values('protein').unique()
-		protein_residues_list = protein_residues.tolist()
-		print(protein_residues_list)
+		print('\n\nACCESSING THE DATA...\n')
+		interactions = []
+		# NOTE: This is the best way to access the data
+		for (lig_res, prot_res, interaction) in df.columns:
+			prot_res_result = fp.ifp[0][(lig_res, prot_res)]
+			if len(prot_res_result) > 1:
+				# print(f"\n{prot_res_result}")
+				# print(len(prot_res_result))
+				# Loop through all the items in the dictionary
+				# print('\niterating...')
+				for key, value in prot_res_result.items():
+					prot_res_result_i = {}
+					prot_res_result_i[key] = value
+					# print(prot_res_result_i)
+					interactions.append(prot_res_result_i)
+			else:
+				# print(f"\n{prot_res_result}")
+				# print(len(prot_res_result))
+				interactions.append(prot_res_result)
 
-		# Basically need to combine the ligand and protein residues to get the interactions
-		# Extract resids (parent_indices), distances and angles
+		print('\n\nInteractions\n')
+		# print(interactions)
 
 
-		# Dictionary to store interactions data for each ligand
-		ligand_interactions = {}
+		self.prolif_fp = interactions  # TODO: Turn this into a property
 
-		# Looping through each ligand to extract their interactions
-		for ligand in unique_ligands:
-			ligand_interactions[ligand] = df.xs(ligand, level='ligand', axis=1).T
+		test_idx = 1
 
-		print(ligand_interactions)
+		test_interaction = self.prolif_fp[test_idx]
+		print(test_interaction)
+		# Print the value of the dictionary
+		for key, value in test_interaction.items():
+			print(f"\nKey\n{key}")
+			print(value[0])
+			props = value[0]
+			parent_indices = props['parent_indices']
+			print(f"\nParent indices\n{parent_indices}")
+			ligand_idx = parent_indices['ligand']
+			protein_idx = parent_indices['protein']
 
+
+
+
+		u = mda.Universe(prepared_protein_path)
+		prot_atom = u.select_atoms(f'index {protein_idx[0]}')
+		print(f"\nProtein atom\n{prot_atom}")
+		# print(dir(prot_atom))
+		print(
+			f"\n"
+			f"Protein ChainID: {prot_atom.chainIDs[0]}\n"
+			f"Protein ResName: {prot_atom.resnames[0]}\n"
+			f"Protein ResID: {prot_atom.resids[0]}\n"
+			# f"Protein ResNums: {prot_atom.resnums[0]}\n"
+			f"Protein AtomName: {prot_atom.names[0]}\n"
+			# f"Protein Residues: {prot_atom.residues[0]}\n"
+			)
+
+		# def mol_with_atom_index(mol):
+		# 	for atom in mol.GetAtoms():
+		# 		print(atom.GetIdx(), atom.GetSymbol(), atom.GetSmarts(), atom.GetNumExplicitHs(), atom.GetFormalCharge())
+		# 		# atom.GetNeighbors()
+		# 		# print(dir(atom))
+		
+		# mol_with_atom_index(ligand_mol)
+
+
+		# # Save the highlighted molecule as image
+		highlighted_ligand_mol_filename = os.path.join(output_dir, f'{self.id}_highlighted.png')
+
+		self.draw_highlighted_mol(mol=ligand_mol, atom_indices=list(ligand_idx), filename=highlighted_ligand_mol_filename)
+
+
+		# NOTE: Maybe something useful in here - like ligand_interactions
+		# # Get unique ligand IDs
+		# all_ligands = df.columns.get_level_values('ligand').T
+		# print(f"\n\n\nLigands\n{all_ligands}")
+		# # print(dir(unique_ligands[0]))
+
+		# interaction_types = df.columns.get_level_values('interaction').T
+		# print(f"\nInteraction Types\n{interaction_types}")
+
+
+		# # Get unique protein residues
+		# protein_residues = df.columns.get_level_values('protein')
+		# protein_residues_list = protein_residues.tolist()
+		# print(f"\nProtein residues list\n{protein_residues_list}")
+
+		# # Basically need to combine the ligand and protein residues to get the interactions
+		# # Extract resids (parent_indices), distances and angles
+
+
+		# # Dictionary to store interactions data for each ligand
+		# ligand_interactions = {}
+
+		# # Looping through each ligand to extract their interactions
+		# for ligand in all_ligands:
+		# 	ligand_interactions[ligand] = df.xs(ligand, level='ligand', axis=1).T
+
+		# print(f"\nLigand Interactions\n{ligand_interactions}")
+
+		# Timing
+		end_time = time.time()
+		print(f"\n`calculate_prolif_fp` executed in {end_time - start_time:.4f} seconds")
 
 
 	@timefunction
@@ -358,6 +469,67 @@ class Pose:
 		return m
 
 
+	@timefunction
+	def draw_highlighted_mol(self, mol, atom_indices, filename=None, img_size=(400, 400), save_3d_img=True):
+		"""
+		Draw the pose's rdkit.Chem.Mol with highlighted atoms.
+		"""
+		filename3d = filename.replace('.png', '_3d.png')
+		bond_indices = []
+		for i in range(len(atom_indices)):
+			for j in range(i + 1, len(atom_indices)):
+				bond = mol.GetBondBetweenAtoms(atom_indices[i], atom_indices[j])
+				if bond is not None:
+					bond_indices.append(bond.GetIdx())
+
+		ligand_mol2d = Chem.Mol(mol) # Copy the molecule
+		ligand_mol2d.Compute2DCoords()
+
+		img = Draw.MolToImage(
+			ligand_mol2d,
+			highlightAtoms=atom_indices,
+			highlightBonds=bond_indices,
+			size=img_size
+			)
+
+		if filename:
+			img.save(filename)
+			if save_3d_img:
+				img3d = Draw.MolToImage(
+					mol,
+					highlightAtoms=atom_indices,
+					highlightBonds=bond_indices,
+					size=img_size
+					)
+				img3d.save(filename3d)
+		else:
+			img.show()
+
+
+	# TODO: Delete?
+	def draw_mol3d(self, filename=None):
+		"""
+		Draw the pose's rdkit.Chem.Mol. This is drawn considering 3D coords.
+		"""
+		if filename:
+			Draw.MolToFile(self.mol, filename)
+		else:
+			img = Draw.MolToImage(self.mol)
+			img.show()
+
+
+	# TODO: Delete?
+	def draw_mol(self, filename=None):
+		"""
+		Draw the pose's rdkit.Chem.Mol. This is drawn considering 2D coords.
+		"""
+		if filename:
+			m = MolFromSmiles(self.smiles)
+			Draw.MolToFile(m, filename)
+		else:
+			m = MolFromSmiles(self.smiles)
+			img = Draw.MolToImage(m, size=(300, 300))
+			img.show()
 
 
 	def draw(self, inspirations=True, protein=False, **kwargs):
@@ -437,31 +609,7 @@ class Pose:
 		"""Returns the pose's features"""
 		return mp.rdkit.features_from_mol(self.mol)
 	
-	def draw_mol3d(self, filename=None):
-		"""
-		Draw the pose's rdkit.Chem.Mol. This is drawn considering 3D coords.
-		"""
-		if filename:
-			Draw.MolToFile(self.mol, filename)
-		else:
-			img = Draw.MolToImage(self.mol)
-			img.show()
 
-
-	def draw_mol(self, filename=None):
-		"""
-		Draw the pose's rdkit.Chem.Mol. This is drawn considering 2D coords.
-		"""
-		if filename:
-			m = MolFromSmiles(self.smiles)
-			Draw.MolToFile(m, filename)
-		else:
-			m = MolFromSmiles(self.smiles)
-			img = Draw.MolToImage(m, size=(300, 300))
-			img.show()
-
-
-		# TODO: Add option to save this image to a file
 	# NOTE: Look into setting a path for when this is all run in a script
 
 
@@ -484,10 +632,14 @@ if __name__ == '__main__':
 	from FragFeatures.target_parser import TargetParser
 	target = TargetParser('/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac')
 	lig = Pose(target.target_dir, 'cx0270a')
-	lig.calculate_fingerprint()
-	print(lig.duck_feature_names)
+	# lig.calculate_fingerprint()
+	# print(lig.duck_feature_names)
 	# print(target.target_dir)
 	# print(lig.protein_path)
 	# print(lig.mol_path)
 	print('\n')
-	lig.calculate_prolif_fp('/Users/nfo24278/Documents/dphil/diamond/DuCK/code/features/Protein_preparation')
+	lig.calculate_prolif_fp(
+		'/Users/nfo24278/Documents/dphil/diamond/DuCK/code/features/Protein_preparation',
+		rdkit_protein=True
+		)
+	

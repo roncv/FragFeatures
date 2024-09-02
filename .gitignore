@@ -34,6 +34,8 @@ docs/_build/
 Experiment/
 */Protein_preparation/
 Protein_preparation/
+*/prolif_testing/
+prolif_testing/
 # */*_test/
 # structures/
 # structures*/
