@@ -90,12 +90,98 @@ class DUckInput():
 
 		return compound
 
+	# @timeit
+	def get_prolif_compound(self, compound_code):
+		"""
+		Return a compound's features and metadata from the given compound code.
+		"""
+		compound = Pose(self.target_dir, compound_code)
+		compound.calculate_prolif_fp()
+
+		return compound
 
 	def prepare_experiment_prolif(self):
 		"""
 		Build & prepare a directory for the experiment with all files and inputs.
 		"""
-		pass
+		# Create the experiment directory in current working directory
+		experiment_dir = Path(self.experiment_name)
+		experiment_dir.mkdir(exist_ok=True)
+
+		compound_summaries = {}
+		compound_tally = 0
+		feature_tally = 0
+
+		# Create the compound directories in the experiment directory
+		for compound_code in self.compound_codes:
+			compound_dir = experiment_dir / compound_code # TODO: Use Path
+			compound_dir.mkdir(exist_ok=True)
+
+			# Get the compound's features
+			compound = self.get_compound(compound_code) # Run calculate_fingerprint()
+
+			# Get the compound's features
+			feature_names = compound.duck_feature_names
+			expanded_features = compound.fingerprint_ext # Detailed features
+			protein_features = compound.protein_features
+			ligand_features = compound.ligand_features
+
+			# Copy necessary files from a given directory using general copy function
+			shutil.copy2(compound.protein_path, compound_dir) # protien pdb
+			shutil.copy2(compound.mol_path, compound_dir) # ligand mol
+
+			# Save the compound object to a pickle file using pickle library
+			with open(f'{compound_dir}/{compound_code}_compound.pkl', 'wb') as f:
+				pickle.dump(compound, f)
+
+			compound_summaries[compound_code] = {
+				'protein_path': compound.protein_path,
+				'ligand_path': compound.mol_path,
+				'features': feature_names,
+				'num_features': len(feature_names)
+			}
+			compound_tally += 1
+			feature_tally += len(feature_names)
+
+			# FIXME: Include ligand smiles in the compound metadata
+			self.generate_compound_metadata(compound=compound,
+									 compound_code=compound_code,
+									 compound_dir=compound_dir)
+			# TODO: Include warning of multiple ligand features
+			# Create subdirectories for the features
+			# TODO: Check if the feature directories already exist and contain simulation data
+			# FIXME: Figure out a new naming scheme for the feature directories
+			for (feature,feature_e, prot_feat, lig_feat) in zip(feature_names,
+													   expanded_features,
+													   protein_features,
+													   ligand_features):
+				feature_dir = compound_dir / feature
+				# print(f"Creating feature directory: {feature_dir}")
+				feature_dir.mkdir(exist_ok=True)
+
+				# Generate the input for DUck simulation
+				self.generate_duck_input(compound_code=compound_code,
+							 feature=feature,
+							 protein_pdb_path=f'../{compound_code}_apo.pdb',
+							 ligand_mol_path=f'../{compound_code}_ligand.mol',
+							 output_dir=feature_dir
+							 )
+
+				self.generate_feature_metadata(feature=feature,
+								   expanded_feature=feature_e,
+								   protein_feature=prot_feat,
+								   ligand_features=lig_feat,
+								   output_dir=feature_dir
+								   )
+
+		# Generate metadata for the experiment
+		# TODO: Create a large tsv with a summary of all the features
+		dict_to_json(compound_summaries, f'{experiment_dir}/compound_summaries.json')
+		tallies = {
+			'num_compounds': compound_tally,
+			'num_features': feature_tally
+		}
+		dict_to_json(tallies, f'{experiment_dir}/tallies.json')
 
 
 	# TODO: Add parameters to deal with overwriting existing directories

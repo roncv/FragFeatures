@@ -360,6 +360,7 @@ class Pose:
 
 		print('\n\nInteractions\n')
 		# print(interactions)
+		print(f"\nNumber of interactions: {len(interactions)}")
 
 
 		self.prolif_fp = interactions  # TODO: Turn this into a property
@@ -369,6 +370,7 @@ class Pose:
 		test_interaction = self.prolif_fp[test_idx]
 		print(test_interaction)
 		# Print the value of the dictionary
+		duck_feature_names = []
 		for key, value in test_interaction.items():
 			print(f"\nKey\n{key}")
 			print(value[0])
@@ -377,6 +379,18 @@ class Pose:
 			print(f"\nParent indices\n{parent_indices}")
 			ligand_idx = parent_indices['ligand']
 			protein_idx = parent_indices['protein']
+
+		print("\n\n\nLoop...")
+		# Loop through the interactions
+		for interaction in self.prolif_fp:
+			print(f"\n{interaction}")
+			for key, value in interaction.items():
+				print(f"Key: {key}")
+				print(value[0])
+				props = value[0]
+				parent_indices = props['parent_indices']
+				ligand_idx = parent_indices['ligand']
+				protein_idx = parent_indices['protein']
 
 
 
@@ -444,7 +458,7 @@ class Pose:
 
 
 	@timefunction
-	def ligand_preparation(self, verbose=False, output_dir=None):
+	def ligand_preparation(self, output_dir=None, verbose=False):
 		"""
 		Prepare the ligand for featrure analysis.
 		"""
