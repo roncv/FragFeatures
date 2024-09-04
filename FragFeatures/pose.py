@@ -275,6 +275,7 @@ class Pose:
 			)
 		protein_prep.prepare_protein()
 		prepared_protein_path = protein_prep.get_prepared_protein_path()
+		self.protein_termini = protein_prep.termini
 		self.prepared_protein_path = prepared_protein_path
 		# print(f'Prepared protein path: {prepared_protein_path}')
 

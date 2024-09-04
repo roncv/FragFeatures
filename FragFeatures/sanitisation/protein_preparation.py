@@ -40,6 +40,7 @@ class ProteinPreparation:
 		self.protein_output_path = os.path.join(self.output_dir, os.path.basename(self.protein_path))
 		self.minimize = minimize
 		self.pH = pH
+		self.termini = True
 		self.verbose = verbose
 		self.verbose_l2 = verbose_l2
 
@@ -113,6 +114,7 @@ class ProteinPreparation:
 			if self.verbose_l2:
 				print(f"\nResIdxs Cut:\n{openmm_resids_cut}\n")
 			modeller.addHydrogens(forcefield, pH=pH)
+			self.termini = False
 
 		system = forcefield.createSystem(modeller.topology, nonbondedMethod=PME)
 		integrator = VerletIntegrator(0.001*picoseconds)

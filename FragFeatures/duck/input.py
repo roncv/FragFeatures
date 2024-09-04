@@ -434,6 +434,7 @@ class DUckInput():
 			'compound_code': compound_code,
 			'protein': compound.protein_path,
 			'prepared_protein': compound.prepared_protein_path,
+			'termini_present': compound.protein_termini,
 			'ligand': compound.mol_path,
 			'prepared_ligand': compound.prepared_ligand_path,
 			'SMILES': compound.smiles,
