@@ -23,6 +23,8 @@ requirements = [
     # 'rdkit',
     # 'molparse',
     # 'pandas',
+    # 'openmm',
+    # 'prolif',
 	]
 
 # TODO: Add long description linked to README.md

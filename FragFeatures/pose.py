@@ -3,17 +3,15 @@ Main script for extracting compound/fragment fingerprints.
 
 Inspired by https://github.com/mwinokan/HIPPO
 """
-if __name__ == '__main__':
-	# Conditional imports only when running as the main script
-	from FragFeatures.core.tools import sanitise_mol
-	from FragFeatures.utils import timefunction
-else:
-	from FragFeatures.core.tools import sanitise_mol
-	from FragFeatures.utils import timefunction
+from FragFeatures.core.tools import sanitise_mol
+from FragFeatures.utils import timefunction
+from FragFeatures.prolif_feature import PLFeature
+from FragFeatures.sanitisation.protein_preparation import ProteinPreparation
 
 # TODO: Rename this to ...
 
 import os
+import time
 import molparse as mp
 # from molparse.rdkit.features import FEATURE_FAMILIES, COMPLEMENTARY_FEATURES
 from molparse.rdkit import draw_mols
@@ -77,7 +75,7 @@ class Pose:
 	"""
 	Represents a pose of a compound in a target.
 	"""
-	def __init__(self, target_dir, compound_code, interaction_types="hbonds+"):
+	def __init__(self, target_dir, compound_code, interaction_types="hbonds+", verbose=False, verbose_l2=False):
 		self.target_dir = target_dir
 		self.compound_code = compound_code
 		self.id = compound_code # TODO: for now: what is the id for a pose? Ask Max
@@ -86,6 +84,8 @@ class Pose:
 		self.smi_path = f'{target_dir}/aligned_files/{compound_code}/{compound_code}_ligand.smi'
 		self.protein_system = mp.parse(self.protein_path, verbosity=False).protein_system
 		self.feature_families, self.complementary_features, self.ligand_families = self.define_interaction_types(interaction_types)
+		self.verbose = verbose
+		self.verbose_l2 = verbose_l2
 
 		# self.complex_system = None
 		# self.reference = None
@@ -141,7 +141,7 @@ class Pose:
 		return updated_feature_families, updated_complementary_features, ligand_families
 
 	@timefunction
-	def calculate_fingerprint(self, verbose=False):
+	def calculate_fingerprint(self):
 		"""Calculate the pose's interaction fingerprint"""
 		#FIXME: Get this working with the protonoted ligand and protein
 		# TODO: Add some error handling, type checking, and logging
@@ -247,7 +247,7 @@ class Pose:
 
 		print(f'Number of features: {len(dense_fingerprint.items())}\n')
 
-		if verbose:
+		if self.verbose:
 			# Print the fingerprint
 			print(f"\nFingerprint\n-----------\n{dense_fingerprint_str}")
 			print(f"\nDense Fingerprint\n-----------------\n{dense_fingerprint_ext_str}\n")
@@ -259,169 +259,110 @@ class Pose:
 		Calculate the ProLIF fingerprint for a pose.
 		"""
 		# Add hydrogens to the protein
-		from FragFeatures.sanitisation.protein_preparation import ProteinPreparation # FIXME: Move this to the top
+		if self.verbose:
+			print(f"\nCalculating ProLIF fingerprint for {self.compound_code}...")
+			print(f"\nProtein path: {self.protein_path}")
+			print(f"\nLigand path: {self.mol_path}")
 
-		# Add some timing
-		import time
-		start_time = time.time()
+		protein_prep = ProteinPreparation(
+			protein_path=self.protein_path,
+			output_dir=output_dir,
+			protein_id=self.compound_code,
+			minimize=True,
+			pH=7.8,
+			verbose=self.verbose,
+			verbose_l2=self.verbose_l2
+			)
+		protein_prep.prepare_protein()
+		prepared_protein_path = protein_prep.get_prepared_protein_path()
+		self.prepared_protein_path = prepared_protein_path
+		# print(f'Prepared protein path: {prepared_protein_path}')
 
-
-		# FIXME: Uncomment this
-		# protein_prep = ProteinPreparation(protein_path=self.protein_path, output_dir=output_dir)
-		# protein_prep.prepare_protein()
-		# prepared_protein_path = protein_prep.get_prepared_protein_path()
-		# # print(f'Prepared protein path: {prepared_protein_path}')
-
-		# TEMPORARY # FIXME: Remove this
-		prepared_protein_path = '/Users/nfo24278/Documents/dphil/diamond/DuCK/code/features/prolif_testing/cx0270a_apo_prepared.pdb'
+		# # TEMPORARY # FIXME: Remove this
+		# prepared_protein_path = '/Users/nfo24278/Documents/dphil/diamond/DuCK/code/features/prolif_testing/cx0270a_apo_prepared.pdb'
 
 		if rdkit_protein:
-			from rdkit import Chem
 			rdkit_prot = Chem.MolFromPDBFile(prepared_protein_path, removeHs=False)
 			protein_mol = plf.Molecule(rdkit_prot)
 		else:
 			u = mda.Universe(prepared_protein_path)
 			protein_mol = plf.Molecule.from_mda(u)
 
-
-		# Timing
-		mda_time = time.time()
-		print(f"\nplf protein: {mda_time - start_time:.4f} seconds")
-
-
-		print(f"\nNumber of resiudes: {protein_mol.n_residues}")
-
-		# Timing
-		prolif_time = time.time()
-		print(f"\n`plf.Molecule.from_mda(u)`: {prolif_time - mda_time:.4f} seconds")
-
 		# use default interactions
 		# fp = plf.Fingerprint()
-		# TODO: Add option to specify interactions
+		# FIXME: Add option to specify interactions
 		# fp = plf.Fingerprint(["HBDonor", "HBAcceptor", "CationPi", "Cationic", "Anionic"])
 		fp = plf.Fingerprint() # FIXME: just for testing
 
-		# Timing
-		prolif_fp__time = time.time()
-		print(f"\n`plf.Fingerprint()`: {prolif_fp__time - prolif_time:.4f} seconds")
+		self.plf_fp_obj = fp
 
-		ligand_mol = self.ligand_preparation(output_dir=output_dir)
+		# FIXME: Make sure ligand path is updated
+		# FIXME: Make this a property
+		self.ligand_mol = self.ligand_preparation(output_dir=output_dir)
+		ligand = plf.Molecule.from_rdkit(self.ligand_mol)
 
-		# Timing
-		ligand__time = time.time()
-		print(f"\n`self.ligand_preparation(output_dir=output_dir)`: {ligand__time - prolif_fp__time:.4f} seconds")
+		fp.run_from_iterable([ligand], protein_mol)  # get fingerprint
 
-		ligand = plf.Molecule.from_rdkit(ligand_mol)
-
-
-		# Timing
-		ligand_plf__time = time.time()
-		print(f"\n`plf.Molecule.from_rdkit(ligand_mol)`: {ligand_plf__time - ligand__time:.4f} seconds\n")
-
-
-		# run on your poses
-		fp.run_from_iterable([ligand], protein_mol)
-
-		# Timing
-		fp_iter_time = time.time()
-		print(f"\n`fp.run_from_iterable([ligand], protein_mol)`: {fp_iter_time - ligand_plf__time:.4f} seconds")
-
-
-		print('\n')
-		# fp.ifp[0].ResidueId
 		df = fp.to_dataframe()
-		print(f"\nPlain dataframe (.T)\n{df.T}") # TODO: Save this to a file
 
-		# NOTE: This might be the best approach
-		print(f"\nColumns\n{df.columns.tolist()}")
-		# print(dir(df.columns))
-		print(f"\nIndex\n{df.index}")
+		if self.verbose:
+			print(f"\nProLIF Interactions Dataframe\n\n{df.T}\n")  # TODO: Save this to a file
 
-
-		print('\n\nACCESSING THE DATA...\n')
-		interactions = []
-		# NOTE: This is the best way to access the data
+		# ProLIF only identifies using ligand and protein residues
+		res_lig_interactions = []
 		for (lig_res, prot_res, interaction) in df.columns:
 			prot_res_result = fp.ifp[0][(lig_res, prot_res)]
+			res_lig_interactions.append((lig_res, prot_res))
+		# Remove duplicates
+		unique_res_lig_interactions = list(set(res_lig_interactions))
+
+		self.number_of_interactions_plf = len(df.columns)
+		self.plf_fp_keys = unique_res_lig_interactions
+
+		if self.verbose:
+			print(f"\nNumber of interactions: {self.number_of_interactions_plf}")
+			print(f"\nPLF FP Keys\n\n{self.plf_fp_keys}\n\n")
+
+		interactions = []
+		for (lig_res, prot_res) in self.plf_fp_keys:
+			prot_res_result = fp.ifp[0][(lig_res, prot_res)] # access the interaction
 			if len(prot_res_result) > 1:
-				# print(f"\n{prot_res_result}")
-				# print(len(prot_res_result))
-				# Loop through all the items in the dictionary
-				# print('\niterating...')
 				for key, value in prot_res_result.items():
 					prot_res_result_i = {}
 					prot_res_result_i[key] = value
 					# print(prot_res_result_i)
 					interactions.append(prot_res_result_i)
 			else:
-				# print(f"\n{prot_res_result}")
-				# print(len(prot_res_result))
 				interactions.append(prot_res_result)
 
-		print('\n\nInteractions\n')
-		# print(interactions)
-		print(f"\nNumber of interactions: {len(interactions)}")
+		# This is a list of dictionaries, each being a single interaction
+		self.plf_fp = interactions  # TODO: Turn this into a property
 
-
-		self.prolif_fp = interactions  # TODO: Turn this into a property
-
-		test_idx = 1
-
-		test_interaction = self.prolif_fp[test_idx]
-		print(test_interaction)
-		# Print the value of the dictionary
-		duck_feature_names = []
-		for key, value in test_interaction.items():
-			print(f"\nKey\n{key}")
-			print(value[0])
-			props = value[0]
-			parent_indices = props['parent_indices']
-			print(f"\nParent indices\n{parent_indices}")
-			ligand_idx = parent_indices['ligand']
-			protein_idx = parent_indices['protein']
-
-		print("\n\n\nLoop...")
-		# Loop through the interactions
-		for interaction in self.prolif_fp:
-			print(f"\n{interaction}")
-			for key, value in interaction.items():
-				print(f"Key: {key}")
-				print(value[0])
-				props = value[0]
-				parent_indices = props['parent_indices']
-				ligand_idx = parent_indices['ligand']
-				protein_idx = parent_indices['protein']
-
-
-
+		if self.verbose:
+			print(f"Extracting metadata from {self.number_of_interactions_plf} features...")
 
 		u = mda.Universe(prepared_protein_path)
-		prot_atom = u.select_atoms(f'index {protein_idx[0]}')
-		print(f"\nProtein atom\n{prot_atom}")
-		# print(dir(prot_atom))
-		print(
-			f"\n"
-			f"Protein ChainID: {prot_atom.chainIDs[0]}\n"
-			f"Protein ResName: {prot_atom.resnames[0]}\n"
-			f"Protein ResID: {prot_atom.resids[0]}\n"
-			# f"Protein ResNums: {prot_atom.resnums[0]}\n"
-			f"Protein AtomName: {prot_atom.names[0]}\n"
-			# f"Protein Residues: {prot_atom.residues[0]}\n"
-			)
+		duck_feature_names = []
+		plf_feature_objs = []
+		for feature in self.plf_fp:
+			plf_feature = PLFeature(
+				universe=u,
+				mol=self.ligand_mol,
+				prolif_feature=feature, 
+				verbose=self.verbose,
+				verbose_l2=self.verbose_l2
+				)
+			duck_feature_name = plf_feature.duck_feature_name
 
-		# def mol_with_atom_index(mol):
-		# 	for atom in mol.GetAtoms():
-		# 		print(atom.GetIdx(), atom.GetSymbol(), atom.GetSmarts(), atom.GetNumExplicitHs(), atom.GetFormalCharge())
-		# 		# atom.GetNeighbors()
-		# 		# print(dir(atom))
-		
-		# mol_with_atom_index(ligand_mol)
+			duck_feature_names.append(duck_feature_name)
+			plf_feature_objs.append(plf_feature)
 
+		self.duck_feature_names_plf = duck_feature_names
+		self.plf_feature_objs = plf_feature_objs
 
-		# # Save the highlighted molecule as image
-		highlighted_ligand_mol_filename = os.path.join(output_dir, f'{self.id}_highlighted.png')
+		if self.verbose:
+			print(f"\nDUck feature names:\n{duck_feature_names}")
 
-		self.draw_highlighted_mol(mol=ligand_mol, atom_indices=list(ligand_idx), filename=highlighted_ligand_mol_filename)
 
 
 		# NOTE: Maybe something useful in here - like ligand_interactions
@@ -452,30 +393,43 @@ class Pose:
 
 		# print(f"\nLigand Interactions\n{ligand_interactions}")
 
-		# Timing
-		end_time = time.time()
-		print(f"\n`calculate_prolif_fp` executed in {end_time - start_time:.4f} seconds")
 
 
-	@timefunction
-	def ligand_preparation(self, output_dir=None, verbose=False):
+	def get_interactive_ligand_network(self, fp, output_dir):
+		"""Return the interactive protein-ligand interaction network plot for the pose"""
+		# Get interactive protein-ligand network plot
+		fp.plot_lignetwork(self.ligand_mol, kind="frame", frame=0)
+		network_plot = fp.plot_lignetwork(self.ligand_mol, kind="frame", frame=0)
+
+		# Assuming 'output_dir' is your directory path where you want to save the HTML file
+		html_file_path = os.path.join(output_dir, f"{self.compound_code}_interactive_plot.html")
+
+		with open(html_file_path, 'w') as file:
+			file.write(network_plot.data)  # Assuming 'data' contains the HTML content
+
+
+	def ligand_preparation(self, output_dir=None):
 		"""
 		Prepare the ligand for featrure analysis.
 		"""
 		m = Chem.MolFromMolFile(self.mol_path)
+		self.smiles = Chem.MolToSmiles(m)
+
 		# m = AllChem.AssignBondOrdersFromTemplate(m, )
-		if verbose:
-			print(f"NumAtoms: {m.GetNumAtoms()}")
+
+		if self.verbose_l2:
+			print(f"\n{self.compound_code} NumAtoms: {m.GetNumAtoms()}")
 		# Chem.AllChem.EmbedMolecule(m)
 
 		m = Chem.AddHs(m, addCoords=True)
-		if verbose:
-			print(f"NumAtomswithHs: {m.GetNumAtoms()}")
+		if self.verbose_l2:
+			print(f"{self.compound_code} NumAtomswithHs: {m.GetNumAtoms()}\n")
 		# Embed the 3D structure
 
 		# Write molecule
 		if output_dir:
 			mol_path = os.path.join(output_dir, f'{self.id}_Hs.mol')
+			self.prepared_ligand_path = mol_path
 			out = Chem.SDWriter(mol_path)
 			out.write(m)
 			out.close()
@@ -483,8 +437,7 @@ class Pose:
 		return m
 
 
-	@timefunction
-	def draw_highlighted_mol(self, mol, atom_indices, filename=None, img_size=(400, 400), save_3d_img=True):
+	def draw_highlighted_mol(self, atom_indices, filename=None, img_size=(400, 400), save_3d_img=True):
 		"""
 		Draw the pose's rdkit.Chem.Mol with highlighted atoms.
 		"""
@@ -492,11 +445,11 @@ class Pose:
 		bond_indices = []
 		for i in range(len(atom_indices)):
 			for j in range(i + 1, len(atom_indices)):
-				bond = mol.GetBondBetweenAtoms(atom_indices[i], atom_indices[j])
+				bond = self.ligand_mol.GetBondBetweenAtoms(atom_indices[i], atom_indices[j])
 				if bond is not None:
 					bond_indices.append(bond.GetIdx())
 
-		ligand_mol2d = Chem.Mol(mol) # Copy the molecule
+		ligand_mol2d = Chem.Mol(self.ligand_mol) # Copy the molecule
 		ligand_mol2d.Compute2DCoords()
 
 		img = Draw.MolToImage(
@@ -510,7 +463,7 @@ class Pose:
 			img.save(filename)
 			if save_3d_img:
 				img3d = Draw.MolToImage(
-					mol,
+					self.ligand_mol,
 					highlightAtoms=atom_indices,
 					highlightBonds=bond_indices,
 					size=img_size
@@ -580,11 +533,11 @@ class Pose:
 		return [v[1] for v in self.fingerprint_ext.values()]
 
 
-	@property
-	def smiles(self):
-		"""Return the pose's SMILES"""
-		with open(self.smi_path, 'r') as f:
-			return f.read().strip()
+	# @property
+	# def smiles(self):
+	# 	"""Return the pose's SMILES"""
+	# 	with open(self.smi_path, 'r') as f:
+	# 		return f.read().strip()
 
 
 	@property
@@ -592,7 +545,9 @@ class Pose:
 		"""Returns a pose's rdkit.Chem.Mol"""
 		if not self._mol:
 			if self.mol_path.endswith('.mol'):
-				logger.reading(self.mol_path)
+				if self.verbose:
+					print("")
+					logger.reading(self.mol_path)
 				mol = mp.parse(self.mol_path, verbosity=False)
 
 				if not mol:
@@ -654,6 +609,7 @@ if __name__ == '__main__':
 	print('\n')
 	lig.calculate_prolif_fp(
 		'/Users/nfo24278/Documents/dphil/diamond/DuCK/code/features/Protein_preparation',
-		rdkit_protein=True
+		rdkit_protein=True,
+		verbose=True
 		)
 	
