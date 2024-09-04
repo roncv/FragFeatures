@@ -12,6 +12,7 @@ from contextlib import redirect_stdout
 import io
 from pathlib import Path
 import pickle
+import os
 
 import logging
 logger = logging.getLogger('FragFeatures')
@@ -110,9 +111,13 @@ class DUckInput():
 			verbose=self.verbose, 
 			verbose_l2=self.verbose_l2
 			)
-		compound.calculate_prolif_fp(
-			output_dir=output_dir
-			)
+		try:
+			compound.calculate_prolif_fp(
+				output_dir=output_dir
+				)
+		except:
+			logger.error(f"Error calculating {compound_code} fingerprint")
+			raise ValueError(f"Error getting {compound_code} fingerprint.")
 
 		return compound
 
@@ -127,20 +132,40 @@ class DUckInput():
 
 		compound_summaries = {}
 		interaction_types_summary = {}
+		compound_fails = []
 		compound_tally = 0
 		feature_tally = 0
+		dud_tally = 0
 
 		# Create the compound directories in the experiment directory
 		for compound_code in self.compound_codes:
 			print(f"\nPreparing {compound_code}...\n")
-			compound_dir = experiment_dir / compound_code # TODO: Use Path
-			compound_dir.mkdir(exist_ok=True)
+			compound_dir = os.path.join(experiment_dir, compound_code) # TODO: Use Path
+
+			# Check if the compound directory already exists
+			if os.path.exists(compound_dir):
+				metadata_file = os.path.join(compound_dir, f'{compound_code}_metadata.json')
+				if os.path.exists(metadata_file):
+					print(f"Skipping {compound_code} as the directory already exists.")
+					continue
+				else:
+					# Remove the directory if it exists but doesn't contain metadata
+					shutil.rmtree(compound_dir)
+					os.makedirs(compound_dir, exist_ok=True)
+			else:
+				os.makedirs(compound_dir, exist_ok=True)
 
 			# Get the compound's features
-			compound = self.get_prolif_compound(
-				compound_code,
-				output_dir=compound_dir
-				)
+			try:
+				compound = self.get_prolif_compound(
+					compound_code,
+					output_dir=compound_dir
+					)
+			except:
+				logger.error(f"Error getting {compound_code}'s Pose object")
+				compound_fails.append(compound_code)
+				dud_tally += 1
+				continue
 
 			# Get the compound's features
 			feature_names = compound.duck_feature_names_plf
@@ -165,15 +190,13 @@ class DUckInput():
 			compound_tally += 1
 			feature_tally += len(feature_names)
 
-			self.generate_compound_mdata_plf(
-				compound=compound,
-				compound_code=compound_code,
-				compound_dir=compound_dir
-				)
-
-			compound.get_interactive_ligand_network(
-				compound.plf_fp_obj, 
-				output_dir=compound_dir)
+			try:
+				compound.get_interactive_ligand_network(
+					compound.plf_fp_obj, 
+					output_dir=compound_dir
+					)
+			except:
+				pass
 
 			# TODO: Include warning of multiple ligand features
 			# TODO: Check if the feature directories already exist and contain simulation data
@@ -183,12 +206,12 @@ class DUckInput():
 				interaction_types_summary[feature_obj.interaction_type] = interaction_types_summary.get(feature_obj.interaction_type, 0) + 1
 
 				feature_dirname = f"{feature_name}_{feature_obj.interaction_type}"
-				feature_dir = compound_dir / feature_dirname
+				feature_dir = os.path.join(compound_dir, feature_dirname)
 				if self.verbose:
 					print("...")
 					if self.verbose_l2:
 						print(f"\nCreating feature directory: {feature_dir}\n")
-				feature_dir.mkdir(exist_ok=True)
+				os.makedirs(feature_dir, exist_ok=True)
 
 				# # Save the feature object to a pickle file using pickle library
 				# with open(f'{feature_dir}/{feature_name}_PLFeature_obj.pkl', 'wb') as f:
@@ -214,13 +237,25 @@ class DUckInput():
 					atom_indices=list(feature_obj.ligand_indices),
 					filename=f'{feature_dir}/{compound_code}_{feature_name}_highlighted.png'
 					)
+				
+			# Compound metadata
+			self.generate_compound_mdata_plf(
+				compound=compound,
+				compound_code=compound_code,
+				compound_dir=compound_dir
+				)
+
+		# Check if the metadata files exist and iteratjvely create new numbered versions
+
 
 		# Generate metadata for the experiment
 		# TODO: Create a large tsv with a summary of all the features
 		dict_to_json(compound_summaries, f'{experiment_dir}/compound_summaries.json')
 		tallies = {
 			'num_compounds': compound_tally,
-			'num_features': feature_tally
+			'num_features': feature_tally,
+			'dud_tally': dud_tally,
+			'compound_fails': compound_fails
 		}
 		dict_to_json(tallies, f'{experiment_dir}/tallies.json')
 		dict_to_json(interaction_types_summary, f'{experiment_dir}/interaction_types_summary.json')
@@ -526,10 +561,13 @@ if __name__ == '__main__':
 
 	duck_input = DUckInput(
 		# compound_selection=['cx0270a', 'cx0281a', 'cx0756c', 'cx0858a'],
-		compound_selection=['cx1091b'], # issues with termini
+		# compound_selection=['cx1091b'], # issues with termini
 		# compound_selection=['cx0270a'],
-		# compound_selection='all',
-		experiment_name='Experiment2',
+		# compound_selection=['cx1103b'], # issues with lignetwork - no ligand features
+		# compound_selection=['cx1151e'], # issues with plf.from_mda
+		# compound_selection=['cx1183a'], # Explicit valence for atom # 1239 H, 2
+		compound_selection='all',
+		experiment_name='Experiment',
 		target_dir='/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac',
 		verbose=True,
 		verbose_l2=True

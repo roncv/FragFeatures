@@ -254,7 +254,7 @@ class Pose:
 
 
 	@timefunction
-	def calculate_prolif_fp(self, output_dir, rdkit_protein=False):
+	def calculate_prolif_fp(self, output_dir, rdkit_protein=True):
 		"""
 		Calculate the ProLIF fingerprint for a pose.
 		"""
@@ -283,8 +283,13 @@ class Pose:
 		# prepared_protein_path = '/Users/nfo24278/Documents/dphil/diamond/DuCK/code/features/prolif_testing/cx0270a_apo_prepared.pdb'
 
 		if rdkit_protein:
-			rdkit_prot = Chem.MolFromPDBFile(prepared_protein_path, removeHs=False)
-			protein_mol = plf.Molecule(rdkit_prot)
+			try:
+				rdkit_prot = Chem.MolFromPDBFile(prepared_protein_path, removeHs=False)
+				protein_mol = plf.Molecule(rdkit_prot)
+			except:
+				logger.warning(f"Could not load protein from {prepared_protein_path} using RDKit. Falling back to MDAnalysis.")
+				u = mda.Universe(prepared_protein_path)
+				protein_mol = plf.Molecule.from_mda(u)
 		else:
 			u = mda.Universe(prepared_protein_path)
 			protein_mol = plf.Molecule.from_mda(u)

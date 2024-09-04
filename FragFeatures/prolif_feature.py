@@ -168,10 +168,12 @@ class PLFeature():
 
 		# SMARTS for the selected substructure
 		atom_indices = list(self.ligand_indices)
-		submol = rdmolops.PathToSubmol(self.mol, atom_indices)
-		sub_smarts = Chem.MolToSmarts(submol)
-		self.smarts_substructure = sub_smarts
-
+		try:
+			submol = rdmolops.PathToSubmol(self.mol, atom_indices)
+			sub_smarts = Chem.MolToSmarts(submol)
+			self.smarts_substructure = sub_smarts
+		except:
+			self.smarts_substructure = None
 
 	def get_duck_feature_name(self):
 		"""
