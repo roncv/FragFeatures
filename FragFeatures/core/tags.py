@@ -3,164 +3,164 @@ from collections.abc import MutableSet
 
 # FIXME: This module is not used in the current version of the codebase
 
+
 class TagTable:
-	"""Object representing the 'tag' table in the :class:`.Database`."""
+    """Object representing the 'tag' table in the :class:`.Database`."""
 
-	def __init__(self, 
-		db, 
-		table: str = 'tag',
-	) -> None:
-		
-		self._db = db
-		self._table = table
+    def __init__(
+        self,
+        db,
+        table: str = "tag",
+    ) -> None:
+        self._db = db
+        self._table = table
 
-	### FACTORIES
+    ### FACTORIES
 
-	### PROPERTIES
+    ### PROPERTIES
 
-	@property
-	def db(self):
-		"""Returns the associated :class:`.database`"""
-		return self._db
-	
-	@property
-	def table(self) -> str:
-		return self._table
+    @property
+    def db(self):
+        """Returns the associated :class:`.database`"""
+        return self._db
 
-	@property
-	def unique(self) -> set:
-		"""Returns a set of tag names contained in the table"""
-		values = self.db.select(table=self.table, query='DISTINCT tag_name', multiple=True)
-		return set(v for v, in values)
+    @property
+    def table(self) -> str:
+        return self._table
 
-	### METHODS
+    @property
+    def unique(self) -> set:
+        """Returns a set of tag names contained in the table"""
+        values = self.db.select(
+            table=self.table, query="DISTINCT tag_name", multiple=True
+        )
+        return set(v for (v,) in values)
 
-	### DUNDERS
+    ### METHODS
 
-	def __getitem__(self, key):
-		raise NotImplementedError
+    ### DUNDERS
 
+    def __getitem__(self, key):
+        raise NotImplementedError
 
 
 class TagSet(MutableSet):
-	"""Object representing a subset of the 'tag' table in the :class:`.Database` belonging to a certain :class:`.Compound` or :class:`.Pose`."""
+    """Object representing a subset of the 'tag' table in the :class:`.Database` belonging to a certain :class:`.Compound` or :class:`.Pose`."""
 
-	def __init__(self, 
-		parent, # Compound or Pose
-		tags=(), 
-		immutable=False,
-		commit=True,
-	):
-		
-		self._elements = []
-		self._immutable = immutable
-		self._parent = parent
+    def __init__(
+        self,
+        parent,  # Compound or Pose
+        tags=(),
+        immutable=False,
+        commit=True,
+    ):
+        self._elements = []
+        self._immutable = immutable
+        self._parent = parent
 
-		for tag in tags:
-			self.add(tag, commit=commit)
-		
-	### FACTORIES
+        for tag in tags:
+            self.add(tag, commit=commit)
 
-	### PROPERTIES
+    ### FACTORIES
 
-	@property
-	def tags(self) -> list:
-		"""Returns the elements in this set"""
-		return self._elements
+    ### PROPERTIES
 
-	@property
-	def immutable(self):
-		"""Returns whether this set is immutable"""
-		return self._immutable
-	
-	@immutable.setter
-	def immutable(self,b):
-		self._immutable = b
+    @property
+    def tags(self) -> list:
+        """Returns the elements in this set"""
+        return self._elements
 
-	@property
-	def parent(self):
-		"""Returns this set of tags parent :class:`.Compound` or :class:`.Pose`."""
-		return self._parent
+    @property
+    def immutable(self):
+        """Returns whether this set is immutable"""
+        return self._immutable
 
-	@property
-	def db(self):
-		"""Returns the associated :class:`.database`"""
-		return self.parent.db
-	
+    @immutable.setter
+    def immutable(self, b):
+        self._immutable = b
 
-	
-	### DATABASE
+    @property
+    def parent(self):
+        """Returns this set of tags parent :class:`.Compound` or :class:`.Pose`."""
+        return self._parent
 
-	def _remove_tag_from_db(self, tag):
-		sql = f'DELETE FROM tag WHERE tag_name="{tag}" AND tag_{self.parent.table}={self.parent.id}'
-		self.db.execute(sql)
+    @property
+    def db(self):
+        """Returns the associated :class:`.database`"""
+        return self.parent.db
 
-	def _clear_tags_from_db(self, tag):
-		sql = f'DELETE FROM tag WHERE tag_{self.parent.table}={self.parent.id}'
-		self.db.execute(sql)
+    ### DATABASE
 
-	def _add_tag_to_db(self, tag, commit=True):
-		payload = { 'name':tag, self.parent.table:self.parent.id }
-		self.db.insert_tag(**payload, commit=commit)
-			
+    def _remove_tag_from_db(self, tag):
+        sql = f'DELETE FROM tag WHERE tag_name="{tag}" AND tag_{self.parent.table}={self.parent.id}'
+        self.db.execute(sql)
 
-	### METHODS
+    def _clear_tags_from_db(self, tag):
+        sql = f"DELETE FROM tag WHERE tag_{self.parent.table}={self.parent.id}"
+        self.db.execute(sql)
 
-	def pop(self):
-		"""Pop the last element"""
-		assert not self.immutable
-		return self._elements.pop()
+    def _add_tag_to_db(self, tag, commit=True):
+        payload = {"name": tag, self.parent.table: self.parent.id}
+        self.db.insert_tag(**payload, commit=commit)
 
-	def discard(self, tag):
-		"""Discard an element"""
-		return self.discard(tag)
+    ### METHODS
 
-	def clear(self):
-		"""Clear all tags"""
-		self._elements = []
-		self._clear_tags_from_db(self)
+    def pop(self):
+        """Pop the last element"""
+        assert not self.immutable
+        return self._elements.pop()
 
-	def remove(self, tag):
-		"""Remove an element"""
-		assert not self.immutable
-		if tag in self:
-			i = self._elements.index(tag)
-			del self._elements[i]
-			self._remove_tag_from_db(tag)
-		else:
-			raise ValueError(f'{tag} not in {self}')
+    def discard(self, tag):
+        """Discard an element"""
+        return self.discard(tag)
 
-	def add(self, tag, commit=True):
-		"""Add an element"""
-		assert not self.immutable
-		if tag not in self._elements:
-			self._elements.append(tag)
-			self._add_tag_to_db(tag, commit=commit)
+    def clear(self):
+        """Clear all tags"""
+        self._elements = []
+        self._clear_tags_from_db(self)
 
-	def glob(self, pattern):
-		import fnmatch
-		return fnmatch.filter(self.tags, pattern)
+    def remove(self, tag):
+        """Remove an element"""
+        assert not self.immutable
+        if tag in self:
+            i = self._elements.index(tag)
+            del self._elements[i]
+            self._remove_tag_from_db(tag)
+        else:
+            raise ValueError(f"{tag} not in {self}")
 
-	### DUNDERS
+    def add(self, tag, commit=True):
+        """Add an element"""
+        assert not self.immutable
+        if tag not in self._elements:
+            self._elements.append(tag)
+            self._add_tag_to_db(tag, commit=commit)
 
-	def __contains__(self, tag):
-		return tag in self.tags
+    def glob(self, pattern):
+        import fnmatch
 
-	def __repr__(self):
-		return str(self._elements)
+        return fnmatch.filter(self.tags, pattern)
 
-	def __len__(self):
-		return len(self._elements)
+    ### DUNDERS
 
-	def __iter__(self):
-		return iter(self._elements)
+    def __contains__(self, tag):
+        return tag in self.tags
 
-	def __iter__(self):
-		return iter(self.tags)
+    def __repr__(self):
+        return str(self._elements)
 
-	def __add__(self, other):
-		raise NotImplementedError
-		# return TagTable(self.tags+other)
+    def __len__(self):
+        return len(self._elements)
 
-	def __getitem__(self, key):
-		return self._elements[key]
+    def __iter__(self):
+        return iter(self._elements)
+
+    # def __iter__(self):
+    #     return iter(self.tags)
+
+    def __add__(self, other):
+        raise NotImplementedError
+        # return TagTable(self.tags+other)
+
+    def __getitem__(self, key):
+        return self._elements[key]
