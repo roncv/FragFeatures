@@ -47,7 +47,7 @@ setup(
 		'Programming Language :: Python :: 3',
 		'Topic :: Scientific/Engineering :: Chemistry',
 	],
-	python_requires='>=3.8',
+	python_requires='>=3.10',
 	# package_data={  # Optional: include data files
 	#     'your_package_name': ['data/*']
 	# },
