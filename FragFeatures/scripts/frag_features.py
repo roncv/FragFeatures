@@ -10,14 +10,6 @@ from FragFeatures.duck.input import DUckInput
 from FragFeatures.utils import timefunction
 
 
-def hello(hello_who=None):
-    """Hello World function"""
-    if hello_who is not None:
-        print(f"Hello, {hello_who}!")
-    else:
-        print("Hello, World!")
-
-
 def prepare_duck_experiment(
         compound_selection,
         experiment_name,
@@ -89,20 +81,10 @@ def args_sanitation(parser, modes):
     """Sanitize the parser arguments."""
     args = parser.parse_args()
 
-    ### HELLO ###
-    # check if everything is ok
-    if args.mode == "hello":
-        if args.who is None:
-            # This overwrites the function if condition is not met
-            modes.choices["hello"].error("You didn't specify who to say hello to.")
-            # print("You didn't specify who to say hello to.")
-        else:
-            pass
-
 
     ### PREPARE-DUCK ###
     # TODO: Type check for compound_selection
-    elif args.mode == "prepare-duck":
+    if args.mode == "prepare-duck":
         print(args.compound_selection, args.experiment_name, args.target_dir)
         if (
             (args.compound_selection is None and args.all_compounds is False)
@@ -139,22 +121,10 @@ def parse_input():
         description="Open-source toolkit for extracting fragment features from protein-ligand complexes."
     )
 
-
-    ### HELLO ###
     parser.set_defaults(mode=None)
     modes = parser.add_subparsers(
         title="Subcommands", help=None, metavar="                                  "
     )
-    # Arguments for hello function (hello)
-    hello = modes.add_parser(
-        "hello",
-        help="Hello function from FragFeatures (testing).",
-        description='A simple "Hello World" function.',
-    )
-    hello.add_argument(
-        "-w", "--who", type=str, default=None, help="Say hello to this person."
-    )
-    hello.set_defaults(mode="hello")
 
 
     ### PREPARE-DUCK ###
@@ -237,17 +207,13 @@ def parse_input():
     return args, parser
 
 
-@timefunction
 def main():
     # Parse and sanitize the inputs
     args, parser = parse_input()
 
-    ### HELLO ###
-    if args.mode == "hello":
-        hello(hello_who=args.who)
 
     ### PREPARE-DUCK ###
-    elif args.mode == "prepare-duck":
+    if args.mode == "prepare-duck":
         prepare_duck_experiment(
             compound_selection=args.compound_selection,
             experiment_name=args.experiment_name,
