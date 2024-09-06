@@ -4,10 +4,10 @@ Process the output of a compound's DUck simulation.
 
 if __name__ == "__main__":
     # Conditional imports only when running as the main script
-    from FragFeatures.duck.feature import DUckFeature
+    from FragFeatures.duck.analysis.feature import DUckFeature
     from FragFeatures.utils import dict_to_json
 else:
-    from FragFeatures.duck.feature import DUckFeature
+    from FragFeatures.duck.analysis.feature import DUckFeature
     from FragFeatures.utils import dict_to_json
 
 import csv

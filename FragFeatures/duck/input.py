@@ -13,8 +13,8 @@ from pathlib import Path
 
 import numpy as np
 
-from FragFeatures.pose import Pose
-from FragFeatures.target_parser import TargetParser
+from FragFeatures.fingerprint.pose import Pose
+from FragFeatures.fragalysis.target_parser import TargetParser
 from FragFeatures.utils import dict_to_json  # NOTE: Necessary?
 
 logger = logging.getLogger("FragFeatures")
@@ -22,7 +22,7 @@ logger = logging.getLogger("FragFeatures")
 
 class DUckInput:
     """
-    Prepare the input for DUck simulation.
+    Prepare the input for DUck simulation from a Fragalysis target.
     """
 
     def __init__(
@@ -30,27 +30,36 @@ class DUckInput:
         compound_selection: list | str,
         experiment_name: str,
         target_dir: str,
+        all_compounds: bool = False,
         verbose: bool = False,
         verbose_l2: bool = False,
     ):
         self.compound_selection = compound_selection
         self.experiment_name = experiment_name
         self.target_dir = target_dir
+        self.all_compounds = all_compounds
         self.verbose = verbose
         self.verbose_l2 = verbose_l2
         self.target = TargetParser(
             target_dir, verbose=self.verbose, verbose_l2=self.verbose_l2
         )  # Fragalysis
-        self.compound_codes = self.validate_compounds()
+        self.compound_codes = self.get_compound_selection()
         # TODO: Add an option to select all compounds - for script execution
 
 
-    def validate_compounds(self):
+    def get_compound_selection(self):
         """
-        Get the validate the given compounds against the target.
+        Get and validate the given compounds against the target.
         """
         all_compound_codes = self.target.get_all_compounds()
-        if isinstance(self.compound_selection, str):
+
+        if self.all_compounds:
+            self.compound_codes = all_compound_codes
+            if self.verbose:
+                print(f"\nSelected compounds: \n{self.compound_codes}")
+            return self.compound_codes
+
+        elif isinstance(self.compound_selection, str):
             if self.compound_selection == "all":
                 self.compound_codes = all_compound_codes
                 if self.verbose:

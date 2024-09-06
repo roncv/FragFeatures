@@ -4,7 +4,7 @@ Process the output directory containing results of DUck simulations for multiple
 
 import os
 
-from FragFeatures.duck.compound import DUckCompound
+from FragFeatures.duck.analysis.compound import DUckCompound
 from FragFeatures.utils import dict_to_json
 
 

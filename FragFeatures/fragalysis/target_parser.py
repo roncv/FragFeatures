@@ -49,7 +49,7 @@ class TargetParser:
 
 # Test
 if __name__ == "__main__":
-    from FragFeatures.pose import Pose
+    from FragFeatures.fingerprint.pose import Pose
 
     target = TargetParser(
         "/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac"

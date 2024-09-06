@@ -5,7 +5,7 @@ Console Script for FragFeatures - preparing and summarising experiments.
 import argparse
 import time
 
-from FragFeatures.duck.experiment import DUckExperiment
+from FragFeatures.duck.analysis.experiment import DUckExperiment
 from FragFeatures.duck.input import DUckInput
 from FragFeatures.utils import timefunction
 
@@ -18,7 +18,13 @@ def hello(hello_who=None):
         print("Hello, World!")
 
 
-def prepare_duck_experiment(compound_selection, experiment_name, target_dir):
+def prepare_duck_experiment(
+        compound_selection,
+        experiment_name,
+        target_dir,
+        all_compounds,
+        verbosity
+        ):
     """Prepare an experiment for DUck.
 
     Parameters
@@ -30,21 +36,33 @@ def prepare_duck_experiment(compound_selection, experiment_name, target_dir):
     target_dir : str
             Path to the Fragalysis target's directory.
     """
-    # Add some timing
     start_time = time.time()
 
+    if verbosity >= 1:
+        verbose = True
+    else:
+        verbose = False
+    if verbosity >= 2:
+        verbose_l2 = True
+    else:
+        verbose_l2 = False
+
     # Prepare the input for DUck simulation
+    # TODO: add verbosity options
     duck_input = DUckInput(
         compound_selection=compound_selection,
         experiment_name=experiment_name,
         target_dir=target_dir,
+        all_compounds=all_compounds,
+        verbose=verbose,
+        verbose_l2=verbose_l2,
     )
     # print(duck_input.compound_codes)
-    duck_input.prepare_experiment()
+    # duck_input.prepare_experiment()
+    duck_input.prepare_experiment_prolif()
 
-    # Timing
     end_time = time.time()
-    print(f"`prepare_duck_experiment` executed in {end_time - start_time:.4f} seconds")
+    print(f"\n`prepare-duck` executed in {end_time - start_time:.4f} seconds")
 
 
 def summarize_duck_experiment(experiment_dir, output_dir, wqb_filename):
@@ -71,7 +89,7 @@ def args_sanitation(parser, modes):
     """Sanitize the parser to allow yaml or command line inputs with a proper formating for the rest of the script to work"""
     args = parser.parse_args()
 
-    # HELLO
+    ### HELLO ###
     # check if everything is ok
     if args.mode == "hello":
         if args.who is None:
@@ -81,12 +99,13 @@ def args_sanitation(parser, modes):
         else:
             pass
 
-    # PREPARE-DUCK
+
+    ### PREPARE-DUCK ###
     # TODO: Type check for compound_selection
     elif args.mode == "prepare-duck":
         print(args.compound_selection, args.experiment_name, args.target_dir)
         if (
-            (args.compound_selection is None)
+            (args.compound_selection is None and args.all_compounds is False)
             or (args.experiment_name is None)
             or (args.target_dir is None)
         ):
@@ -96,14 +115,14 @@ def args_sanitation(parser, modes):
             )
             # print("You didn't specify all the required arguments.")
 
-    # SUMMARISE-DUCK
+
+    ### SUMMARISE-DUCK ###
     elif args.mode == "summarise-duck":
         if args.experiment_dir is None:
             # This overwrites the function if condition is not met
             modes.choices["summarise-duck"].error(
                 "You didn't specify the experiment directory."
             )
-            # print("You didn't specify the experiment directory.")
     else:
         pass
 
@@ -117,15 +136,14 @@ def parse_input():
     )
     parser = argparse.ArgumentParser(
         formatter_class=formatter,
-        description="Open-source toolkit for extracting fragment features.",
+        description="Open-source toolkit for extracting fragment features from protein-ligand complexes. ",
     )
-
+    ### HELLO ###
     # parser = argparse.ArgumentParser(description='Open-source toolkit for extracting fragment features.')
     parser.set_defaults(mode=None)
     modes = parser.add_subparsers(
         title="Subcommands", help=None, metavar="                                  "
     )
-
     # Arguments for hello function (hello)
     hello = modes.add_parser(
         "hello",
@@ -137,6 +155,8 @@ def parse_input():
     )
     hello.set_defaults(mode="hello")
 
+
+    ### PREPARE-DUCK ###
     # Arguments for preparing a DUck experiment (prepare-duck)
     prepare_duck = modes.add_parser(
         "prepare-duck", help="Prepare an experiment for DUck."
@@ -163,9 +183,25 @@ def parse_input():
         default=None,
         help="Path to the Fragalysis target's directory.",
     )
-    # prepare_duck.add_argument('-a', '--all-compounds', action='store_true', help='Use all compounds in the target.')
+    prepare_duck.add_argument(
+        "-a",
+        "--all-compounds",
+        action="store_true",
+        default=False,
+        help="Select all available compounds from a target.",
+        )
+
+    prepare_duck.add_argument(
+        '-v','--verbose',
+        action='count',
+        default=0,
+        help='Increase verbosity. Use -v for verbose and -vv for additional verbosity.'
+        )
+
     prepare_duck.set_defaults(mode="prepare-duck")
 
+
+    ### SUMMARISE-DUCK ###
     # Arguments for summarising a DUck experiment (summarise-duck)
     summarise_duck = modes.add_parser(
         "summarise-duck", help="Summarise the output of a DUck experiment."
@@ -193,8 +229,9 @@ def parse_input():
     )
     summarise_duck.set_defaults(mode="summarise-duck")
 
+
+    ### SANITATION ###
     args = args_sanitation(parser, modes)
-    # print(args)
 
     return args, parser
 
@@ -204,23 +241,32 @@ def main():
     # Parse and sanitize the inputs
     args, parser = parse_input()
 
-    # Chose and perform the specified action
+    ### HELLO ###
     if args.mode == "hello":
         hello(hello_who=args.who)
+
+    ### PREPARE-DUCK ###
     elif args.mode == "prepare-duck":
         prepare_duck_experiment(
             compound_selection=args.compound_selection,
             experiment_name=args.experiment_name,
             target_dir=args.target_dir,
+            all_compounds=args.all_compounds,
+            verbosity=args.verbose
         )
+
+    ### SUMMARISE-DUCK ###
     elif args.mode == "summarise-duck":
         summarize_duck_experiment(
             experiment_dir=args.experiment_dir,
             output_dir=args.output_dir,
             wqb_filename=args.wqb_filename,
         )
+
+    ### HELP ###
     else:
         parser.print_help()
+
 
 
 if __name__ == "__main__":
