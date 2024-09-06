@@ -86,7 +86,7 @@ def summarize_duck_experiment(experiment_dir, output_dir, wqb_filename):
 
 
 def args_sanitation(parser, modes):
-    """Sanitize the parser to allow yaml or command line inputs with a proper formating for the rest of the script to work"""
+    """Sanitize the parser arguments."""
     args = parser.parse_args()
 
     ### HELLO ###
@@ -136,10 +136,9 @@ def parse_input():
     )
     parser = argparse.ArgumentParser(
         formatter_class=formatter,
-        description="Open-source toolkit for extracting fragment features from protein-ligand complexes. ",
+        description="Open-source toolkit for extracting fragment features from protein-ligand complexes."
     )
     ### HELLO ###
-    # parser = argparse.ArgumentParser(description='Open-source toolkit for extracting fragment features.')
     parser.set_defaults(mode=None)
     modes = parser.add_subparsers(
         title="Subcommands", help=None, metavar="                                  "
