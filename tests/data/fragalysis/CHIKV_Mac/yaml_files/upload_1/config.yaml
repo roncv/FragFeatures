@@ -1,0 +1,26 @@
+# DO NOT USE TABS FOR THE WHITESPACE!
+target_name: CHIKV_Mac # The name of your target. If you already have data on Fragalysis it should be the 'target' name that
+                   # it appears under
+base_dir: / # The directory that inputs (not output_dir!) are relative to. For users at
+                                            # Diamond this should be set to '/'
+output_dir: /dls/labxchem/data/lb32633/lb32633-6/processing/analysis/xchemalign  # The directory that will contain all your upload folders. This path is
+                                             # NOT relative to base_dir.
+
+inputs:  # The datasources to collate
+  - dir: dls/labxchem/data/lb32633/lb32633-6  # The target directory. This will pull data from
+                                              # 'dir/processing/analysis/modeL_building'. This is relative to 'base_dir'.
+    type: model_building  # This will always be model_building unless you have datasets from the pdb you want to align
+                          # which is an advanced topic not covered here.
+    code_prefix: "c"
+    code_prefix_tooltip: "CHIKV_MacB structures"
+    soakdb: processing/database/soakDBDataFile.sqlite  # The path to the soakdb database relative to 'dir'.
+    exclude: [ ]
+    panddas_event_files:  # The paths to the inspect tables of the PanDDAs used to model the bound state.
+    - processing/analysis/panddas/20231124_pandda2/analyses/pandda_inspect_events.csv
+    - processing/analysis/panddas/20231130_pandda2_subset/analyses/pandda_inspect_events.csv
+    - processing/analysis/panddas/20231016_pandda1_2/analyses/pandda_inspect_events.csv
+    - processing/analysis/panddas/TEST_pandda_2/pandda/analyses/pandda_inspect_events.csv  # Again these are relative to 'dir'.
+  - dir: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/xchemalign/references
+    code_prefix: "c"
+    code_prefix_tooltip: "CHIKV_MacB structures"
+    type: manual

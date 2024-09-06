@@ -1,0 +1,4636 @@
+run_on: '2024-04-07 16:04:49.243045'
+collator_cwd: /dls/labxchem/data/lb32633/lb32633-6/processing/analysis/xchemalign
+collator_config_file: config.yaml
+input_dirs:
+- /dls/labxchem/data/lb32633/lb32633-6
+- /dls/labxchem/data/lb32633/lb32633-6/processing/analysis/xchemalign/references
+output_dir: /dls/labxchem/data/lb32633/lb32633-6/processing/analysis/xchemalign
+version_number: 2
+version_dir: upload_2
+previous_version_dirs:
+- upload_1
+code_prefix_tooltips:
+  c: CHIKV_MacB structures
+crystals:
+  CHIKV_MacB-x0270:
+    type: model_building
+    last_updated: '2024-03-22 15:04:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z100643660
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0270/CHIKV_MacB-x0270.pdb
+        sha256: f5004b3860ab7cceae619c3fa56e4cc45e0dab8d20cb9503e50e74585ff3b049
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0270/CHIKV_MacB-x0270.mtz
+        sha256: 12e6ffe7a42519876a12580a60630dfa182b8871aa134dc7e0665a3fb4e0c9f2
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0270/CHIKV_MacB-x0270.cif
+        sha256: be57d293c554cfb1e2f4184b8e4272131007f3bdb34b710b41b8d1f9ae4a02a1
+        smiles: CNC(=O)c1cn(C)c2ccccc12
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0270/CHIKV_MacB-x0270_1_A_304.ccp4
+        sha256: 4a3970375763de60738be60060d3d6051f44d566cee958386fb2323f911bbb30
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.14
+  CHIKV_MacB-x0281:
+    type: model_building
+    last_updated: '2024-03-19 13:06:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1041785508
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0281/CHIKV_MacB-x0281.pdb
+        sha256: f75ef02d98c108693e85439c82d45d382bfacbb6aaea56496d9e01d85343b81b
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0281/CHIKV_MacB-x0281.mtz
+        sha256: 3a02d732372977ff1e4e688227c23b7aff2f0116f652235d0d61d9b837eb6003
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0281/CHIKV_MacB-x0281.cif
+        sha256: 0ea8b733f7c19a354063368a3bb09858ac354f0493b822ba7b37f4604f8f39b5
+        smiles: c1csc(-c2nnc[nH]2)n1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0281/CHIKV_MacB-x0281_1_C_304.ccp4
+        sha256: 894bdcccb4b643c945d1756e8fa6a80155ced42e948820574eb23ee4e34060b5
+        model: '1'
+        chain: C
+        res: 304
+        index: 1
+        bdc: 0.09
+  CHIKV_MacB-x0289:
+    type: model_building
+    last_updated: '2024-03-19 13:06:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z104492884
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0289/CHIKV_MacB-x0289.pdb
+        sha256: 8b65491e18747a9e9cf056067f54a260167109e0c4b778411984e14f2cef8fdd
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0289/CHIKV_MacB-x0289.mtz
+        sha256: 22964ceca22c2c75596425260f538f8ea717d8918165d716896a292b54444ccf
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0289/CHIKV_MacB-x0289.cif
+        sha256: 712ab21413b1218c6cff6424cf40fbcab813b4398a5dde6b1bd42d701d6747f8
+        smiles: Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0289/CHIKV_MacB-x0289_1_C_401.ccp4
+        sha256: b7d551f8851b012636f4172ec6c9a6bfd7ad6052630f58ed1fc4fa4a23e1aab3
+        model: '1'
+        chain: C
+        res: 401
+        index: 3
+        bdc: 0.15
+  CHIKV_MacB-x0294:
+    type: model_building
+    last_updated: '2024-03-19 13:06:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1079168976
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0294/CHIKV_MacB-x0294.pdb
+        sha256: 47cc5b76427b103c2f7cec71d977552a31885e90b42f4ffa6dedd2f2d273e2b8
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0294/CHIKV_MacB-x0294.mtz
+        sha256: efadda26376ad91968a9bee028c33822c57b68f0693e772ba2d1ffd984e9155c
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0294/CHIKV_MacB-x0294.cif
+        sha256: 7a9c3c6ec41741d5db4dfed4b02976533fedf2c4be47bcc55a0a02673cc3cecc
+        smiles: N#CCc1nccn1CC(F)(F)F
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0294/CHIKV_MacB-x0294_1_A_401.ccp4
+        sha256: 269d7ee40696cfaa99f6b571eeb445affe11c557d643a9c7d51f47b32013b678
+        model: '1'
+        chain: A
+        res: 401
+        index: 1
+        bdc: 0.68
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0294/CHIKV_MacB-x0294_1_A_501.ccp4
+        sha256: a546cdad55231c3cfb0c791eacd1f3fcc4efc72fbdf2a2968ce6f58b8764a9b4
+        model: '1'
+        chain: A
+        res: 501
+        index: 3
+        bdc: 0.14
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0294/CHIKV_MacB-x0294_1_B_304.ccp4
+        sha256: ea9ac9e2f37466775b0cc28b10201aa9af19ae81b9290438a1e278b37c912b2a
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.12
+  CHIKV_MacB-x0295:
+    type: model_building
+    last_updated: '2024-03-19 13:06:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1079512010
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0295/CHIKV_MacB-x0295.pdb
+        sha256: 71ff6299f0d3fe7269573e3addcbf2dad36088ed7c78e0e64c4552bf1a8f5634
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0295/CHIKV_MacB-x0295.mtz
+        sha256: 589e18375fec1835b1402f1d5ca76c0dc980e893469ae20cded65826e037e40a
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0295/CHIKV_MacB-x0295.cif
+        sha256: acd720c59d7f88ca5c9fb0cb2f1c83d0f610ab00e51e902373406c7bb273f9c6
+        smiles: Cc1cc(Cn2nc(C)ccc2=O)on1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0295/CHIKV_MacB-x0295_1_A_401.ccp4
+        sha256: 17e2ced82896e5e679718076b7b4977829df76d49a428935a40772e34f9400d1
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.18
+  CHIKV_MacB-x0300:
+    type: model_building
+    last_updated: '2024-03-19 13:06:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1102357527
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0300/CHIKV_MacB-x0300.pdb
+        sha256: 1b59b38f1e88d487f1decc941363f2736eccabd6e64217f47bdd82cdf027f50f
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0300/CHIKV_MacB-x0300.mtz
+        sha256: 535e94bd6c34040722bb7e9b827ecf9694519c230c3734567cbace7958078f79
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0300/CHIKV_MacB-x0300.cif
+        sha256: b63dd6c4974d56cd60c02842f25797cabadbd0590a9ce638de1aec1fdeaa8bdb
+        smiles: O=C1CC[C@@H](NC(=O)c2cscn2)CN1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0300/CHIKV_MacB-x0300_1_A_401.ccp4
+        sha256: 4da0637a116710e8fc626bd3053adffba6ed8d3bbc03e1d76b05279595be2a99
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.18
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0300/CHIKV_MacB-x0300_1_C_304.ccp4
+        sha256: 3f80641136d6c58c131bded6d82b36d3439d31547997c6883f9ef58cbf178bf7
+        model: '1'
+        chain: C
+        res: 304
+        index: 1
+        bdc: 0.17
+  CHIKV_MacB-x0305:
+    type: model_building
+    last_updated: '2024-03-19 13:06:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1129283193
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0305/CHIKV_MacB-x0305.pdb
+        sha256: 51ea34ac1c89b09415aafb214f274855d27740a52fa2a47e8c7bfd2c3ad135d0
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0305/CHIKV_MacB-x0305.mtz
+        sha256: f7309b895378f1df78977a252939432571794f757fa0a6ef307889f726b3b01c
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0305/CHIKV_MacB-x0305.cif
+        sha256: d8c5af2c69b42c13e62e907530ac7c3657f57cb18b8a1cad6db3e682f4946039
+        smiles: CC(=O)Nc1cnccc1C
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0305/CHIKV_MacB-x0305_1_C_304.ccp4
+        sha256: 64b39410af8c971735f6db75540943052cb78bd790311804cef002b5d4a780b1
+        model: '1'
+        chain: C
+        res: 304
+        index: 1
+        bdc: 0.06
+  CHIKV_MacB-x0312:
+    type: model_building
+    last_updated: '2024-03-19 13:06:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1148165337
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0312/CHIKV_MacB-x0312.pdb
+        sha256: b9581864838734df38a975b022605e31a85d949303fd411bab2f0a2ac1c34560
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0312/CHIKV_MacB-x0312.mtz
+        sha256: fc131194669c3565af6f114973a612f791053bca54631e68f1349965b39c3401
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0312/CHIKV_MacB-x0312.cif
+        sha256: f3f3a5236e5b263c975015885e0818ff5f5a24348603bd5dfe1a2d16f3173fb2
+        smiles: CN(C)C(=O)Cn1ncc2ccccc21
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0312/CHIKV_MacB-x0312_1_A_304.ccp4
+        sha256: 46f4b27d740707f3542c7a31eacc4f3b98327fe66767d9dabc83054936ea28bf
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.12
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0312/CHIKV_MacB-x0312_1_C_401.ccp4
+        sha256: 026386336bbb9217306bbe9bc96905c892035709a8f81b758ea07a55181295ca
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.19
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0312/CHIKV_MacB-x0312_1_D_401.ccp4
+        sha256: 555745e60ddca4000efb5cf135f9fad9141e32b89cd6069ea7a7fb75b8d3044d
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.16
+  CHIKV_MacB-x0314:
+    type: model_building
+    last_updated: '2024-03-19 13:06:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1154747269
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0314/CHIKV_MacB-x0314.pdb
+        sha256: 500cd8dcd27066280031dda9b64aa567027ac44561c8b8930ee2abdf9f7a48f7
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0314/CHIKV_MacB-x0314.mtz
+        sha256: 8ab29f16ca731c8b82ec163c7b28308a176b1a1db4d4a637b11dc2fa56a1e09a
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0314/CHIKV_MacB-x0314.cif
+        sha256: 2fcb027564f3f2c7a0e9d75fdc74e8cd4043886ee4d830f45c7b1e034c1334e2
+        smiles: O=c1ccncn1CCO
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0314/CHIKV_MacB-x0314_1_B_401.ccp4
+        sha256: d46b86874213c894e5e6f6864e8834aa4bb027eac97890ee4fde195cc9e52c43
+        model: '1'
+        chain: B
+        res: 401
+        index: 3
+        bdc: 0.13
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0314/CHIKV_MacB-x0314_1_C_304.ccp4
+        sha256: a02bdc1c17f7268d96a7d69216e4cb5b41a27ab6431a71c654d8890763dd882a
+        model: '1'
+        chain: C
+        res: 304
+        index: 1
+        bdc: 0.15
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0314/CHIKV_MacB-x0314_1_D_401.ccp4
+        sha256: f09ef3fd35056ec6f552ffa908030b97b702df9e82ebcc857127df2beef8545d
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.08
+  CHIKV_MacB-x0316:
+    type: model_building
+    last_updated: '2024-03-19 13:06:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1162778919
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0316/CHIKV_MacB-x0316.pdb
+        sha256: 51cb63db1217acbc4c74402ec933b2670f5a423e53b66166ed552d2213317d27
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0316/CHIKV_MacB-x0316.mtz
+        sha256: 9d7dd8af6b46518aff81cea402532ebcb253fec13026078ff4ed947e6a07ba4b
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0316/CHIKV_MacB-x0316.cif
+        sha256: 4d1ffa65ba2210e2854d89336103428f0ee6b7cfe86033bef1ae4d1552be338e
+        smiles: CCc1nc(Cn2ccccc2=O)no1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0316/CHIKV_MacB-x0316_1_C_304.ccp4
+        sha256: 6a7d0cf2c638fe9a12799c12e35d689689d7f3dacd0133d4eed8e5c1b088185d
+        model: '1'
+        chain: C
+        res: 304
+        index: 1
+        bdc: 0.17
+  CHIKV_MacB-x0317:
+    type: model_building
+    last_updated: '2024-03-19 13:06:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1165350851
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0317/CHIKV_MacB-x0317.pdb
+        sha256: ebcc7d20f2afe07df70a407d11fb9b09296f0ae3c51b6d6e60ad572c338b6ae7
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0317/CHIKV_MacB-x0317.mtz
+        sha256: 2508ee5ae5dc1846c88613f9db3189338a41d59a3840279526ad6c1cc9154e3c
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0317/CHIKV_MacB-x0317.cif
+        sha256: d01445eeae1540f1b7f87e71d5694f560eb40cd22e1de66f9ce6659d7b437a10
+        smiles: Cc1[nH][nH]c(=O)c1CCO
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0317/CHIKV_MacB-x0317_1_C_401.ccp4
+        sha256: 198a1306f78c03b629457228042cff901527df04728f631154b471b8b99e14f2
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.14
+  CHIKV_MacB-x0353:
+    type: model_building
+    last_updated: '2024-03-19 13:06:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1216833237
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0353/CHIKV_MacB-x0353.pdb
+        sha256: f56ed20ce876152f62163edebea6aa12498e92d80a2db70f734ef31613fcc141
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0353/CHIKV_MacB-x0353.mtz
+        sha256: b545f7fc26e35785b8d4da40ba8c3caebff6fe57633a4ef5f3fba84eb58fcd41
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0353/CHIKV_MacB-x0353.cif
+        sha256: 9b0c745bdcc9850f505b40e8096a69f86ef5bb88ab60217fb80f900f5945527e
+        smiles: CNc1nccc2ccccc12
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0353/CHIKV_MacB-x0353_1_A_304.ccp4
+        sha256: 589984f250c6aaf142f87b14663917ea1b0cf4b55baf583434800f76a3d0203c
+        model: '1'
+        chain: A
+        res: 304
+        index: 3
+        bdc: 0.18
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0353/CHIKV_MacB-x0353_1_B_304.ccp4
+        sha256: d931a1ca26c2bbaf1276fdd8c06687a316add3d2e00fc0363457b2af92588e57
+        model: '1'
+        chain: B
+        res: 304
+        index: 2
+        bdc: 0.13
+  CHIKV_MacB-x0394:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1262633486
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0394/CHIKV_MacB-x0394.pdb
+        sha256: 8bcd174941f1c1df8718bbd2c5906855fa678b9d9186d6525ee159ee4e83785c
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0394/CHIKV_MacB-x0394.mtz
+        sha256: fef5e5128b2ebce943172136fcb34798a9b81cf69e54163c209f1c9a3ff7d6f6
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0394/CHIKV_MacB-x0394.cif
+        sha256: 2f923619afab05b618ee2805846308668e7168423726e4843f0c30f25cd612a4
+        smiles: Cn1cc(C(N)=O)c(C(F)F)n1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0394/CHIKV_MacB-x0394_1_D_304.ccp4
+        sha256: f3684af45c197b4bd9752fa4320a8adc567fda4fb8c25cda3a51e8fb7ff6b1b1
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.05
+  CHIKV_MacB-x0398:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1267773765
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0398/CHIKV_MacB-x0398.pdb
+        sha256: 8e7d5ed4707a7584a5e4ffef7f795e3bf5177afbd5a932dd13840812450f7ded
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0398/CHIKV_MacB-x0398.mtz
+        sha256: efdfdb82262fa65f09432ca5a28cf8bde05893a3d7505021266f75f4ab454997
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0398/CHIKV_MacB-x0398.cif
+        sha256: bb7fdddfbed65f9f0f6be6e71218038158bda1511c7108a4470692b3e0296afd
+        smiles: CN[C@@H]1CCN(c2ccccc2F)C1=O
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0398/CHIKV_MacB-x0398_1_C_401.ccp4
+        sha256: 27631cbca3e30ea1131eb163ec63b914e0a537ae14c940902c902c61bf56d041
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.15
+  CHIKV_MacB-x0399:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1267800292
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0399/CHIKV_MacB-x0399.pdb
+        sha256: c66deabc2d78638629bc85a64fedd059c0060b3d68d6058b729d5c7cb332c2bc
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0399/CHIKV_MacB-x0399.mtz
+        sha256: fdcbc7e03f4870ed6cf430878ec5b7d8eedca654fa23deb874202875b6c741d9
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0399/CHIKV_MacB-x0399.cif
+        sha256: bf518602aed20470affe2237e1639e4ef3d57d069af66bd3ae63fc2f206c9327
+        smiles: CNC(=O)c1cccc2cc[nH]c12
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0399/CHIKV_MacB-x0399_1_A_401.ccp4
+        sha256: de3b2383f85703c72cdddc7a48e427c5389bd7a498c6becb521aa6af646e3d07
+        model: '1'
+        chain: A
+        res: 401
+        index: 3
+        bdc: 0.27
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0399/CHIKV_MacB-x0399_1_A_402.ccp4
+        sha256: 636e6598c46087498f9594b738fa4e7d9706f71450e0272486c87f3b4c244285
+        model: '1'
+        chain: A
+        res: 402
+        index: 1
+        bdc: 0.16
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0399/CHIKV_MacB-x0399_1_B_401.ccp4
+        sha256: d030567660f941338f33fed18c2e1775b842c5d88b9318cc5e5a7dacdf6bb163
+        model: '1'
+        chain: B
+        res: 401
+        index: 2
+        bdc: 0.41
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0399/CHIKV_MacB-x0399_1_B_402.ccp4
+        sha256: a527a37d95a79d06f7adda86cb3e697c34cff19b2d636578e52a34d34d831e70
+        model: '1'
+        chain: B
+        res: 402
+        index: 3
+        bdc: 0.18
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0399/CHIKV_MacB-x0399_1_C_308.ccp4
+        sha256: 568a3a5a6c879e8b3226d16679080a79278177e8e31232458b4153d18972be3d
+        model: '1'
+        chain: C
+        res: 308
+        index: 1
+        bdc: 0.22
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0399/CHIKV_MacB-x0399_1_C_309.ccp4
+        sha256: dac846a6ae81f8d0955ce07702173a7be393d2ba9c20f7a0da8a3bcceede3940
+        model: '1'
+        chain: C
+        res: 309
+        index: 3
+        bdc: 0.15
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0399/CHIKV_MacB-x0399_1_D_304.ccp4
+        sha256: 42471584e9da3a127232435c960743bbf70397a03fc7140373ebb44984bfb3d1
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.14
+  CHIKV_MacB-x0404:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1270393711
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0404/CHIKV_MacB-x0404.pdb
+        sha256: 6e7655157e8cecf9cb4a6e78bac4c32fc8d5809e9a90b38385613b47a3c6f574
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0404/CHIKV_MacB-x0404.mtz
+        sha256: 85a971d4c65ada5184c56c919eaf149faf5870d325c2e8eed3bdda9f39d8f479
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0404/CHIKV_MacB-x0404.cif
+        sha256: 1e7c9b1fd305cf6b544a90d5b99454ecca361eace77b55849485605aca9cd01e
+        smiles: COCc1cc(C(N)=O)no1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0404/CHIKV_MacB-x0404_1_A_401.ccp4
+        sha256: ab728a6408358138be288134479b39cc1d65ccef467cbe2c253adb9d0494a5f1
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.08
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0404/CHIKV_MacB-x0404_1_C_304.ccp4
+        sha256: c046fe36636a458a70fd914a7cf71201e52bfb6998aaf93df55b101af2dfc70f
+        model: '1'
+        chain: C
+        res: 304
+        index: 2
+        bdc: 0.05
+  CHIKV_MacB-x0406:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1272494722
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0406/CHIKV_MacB-x0406.pdb
+        sha256: 9085134eeec87a9732b51847b2fc05dc06a32fad95a63531b036d4c5cab5f339
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0406/CHIKV_MacB-x0406.mtz
+        sha256: e7e9a46608392ed5fba1311a69401097a1363e75442e30739f74b7bf7678a2c6
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0406/CHIKV_MacB-x0406.cif
+        sha256: 7d44305264197da40423ac053cb9c48c3810da80ecee635320633ff5d6745a8a
+        smiles: Cc1nsc(N[C@H]2CCC[C@@H]2CO)n1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0406/CHIKV_MacB-x0406_1_A_401.ccp4
+        sha256: 97ef6841b6b8ff292a835192f99966c8f19737816f4b616560dc2f9a9675a01d
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0406/CHIKV_MacB-x0406_1_B_304.ccp4
+        sha256: 5fd918e313fcc00da30b4b6a6e0991513a5f1287df6a0d0dc966b6fb3f98de6e
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.22
+  CHIKV_MacB-x0436:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1400796579
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0436/CHIKV_MacB-x0436.pdb
+        sha256: 5eba56e7e48f5ba9a61e181f31e3ed748346289a2319c1366d2ff0e7651ed15b
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0436/CHIKV_MacB-x0436.mtz
+        sha256: 2d7a9e56a869824e8b7d3f6fa601a108cdde1cf9ec4759ff8788b97cf0767d15
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0436/CHIKV_MacB-x0436.cif
+        sha256: 510a7710c293b4b4f41bcfefc9c8d57229103f33bd2a4d938ffcf3c46fd203bf
+        smiles: O=C1NCCN[C@@H]1CC1CCCCC1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0436/CHIKV_MacB-x0436_1_A_401.ccp4
+        sha256: 7ba824c498a75759f57617a9047d8d9578e4d4b248ad2b77e761cff2b2cfa7bc
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.32
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0436/CHIKV_MacB-x0436_1_C_304.ccp4
+        sha256: 72c408f5dfd188fd77c0d3a65c9419eb67f2edbb0278071a4202879f19cde89e
+        model: '1'
+        chain: C
+        res: 304
+        index: 1
+        bdc: 0.52
+  CHIKV_MacB-x0441:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1416571195
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0441/CHIKV_MacB-x0441.pdb
+        sha256: 1c6e2bcde12543e0e57b7898fbcd14334964512f24cf224c82e7d434b733f11f
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0441/CHIKV_MacB-x0441.mtz
+        sha256: 611e833c8c675c9bfc86a2b7c5921e9ffad93d7b43c2e6ae9efcea0ddb095ec5
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0441/CHIKV_MacB-x0441.cif
+        sha256: cd3cedfa2ac57533ac9b6c3eada7ebd6c1df753ce6b9146b3e9af397d151ed85
+        smiles: NC(=O)c1ccnc(NC2CC=CC2)c1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0441/CHIKV_MacB-x0441_1_D_401.ccp4
+        sha256: a3b04e550bd49720c31c3242488fae2be285e522397ada1400681ee68814a657
+        model: '1'
+        chain: D
+        res: 401
+        index: 3
+        bdc: 0.05
+  CHIKV_MacB-x0477:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1562205518
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0477/CHIKV_MacB-x0477.pdb
+        sha256: 736a8d169be69de7a449267489d70c48f5b07daa86d58bd5e34447221d3ed195
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0477/CHIKV_MacB-x0477.mtz
+        sha256: e509afbb65be2022537d38350c7dc6027adbc6de2826495ee671356ebe42073d
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0477/CHIKV_MacB-x0477.cif
+        sha256: 8d28c8d243b5e203909013eaae72dcdd7ba6c58c5f58322eb20ff605015e3cfb
+        smiles: NC(=O)c1cnn(CCO)c1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0477/CHIKV_MacB-x0477_1_A_401.ccp4
+        sha256: 3fd1b0f1ac94768a8bca37e1b739a624c118875e9346dcbc87f6ee2f83ad9b9b
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.12
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0477/CHIKV_MacB-x0477_1_D_401.ccp4
+        sha256: 07223274abbba3ea1a76a4f3eccc1c2e4001f1ead536e05bd3991df59a8e53e5
+        model: '1'
+        chain: D
+        res: 401
+        index: 1
+        bdc: 0.33
+  CHIKV_MacB-x0505:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1730522163
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0505/CHIKV_MacB-x0505.pdb
+        sha256: fc84e7d258ea56c1f933c215b3983846660a41215cafe56b2200d6b6d1a11e5e
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0505/CHIKV_MacB-x0505.mtz
+        sha256: e779ab20ce5a08e00bab2feff2d4c91df545ff7ccf20072ab8a252f18b51efa6
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0505/CHIKV_MacB-x0505.cif
+        sha256: 8b5d81319388be064087a65949ef77bb9e8d35852dab60693db03900f230a17c
+        smiles: CC(=O)N1C[C@@H](C)Oc2c(F)cccc21
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0505/CHIKV_MacB-x0505_1_A_401.ccp4
+        sha256: 35c0b24a8f0e247fddfb16c580f6a87c084b14145669fca0546dbd86b64ad9ed
+        model: '1'
+        chain: A
+        res: 401
+        index: 3
+        bdc: 0.14
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0505/CHIKV_MacB-x0505_1_B_401.ccp4
+        sha256: acd5666449d86b9361579149e4ce2af03460c164ecb6daf9319af8d12ca8045a
+        model: '1'
+        chain: B
+        res: 401
+        index: 1
+        bdc: 0.12
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0505/CHIKV_MacB-x0505_1_C_401.ccp4
+        sha256: 5005997a55a107c66fd39ad408dbe68bd22e205e43be450eb7ad54642b79cd84
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.13
+  CHIKV_MacB-x0522:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z184825330
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0522/CHIKV_MacB-x0522.pdb
+        sha256: 0ae49fca771e38ebfc7a49a003fca9973d9a1efee4af79ba1fcb9775f1b2f128
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0522/CHIKV_MacB-x0522.mtz
+        sha256: 30e09316b278943c9f7158262710258c22c9e614073bff263d903d31b2201399
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0522/CHIKV_MacB-x0522.cif
+        sha256: a702699e7af57c689449898e23664eb3b7329ebf0df14114171dc3851aaca255
+        smiles: CCOc1ncccc1C(=O)N(C)C
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0522/CHIKV_MacB-x0522_1_A_401.ccp4
+        sha256: 8cdd6f3c75676a99a106da9400a07b0c180eb2d1900d1a0f07430fc06433d1ac
+        model: '1'
+        chain: A
+        res: 401
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0522/CHIKV_MacB-x0522_1_B_401.ccp4
+        sha256: dab044430b14656fdb10fa6f94d275140872a76846830068aec73d65407ab274
+        model: '1'
+        chain: B
+        res: 401
+        index: 2
+        bdc: 0.15
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0522/CHIKV_MacB-x0522_1_D_306.ccp4
+        sha256: 882e35385a34a66dc1f241cf4fd41a7651c0292cad5126919b75f8689fe36907
+        model: '1'
+        chain: D
+        res: 306
+        index: 6
+        bdc: 0.14
+  CHIKV_MacB-x0540:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z19755216
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0540/CHIKV_MacB-x0540.pdb
+        sha256: 87e02234d33b06eccf806a6547c0644d200b9387f8e7d1cea957181912efb614
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0540/CHIKV_MacB-x0540.mtz
+        sha256: 4442d48181af5f573dcf1ffd5ea9d5a209321b8195c130610375c7a1de209116
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0540/CHIKV_MacB-x0540.cif
+        sha256: 99d8460499c06711a39f2d824917e2df75e0c46d25dae50a0c34363cc8281916
+        smiles: CN(C)C(=O)COc1cccc(F)c1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0540/CHIKV_MacB-x0540_1_C_401.ccp4
+        sha256: 7e57542a3754f0c219676c0402224f146146ef7cacfd84fa083ed2e59a92cab3
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.14
+  CHIKV_MacB-x0543:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z198194396
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0543/CHIKV_MacB-x0543.pdb
+        sha256: b3c9172a0ddd3c9e8cef857dd995d4d010803951c85ce8ff4ae9856053bd6703
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0543/CHIKV_MacB-x0543.mtz
+        sha256: 5a59d6130a859949749329f55218131c1b19ce457ee889bc48759a65f901883e
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0543/CHIKV_MacB-x0543.cif
+        sha256: 356c656de92a48489c8563a028ad900f93610b4f0569f04242bca8b01a051da7
+        smiles: NC(=O)N1CCN(C(=O)c2ccco2)CC1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0543/CHIKV_MacB-x0543_1_A_304.ccp4
+        sha256: aa0943bc15c9240120c9a36a89a5554417033d011fe4e583fa9446c9e3b8eb17
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.19
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0543/CHIKV_MacB-x0543_1_B_308.ccp4
+        sha256: 372a510d5fc89734d5151f022ecb2646c5fcb81f13acf1278048b5640bd05965
+        model: '1'
+        chain: B
+        res: 308
+        index: 2
+        bdc: 0.52
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0543/CHIKV_MacB-x0543_1_C_401.ccp4
+        sha256: f0b87c07174bd35e01e0c33727634cfb8e2a507088eabe1e7a83a4cab1bdf20b
+        model: '1'
+        chain: C
+        res: 401
+        index: 3
+        bdc: 0.46
+  CHIKV_MacB-x0544:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z198195770
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0544/CHIKV_MacB-x0544.pdb
+        sha256: da437e076e3caab125bd45c8bd9bdfaa9da81331611f38f0ef71639cfa2fc09f
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0544/CHIKV_MacB-x0544.mtz
+        sha256: 9f594c0549aef01f49812420d0e20fd7de1f16d4afabd6754bf7519b4ad1a8db
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0544/CHIKV_MacB-x0544.cif
+        sha256: da3a3c8ec217fa2d4788888b0e318aff7c0eca084637278d741f47ea445aea08
+        smiles: CC(=O)Nc1cccc(NC(N)=O)c1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0544/CHIKV_MacB-x0544_1_D_401.ccp4
+        sha256: 176e664a3b18c9c2ce86d1f692ce7629b382fb8248fa46e778bd175315e7b1a5
+        model: '1'
+        chain: D
+        res: 401
+        index: 3
+        bdc: 0.11
+  CHIKV_MacB-x0553:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z2033637875
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0553/CHIKV_MacB-x0553.pdb
+        sha256: 074e74982682d7891e97a18b4f2336af5a5f02d1dd1d7fb6b7f709880e707538
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0553/CHIKV_MacB-x0553.mtz
+        sha256: 0e1ec21b32415da69642732a448b326ab1c8b591297bed501a1c89965e125654
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0553/CHIKV_MacB-x0553.cif
+        sha256: 12c31625f91726fdd9d8aa3c295af6fae68235a6246ea913c1a0c27fc2bf061a
+        smiles: Cc1nsc(N(C)CC(N)=O)c1C#N
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0553/CHIKV_MacB-x0553_1_A_401.ccp4
+        sha256: 019b4ec56ed6d5f7aa3a78e0cd3448aee9fe587a5ddce5d219e19d3a65b2ac7d
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.13
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0553/CHIKV_MacB-x0553_1_B_304.ccp4
+        sha256: 23b39d197e16b14cb79251f9efe8e8348ab60879d1e48e361a0b90a41229ee1e
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.12
+  CHIKV_MacB-x0585:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z228586974
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0585/CHIKV_MacB-x0585.pdb
+        sha256: a5576b5ee9bdc2576dce5e60771f7418fbd242fe8c2a773f540fd84a8b58ca4e
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0585/CHIKV_MacB-x0585.mtz
+        sha256: e356b460ab5e7e37301ee202f59a03e45b29cf66794fbab0d0d19f9103a3a420
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0585/CHIKV_MacB-x0585.cif
+        sha256: 1c2663c9b3dbfcfef87fa9f80fc6bf76ba1a19bd86e6d9d6093b259b5181a07a
+        smiles: O=C(c1cccc(F)c1)N1CCNCC1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0585/CHIKV_MacB-x0585_1_B_308.ccp4
+        sha256: 352b6aeddd797f3c1d8698fdce15ef2f6d488cfb77731a220a12f10d438b4ef9
+        model: '1'
+        chain: B
+        res: 308
+        index: 2
+        bdc: 0.19
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0585/CHIKV_MacB-x0585_1_C_401.ccp4
+        sha256: e1302c360f3b9fd1ec99e51cd19927cca4afe8991dc0e462deda8760ecf812cd
+        model: '1'
+        chain: C
+        res: 401
+        index: 3
+        bdc: 0.21
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0585/CHIKV_MacB-x0585_1_D_306.ccp4
+        sha256: e21858a5c8e489dc70eb01d09ba94003c2f28ea7d49e5dc52ed6cedf7a03c882
+        model: '1'
+        chain: D
+        res: 306
+        index: 4
+        bdc: 0.23
+  CHIKV_MacB-x0620:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z26333434
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0620/CHIKV_MacB-x0620.pdb
+        sha256: 5c011e47ae6c66083ab6e728fcb00ee70c7b8eb53b7ebe90fed270920b465bf2
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0620/CHIKV_MacB-x0620.mtz
+        sha256: 34794271f3d5072db860a409389ce923e96fb35c631d4ecadaf1d6a1f04f179d
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0620/CHIKV_MacB-x0620.cif
+        sha256: ee44b195f048ef5486f15647e3e5023df2c347dd3dee0213050c488199e65f85
+        smiles: N#Cc1ccc(Cn2cnc3ccccc32)cc1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0620/CHIKV_MacB-x0620_1_C_401.ccp4
+        sha256: f5354efb309e3454d554daefc94e8fcf3cfbabddf8c10ae18ff10db4de724838
+        model: '1'
+        chain: C
+        res: 401
+        index: 1
+        bdc: 0.05
+  CHIKV_MacB-x0632:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z2692078340
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0632/CHIKV_MacB-x0632.pdb
+        sha256: 1814bb5720462acd8a6823e75fb59b5b5bb4d216f6d71e583bbdaf9306951642
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0632/CHIKV_MacB-x0632.mtz
+        sha256: 156806c925559e2bb0703b1607fa4193195c337b08be7da31e4bc38524bd7228
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0632/CHIKV_MacB-x0632.cif
+        sha256: 73b5f3cc63f5c1af9d5b2793f067b8b6ba4aaac19393595570cf205c887b320f
+        smiles: CNCc1cnn(-c2ccccc2)c1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0632/CHIKV_MacB-x0632_1_A_401.ccp4
+        sha256: 95d4ef70e15dcee3c377d87dcb16e6a8f51816fab596a76ecafd926b374d3334
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.06
+  CHIKV_MacB-x0692:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z31504642
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0692/CHIKV_MacB-x0692.pdb
+        sha256: 2777e83c5a3f8e3fafd5d59cc2536dde0537aa3b04f70c1039ae59d131a57076
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0692/CHIKV_MacB-x0692.mtz
+        sha256: 3777c1b707b785dbd89c8814fcadb260f403c62da85f865e1483f5094ad564c4
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0692/CHIKV_MacB-x0692.cif
+        sha256: 07209930f2a85e1110401f7a4003891a0ffb6afcf3c541ed042cf5f2e096317c
+        smiles: COCC(=O)Nc1ccccc1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0692/CHIKV_MacB-x0692_1_C_401.ccp4
+        sha256: 5411dbf9f4e07c45bb0b1821c9f57f1642ff94fff76bc6c0f1a56071d9220b11
+        model: '1'
+        chain: C
+        res: 401
+        index: 3
+        bdc: 0.18
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0692/CHIKV_MacB-x0692_1_D_304.ccp4
+        sha256: 21c8349fa6768df5b89a88d83ebf164462a6439f672e26c7a4beffce95dd020e
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.35
+  CHIKV_MacB-x0721:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z422410426
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0721/CHIKV_MacB-x0721.pdb
+        sha256: 119c9d2bdcc4232c0cbc26deafd4b684fee5fd87d2342697cc464e8510f4dff9
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0721/CHIKV_MacB-x0721.mtz
+        sha256: 7f36b599759802b8a10556e04bdc4d688b5f8d2a3e45e6f25698df59abecb31a
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0721/CHIKV_MacB-x0721.cif
+        sha256: 59e4aed0502682bf37afecbd885738276bf846ea13f93388a7cfd88da916fa8b
+        smiles: Cc1ncsc1C(=O)NCC(=O)N(C)C
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0721/CHIKV_MacB-x0721_1_B_401.ccp4
+        sha256: e33fef65320fca6a52e259d30eb469cadb1579d499d5f7d2d6da2e290a3dab76
+        model: '1'
+        chain: B
+        res: 401
+        index: 2
+        bdc: 0.05
+  CHIKV_MacB-x0732:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z432057220
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0732/CHIKV_MacB-x0732.pdb
+        sha256: 059d0b5eba44f08482a5a8ae04b6c0053f410b0ba712204bb5119d23311a53b3
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0732/CHIKV_MacB-x0732.mtz
+        sha256: d4872735936913ca0c0bacbbcdb55c144140a3fb9e1435c4eadf7f3816e94ea4
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0732/CHIKV_MacB-x0732.cif
+        sha256: 643c02a9b3ae5c888a78c319b4f766f7df8ad7e2a00d9d3f9705d1bf8fcd4762
+        smiles: CN(C)C(=O)c1cn[nH]c1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0732/CHIKV_MacB-x0732_1_C_401.ccp4
+        sha256: be9ffe544c1f98f757cf71f1015c0d9ece357582164e847e31a061424f693c10
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.05
+  CHIKV_MacB-x0756:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z4628744292
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0756/CHIKV_MacB-x0756.pdb
+        sha256: efa6046c0d287ae9401b87a66c597192563ba34d8a2ab9ac9524608217a1b636
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0756/CHIKV_MacB-x0756.mtz
+        sha256: be484572c43d6b6d6b48a7a4963cec9e2e9d2ab4ae77147f692c023ebd7b8b18
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0756/CHIKV_MacB-x0756.cif
+        sha256: 8905c377f1ba9152b1adaa1d48a928755e877c24270a89aa0df0d573d5312a1f
+        smiles: Cc1cn[nH]c1-c1ccncc1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0756/CHIKV_MacB-x0756_1_A_304.ccp4
+        sha256: ec4b222f3cedc5f90b5ce1e32ceab111941d4446280de8af517f7b600e0223d4
+        model: '1'
+        chain: A
+        res: 304
+        index: 3
+        bdc: 0.27
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0756/CHIKV_MacB-x0756_1_C_401.ccp4
+        sha256: f8be03423d34e63661dd0eeccb37d8b811092df57399235809d721062d8c8553
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0756/CHIKV_MacB-x0756_1_C_402.ccp4
+        sha256: f8be03423d34e63661dd0eeccb37d8b811092df57399235809d721062d8c8553
+        model: '1'
+        chain: C
+        res: 402
+        index: 2
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0756/CHIKV_MacB-x0756_1_D_304.ccp4
+        sha256: 3c0aa7b3716b2a8d1e26f1af9d87b7652a774477f585032fe1cc3fa0dcbd02b9
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.27
+  CHIKV_MacB-x0760:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z50145861
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0760/CHIKV_MacB-x0760.pdb
+        sha256: b6745b0f446c2a4b96f2f20eca9e6898225d7da3eb215d136a47fdf1d68f12dc
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0760/CHIKV_MacB-x0760.mtz
+        sha256: 12ca721b114abc1e6ea49a6531798808920a0a048fbcec0f25a3a248e71e3676
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0760/CHIKV_MacB-x0760.cif
+        sha256: 8f5b41d6ce7f787f2213b4ba476972a13510f52ca7a6175720aa2c737dad9740
+        smiles: CC1=NN(c2ccccc2)C(=O)C1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0760/CHIKV_MacB-x0760_1_A_401.ccp4
+        sha256: 31fc49d9da49d4daef5d144bfa7fc9f16c55bff2013156692f0e2a9ae844f344
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.34
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0760/CHIKV_MacB-x0760_1_B_304.ccp4
+        sha256: bcdad583e3b024afb972b4621dab570140156a0b839e1fb4e22b57417fdb38a3
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.15
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0760/CHIKV_MacB-x0760_1_C_308.ccp4
+        sha256: 0704cca2631b021f76c364b967fa6846d984121aa985a5f2a422921283e99c30
+        model: '1'
+        chain: C
+        res: 308
+        index: 3
+        bdc: 0.78
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0760/CHIKV_MacB-x0760_1_D_401.ccp4
+        sha256: 0704cca2631b021f76c364b967fa6846d984121aa985a5f2a422921283e99c30
+        model: '1'
+        chain: D
+        res: 401
+        index: 3
+        bdc: 0.78
+  CHIKV_MacB-x0822:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z600458168
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0822/CHIKV_MacB-x0822.pdb
+        sha256: 49417cd9a7720e619aea75d412380a545067198efbfb88255dce756e058fef67
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0822/CHIKV_MacB-x0822.mtz
+        sha256: 4c6f8016304f153a78ce9496042c0f6b5419e6d030193e6a53edb236de63153a
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0822/CHIKV_MacB-x0822.cif
+        sha256: fe31480fcef04d88979a51946457a878863ef7435a7c5d80c929845bb2e18ff9
+        smiles: Cc1nccn1C[C@@H](C)O
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0822/CHIKV_MacB-x0822_1_A_401.ccp4
+        sha256: 9bef74ab036877eb87d8d2a55abfb83b073bdf53f9c19741155fe019cfd06f2e
+        model: '1'
+        chain: A
+        res: 401
+        index: 3
+        bdc: 0.05
+  CHIKV_MacB-x0824:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z606937774
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0824/CHIKV_MacB-x0824.pdb
+        sha256: 9b7b6b4bc7302c0f7a2bc0109afeef9e2eddeb6957f0c9d9c859c9711934a777
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0824/CHIKV_MacB-x0824.mtz
+        sha256: 8145a1b5847ad1bc641646cb1e9c732795c7545d60ae7c1ff4f953d7bca83acb
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0824/CHIKV_MacB-x0824.cif
+        sha256: f6eaa2ed30b4f44c45bc7fdbee04ecef446a69945bcd00581a76a4ec6348c75e
+        smiles: O=C(NCCc1ccncc1)c1ccccc1F
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0824/CHIKV_MacB-x0824_1_A_401.ccp4
+        sha256: a7f8a148ba36c7e7011e7db6b66b115af0a483db4767c56626b5661c6db4aab2
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.05
+  CHIKV_MacB-x0839:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z728939702
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0839/CHIKV_MacB-x0839.pdb
+        sha256: fc7ecd3ff8e1bd59f32ebb7d151b5f2df1b8b059a779ec6c07f3a8fbd2e13b08
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0839/CHIKV_MacB-x0839.mtz
+        sha256: eb095a25acb6545e6519a631395aff3f03e5d5fdb244641887dbe85c35f6c37e
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0839/CHIKV_MacB-x0839.cif
+        sha256: 80c4801688990324210af760a8d1679cdb80a93d2664c684928991182268e85c
+        smiles: CNc1cnc2ccccc2n1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0839/CHIKV_MacB-x0839_1_A_401.ccp4
+        sha256: e38c414915f3fe5c52d620ae8ef526d378a3a995878d409a464d19ef68518a66
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.09
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0839/CHIKV_MacB-x0839_1_B_401.ccp4
+        sha256: bfb400e8617d171d8c39c044c456e63fa9e72e1ff4e81cdbb8158b0af6b0af5f
+        model: '1'
+        chain: B
+        res: 401
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0839/CHIKV_MacB-x0839_1_C_308.ccp4
+        sha256: bfb400e8617d171d8c39c044c456e63fa9e72e1ff4e81cdbb8158b0af6b0af5f
+        model: '1'
+        chain: C
+        res: 308
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0839/CHIKV_MacB-x0839_1_D_304.ccp4
+        sha256: 3fc04c0c17b93feb3c91d94e152f32dcd5bc96f206778b93ba8b739659177fc2
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.17
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0839/CHIKV_MacB-x0839_1_D_401.ccp4
+        sha256: 3fc04c0c17b93feb3c91d94e152f32dcd5bc96f206778b93ba8b739659177fc2
+        model: '1'
+        chain: D
+        res: 401
+        index: 1
+        bdc: 0.17
+  CHIKV_MacB-x0858:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z768399682
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0858/CHIKV_MacB-x0858.pdb
+        sha256: f6622ed6a714fec9372d4c61279ad1f4a7cfd02cbe33e0d84a6b4ef585baa356
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0858/CHIKV_MacB-x0858.mtz
+        sha256: d6f684e41bfa1e438d9c4fbacbc296b854a9f49caef3b689a78ca28239d60563
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0858/CHIKV_MacB-x0858.cif
+        sha256: a7e9e04975185741da5de35fa9b5bb125b90353520af05e6baf291d34db9712c
+        smiles: C[C@@H]1CO[C@@H](C)CN1C(=O)c1cnsn1
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0858/CHIKV_MacB-x0858_1_A_401.ccp4
+        sha256: a4ef33d171b978e3a8ca1e6e667f6bef82393b0e62a70f36b8f6a439ff20ec04
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.06
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0858/CHIKV_MacB-x0858_1_B_304.ccp4
+        sha256: 2c2cc385b94e005f6048a25c09dfdd832ac9bd166a8ef1241c7347c3f5346887
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.29
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0858/CHIKV_MacB-x0858_1_C_308.ccp4
+        sha256: 6d09aac9db30fa8d2ca6f104660f7ed9f0ca60d3630ffe7d9bb72f46b472f433
+        model: '1'
+        chain: C
+        res: 308
+        index: 3
+        bdc: 1.0
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0858/CHIKV_MacB-x0858_1_D_306.ccp4
+        sha256: 6d09aac9db30fa8d2ca6f104660f7ed9f0ca60d3630ffe7d9bb72f46b472f433
+        model: '1'
+        chain: D
+        res: 306
+        index: 3
+        bdc: 1.0
+  CHIKV_MacB-x0864:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z815437698
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0864/CHIKV_MacB-x0864.pdb
+        sha256: 727d8e80ff1816fc853b2c5e56037eaf102bd3bd8f4e18f33748d6e14cc46437
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0864/CHIKV_MacB-x0864.mtz
+        sha256: e8304d2ac0ad04f6b2f700bf9b04256d2621983db028aef5e88e171c87e8b9c4
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0864/CHIKV_MacB-x0864.cif
+        sha256: 90fdcce40dd54a9f63cc5349a5f0e6b7affe3849a8448093a21e53779eafa2e8
+        smiles: c1cc(-c2ccc3c(c2)OCO3)n[nH]1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0864/CHIKV_MacB-x0864_1_A_401.ccp4
+        sha256: f4126a259b484dceda8f3482befe1978a2180e0bb905475e73c4b3adeab84c96
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.17
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0864/CHIKV_MacB-x0864_1_A_501.ccp4
+        sha256: f4126a259b484dceda8f3482befe1978a2180e0bb905475e73c4b3adeab84c96
+        model: '1'
+        chain: A
+        res: 501
+        index: 2
+        bdc: 0.17
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0864/CHIKV_MacB-x0864_1_C_304.ccp4
+        sha256: e23df7628624a1394bd22baf27bf109df574adce39988f4297ab778e7a2c2465
+        model: '1'
+        chain: C
+        res: 304
+        index: 1
+        bdc: 0.51
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0864/CHIKV_MacB-x0864_1_C_401.ccp4
+        sha256: e23df7628624a1394bd22baf27bf109df574adce39988f4297ab778e7a2c2465
+        model: '1'
+        chain: C
+        res: 401
+        index: 1
+        bdc: 0.51
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0864/CHIKV_MacB-x0864_1_D_401.ccp4
+        sha256: 47df0a0cad108cfa42c3e97fa83dc21c1f25d2d7a9bb5f9da438d645c9657533
+        model: '1'
+        chain: D
+        res: 401
+        index: 3
+        bdc: 0.06
+  CHIKV_MacB-x0888:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z905065822
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0888/CHIKV_MacB-x0888.pdb
+        sha256: 5832d7185984cc6b5a19f0baa59d5642c46eec2f75eeaf7813a098e5a171ced9
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0888/CHIKV_MacB-x0888.mtz
+        sha256: ca204901987d5046ceda3077e623e3f96074d6231765ff9c9f7eef281f5d2f9d
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0888/CHIKV_MacB-x0888.cif
+        sha256: e9765f4fcc795ce0467b46d6ba6d69452241102e661bc955a00126b958f24237
+        smiles: O=C1NC(=O)[C@@]2(CCCNC2)N1
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0888/CHIKV_MacB-x0888_1_A_304.ccp4
+        sha256: 2bab2b115144263f33a3616501a5f221ac03391405d13d161497cc656fdb0eb8
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.46
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0888/CHIKV_MacB-x0888_1_C_401.ccp4
+        sha256: dd808d3567411d95e8416d672b8b8fad3e19c554e1062bf5868547af9fc1ea3d
+        model: '1'
+        chain: C
+        res: 401
+        index: 3
+        bdc: 0.28
+  CHIKV_MacB-x0892:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z915492990
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0892/CHIKV_MacB-x0892.pdb
+        sha256: 84277033425f95b6199666d90acfc6e4a9399e3987fe4a85791ba2d311acf473
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0892/CHIKV_MacB-x0892.mtz
+        sha256: 024ab8c6746fbf0219003dd21a9b7588f9f6bbe43a8c799e75fc1bd5126f3e3d
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0892/CHIKV_MacB-x0892.cif
+        sha256: a73547493c0c68895cbf48c8e3223241ee331c8eee94ef603eabddb2dde404d9
+        smiles: Cn1nccc1C(=O)NCc1cccs1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0892/CHIKV_MacB-x0892_1_A_304.ccp4
+        sha256: 6d325dd6be8c1dd8614484a00b6c97f2f40b11c6d258cbb933f37bc0a5924026
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.61
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0892/CHIKV_MacB-x0892_1_D_306.ccp4
+        sha256: e5d10429eb7c0df8d4bd0c91c2ed16bb59c33f61e30d675ab400aab8c18fa444
+        model: '1'
+        chain: D
+        res: 306
+        index: 3
+        bdc: 0.08
+  CHIKV_MacB-x0894:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z952016136
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0894/CHIKV_MacB-x0894.pdb
+        sha256: 027d4c81faf103ce63ace0ea50dee63251e0a928f49122cd02a36ec9505c5c3e
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0894/CHIKV_MacB-x0894.mtz
+        sha256: d253528eb29bd154dfccd1d5df35cc66ed86553007c67c967cdbcea9be31c886
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0894/CHIKV_MacB-x0894.cif
+        sha256: 90a3f7fd40a771151804b49cb5e796bb93e2ee4953827371d4b2324b9e5dd1a1
+        smiles: Clc1cccc2nc[nH]c12
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0894/CHIKV_MacB-x0894_1_A_401.ccp4
+        sha256: 2634943834ffd6d3c9acdcfc8de4f1fe5cd6519ef8b14ea3acdd1478c729dcfa
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0894/CHIKV_MacB-x0894_1_A_402.ccp4
+        sha256: 2634943834ffd6d3c9acdcfc8de4f1fe5cd6519ef8b14ea3acdd1478c729dcfa
+        model: '1'
+        chain: A
+        res: 402
+        index: 2
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0894/CHIKV_MacB-x0894_1_B_308.ccp4
+        sha256: a60c6df20826a89f9a853941044ec4889fac1f7cf198b36c4ff3b0d3858c65c2
+        model: '1'
+        chain: B
+        res: 308
+        index: 1
+        bdc: 0.18
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0894/CHIKV_MacB-x0894_1_B_309.ccp4
+        sha256: a60c6df20826a89f9a853941044ec4889fac1f7cf198b36c4ff3b0d3858c65c2
+        model: '1'
+        chain: B
+        res: 309
+        index: 1
+        bdc: 0.18
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0894/CHIKV_MacB-x0894_1_C_308.ccp4
+        sha256: 40f37de1b7b7ba8f0b076d13c7bba82890fa67942e80a01acef9e0b974712d38
+        model: '1'
+        chain: C
+        res: 308
+        index: 3
+        bdc: 0.41
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0894/CHIKV_MacB-x0894_1_C_309.ccp4
+        sha256: 40f37de1b7b7ba8f0b076d13c7bba82890fa67942e80a01acef9e0b974712d38
+        model: '1'
+        chain: C
+        res: 309
+        index: 3
+        bdc: 0.41
+  CHIKV_MacB-x0926:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z32968340
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0926/CHIKV_MacB-x0926.pdb
+        sha256: 75d3064675d11563532077b2386bc3a7808680bbb0e5379a21de22a5659aa028
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0926/CHIKV_MacB-x0926.mtz
+        sha256: 26fd6800045b5c9b9ca4d9af65ed177924846b55db9e98063d480e2c749f4af7
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0926/CHIKV_MacB-x0926.cif
+        sha256: 5bdd772b0abb7ed771fdcd0dd8b7af98682cb5c1d315532b3218abb7f4c4cfdb
+        smiles: C[C@@H]1CCCCN1C(=O)c1cnccn1
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0926/CHIKV_MacB-x0926_1_A_401.ccp4
+        sha256: 651706efb409efc76063609f269342b0408c97d3670a240bded07b51e357b2a0
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.05
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0926/CHIKV_MacB-x0926_1_B_308.ccp4
+        sha256: e417a368985a488fef01e23c83e4c223aa1d03abd6ad25535df460823c28bf2d
+        model: '1'
+        chain: B
+        res: 308
+        index: 3
+        bdc: 0.05
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0926/CHIKV_MacB-x0926_1_D_304.ccp4
+        sha256: 2c7d8cb2cdb01e830b1f05b24649238dbc5482a60cb0ea1d01ea9c30731b2f40
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.1
+  CHIKV_MacB-x0927:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z329734230
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0927/CHIKV_MacB-x0927.pdb
+        sha256: eaebf64342c5a3af2799263b0cbb0e6e9cb1eccdfc2d57aefae52fdedc14fd5a
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0927/CHIKV_MacB-x0927.mtz
+        sha256: 6b6aedb9644a90cc177278a3e38fec17fab69b407353d308b61bf29190488159
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0927/CHIKV_MacB-x0927.cif
+        sha256: 8a9ddbf76e0b4f74a75660132f494e2bbf42109ea79ca1a7e897e10ae93f6658
+        smiles: CC1=NN(c2cccc(N)c2)C(=O)C1
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0927/CHIKV_MacB-x0927_1_B_307.ccp4
+        sha256: 9c18e99d2eef0e71c3c766cf00074e16786d4d7a058c9bee8ec86d45e29e4d82
+        model: '1'
+        chain: B
+        res: 307
+        index: 3
+        bdc: 0.16
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0927/CHIKV_MacB-x0927_1_C_401.ccp4
+        sha256: 9c18e99d2eef0e71c3c766cf00074e16786d4d7a058c9bee8ec86d45e29e4d82
+        model: '1'
+        chain: C
+        res: 401
+        index: 3
+        bdc: 0.16
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0927/CHIKV_MacB-x0927_1_D_401.ccp4
+        sha256: aea8c8f3772c5e6f3d5541f769ff246a8c9cfdf26dd31270c89deea6d24f46c5
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.22
+  CHIKV_MacB-x0934:
+    type: model_building
+    last_updated: '2024-03-19 13:07:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z33546965
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0934/CHIKV_MacB-x0934.pdb
+        sha256: 9be9899f89477ee1330e27e51dfc39cf52ece7baee9545e9e8ccb0e88c800ffc
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0934/CHIKV_MacB-x0934.mtz
+        sha256: 2081c9d25dafe440a9e6e1aa7399fe8b9593e99881493f61c9d5dffb312e23d5
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0934/CHIKV_MacB-x0934.cif
+        sha256: 233185d72ba3cfc321ff1ae59177153fef80a9e48cee8ecfb5acd9d82232b883
+        smiles: COc1ccc(C(=O)NCC(N)=O)cc1
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0934/CHIKV_MacB-x0934_1_A_304.ccp4
+        sha256: 71f7fa5e8d46bcf00b44f61f33b8dab7f4519e6c669c597e8c7a1c9d78ef69b4
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.71
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0934/CHIKV_MacB-x0934_1_A_401.ccp4
+        sha256: 32f78036faa64a668afde82f7dec542f9475dc26a043383add13d4a678dc236f
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.05
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0934/CHIKV_MacB-x0934_1_C_308.ccp4
+        sha256: 32f78036faa64a668afde82f7dec542f9475dc26a043383add13d4a678dc236f
+        model: '1'
+        chain: C
+        res: 308
+        index: 2
+        bdc: 0.05
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0934/CHIKV_MacB-x0934_1_D_306.ccp4
+        sha256: 58b1262120a6fc623c839aabfeac32eb2cd65deb37fac3aeba7ce6e63ba85568
+        model: '1'
+        chain: D
+        res: 306
+        index: 3
+        bdc: 0.05
+  CHIKV_MacB-x0935:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z335807570
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0935/CHIKV_MacB-x0935.pdb
+        sha256: 6b0c201d5093001a664c28a47ce74309581b536ec909a35c772cbc1d3c938aae
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0935/CHIKV_MacB-x0935.mtz
+        sha256: c2b0ccf252868abc45e87240b621180c68d9698427be75f677aa3c8166d26c0c
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0935/CHIKV_MacB-x0935.cif
+        sha256: 4e7acb12a4e389826b9e8f7d653ec6a2a92976bd27926ef8aad3471df1ba4218
+        smiles: COCC(=O)Nc1ccc(O)cc1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0935/CHIKV_MacB-x0935_1_A_401.ccp4
+        sha256: 55ac94538b182dbfda0061e6c4b70e5b5bed58373a59a187c59d218e5c8fb5da
+        model: '1'
+        chain: A
+        res: 401
+        index: 3
+        bdc: 0.52
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0935/CHIKV_MacB-x0935_1_B_308.ccp4
+        sha256: 55ac94538b182dbfda0061e6c4b70e5b5bed58373a59a187c59d218e5c8fb5da
+        model: '1'
+        chain: B
+        res: 308
+        index: 3
+        bdc: 0.52
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0935/CHIKV_MacB-x0935_1_C_401.ccp4
+        sha256: 014866f578e72719e81d38c755b4f060ede795af80ad72b544fb216bdd3261f0
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.22
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0935/CHIKV_MacB-x0935_1_D_304.ccp4
+        sha256: 42324cbf3c142e847b15c4c0f6aa761d1a051cf1082e84ea2ed8c88cf21b1a20
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.49
+  CHIKV_MacB-x0969:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z385370362
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0969/CHIKV_MacB-x0969.pdb
+        sha256: f32a0aad5aa894fd9bfbe4dab7e4389c105de720d5afd0892fe7339c832aeb35
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0969/CHIKV_MacB-x0969.mtz
+        sha256: 732e2767617b273eb170ec8b3c962ea7c63c804b7264f73452cb40e6ff12d358
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x0969/CHIKV_MacB-x0969.cif
+        sha256: 00e917ea934f7c05284407be10244d9a9ff3c482e2115ef9ce795686cbe64b31
+        smiles: OCc1ccc2c(c1)CCO2
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0969/CHIKV_MacB-x0969_1_A_304.ccp4
+        sha256: 9627c42c250607c2b035a9be54faad735ced486bf0aacc6209dabbb74ce8d6cc
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.41
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0969/CHIKV_MacB-x0969_1_A_401.ccp4
+        sha256: 9627c42c250607c2b035a9be54faad735ced486bf0aacc6209dabbb74ce8d6cc
+        model: '1'
+        chain: A
+        res: 401
+        index: 1
+        bdc: 0.41
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0969/CHIKV_MacB-x0969_1_C_401.ccp4
+        sha256: b7f95fdd8267592085835ca548d898da4137bf5540d5a09d1174ccdd2370b548
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.29
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0969/CHIKV_MacB-x0969_1_C_501.ccp4
+        sha256: b7f95fdd8267592085835ca548d898da4137bf5540d5a09d1174ccdd2370b548
+        model: '1'
+        chain: C
+        res: 501
+        index: 2
+        bdc: 0.29
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0969/CHIKV_MacB-x0969_1_D_401.ccp4
+        sha256: f17d70c6715a4b42d8a5d93918f6314ac27f8e81cbc2172163cf5c89302b8cb5
+        model: '1'
+        chain: D
+        res: 401
+        index: 3
+        bdc: 0.23
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x0969/CHIKV_MacB-x0969_1_D_501.ccp4
+        sha256: f17d70c6715a4b42d8a5d93918f6314ac27f8e81cbc2172163cf5c89302b8cb5
+        model: '1'
+        chain: D
+        res: 501
+        index: 3
+        bdc: 0.23
+  CHIKV_MacB-x0997:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: POB0112
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0997/CHIKV_MacB-x0997.pdb
+        sha256: 1e0060a12ef39fcaee1f228f7d3495868b9b8fa8c4b48de79b4e3b53e4bf51a7
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0997/CHIKV_MacB-x0997.mtz
+        sha256: a00b9a2fc08d1b352ff8421f1d0c8f82eb926ff17c8b22b39bf8817a6f1bca23
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x0997/CHIKV_MacB-x0997.cif
+        sha256: ebf70f44f2d5db48f9ded6c8ae7329976ad704e07f165af9c57a909185e68b5c
+        smiles: COC(=O)[C@]1(Cc2ccc(F)cc2)CCNC1
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0997/CHIKV_MacB-x0997_1_B_308.ccp4
+        sha256: 6579b20dcc0217f33663e3aec8c97277414220b870c997e9fb50840c50f4d216
+        model: '1'
+        chain: B
+        res: 308
+        index: 2
+        bdc: 0.42
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x0997/CHIKV_MacB-x0997_1_C_401.ccp4
+        sha256: 6579b20dcc0217f33663e3aec8c97277414220b870c997e9fb50840c50f4d216
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.42
+  CHIKV_MacB-x1075:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: NCL-00023823
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1075/CHIKV_MacB-x1075.pdb
+        sha256: 989ace3198302059d5b877833813e8283e3e98af222972531fdbd1bda117bc80
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1075/CHIKV_MacB-x1075.mtz
+        sha256: cdf1575618b02657cfdbe671488db870b90041ffdecfa7cb585d33a00278d46e
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1075/CHIKV_MacB-x1075.cif
+        sha256: 9b46b96057f7c590be2d1ea410d8ca19a1250b2dcc6abefef7cbef6ca186cccf
+        smiles: Nc1cc(Br)ccn1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1075/CHIKV_MacB-x1075_1_A_304.ccp4
+        sha256: 01f375e5b34ea3ca4f91287f166dc9e4029d484fb0e9d002014604e8c3ae66d9
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.19
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1075/CHIKV_MacB-x1075_1_B_304.ccp4
+        sha256: 01f375e5b34ea3ca4f91287f166dc9e4029d484fb0e9d002014604e8c3ae66d9
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.19
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1075/CHIKV_MacB-x1075_1_D_401.ccp4
+        sha256: db3e5abfea30be31c69c1e1fabf629cbfb3b9e2f5ab9d87e3364da9fe4c1069d
+        model: '1'
+        chain: D
+        res: 401
+        index: 3
+        bdc: 0.94
+  CHIKV_MacB-x1076:
+    type: model_building
+    last_updated: '2024-03-20 11:53:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: NCL-00023825
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1076/CHIKV_MacB-x1076.pdb
+        sha256: b510a4e507be4f793b7321452fb61ecddce59c0f0cdc844d9bc98e5597fe2819
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1076/CHIKV_MacB-x1076.mtz
+        sha256: 7d0e1189d356e6381d888749080a79fd8e9a52a4f409408479a1e9e4bd29e550
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1076/CHIKV_MacB-x1076.cif
+        sha256: a050880c8761d9e7ed6af55ce8475eba311ae69c4f5788b9d33950270750a8fd
+        smiles: O=c1cc(Br)cc[nH]1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1076/CHIKV_MacB-x1076_1_B_401.ccp4
+        sha256: e3a82a6066b76ae323dadb54fd8a6367d346106b6062213fdbe0a38eafbfdb4b
+        model: '1'
+        chain: B
+        res: 401
+        index: 3
+        bdc: 0.05
+  CHIKV_MacB-x1091:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: NCL-00024672
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1091/CHIKV_MacB-x1091.pdb
+        sha256: 6d680db0c5d9a6ae948fdfc680e35fb44f51a40c276affc0e6fd4a7ccfaa2e4e
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1091/CHIKV_MacB-x1091.mtz
+        sha256: 85574d12c7ef4c4c703bdffa9f499d622b159aa461c751d5d701cdde95a22dd3
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1091/CHIKV_MacB-x1091.cif
+        sha256: 638d38538fb08e06d2e96dc1b8e13ac26c4615e567d058d055cc36aee2fe916b
+        smiles: O=c1cc(Br)ccn1CCO
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1091/CHIKV_MacB-x1091_1_C_308.ccp4
+        sha256: 178712955392239ebcc1c5da5f50d3947bac360c1d547f0a5e0550f89adb06c2
+        model: '1'
+        chain: C
+        res: 308
+        index: 1
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1091/CHIKV_MacB-x1091_1_D_401.ccp4
+        sha256: f17088a96f471bad3b294eccade16b04a5f769d42dbdd07aa074c85a29143b31
+        model: '1'
+        chain: D
+        res: 401
+        index: 3
+        bdc: 0.05
+  CHIKV_MacB-x1103:
+    type: model_building
+    last_updated: '2024-03-21 10:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1198386795
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1103/CHIKV_MacB-x1103.pdb
+        sha256: c79afc05a7b4e3ee087da6ae442816f0aab40c8ffb36d0bedd078ecf7eff50fe
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1103/CHIKV_MacB-x1103.mtz
+        sha256: 93d298e0489c4fe8d2a9e819a4aaec0d6e29bedbe28bc001d8fe17d94339882d
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1103/CHIKV_MacB-x1103.cif
+        sha256: 5de502525244c64478299a146d0b4e03ea30f80d77ba4d7fb77bad3864c1ca54
+        smiles: c1c[nH]nn1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1103/CHIKV_MacB-x1103_1_B_401.ccp4
+        sha256: 1acbc88348e44f2e8d650ac66a474f38327accae0b57efadce90de13768edf7e
+        model: '1'
+        chain: B
+        res: 401
+        index: 2
+        bdc: 0.23
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1103/CHIKV_MacB-x1103_1_C_308.ccp4
+        sha256: 9633aa4d684c7af963e1dcd11cd1809d1f149601807b74c1cbefc9a22f279482
+        model: '1'
+        chain: C
+        res: 308
+        index: 1
+        bdc: 0.16
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1103/CHIKV_MacB-x1103_1_D_304.ccp4
+        sha256: 9633aa4d684c7af963e1dcd11cd1809d1f149601807b74c1cbefc9a22f279482
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.16
+  CHIKV_MacB-x1108:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1741970824
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1108/CHIKV_MacB-x1108.pdb
+        sha256: df1a8e53ccdfeb95ebf04b46a5af216b4a66c0bdda7edf8f0fbea7b0c6046403
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1108/CHIKV_MacB-x1108.mtz
+        sha256: 1b8683719ac90ebc8a26b1efb2173e4fd7304f95e5edba8c7ec8ddbffd9faada
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1108/CHIKV_MacB-x1108.cif
+        sha256: 13d352035d1bb6ed3c2203862ba382921bf1f53a765cf26271136a22504ff481
+        smiles: Nc1cncnc1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1108/CHIKV_MacB-x1108_1_A_304.ccp4
+        sha256: c5302717216f694d48d96a3567691c1572cd4db8639fd9d0614b27e23561a051
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.66
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1108/CHIKV_MacB-x1108_1_B_308.ccp4
+        sha256: 848e449eee78cf19118db3694e6f4f0f6cc130de44e4e8a2f3dd42bf272990e1
+        model: '1'
+        chain: B
+        res: 308
+        index: 3
+        bdc: 0.79
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1108/CHIKV_MacB-x1108_1_B_309.ccp4
+        sha256: 848e449eee78cf19118db3694e6f4f0f6cc130de44e4e8a2f3dd42bf272990e1
+        model: '1'
+        chain: B
+        res: 309
+        index: 3
+        bdc: 0.79
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1108/CHIKV_MacB-x1108_1_C_308.ccp4
+        sha256: b642d7cb6b8b8ec20d959ccd80392a75b23ec8131661f730f104106deb025b78
+        model: '1'
+        chain: C
+        res: 308
+        index: 2
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1108/CHIKV_MacB-x1108_1_D_306.ccp4
+        sha256: b642d7cb6b8b8ec20d959ccd80392a75b23ec8131661f730f104106deb025b78
+        model: '1'
+        chain: D
+        res: 306
+        index: 2
+        bdc: 0.05
+  CHIKV_MacB-x1112:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z57127349
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1112/CHIKV_MacB-x1112.pdb
+        sha256: 765ad6e5e317587cdb4a733d7f65e412cfa90e5e2c12d09c1af9f0443d631ef5
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1112/CHIKV_MacB-x1112.mtz
+        sha256: e23722909e2fc9e1c29e70ed3e07d9cf96e3f2da97eb53bbcac45b84e4af14d6
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1112/CHIKV_MacB-x1112.cif
+        sha256: db5db8185b526f488748600ec919b9906c8b2e739d41400663dce4ac210ca078
+        smiles: O=C1CCC(=O)N1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1112/CHIKV_MacB-x1112_1_A_305.ccp4
+        sha256: 36de25da2e7b3553c8b6fe28888e7a94aabad163c31e0eecf4c7b113400d4498
+        model: '1'
+        chain: A
+        res: 305
+        index: 3
+        bdc: 0.62
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1112/CHIKV_MacB-x1112_1_A_306.ccp4
+        sha256: 36de25da2e7b3553c8b6fe28888e7a94aabad163c31e0eecf4c7b113400d4498
+        model: '1'
+        chain: A
+        res: 306
+        index: 3
+        bdc: 0.62
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1112/CHIKV_MacB-x1112_1_B_304.ccp4
+        sha256: 1ec5a015702e3254d580510bf2fbf52dfdef111005d0335f34c5dbe6ddc8fa4f
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.79
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1112/CHIKV_MacB-x1112_1_B_401.ccp4
+        sha256: 1ec5a015702e3254d580510bf2fbf52dfdef111005d0335f34c5dbe6ddc8fa4f
+        model: '1'
+        chain: B
+        res: 401
+        index: 1
+        bdc: 0.79
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1112/CHIKV_MacB-x1112_1_C_401.ccp4
+        sha256: ecbc5701e1e276cccf55a8310119c36e52b3dade5cf6892118c9bf5d5f694688
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.17
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1112/CHIKV_MacB-x1112_1_C_402.ccp4
+        sha256: ecbc5701e1e276cccf55a8310119c36e52b3dade5cf6892118c9bf5d5f694688
+        model: '1'
+        chain: C
+        res: 402
+        index: 2
+        bdc: 0.17
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1112/CHIKV_MacB-x1112_1_D_306.ccp4
+        sha256: ecbc5701e1e276cccf55a8310119c36e52b3dade5cf6892118c9bf5d5f694688
+        model: '1'
+        chain: D
+        res: 306
+        index: 2
+        bdc: 0.17
+  CHIKV_MacB-x1114:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z940713508
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1114/CHIKV_MacB-x1114.pdb
+        sha256: 0e5810b34d01985e69651cd897053da19e97fad7468a09a7d24f8b70500dd252
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1114/CHIKV_MacB-x1114.mtz
+        sha256: 88d88570808baa6c68a14d381da322cf67c6fe85adb486c2c63eeced5abec426
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1114/CHIKV_MacB-x1114.cif
+        sha256: d463384258e9e0a6b18a3a4a4a65d47aa3243abb620819247b5e48d438d7c95c
+        smiles: O=C1CCCN1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1114/CHIKV_MacB-x1114_1_A_401.ccp4
+        sha256: f2a793bf7818726292f7fa85fbbda553ea536e228347448793086b7c141533ea
+        model: '1'
+        chain: A
+        res: 401
+        index: 3
+        bdc: 0.34
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1114/CHIKV_MacB-x1114_1_B_304.ccp4
+        sha256: a7e7bdaf687a5917907fd33dc5d3023c7dc7aad7fec4de7d742601ad480a4ee7
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.24
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1114/CHIKV_MacB-x1114_1_B_308.ccp4
+        sha256: a7e7bdaf687a5917907fd33dc5d3023c7dc7aad7fec4de7d742601ad480a4ee7
+        model: '1'
+        chain: B
+        res: 308
+        index: 1
+        bdc: 0.24
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1114/CHIKV_MacB-x1114_1_C_308.ccp4
+        sha256: a7e7bdaf687a5917907fd33dc5d3023c7dc7aad7fec4de7d742601ad480a4ee7
+        model: '1'
+        chain: C
+        res: 308
+        index: 1
+        bdc: 0.24
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1114/CHIKV_MacB-x1114_1_D_401.ccp4
+        sha256: e260149e51ddc2847ac0766c1ba2e4c5ff64f0cdd49feed1fe75e924c9afcfd1
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.05
+  CHIKV_MacB-x1116:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z275118248
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1116/CHIKV_MacB-x1116.pdb
+        sha256: da0b4055f362cc0aef2f7aad31066107a555dc60723967ee5fcc021c56dc7126
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1116/CHIKV_MacB-x1116.mtz
+        sha256: 92d41a90dcad39cdbe9b4f9ba5ff9d64857c3ec688b11e6c7b790135e3874a7d
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1116/CHIKV_MacB-x1116.cif
+        sha256: 97ad6c09eb7f52fce84332248444cfff5e85650c4d398cae66a823515d93b950
+        smiles: Nc1ccccn1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1116/CHIKV_MacB-x1116_1_A_304.ccp4
+        sha256: de2f5af85c2d5665d71d78a208b4bc2b07c813c05dc92e2168a32d6e079e9ff3
+        model: '1'
+        chain: A
+        res: 304
+        index: 3
+        bdc: 0.45
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1116/CHIKV_MacB-x1116_1_B_401.ccp4
+        sha256: de2f5af85c2d5665d71d78a208b4bc2b07c813c05dc92e2168a32d6e079e9ff3
+        model: '1'
+        chain: B
+        res: 401
+        index: 3
+        bdc: 0.45
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1116/CHIKV_MacB-x1116_1_B_402.ccp4
+        sha256: de2f5af85c2d5665d71d78a208b4bc2b07c813c05dc92e2168a32d6e079e9ff3
+        model: '1'
+        chain: B
+        res: 402
+        index: 3
+        bdc: 0.45
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1116/CHIKV_MacB-x1116_1_D_304.ccp4
+        sha256: 6f897dd3e66554e04b672d7a40eef9c870dc77f83347a91d8044f5830ab1eaee
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.1
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1116/CHIKV_MacB-x1116_1_D_401.ccp4
+        sha256: 6f897dd3e66554e04b672d7a40eef9c870dc77f83347a91d8044f5830ab1eaee
+        model: '1'
+        chain: D
+        res: 401
+        index: 1
+        bdc: 0.1
+  CHIKV_MacB-x1118:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1741982125
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1118/CHIKV_MacB-x1118.pdb
+        sha256: 9091ac7302d862dc6a90e6af9723bedb02c6d6b0d26867ec90844ca747e13d1d
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1118/CHIKV_MacB-x1118.mtz
+        sha256: 16031a0265308ac2d856d3f83f240af04951d3ac24b9278ffb1996ed0bedd90f
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1118/CHIKV_MacB-x1118.cif
+        sha256: 7afaa4b2bc0e10a321ca9a94084c912953325507c41831a1d2ff5623142b497a
+        smiles: Oc1ccccn1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1118/CHIKV_MacB-x1118_1_A_304.ccp4
+        sha256: f51b06b5425300edfdc2864024446a1fbbc6a0d9bdc15c4ff6ab89cd464931c4
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.33
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1118/CHIKV_MacB-x1118_1_A_305.ccp4
+        sha256: f51b06b5425300edfdc2864024446a1fbbc6a0d9bdc15c4ff6ab89cd464931c4
+        model: '1'
+        chain: A
+        res: 305
+        index: 1
+        bdc: 0.33
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1118/CHIKV_MacB-x1118_1_B_401.ccp4
+        sha256: 90d3b34431455a4328162c7f982dada06c06d2b236d949178835e6f2e9e43b65
+        model: '1'
+        chain: B
+        res: 401
+        index: 3
+        bdc: 0.56
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1118/CHIKV_MacB-x1118_1_B_402.ccp4
+        sha256: 90d3b34431455a4328162c7f982dada06c06d2b236d949178835e6f2e9e43b65
+        model: '1'
+        chain: B
+        res: 402
+        index: 3
+        bdc: 0.56
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1118/CHIKV_MacB-x1118_1_C_307.ccp4
+        sha256: 90d3b34431455a4328162c7f982dada06c06d2b236d949178835e6f2e9e43b65
+        model: '1'
+        chain: C
+        res: 307
+        index: 3
+        bdc: 0.56
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1118/CHIKV_MacB-x1118_1_C_308.ccp4
+        sha256: 90d3b34431455a4328162c7f982dada06c06d2b236d949178835e6f2e9e43b65
+        model: '1'
+        chain: C
+        res: 308
+        index: 3
+        bdc: 0.56
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1118/CHIKV_MacB-x1118_1_D_308.ccp4
+        sha256: 63a8b837edca055e8e03cc44dd0141ce79c94f10873365b8fba57bc2d642d4d6
+        model: '1'
+        chain: D
+        res: 308
+        index: 2
+        bdc: 0.42
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1118/CHIKV_MacB-x1118_1_D_401.ccp4
+        sha256: 63a8b837edca055e8e03cc44dd0141ce79c94f10873365b8fba57bc2d642d4d6
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.42
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1118/CHIKV_MacB-x1118_1_D_402.ccp4
+        sha256: 63a8b837edca055e8e03cc44dd0141ce79c94f10873365b8fba57bc2d642d4d6
+        model: '1'
+        chain: D
+        res: 402
+        index: 2
+        bdc: 0.42
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1118/CHIKV_MacB-x1118_1_D_403.ccp4
+        sha256: 63a8b837edca055e8e03cc44dd0141ce79c94f10873365b8fba57bc2d642d4d6
+        model: '1'
+        chain: D
+        res: 403
+        index: 2
+        bdc: 0.42
+  CHIKV_MacB-x1123:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z56866006
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1123/CHIKV_MacB-x1123.pdb
+        sha256: 782578f3db377a6ebd9d84b058659aa159a799122d8e701d05b462c1b077d29f
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1123/CHIKV_MacB-x1123.mtz
+        sha256: d0db2d7bdb987406666bd5d879590179c6853adfbcf43caa09c74364638bccb4
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1123/CHIKV_MacB-x1123.cif
+        sha256: cf9cce54ea97adef8201b03701fab6c6cffdb0a14ea7e6fc491c912559496d2a
+        smiles: Nc1nnc[nH]1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1123/CHIKV_MacB-x1123_1_A_304.ccp4
+        sha256: 1c6e79caf747afc50569d2de6c117c33b7c68b5aec4a0956fc6174f4ddb8bcf0
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.53
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1123/CHIKV_MacB-x1123_1_A_305.ccp4
+        sha256: 1c6e79caf747afc50569d2de6c117c33b7c68b5aec4a0956fc6174f4ddb8bcf0
+        model: '1'
+        chain: A
+        res: 305
+        index: 1
+        bdc: 0.53
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1123/CHIKV_MacB-x1123_1_B_304.ccp4
+        sha256: 1c6e79caf747afc50569d2de6c117c33b7c68b5aec4a0956fc6174f4ddb8bcf0
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.53
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1123/CHIKV_MacB-x1123_1_B_308.ccp4
+        sha256: 1c6e79caf747afc50569d2de6c117c33b7c68b5aec4a0956fc6174f4ddb8bcf0
+        model: '1'
+        chain: B
+        res: 308
+        index: 1
+        bdc: 0.53
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1123/CHIKV_MacB-x1123_1_B_309.ccp4
+        sha256: 1c6e79caf747afc50569d2de6c117c33b7c68b5aec4a0956fc6174f4ddb8bcf0
+        model: '1'
+        chain: B
+        res: 309
+        index: 1
+        bdc: 0.53
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1123/CHIKV_MacB-x1123_1_B_310.ccp4
+        sha256: 1c6e79caf747afc50569d2de6c117c33b7c68b5aec4a0956fc6174f4ddb8bcf0
+        model: '1'
+        chain: B
+        res: 310
+        index: 1
+        bdc: 0.53
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1123/CHIKV_MacB-x1123_1_C_401.ccp4
+        sha256: c9f6cd000500ba9fcfe0c1e6d31b8d9b12161f345ea8d5c005098aee82385047
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.28
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1123/CHIKV_MacB-x1123_1_C_402.ccp4
+        sha256: c9f6cd000500ba9fcfe0c1e6d31b8d9b12161f345ea8d5c005098aee82385047
+        model: '1'
+        chain: C
+        res: 402
+        index: 2
+        bdc: 0.28
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1123/CHIKV_MacB-x1123_1_C_403.ccp4
+        sha256: c9f6cd000500ba9fcfe0c1e6d31b8d9b12161f345ea8d5c005098aee82385047
+        model: '1'
+        chain: C
+        res: 403
+        index: 2
+        bdc: 0.28
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1123/CHIKV_MacB-x1123_1_C_405.ccp4
+        sha256: c9f6cd000500ba9fcfe0c1e6d31b8d9b12161f345ea8d5c005098aee82385047
+        model: '1'
+        chain: C
+        res: 405
+        index: 2
+        bdc: 0.28
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1123/CHIKV_MacB-x1123_1_D_306.ccp4
+        sha256: c9f6cd000500ba9fcfe0c1e6d31b8d9b12161f345ea8d5c005098aee82385047
+        model: '1'
+        chain: D
+        res: 306
+        index: 2
+        bdc: 0.28
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1123/CHIKV_MacB-x1123_1_D_307.ccp4
+        sha256: c9f6cd000500ba9fcfe0c1e6d31b8d9b12161f345ea8d5c005098aee82385047
+        model: '1'
+        chain: D
+        res: 307
+        index: 2
+        bdc: 0.28
+  CHIKV_MacB-x1125:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z56896153
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1125/CHIKV_MacB-x1125.pdb
+        sha256: 54abfeafc5198613e8d757e6c46ead721d31b2cd63ece1cc331550b8933bdf92
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1125/CHIKV_MacB-x1125.mtz
+        sha256: 7992a4ac6a0c0c6c562c08a26bb3fabf447feabbb9dea377d02311e6ad9afed0
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1125/CHIKV_MacB-x1125.cif
+        sha256: 666bfa812f8387056ab5c8592c9489976bd4a1673118689744754a92649f3768
+        smiles: N#CCC(N)=O
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1125/CHIKV_MacB-x1125_1_A_401.ccp4
+        sha256: d647bad59627e205087b34e973b1939f525fd9125b9cb08e125e52ff4a647fd5
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.32
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1125/CHIKV_MacB-x1125_1_A_402.ccp4
+        sha256: d647bad59627e205087b34e973b1939f525fd9125b9cb08e125e52ff4a647fd5
+        model: '1'
+        chain: A
+        res: 402
+        index: 2
+        bdc: 0.32
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1125/CHIKV_MacB-x1125_1_C_401.ccp4
+        sha256: 639b12f58a0dfb3d0ae853837140b2f882e469a0f691e0edacd2c8661b2f6a28
+        model: '1'
+        chain: C
+        res: 401
+        index: 3
+        bdc: 0.21
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1125/CHIKV_MacB-x1125_1_C_402.ccp4
+        sha256: 639b12f58a0dfb3d0ae853837140b2f882e469a0f691e0edacd2c8661b2f6a28
+        model: '1'
+        chain: C
+        res: 402
+        index: 3
+        bdc: 0.21
+  CHIKV_MacB-x1131:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z56968535
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1131/CHIKV_MacB-x1131.pdb
+        sha256: 0e8046b2278fbb33719c6626386ab472c75b8d77f02aa25d05b54d2c320892da
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1131/CHIKV_MacB-x1131.mtz
+        sha256: 68a6fe4b6ae2ba8a5b2204a65e85905f5a9f14e6c7e41e036eb628d355b901f0
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1131/CHIKV_MacB-x1131.cif
+        sha256: 8cb8196bf92b4a277a23f1aae682b3ca26f0538248403a8dc205c256a0cd99b0
+        smiles: O=C1CNCCN1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1131/CHIKV_MacB-x1131_1_A_401.ccp4
+        sha256: 943664bfa35eb2c0a97bdc8374d2ef2eed56b91b917819225ca0eb17e26a1d19
+        model: '1'
+        chain: A
+        res: 401
+        index: 3
+        bdc: 0.06
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1131/CHIKV_MacB-x1131_1_A_402.ccp4
+        sha256: 943664bfa35eb2c0a97bdc8374d2ef2eed56b91b917819225ca0eb17e26a1d19
+        model: '1'
+        chain: A
+        res: 402
+        index: 3
+        bdc: 0.06
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1131/CHIKV_MacB-x1131_1_B_401.ccp4
+        sha256: 4e10775a2b2d505efc7aa44fa1f38c9f8d440d86a5c1ee81794ec3787616d92c
+        model: '1'
+        chain: B
+        res: 401
+        index: 2
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1131/CHIKV_MacB-x1131_1_B_402.ccp4
+        sha256: e27fd0b24d79ca6848767a088883b62009d931dca53dd505b27e0f7acf1ddff4
+        model: '1'
+        chain: B
+        res: 402
+        index: 1
+        bdc: 0.51
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1131/CHIKV_MacB-x1131_1_C_308.ccp4
+        sha256: e27fd0b24d79ca6848767a088883b62009d931dca53dd505b27e0f7acf1ddff4
+        model: '1'
+        chain: C
+        res: 308
+        index: 1
+        bdc: 0.51
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1131/CHIKV_MacB-x1131_1_D_306.ccp4
+        sha256: e27fd0b24d79ca6848767a088883b62009d931dca53dd505b27e0f7acf1ddff4
+        model: '1'
+        chain: D
+        res: 306
+        index: 1
+        bdc: 0.51
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1131/CHIKV_MacB-x1131_1_D_307.ccp4
+        sha256: e27fd0b24d79ca6848767a088883b62009d931dca53dd505b27e0f7acf1ddff4
+        model: '1'
+        chain: D
+        res: 307
+        index: 1
+        bdc: 0.51
+  CHIKV_MacB-x1132:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1741968196
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1132/CHIKV_MacB-x1132.pdb
+        sha256: 6a277ae34a424af4cf420ded871fd8b97dd2f8e56e5d71bc585a4d16f98e1d70
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1132/CHIKV_MacB-x1132.mtz
+        sha256: 56171bacbb9b15b47074eb0e9816eeb3df946888c03d60c31bb6397d2205347b
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1132/CHIKV_MacB-x1132.cif
+        sha256: aca39adf063729d2fbc394b8f6e639bec1080603ab1681f693da27d7cc37d72a
+        smiles: Nc1ncccn1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1132/CHIKV_MacB-x1132_1_A_305.ccp4
+        sha256: 888831db3b21e1503b24016a30f81a0b0987e66f9d0c4e0a7800763e7c0e2d27
+        model: '1'
+        chain: A
+        res: 305
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1132/CHIKV_MacB-x1132_1_B_401.ccp4
+        sha256: 888831db3b21e1503b24016a30f81a0b0987e66f9d0c4e0a7800763e7c0e2d27
+        model: '1'
+        chain: B
+        res: 401
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1132/CHIKV_MacB-x1132_1_B_403.ccp4
+        sha256: 888831db3b21e1503b24016a30f81a0b0987e66f9d0c4e0a7800763e7c0e2d27
+        model: '1'
+        chain: B
+        res: 403
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1132/CHIKV_MacB-x1132_1_C_308.ccp4
+        sha256: 7b6e78de1c0e8bf681dfce50bdc8644a30fe69fa34b862da564292686642447c
+        model: '1'
+        chain: C
+        res: 308
+        index: 2
+        bdc: 0.12
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1132/CHIKV_MacB-x1132_1_D_304.ccp4
+        sha256: 3362065dd34eee2a6fc742ee9218b88cc374307e8596faddb591e22e58e70165
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.35
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1132/CHIKV_MacB-x1132_1_D_306.ccp4
+        sha256: 3362065dd34eee2a6fc742ee9218b88cc374307e8596faddb591e22e58e70165
+        model: '1'
+        chain: D
+        res: 306
+        index: 1
+        bdc: 0.35
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1132/CHIKV_MacB-x1132_1_D_307.ccp4
+        sha256: 3362065dd34eee2a6fc742ee9218b88cc374307e8596faddb591e22e58e70165
+        model: '1'
+        chain: D
+        res: 307
+        index: 1
+        bdc: 0.35
+  CHIKV_MacB-x1134:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1741972444
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1134/CHIKV_MacB-x1134.pdb
+        sha256: 4e7d39ccb40193fa0b11df4f4c6d65d7707a25de8a3b88e8f15ae37f7ec58838
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1134/CHIKV_MacB-x1134.mtz
+        sha256: 25fa1684876b218ef56b62eb934840b0c86256d836ec4d04dbaa2818feaa93a1
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1134/CHIKV_MacB-x1134.cif
+        sha256: 7ccfd56f2e0017eac9aa220bad3c7c913fbc76102911ef186bcfb58a6303529f
+        smiles: CC(C)/C(N)=N/O
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1134/CHIKV_MacB-x1134_1_A_304.ccp4
+        sha256: 49b9e9923650df1a0f24acc742af347fcf65ea04073e58342e85b36c3a979c02
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1134/CHIKV_MacB-x1134_1_A_305.ccp4
+        sha256: 49b9e9923650df1a0f24acc742af347fcf65ea04073e58342e85b36c3a979c02
+        model: '1'
+        chain: A
+        res: 305
+        index: 1
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1134/CHIKV_MacB-x1134_1_B_308.ccp4
+        sha256: 3834e74f1031b939c18953d8b344ce7265bd0eb95273d6bbc5f804b254008780
+        model: '1'
+        chain: B
+        res: 308
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1134/CHIKV_MacB-x1134_1_B_309.ccp4
+        sha256: 3834e74f1031b939c18953d8b344ce7265bd0eb95273d6bbc5f804b254008780
+        model: '1'
+        chain: B
+        res: 309
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1134/CHIKV_MacB-x1134_1_C_309.ccp4
+        sha256: 3834e74f1031b939c18953d8b344ce7265bd0eb95273d6bbc5f804b254008780
+        model: '1'
+        chain: C
+        res: 309
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1134/CHIKV_MacB-x1134_1_D_401.ccp4
+        sha256: b99a340e42cb212610d569b4dcafdc5fc356587c6f5d57629751546d6052211b
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.35
+  CHIKV_MacB-x1135:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z3219959731
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1135/CHIKV_MacB-x1135.pdb
+        sha256: 3f2002c82c021ae7f70baa562959fc8e56f88be5ce7d7d49444c6f34ee5ed2fe
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1135/CHIKV_MacB-x1135.mtz
+        sha256: db6ecbb70f3f8279ae865d40515590c152211322c9daf7c7905f8fc80643922a
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1135/CHIKV_MacB-x1135.cif
+        sha256: c2001b080c8124ce2e7adf6b9be7049b065d07f2bb06ae8b3cf36ebb8f2efe1f
+        smiles: O=c1cccn[nH]1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1135/CHIKV_MacB-x1135_1_A_304.ccp4
+        sha256: f14cc5ddd2c88080c9be472f114e66c4fa0cc42003aeba3b27babfc047fbd5e3
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.46
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1135/CHIKV_MacB-x1135_1_A_305.ccp4
+        sha256: f14cc5ddd2c88080c9be472f114e66c4fa0cc42003aeba3b27babfc047fbd5e3
+        model: '1'
+        chain: A
+        res: 305
+        index: 1
+        bdc: 0.46
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1135/CHIKV_MacB-x1135_1_B_308.ccp4
+        sha256: 4a813e3f166ffc5f7d41f66f892f5c2e546a90a68a5c92e52d98c692ced6526e
+        model: '1'
+        chain: B
+        res: 308
+        index: 3
+        bdc: 0.47
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1135/CHIKV_MacB-x1135_1_B_309.ccp4
+        sha256: f14cc5ddd2c88080c9be472f114e66c4fa0cc42003aeba3b27babfc047fbd5e3
+        model: '1'
+        chain: B
+        res: 309
+        index: 1
+        bdc: 0.46
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1135/CHIKV_MacB-x1135_1_B_310.ccp4
+        sha256: f14cc5ddd2c88080c9be472f114e66c4fa0cc42003aeba3b27babfc047fbd5e3
+        model: '1'
+        chain: B
+        res: 310
+        index: 1
+        bdc: 0.46
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1135/CHIKV_MacB-x1135_1_B_593.ccp4
+        sha256: f14cc5ddd2c88080c9be472f114e66c4fa0cc42003aeba3b27babfc047fbd5e3
+        model: '1'
+        chain: B
+        res: 593
+        index: 1
+        bdc: 0.46
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1135/CHIKV_MacB-x1135_1_C_401.ccp4
+        sha256: 4a813e3f166ffc5f7d41f66f892f5c2e546a90a68a5c92e52d98c692ced6526e
+        model: '1'
+        chain: C
+        res: 401
+        index: 3
+        bdc: 0.47
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1135/CHIKV_MacB-x1135_1_C_403.ccp4
+        sha256: 4a813e3f166ffc5f7d41f66f892f5c2e546a90a68a5c92e52d98c692ced6526e
+        model: '1'
+        chain: C
+        res: 403
+        index: 3
+        bdc: 0.47
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1135/CHIKV_MacB-x1135_1_C_404.ccp4
+        sha256: 4a813e3f166ffc5f7d41f66f892f5c2e546a90a68a5c92e52d98c692ced6526e
+        model: '1'
+        chain: C
+        res: 404
+        index: 3
+        bdc: 0.47
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1135/CHIKV_MacB-x1135_1_D_401.ccp4
+        sha256: 4e6e48c37ddc6c030b2665dac689104cdbf0481bf7128eaa19e60eb62615bb6d
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.17
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1135/CHIKV_MacB-x1135_1_D_501.ccp4
+        sha256: 4e6e48c37ddc6c030b2665dac689104cdbf0481bf7128eaa19e60eb62615bb6d
+        model: '1'
+        chain: D
+        res: 501
+        index: 2
+        bdc: 0.17
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1135/CHIKV_MacB-x1135_1_D_502.ccp4
+        sha256: 4e6e48c37ddc6c030b2665dac689104cdbf0481bf7128eaa19e60eb62615bb6d
+        model: '1'
+        chain: D
+        res: 502
+        index: 2
+        bdc: 0.17
+  CHIKV_MacB-x1139:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z3225843273
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1139/CHIKV_MacB-x1139.pdb
+        sha256: 3165d3b5fe2b5d1f5505307d196d84c57c431bf6d152414be0d9c00664731896
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1139/CHIKV_MacB-x1139.mtz
+        sha256: a1c63311bf2fea5a3f4a812423cab5bbc3db97c85ffdd9e74d35e6cb34666c5f
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1139/CHIKV_MacB-x1139.cif
+        sha256: feaddf3dd0b326773323551aa4e33b0c021b3f1d7d4aea1c7056a6afe59a8ae4
+        smiles: OCc1cc[nH]n1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1139/CHIKV_MacB-x1139_1_A_305.ccp4
+        sha256: 31b18289443b83cec9251df668e363be8c34f0acd8c383c569d34311a75a2e8c
+        model: '1'
+        chain: A
+        res: 305
+        index: 1
+        bdc: 0.63
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1139/CHIKV_MacB-x1139_1_C_306.ccp4
+        sha256: ad8b1760ab03f273428c5647602c100f5e48a6ad779b61eccfc0f22d6664f84e
+        model: '1'
+        chain: C
+        res: 306
+        index: 2
+        bdc: 0.05
+  CHIKV_MacB-x1145:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z241119328
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1145/CHIKV_MacB-x1145.pdb
+        sha256: 97a8f9fc3a343de5e20e62490af4915beb5c781e294ba95072c2e513d921bb07
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1145/CHIKV_MacB-x1145.mtz
+        sha256: 45cd1d899df3cec5656ddb0b4f887c7b94cb03745bd743d64d04558168cba22a
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1145/CHIKV_MacB-x1145.cif
+        sha256: 86203d488f0432fb00b118959b7c54c758b1e2f12d8b77c27b2acbe1e7221d7a
+        smiles: Nc1cc[nH]n1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1145/CHIKV_MacB-x1145_1_A_305.ccp4
+        sha256: ed7391141378fb241151282cd28ca6943118413f692b613d4c18b65ebca1e143
+        model: '1'
+        chain: A
+        res: 305
+        index: 2
+        bdc: 0.29
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1145/CHIKV_MacB-x1145_1_B_308.ccp4
+        sha256: 901718a199f7f85699d1c3a359d8f6f3d0243b8e4413f174176601136eeeda2d
+        model: '1'
+        chain: B
+        res: 308
+        index: 1
+        bdc: 0.54
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1145/CHIKV_MacB-x1145_1_C_304.ccp4
+        sha256: 901718a199f7f85699d1c3a359d8f6f3d0243b8e4413f174176601136eeeda2d
+        model: '1'
+        chain: C
+        res: 304
+        index: 1
+        bdc: 0.54
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1145/CHIKV_MacB-x1145_1_C_308.ccp4
+        sha256: 901718a199f7f85699d1c3a359d8f6f3d0243b8e4413f174176601136eeeda2d
+        model: '1'
+        chain: C
+        res: 308
+        index: 1
+        bdc: 0.54
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1145/CHIKV_MacB-x1145_1_C_309.ccp4
+        sha256: ed7391141378fb241151282cd28ca6943118413f692b613d4c18b65ebca1e143
+        model: '1'
+        chain: C
+        res: 309
+        index: 2
+        bdc: 0.29
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1145/CHIKV_MacB-x1145_1_C_311.ccp4
+        sha256: 901718a199f7f85699d1c3a359d8f6f3d0243b8e4413f174176601136eeeda2d
+        model: '1'
+        chain: C
+        res: 311
+        index: 1
+        bdc: 0.54
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1145/CHIKV_MacB-x1145_1_D_306.ccp4
+        sha256: ed7391141378fb241151282cd28ca6943118413f692b613d4c18b65ebca1e143
+        model: '1'
+        chain: D
+        res: 306
+        index: 2
+        bdc: 0.29
+  CHIKV_MacB-x1151:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1741976468
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1151/CHIKV_MacB-x1151.pdb
+        sha256: e3314aa5433e56ab885ccdb790469288f4ee2bb3160b09548115c28ede6128bd
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1151/CHIKV_MacB-x1151.mtz
+        sha256: a8d8dcd0b76b7f02cea6a3ee8b4fbbdf5b0c7525f9028b82f7237e2bc08b4002
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1151/CHIKV_MacB-x1151.cif
+        sha256: fe3d8e5b1d6682da61592079d70c5589e7832a7afc2765a7cc3762f06fb93aa3
+        smiles: O=C1NCCN1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1151/CHIKV_MacB-x1151_1_A_304.ccp4
+        sha256: c8a03fdb8a783d9a99e9c1f53efa5be4c880684c7d5cbd8612d1898f245facc0
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.46
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1151/CHIKV_MacB-x1151_1_A_305.ccp4
+        sha256: c8a03fdb8a783d9a99e9c1f53efa5be4c880684c7d5cbd8612d1898f245facc0
+        model: '1'
+        chain: A
+        res: 305
+        index: 1
+        bdc: 0.46
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1151/CHIKV_MacB-x1151_1_A_306.ccp4
+        sha256: c8a03fdb8a783d9a99e9c1f53efa5be4c880684c7d5cbd8612d1898f245facc0
+        model: '1'
+        chain: A
+        res: 306
+        index: 1
+        bdc: 0.46
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1151/CHIKV_MacB-x1151_1_B_308.ccp4
+        sha256: 09ee5decf1ff1f92a51e1007f105435a40e383dfe71edf85acf635151b5449e4
+        model: '1'
+        chain: B
+        res: 308
+        index: 2
+        bdc: 0.35
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1151/CHIKV_MacB-x1151_1_B_309.ccp4
+        sha256: c8a03fdb8a783d9a99e9c1f53efa5be4c880684c7d5cbd8612d1898f245facc0
+        model: '1'
+        chain: B
+        res: 309
+        index: 1
+        bdc: 0.46
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1151/CHIKV_MacB-x1151_1_C_401.ccp4
+        sha256: 09ee5decf1ff1f92a51e1007f105435a40e383dfe71edf85acf635151b5449e4
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.35
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1151/CHIKV_MacB-x1151_1_C_402.ccp4
+        sha256: 09ee5decf1ff1f92a51e1007f105435a40e383dfe71edf85acf635151b5449e4
+        model: '1'
+        chain: C
+        res: 402
+        index: 2
+        bdc: 0.35
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1151/CHIKV_MacB-x1151_1_C_403.ccp4
+        sha256: 09ee5decf1ff1f92a51e1007f105435a40e383dfe71edf85acf635151b5449e4
+        model: '1'
+        chain: C
+        res: 403
+        index: 2
+        bdc: 0.35
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1151/CHIKV_MacB-x1151_1_D_401.ccp4
+        sha256: 010f40ae179abc94246aaed43e31fb447495acfc8d0608204e29126d9725b378
+        model: '1'
+        chain: D
+        res: 401
+        index: 3
+        bdc: 0.62
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1151/CHIKV_MacB-x1151_1_D_402.ccp4
+        sha256: 010f40ae179abc94246aaed43e31fb447495acfc8d0608204e29126d9725b378
+        model: '1'
+        chain: D
+        res: 402
+        index: 3
+        bdc: 0.62
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1151/CHIKV_MacB-x1151_1_D_403.ccp4
+        sha256: 010f40ae179abc94246aaed43e31fb447495acfc8d0608204e29126d9725b378
+        model: '1'
+        chain: D
+        res: 403
+        index: 3
+        bdc: 0.62
+  CHIKV_MacB-x1175:
+    type: model_building
+    last_updated: '2024-03-19 13:08:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z281773378
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1175/CHIKV_MacB-x1175.pdb
+        sha256: 1bfab3ef84db1166ce311d53701aa0ae8e5a837a59ac2e0371d98b3e15747789
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1175/CHIKV_MacB-x1175.mtz
+        sha256: a7233205d6c939611ca3a9abc2cb53d7e269431afc0f36834e23cf74fda905b0
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1175/CHIKV_MacB-x1175.cif
+        sha256: 91c3c0e4c39038ed746d0dc12d08714a0a6aed5946ea26acc2b02e590bbec866
+        smiles: COc1ccc(C2=CCNCC2)cc1
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1175/CHIKV_MacB-x1175_1_A_401.ccp4
+        sha256: 6f31016c32c3ddcf6dfebc307753309aeff2f5854ef5548b45ce62b388ebaa24
+        model: '1'
+        chain: A
+        res: 401
+        index: 3
+        bdc: 0.29
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1175/CHIKV_MacB-x1175_1_B_304.ccp4
+        sha256: a51036df56cc0a3acf2ba2af2687bdae60255bfe8ca7dfd324e9ca11b0a76d78
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.44
+  CHIKV_MacB-x1182:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z303754556
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1182/CHIKV_MacB-x1182.pdb
+        sha256: 8c073b5b232a730ce2c66d465c530d927a17f78c4ea66b72e47923ae125bd954
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1182/CHIKV_MacB-x1182.mtz
+        sha256: fec78b8f8ee08eeee63ba19953ad2937ac5a015c77c542e143c2c69d34cfbe34
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1182/CHIKV_MacB-x1182.cif
+        sha256: 0e0952f70bbf044a0f28f19c15d6b4d2e587409365c229d54499d0d8ca85db05
+        smiles: N#C[C@H]1CCS(=O)(=O)C1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1182/CHIKV_MacB-x1182_1_A_305.ccp4
+        sha256: 6b3c69cfd4dc4d544c191a429972fc705ad5b88ad26f6b9739a3ce6e24090ec2
+        model: '1'
+        chain: A
+        res: 305
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1182/CHIKV_MacB-x1182_1_B_401.ccp4
+        sha256: 6ca4f4e8e4256ee78d35e7994817e60a04f871a4ee5d8f08ebb974c7432ebc9e
+        model: '1'
+        chain: B
+        res: 401
+        index: 2
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1182/CHIKV_MacB-x1182_1_C_304.ccp4
+        sha256: 0fb95f8ea6c6fda1331c8f35c37742b2422178fe55142003d7f5bfb862862cef
+        model: '1'
+        chain: C
+        res: 304
+        index: 1
+        bdc: 0.34
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1182/CHIKV_MacB-x1182_1_D_306.ccp4
+        sha256: 0fb95f8ea6c6fda1331c8f35c37742b2422178fe55142003d7f5bfb862862cef
+        model: '1'
+        chain: D
+        res: 306
+        index: 1
+        bdc: 0.34
+  CHIKV_MacB-x1183:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z57299966
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1183/CHIKV_MacB-x1183.pdb
+        sha256: aaf1c12905d8481615f22e8e8feb62025145264f1cb28ccbc082dc02200f9c4d
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1183/CHIKV_MacB-x1183.mtz
+        sha256: d4c1037e182b653d66b11a07e353d864ab110d277b658bea6c936c7d360d5bf8
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1183/CHIKV_MacB-x1183.cif
+        sha256: 5f722e7caff8ed6ceeef688cdfd46858144b8e01bfa2feea5546ee8ea0ca3cd3
+        smiles: Cn1c(CO)nc2ccccc21
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1183/CHIKV_MacB-x1183_1_B_304.ccp4
+        sha256: 43b6d578bc36f0e5af673232ba7e4d49bf29a5e30d2e98048a7573a11e36bdfb
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1183/CHIKV_MacB-x1183_1_B_401.ccp4
+        sha256: 43b6d578bc36f0e5af673232ba7e4d49bf29a5e30d2e98048a7573a11e36bdfb
+        model: '1'
+        chain: B
+        res: 401
+        index: 1
+        bdc: 0.05
+  CHIKV_MacB-x1185:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z228586860
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1185/CHIKV_MacB-x1185.pdb
+        sha256: 00b09fc40e4b792eceffb7b8e9180a882a4d34d4b6aa4adae56cc3b1f2d044d1
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1185/CHIKV_MacB-x1185.mtz
+        sha256: eda8823df905de57a30bd6c742a5e39e2389d1c721ccce6fbb2a635d5aa118bd
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1185/CHIKV_MacB-x1185.cif
+        sha256: a234ecfb64174177dcc162a6b79a7d89ad252d867d9b27cf47879ac58dba8a83
+        smiles: O=C(c1ccccc1F)N1CCNCC1
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1185/CHIKV_MacB-x1185_1_A_305.ccp4
+        sha256: 31ac74b0ba7f950f895174b0499780eecb9b0a78b35c32a94130735f358c9c0c
+        model: '1'
+        chain: A
+        res: 305
+        index: 2
+        bdc: 0.51
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1185/CHIKV_MacB-x1185_1_B_401.ccp4
+        sha256: 9bb27ce2054c5ec048eec99c018c63f7f7fb9d7a4aa0f7f1ef302014025a92d2
+        model: '1'
+        chain: B
+        res: 401
+        index: 3
+        bdc: 0.05
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1185/CHIKV_MacB-x1185_1_C_304.ccp4
+        sha256: 724b6b4aab97a1817009f8bb702bb48402c5670a05dd408bce7e6bd16c3f6334
+        model: '1'
+        chain: C
+        res: 304
+        index: 1
+        bdc: 1.0
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1185/CHIKV_MacB-x1185_1_D_401.ccp4
+        sha256: 31ac74b0ba7f950f895174b0499780eecb9b0a78b35c32a94130735f358c9c0c
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.51
+  CHIKV_MacB-x1188:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z89269461
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1188/CHIKV_MacB-x1188.pdb
+        sha256: fb6c69cb958829ef2cd20d48cccb878bf2efd595d49ca04d8e3144b5108d940a
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1188/CHIKV_MacB-x1188.mtz
+        sha256: 7c90441952f30d581964c0c7abe92210131ae91cadaed646c88308563daf1818
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1188/CHIKV_MacB-x1188.cif
+        sha256: 9ac6346e6fd5649237db789bce6c9a9afc18eb73f19b0608b7679d523f766fc5
+        smiles: C[C@H]1C(=O)NC(=O)N1c1ccc(Cl)cc1
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1188/CHIKV_MacB-x1188_1_C_401.ccp4
+        sha256: 6edbc9eba83c01c5bfbaa91cb6ec0dbe67b41bc4d3cedf8a65de10dde943de06
+        model: '1'
+        chain: C
+        res: 401
+        index: 3
+        bdc: 0.13
+  CHIKV_MacB-x1194:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z362772344
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1194/CHIKV_MacB-x1194.pdb
+        sha256: c700fe1fcf8a6a0406a130bd1a5a248bfb3b2b584a40dd23097700e4c8456e0b
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1194/CHIKV_MacB-x1194.mtz
+        sha256: a9d2ade4da3f6f5cc2319d4865a2ef23270b523e89ad3170e1ea409749a56fe7
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1194/CHIKV_MacB-x1194.cif
+        sha256: 0f843d5ffbf4829196056bc6214499792e81eee791fec4353a7dd3cda05682c3
+        smiles: Cc1cc(C)c2c(=O)[nH]n(C)c2n1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1194/CHIKV_MacB-x1194_1_A_305.ccp4
+        sha256: d92c0e5e53256b00d7f7a6255e5f0895b5084fa447c70c50ccb3ee46c0663cd6
+        model: '1'
+        chain: A
+        res: 305
+        index: 2
+        bdc: 0.66
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1194/CHIKV_MacB-x1194_1_C_304.ccp4
+        sha256: c24e57cd3ff1db6518a64e718b9f1884551f8634d1e57c20e6e69c58d02fa6d7
+        model: '1'
+        chain: C
+        res: 304
+        index: 1
+        bdc: 0.47
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1194/CHIKV_MacB-x1194_1_D_401.ccp4
+        sha256: d92c0e5e53256b00d7f7a6255e5f0895b5084fa447c70c50ccb3ee46c0663cd6
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.66
+  CHIKV_MacB-x1198:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z362020366
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1198/CHIKV_MacB-x1198.pdb
+        sha256: 4ad466101bc9cb8047ad51fbd2357e128086f780caed69bf36b74bc87763aa53
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1198/CHIKV_MacB-x1198.mtz
+        sha256: 6785bda0089e5034e4ffe8fb9f2d9b29f04f5e4ce12f12ca94205b5e6b088adf
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1198/CHIKV_MacB-x1198.cif
+        sha256: 7b993e434f1bbf6480b52e2f803f688e91046fe3fcc0dfec690e02a589bee039
+        smiles: Nc1nnc2ccccn12
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1198/CHIKV_MacB-x1198_1_A_401.ccp4
+        sha256: a4acf0a685d3132e10f9e4aa3dd26d661db9070e60c8a24d39491bdd5381020c
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.34
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1198/CHIKV_MacB-x1198_1_B_304.ccp4
+        sha256: 399f1376c33bc0553ba8e05063ca7ec7261079c0bf798ba6141bdef6be9d700e
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.13
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1198/CHIKV_MacB-x1198_1_C_308.ccp4
+        sha256: 399f1376c33bc0553ba8e05063ca7ec7261079c0bf798ba6141bdef6be9d700e
+        model: '1'
+        chain: C
+        res: 308
+        index: 1
+        bdc: 0.13
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1198/CHIKV_MacB-x1198_1_D_401.ccp4
+        sha256: 352be61b4a5689e4be55b9d40cb4407bb604651fb0aa7a2a059a19a9cbc92654
+        model: '1'
+        chain: D
+        res: 401
+        index: 3
+        bdc: 0.34
+  CHIKV_MacB-x1203:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z56791928
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1203/CHIKV_MacB-x1203.pdb
+        sha256: 053403dee095f9219898e36f951cde069e0c4393654192ec45f8d266e0cd115f
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1203/CHIKV_MacB-x1203.mtz
+        sha256: bfdfa5359be926a48712cb60c957b497815aa72226143acd12fde7ea93644513
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1203/CHIKV_MacB-x1203.cif
+        sha256: 1fc59c76584eb18f2fcde6c7ce88adbf6b5f44d51307263825ab1980d35e1cc6
+        smiles: Cn1c(N)nc2ccccc21
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1203/CHIKV_MacB-x1203_1_A_304.ccp4
+        sha256: 0d65a5229a4246a9d1be09d5392e69af80a37ec83e3a3c5ddebdcdf4540b1bb8
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.42
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1203/CHIKV_MacB-x1203_1_A_401.ccp4
+        sha256: 0d65a5229a4246a9d1be09d5392e69af80a37ec83e3a3c5ddebdcdf4540b1bb8
+        model: '1'
+        chain: A
+        res: 401
+        index: 1
+        bdc: 0.42
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1203/CHIKV_MacB-x1203_1_A_501.ccp4
+        sha256: 0d65a5229a4246a9d1be09d5392e69af80a37ec83e3a3c5ddebdcdf4540b1bb8
+        model: '1'
+        chain: A
+        res: 501
+        index: 1
+        bdc: 0.42
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1203/CHIKV_MacB-x1203_1_B_308.ccp4
+        sha256: 0d65a5229a4246a9d1be09d5392e69af80a37ec83e3a3c5ddebdcdf4540b1bb8
+        model: '1'
+        chain: B
+        res: 308
+        index: 1
+        bdc: 0.42
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1203/CHIKV_MacB-x1203_1_B_309.ccp4
+        sha256: 0d65a5229a4246a9d1be09d5392e69af80a37ec83e3a3c5ddebdcdf4540b1bb8
+        model: '1'
+        chain: B
+        res: 309
+        index: 1
+        bdc: 0.42
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1203/CHIKV_MacB-x1203_1_C_309.ccp4
+        sha256: cdf20312740ef55e995c539bce9bac4d9b7f69f68904429c8e25325156cda505
+        model: '1'
+        chain: C
+        res: 309
+        index: 2
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1203/CHIKV_MacB-x1203_1_C_310.ccp4
+        sha256: 9c364fa792c891f5c8905a2c10b91a8f62115517247e8189c528a0ed06c64155
+        model: '1'
+        chain: C
+        res: 310
+        index: 3
+        bdc: 0.23
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1203/CHIKV_MacB-x1203_1_D_306.ccp4
+        sha256: 0d65a5229a4246a9d1be09d5392e69af80a37ec83e3a3c5ddebdcdf4540b1bb8
+        model: '1'
+        chain: D
+        res: 306
+        index: 1
+        bdc: 0.42
+  CHIKV_MacB-x1213:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z212053854
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1213/CHIKV_MacB-x1213.pdb
+        sha256: 157f77a29fc71cb3a9f50b88c22f70bc4605fb7eed593ec7d2aec6ccbc405104
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1213/CHIKV_MacB-x1213.mtz
+        sha256: a66420861f7b896f8d95be216c325fca903b95a7c5df4a6dca355f6ee12efff7
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1213/CHIKV_MacB-x1213.cif
+        sha256: f442eb4f1eeae11af6becfc6b8ee45ad9c8eda8acec7891f96cc6420b96fd55b
+        smiles: c1cnc2c(c1)NCCC2
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1213/CHIKV_MacB-x1213_1_A_401.ccp4
+        sha256: 80795feb53fcc89ac18f9028b9b4d5545ae0ee28aabad4b13bb4d900f9f7c639
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.19
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1213/CHIKV_MacB-x1213_1_A_402.ccp4
+        sha256: 80795feb53fcc89ac18f9028b9b4d5545ae0ee28aabad4b13bb4d900f9f7c639
+        model: '1'
+        chain: A
+        res: 402
+        index: 2
+        bdc: 0.19
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1213/CHIKV_MacB-x1213_1_B_308.ccp4
+        sha256: 80795feb53fcc89ac18f9028b9b4d5545ae0ee28aabad4b13bb4d900f9f7c639
+        model: '1'
+        chain: B
+        res: 308
+        index: 2
+        bdc: 0.19
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1213/CHIKV_MacB-x1213_1_C_401.ccp4
+        sha256: 9853e466efe6195d86b0f8d1e70b076de8a755dc897e021de09d5047912ec8fa
+        model: '1'
+        chain: C
+        res: 401
+        index: 3
+        bdc: 0.36
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1213/CHIKV_MacB-x1213_1_D_304.ccp4
+        sha256: 4201b1657db469e120e3b77259bdb7d0688498cf8c3fe3b1613d6d8ff3e6a0f6
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.26
+  CHIKV_MacB-x1258:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z33546644
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1258/CHIKV_MacB-x1258.pdb
+        sha256: 312b95a6b19c0298144baf1b9016304109ba4318c6dcd471bd7c1777c0d44191
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1258/CHIKV_MacB-x1258.mtz
+        sha256: acc11d2adc394362925264e21afd18d06cfd94072088450adc7cdcb87f7638bd
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1258/CHIKV_MacB-x1258.cif
+        sha256: 8b666e5beeda7a4affc3ba06d8bf428b61d5e87b5d027ecfc5a5e76b84f0066f
+        smiles: NC(=O)c1cnccn1
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1258/CHIKV_MacB-x1258_1_A_305.ccp4
+        sha256: a6059dc63d8663e043be7cca13bc64602c556d277e391456d3f2277b04bbda98
+        model: '1'
+        chain: A
+        res: 305
+        index: 1
+        bdc: 0.21
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1258/CHIKV_MacB-x1258_1_B_304.ccp4
+        sha256: a6059dc63d8663e043be7cca13bc64602c556d277e391456d3f2277b04bbda98
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.21
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1258/CHIKV_MacB-x1258_1_C_308.ccp4
+        sha256: 9fa23372ca3cf719e0ffd6e18d4edd849dc564a265b969b519e80c3e87134aba
+        model: '1'
+        chain: C
+        res: 308
+        index: 3
+        bdc: 0.05
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1258/CHIKV_MacB-x1258_1_D_401.ccp4
+        sha256: 4fc4eb622a5221d526afe26f0d5df48a194d436af6fb81f0ac0e64b8c8b36d53
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.05
+  CHIKV_MacB-x1260:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z255114686
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1260/CHIKV_MacB-x1260.pdb
+        sha256: 4e6e05e4666e8bccf48aafd012fe3498cb440d2ead4cd749516590802569d689
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1260/CHIKV_MacB-x1260.mtz
+        sha256: 41f113d25cfc05a95636c6fece4efbae5a413ce0e3eae4f319460baaf6e283eb
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1260/CHIKV_MacB-x1260.cif
+        sha256: c5ca2c1b0ab9bb900075be0116e69ca9de92a051e48bff4a970ae0bedc80793d
+        smiles: Nc1ccc2ncccc2c1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1260/CHIKV_MacB-x1260_1_A_304.ccp4
+        sha256: a53e3c97abdfae837ba5f7943e5b3c376fccb19419e7490070288ca0ac2ef1b0
+        model: '1'
+        chain: A
+        res: 304
+        index: 1
+        bdc: 0.14
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1260/CHIKV_MacB-x1260_1_A_305.ccp4
+        sha256: a53e3c97abdfae837ba5f7943e5b3c376fccb19419e7490070288ca0ac2ef1b0
+        model: '1'
+        chain: A
+        res: 305
+        index: 1
+        bdc: 0.14
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1260/CHIKV_MacB-x1260_1_B_401.ccp4
+        sha256: 369ebdfe3bcca2ce0c14818981c13d4c2b83dce9dd64c8912d69981c2bb08810
+        model: '1'
+        chain: B
+        res: 401
+        index: 2
+        bdc: 0.4
+  CHIKV_MacB-x1268:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1203748449
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1268/CHIKV_MacB-x1268.pdb
+        sha256: 33b2b4ada5ccf833d4f44a5ee5b7badf93c555ecff5cc7886c4f1665004e4599
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1268/CHIKV_MacB-x1268.mtz
+        sha256: 948d7af50f36298ffd396bae25eb601ed15fef455455dcf36903809237c17d4f
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1268/CHIKV_MacB-x1268.cif
+        sha256: beafb6209a51edddfb81c137a30bc7bb2bb66fd0dd5ee1b322ec6e6e2077adc4
+        smiles: NS(=O)(=O)c1ncc[nH]1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1268/CHIKV_MacB-x1268_1_B_304.ccp4
+        sha256: 31206f5cac69378b86f7c60e8693991bef56fea5d622a3f45caa66a227a06217
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.59
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1268/CHIKV_MacB-x1268_1_C_401.ccp4
+        sha256: 275074ab3d27971da4f10bb9b46b383707a359f3c244c9cac07e0eae1819d1be
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.21
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1268/CHIKV_MacB-x1268_1_D_306.ccp4
+        sha256: 03b44373a147b0bf960fed4e61a39bad89fb199109133b464195643f81fefb72
+        model: '1'
+        chain: D
+        res: 306
+        index: 3
+        bdc: 0.13
+  CHIKV_MacB-x1271:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z56912586
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1271/CHIKV_MacB-x1271.pdb
+        sha256: 3326badd6c230939a2f4bb07eada0dcda8c2b257179365a6f01afa70e7908d6c
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1271/CHIKV_MacB-x1271.mtz
+        sha256: 0ac14661a7b3f48b053f2312c033846995dcf3592c922eb9632099b535445f68
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1271/CHIKV_MacB-x1271.cif
+        sha256: 8dfb8f3a31fbc53e93fe89ca7bdcb716e742187ecd8a1b86f5aa0e54bf9e3635
+        smiles: Nc1nc2ccccc2s1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1271/CHIKV_MacB-x1271_1_A_401.ccp4
+        sha256: f988ec1057ae35631522bbe83a15887e61ec411777b11fad30ad15339ebbb491
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.53
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1271/CHIKV_MacB-x1271_1_B_308.ccp4
+        sha256: f988ec1057ae35631522bbe83a15887e61ec411777b11fad30ad15339ebbb491
+        model: '1'
+        chain: B
+        res: 308
+        index: 2
+        bdc: 0.53
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1271/CHIKV_MacB-x1271_1_C_401.ccp4
+        sha256: 40d68a0efbe7970a1aa8a088eefcb4288dfd871d165b1a6da9770802393e82e0
+        model: '1'
+        chain: C
+        res: 401
+        index: 3
+        bdc: 0.45
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1271/CHIKV_MacB-x1271_1_C_402.ccp4
+        sha256: 40d68a0efbe7970a1aa8a088eefcb4288dfd871d165b1a6da9770802393e82e0
+        model: '1'
+        chain: C
+        res: 402
+        index: 3
+        bdc: 0.45
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1271/CHIKV_MacB-x1271_1_D_304.ccp4
+        sha256: 169166d23e675dc3eebee309c4e36c017b8b27c3766851f34321256ba0680378
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.59
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1271/CHIKV_MacB-x1271_1_D_306.ccp4
+        sha256: 169166d23e675dc3eebee309c4e36c017b8b27c3766851f34321256ba0680378
+        model: '1'
+        chain: D
+        res: 306
+        index: 1
+        bdc: 0.59
+  CHIKV_MacB-x1278:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1079133092
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1278/CHIKV_MacB-x1278.pdb
+        sha256: 385ff844c6e4a6a1994e8e2480e811b3c0c9b609d98575f45cec769c3134010b
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1278/CHIKV_MacB-x1278.mtz
+        sha256: 509ee7526cad90f5975f14666f0adf11e2f7d7c6a60985e57e0a28d4be12af92
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1278/CHIKV_MacB-x1278.cif
+        sha256: 32a737c09c7b4842177c5f0a9dda34194638fc20d9f6e692ec8ac43202d49197
+        smiles: COC(=O)c1c[nH]c2ncccc12
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1278/CHIKV_MacB-x1278_1_D_401.ccp4
+        sha256: 7e76de4d555235a4ea3ad446f3e3d5c3e5df3b4a27de4ddd033fb5fb08021086
+        model: '1'
+        chain: D
+        res: 401
+        index: 3
+        bdc: 0.27
+  CHIKV_MacB-x1288:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z218760918
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1288/CHIKV_MacB-x1288.pdb
+        sha256: b67d239d102b5e35acdf2d5b5ab0177bc3e40dbda7a05189b9f1ad483a2555ac
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1288/CHIKV_MacB-x1288.mtz
+        sha256: ef8636f4207681021198cba73ff600b6918046d5150ecf06986958708f409ae2
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1288/CHIKV_MacB-x1288.cif
+        sha256: a9d8ff2aaa5234d643714b26f20cb33f97de05dae927ee47301e9bd5c81ac0ce
+        smiles: Nc1noc2ccccc12
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1288/CHIKV_MacB-x1288_1_A_401.ccp4
+        sha256: f92b986c1574cde33e65f082d10c4116568dc2678f48a3428144c6e65a022699
+        model: '1'
+        chain: A
+        res: 401
+        index: 3
+        bdc: 0.13
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1288/CHIKV_MacB-x1288_1_A_402.ccp4
+        sha256: f92b986c1574cde33e65f082d10c4116568dc2678f48a3428144c6e65a022699
+        model: '1'
+        chain: A
+        res: 402
+        index: 3
+        bdc: 0.13
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1288/CHIKV_MacB-x1288_1_A_403.ccp4
+        sha256: f92b986c1574cde33e65f082d10c4116568dc2678f48a3428144c6e65a022699
+        model: '1'
+        chain: A
+        res: 403
+        index: 3
+        bdc: 0.13
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1288/CHIKV_MacB-x1288_1_B_304.ccp4
+        sha256: e0ff1c468d5800207fee3cafe33b3dda8eadb8254e5ffed77d38bec5a4f0792e
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.54
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1288/CHIKV_MacB-x1288_1_D_401.ccp4
+        sha256: bd275f74395991ef54b57c7dd6a46df6fee53ba94c2a943a7a0d703d711dbd28
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.2
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1288/CHIKV_MacB-x1288_1_D_402.ccp4
+        sha256: bd275f74395991ef54b57c7dd6a46df6fee53ba94c2a943a7a0d703d711dbd28
+        model: '1'
+        chain: D
+        res: 402
+        index: 2
+        bdc: 0.2
+  CHIKV_MacB-x1298:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z104507896
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1298/CHIKV_MacB-x1298.pdb
+        sha256: ca72e6f723d420bbd32e3b5cb07e9fe31e70448315faaa2d8ba2f1cf19c79556
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1298/CHIKV_MacB-x1298.mtz
+        sha256: ebe745bc2c6eb66d2c9d09a50051ae174585989dfc0aa02f862d18ebbcfdce71
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1298/CHIKV_MacB-x1298.cif
+        sha256: e431a63f34341a9a3d7909bc55d78e8acdfa91c1df0227b4d12c3458792e63ca
+        smiles: Cn1c(=O)c2c(ncn2C)n(C)c1=O
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1298/CHIKV_MacB-x1298_1_B_401.ccp4
+        sha256: fff8641142ad61e022f1821c4f04b255c4e213eed1b6e0b6aca36587e26f70b7
+        model: '1'
+        chain: B
+        res: 401
+        index: 2
+        bdc: 0.09
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1298/CHIKV_MacB-x1298_1_C_304.ccp4
+        sha256: ee1fda3854eb3d800b6bf6b7892c7ff5edd2749e832769a61b278486046b0b35
+        model: '1'
+        chain: C
+        res: 304
+        index: 1
+        bdc: 0.11
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1298/CHIKV_MacB-x1298_1_D_401.ccp4
+        sha256: f10cd756523df5b1216b9db1275e428f4d5f02eb7c00ee1fe7c0a3a23cfdb3e2
+        model: '1'
+        chain: D
+        res: 401
+        index: 3
+        bdc: 0.07
+  CHIKV_MacB-x1299:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z367659362
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1299/CHIKV_MacB-x1299.pdb
+        sha256: 90537fa3e5f21861066981fbd08b4af06484ccce9e55459487116c7bcd8f4c2c
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1299/CHIKV_MacB-x1299.mtz
+        sha256: d4a041e3e8e4a1176cc74eb2207c864245b0e4fa1da7bf00120f3a2639f95fcf
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1299/CHIKV_MacB-x1299.cif
+        sha256: 8ebe073b08c05aaacabae67e49953bf9fa2062c9b243a329e88bfcc4ffc4739d
+        smiles: CC(C)n1c(N)nc2ccccc21
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1299/CHIKV_MacB-x1299_1_B_304.ccp4
+        sha256: 5d982ee2eb755b3cbb3b863906e758e078eb6ed67dc0cf344b265d612e7fddd6
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.06
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1299/CHIKV_MacB-x1299_1_C_401.ccp4
+        sha256: c6e15448cd78edb0abff695d018f59a488671e79b354c01570eb4f6a5facf507
+        model: '1'
+        chain: C
+        res: 401
+        index: 3
+        bdc: 0.31
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1299/CHIKV_MacB-x1299_1_D_401.ccp4
+        sha256: 4b1b17fdad5efd990903b65ffbe702d6dc0f6c58ac355661c140c54727574b25
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.56
+  CHIKV_MacB-x1305:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z104473678
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1305/CHIKV_MacB-x1305.pdb
+        sha256: 69cc7416af83f7aa4eba7b6adb73f2cf3f861153b99bdaf5679f291132debb16
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1305/CHIKV_MacB-x1305.mtz
+        sha256: 54eb48b3060479d7cac6e4a34d70cf3a152ff453146a61257b977d16141e8b24
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1305/CHIKV_MacB-x1305.cif
+        sha256: 7df21441c0797a3d1374e8a7fb5cbcae4eb9f1e5e2dc00430727eb067c035cb5
+        smiles: Oc1ccc2c(c1)OCO2
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1305/CHIKV_MacB-x1305_1_A_304.ccp4
+        sha256: b1b06491fbcaaf3a438c7029ea06fe0f5957b2e33d5aba167f14f8736d9db41d
+        model: '1'
+        chain: A
+        res: 304
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1305/CHIKV_MacB-x1305_1_A_305.ccp4
+        sha256: b1b06491fbcaaf3a438c7029ea06fe0f5957b2e33d5aba167f14f8736d9db41d
+        model: '1'
+        chain: A
+        res: 305
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1305/CHIKV_MacB-x1305_1_B_308.ccp4
+        sha256: b1b06491fbcaaf3a438c7029ea06fe0f5957b2e33d5aba167f14f8736d9db41d
+        model: '1'
+        chain: B
+        res: 308
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1305/CHIKV_MacB-x1305_1_C_401.ccp4
+        sha256: b5a8bba5712057c6141b3a293774f0967e0708266f7598dcb514f183b6a1c7d3
+        model: '1'
+        chain: C
+        res: 401
+        index: 1
+        bdc: 0.08
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1305/CHIKV_MacB-x1305_1_D_306.ccp4
+        sha256: b5a8bba5712057c6141b3a293774f0967e0708266f7598dcb514f183b6a1c7d3
+        model: '1'
+        chain: D
+        res: 306
+        index: 1
+        bdc: 0.08
+  CHIKV_MacB-x1315:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z31725206
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1315/CHIKV_MacB-x1315.pdb
+        sha256: b7080593288bb72f7d660f576df98d1cf99767617f5bd0ac520ede689f134859
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1315/CHIKV_MacB-x1315.mtz
+        sha256: 112dce7db144c7e99150223e334e0eff395cebf98bf3c3fb81aa2aa16ff8c438
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1315/CHIKV_MacB-x1315.cif
+        sha256: 2305522f2667e841fa77afc1491a5cfcafff7807bbdba817a157e1c8d2ee0bc0
+        smiles: O=C(NCCO)c1ccc(Cl)cc1
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1315/CHIKV_MacB-x1315_1_C_304.ccp4
+        sha256: 206c0b0e40825700e795b2839a014bc7f4363d09e8854a8967e102e151870227
+        model: '1'
+        chain: C
+        res: 304
+        index: 1
+        bdc: 0.45
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1315/CHIKV_MacB-x1315_1_D_306.ccp4
+        sha256: 26bc44d209ac9752a62328f0951f10ba4e818a13c8a083e1440788cc47ef0c80
+        model: '1'
+        chain: D
+        res: 306
+        index: 3
+        bdc: 0.05
+  CHIKV_MacB-x1316:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z19674820
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1316/CHIKV_MacB-x1316.pdb
+        sha256: a9c5f6eebf29ae05441f119fed0b1004473da20d4b166c9ea42c32361a9d560f
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1316/CHIKV_MacB-x1316.mtz
+        sha256: 8cfb458754ee8fb032dbafe9ed201a368fcf8389973c6fdc68a696cfceadfdcc
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1316/CHIKV_MacB-x1316.cif
+        sha256: 6ec9e8f552cc21002d50fa5e5a09adce1fd10031f4c8e504e3aa4f5dbaf9c3fc
+        smiles: COC(=O)c1ccc(O)cc1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1316/CHIKV_MacB-x1316_1_A_401.ccp4
+        sha256: d55e3ef5fe948769616392c9b236631af6232b2ee12587f7f22724faac3ad899
+        model: '1'
+        chain: A
+        res: 401
+        index: 1
+        bdc: 0.58
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1316/CHIKV_MacB-x1316_1_C_304.ccp4
+        sha256: 83963dc3655abfc8eec0f0b4cc1ccede8a29e7ca67eb45d5a3230c08b0a97c31
+        model: '1'
+        chain: C
+        res: 304
+        index: 2
+        bdc: 0.57
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1316/CHIKV_MacB-x1316_1_D_306.ccp4
+        sha256: 83963dc3655abfc8eec0f0b4cc1ccede8a29e7ca67eb45d5a3230c08b0a97c31
+        model: '1'
+        chain: D
+        res: 306
+        index: 2
+        bdc: 0.57
+  CHIKV_MacB-x1320:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z57169486
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1320/CHIKV_MacB-x1320.pdb
+        sha256: f9971c9294437697575e5e8489d141f14a169cdb33e8c3a1c366af95b3cea95d
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1320/CHIKV_MacB-x1320.mtz
+        sha256: 07edc2a8ec3c89cbf9664f7f084c8adb5ddcaff30db0f899528cb265f4f20c4b
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1320/CHIKV_MacB-x1320.cif
+        sha256: b92c52b73cd6a5de103f933e725f65edf44d8a614e10ad4efc5c4e176966d4e4
+        smiles: O=c1ccc2ccccc2o1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1320/CHIKV_MacB-x1320_1_D_304.ccp4
+        sha256: 8a42fa98e5b966a66c9367b62a6e42293281940ecf194845a3fa638cdbaabc8e
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.06
+  CHIKV_MacB-x1331:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z57127903
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1331/CHIKV_MacB-x1331.pdb
+        sha256: 1256e83224f5982ea26ad6653a7324a2fd875edbe8056fa557a68195110c610f
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1331/CHIKV_MacB-x1331.mtz
+        sha256: a7bdc53cbe85fbca083c5a19612a826a04882d243d6916eeeed41097d6d784bc
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1331/CHIKV_MacB-x1331.cif
+        sha256: 2a9ec090087777f4fac703aad04592fb739c533477b1e38870cd0e387420b001
+        smiles: O=C1Nc2ccccc2C1=O
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1331/CHIKV_MacB-x1331_1_A_304.ccp4
+        sha256: f44e4362325d759c10d103fcb6557a02dcd9d663354b88a31340e67259d785b6
+        model: '1'
+        chain: A
+        res: 304
+        index: 3
+        bdc: 1.0
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1331/CHIKV_MacB-x1331_1_A_305.ccp4
+        sha256: f44e4362325d759c10d103fcb6557a02dcd9d663354b88a31340e67259d785b6
+        model: '1'
+        chain: A
+        res: 305
+        index: 3
+        bdc: 1.0
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1331/CHIKV_MacB-x1331_1_B_308.ccp4
+        sha256: f44e4362325d759c10d103fcb6557a02dcd9d663354b88a31340e67259d785b6
+        model: '1'
+        chain: B
+        res: 308
+        index: 3
+        bdc: 1.0
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1331/CHIKV_MacB-x1331_1_C_401.ccp4
+        sha256: a8061a731092f71b1d1224b5172d30225ed75156cceafe802f037814f01786aa
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.97
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1331/CHIKV_MacB-x1331_1_D_306.ccp4
+        sha256: 59f40378ffa687328a955e3341122c0d1d5bfc9b761198a0c79ca83202d102cd
+        model: '1'
+        chain: D
+        res: 306
+        index: 1
+        bdc: 0.05
+  CHIKV_MacB-x1335:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z104511114
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1335/CHIKV_MacB-x1335.pdb
+        sha256: 4324b06ae40234d5592620f0e257264814c20b26d3be570136e8a643adcb22d6
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1335/CHIKV_MacB-x1335.mtz
+        sha256: 6ae7c3c2e9f0cf630b21db79580a447618da7e72dbb26a2c49334d4c8ab4fa4f
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1335/CHIKV_MacB-x1335.cif
+        sha256: ab13330eeebcd8b3aea5434aa9e69935f9977971a76295027fc110e9dd49b30c
+        smiles: CSc1ccc(N)cc1
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1335/CHIKV_MacB-x1335_1_B_401.ccp4
+        sha256: 739324b7c9e373eaca68e454c15079f4760e694f597aad491b6d3b83bd4a4c6e
+        model: '1'
+        chain: B
+        res: 401
+        index: 1
+        bdc: 0.13
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1335/CHIKV_MacB-x1335_1_C_304.ccp4
+        sha256: a7701a61a6f85eb8690d038b0939350eb980ac15871b251c5f4d1e65e7c9e77b
+        model: '1'
+        chain: C
+        res: 304
+        index: 3
+        bdc: 0.31
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1335/CHIKV_MacB-x1335_1_D_401.ccp4
+        sha256: 2d0c684970fb3aae0a684674d58709fa8701970b5765b8272b2eac58712be8d0
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.18
+  CHIKV_MacB-x1337:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1378432729
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1337/CHIKV_MacB-x1337.pdb
+        sha256: df4e1da8dda093021ce435af97e2bab37fd02d2512306303a2a5048bc0688ea8
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1337/CHIKV_MacB-x1337.mtz
+        sha256: 599b5e9f6b75007ac7a63e04622e2f1f1e5275d174e74e229c92b43a042fbe30
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1337/CHIKV_MacB-x1337.cif
+        sha256: 0b362d5229b9015785a44d5ed89559e137622c4a282f976e3e8e2a5ff2e754db
+        smiles: NS(=O)(=O)c1cc2ccccc2o1
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1337/CHIKV_MacB-x1337_1_C_401.ccp4
+        sha256: a07286ab409c37815fb8585ae50402aa758f9766ac710920a0dbce38e065bf6d
+        model: '1'
+        chain: C
+        res: 401
+        index: 3
+        bdc: 0.28
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1337/CHIKV_MacB-x1337_1_D_304.ccp4
+        sha256: d58c03d874b908f028048ac5148540623245a2e03f72b57b06e81d74b0539f15
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.05
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1337/CHIKV_MacB-x1337_1_D_401.ccp4
+        sha256: de25b8b8502ab2bb30d5537a76fba47a76f2f999bc8db87e0f891586b915a191
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.14
+  CHIKV_MacB-x1338:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z56347237
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1338/CHIKV_MacB-x1338.pdb
+        sha256: 9c69c5bcf56d001e3d4d3f5390577641db14b463b0118950346f659b0c228989
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1338/CHIKV_MacB-x1338.mtz
+        sha256: e3d168d4303ab5256e5cb0adb8d0dcde44e2b21d6c14181915fec1f89dd9a0c5
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1338/CHIKV_MacB-x1338.cif
+        sha256: 4cea3ae28c00256a3862d9185865baa1eb65ae554cf3b75fc03083e17400481e
+        smiles: Nc1ccc2ccccc2n1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1338/CHIKV_MacB-x1338_1_B_304.ccp4
+        sha256: abf221dcf95a9a59d0ca948829055a5443d23438170309c327c72253a5cf3cbe
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.17
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1338/CHIKV_MacB-x1338_1_C_308.ccp4
+        sha256: 8a1282c118110f4c5d4cbb263d8bc398466bdc36c0c9ce1b03df38d7ed17aee9
+        model: '1'
+        chain: C
+        res: 308
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1338/CHIKV_MacB-x1338_1_C_309.ccp4
+        sha256: 8a1282c118110f4c5d4cbb263d8bc398466bdc36c0c9ce1b03df38d7ed17aee9
+        model: '1'
+        chain: C
+        res: 309
+        index: 3
+        bdc: 0.05
+  CHIKV_MacB-x1353:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z104472798
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1353/CHIKV_MacB-x1353.pdb
+        sha256: 97d256183536ed408fdecb04e6567799bf7181b99185d060070720835ed8f719
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1353/CHIKV_MacB-x1353.mtz
+        sha256: 78d3bc3545caca62c62d79ba0dba815a8737a029bb38b1e046359a9f22c20c50
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1353/CHIKV_MacB-x1353.cif
+        sha256: 3570c3401c33dd1bb4828f191616b120e9afc8439f72a4f003d478c70b590be2
+        smiles: Nc1nccs1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1353/CHIKV_MacB-x1353_1_D_304.ccp4
+        sha256: 53c24fe5ccfbe82b19c19d59510baedce4d6ff2d9ff0e254b8ec198447694aa8
+        model: '1'
+        chain: D
+        res: 304
+        index: 3
+        bdc: 0.12
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1353/CHIKV_MacB-x1353_1_D_401.ccp4
+        sha256: 53c24fe5ccfbe82b19c19d59510baedce4d6ff2d9ff0e254b8ec198447694aa8
+        model: '1'
+        chain: D
+        res: 401
+        index: 3
+        bdc: 0.12
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1353/CHIKV_MacB-x1353_1_D_501.ccp4
+        sha256: f45a491829fac64575e4506d3eeeb2fcf370f189aa91b820f86ceecb68dc1e63
+        model: '1'
+        chain: D
+        res: 501
+        index: 2
+        bdc: 1.0
+  CHIKV_MacB-x1365:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z56889474
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1365/CHIKV_MacB-x1365.pdb
+        sha256: 7404c1d02cd68f93c27dd8bb1748753e1b4e1d1fbcee5cab5b68880688880ff8
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1365/CHIKV_MacB-x1365.mtz
+        sha256: 32578dc24fb968971f9cc9e71452fba2761f1831d44d1c9dc56be116528a872f
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1365/CHIKV_MacB-x1365.cif
+        sha256: c9d327e3034cc22e1fc78aa578612c32209f01a70b1618046f176645dfa98920
+        smiles: O=c1cc[nH]c(=O)[nH]1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1365/CHIKV_MacB-x1365_1_A_304.ccp4
+        sha256: c2206def30837c92443d5af7c8848fb5fc70974cf4d137854f981e096ccc5952
+        model: '1'
+        chain: A
+        res: 304
+        index: 3
+        bdc: 0.24
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1365/CHIKV_MacB-x1365_1_A_401.ccp4
+        sha256: e9dcddf57ebe2b4e1e23ce95ff46de4174a4a48402652269fc01f46e9d639df6
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.16
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1365/CHIKV_MacB-x1365_1_C_308.ccp4
+        sha256: 1a11fe3cdc224610a32da22766642ca23e9ad40dfdcf990f99298f2066c75653
+        model: '1'
+        chain: C
+        res: 308
+        index: 1
+        bdc: 0.07
+  CHIKV_MacB-x1371:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z33546479
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1371/CHIKV_MacB-x1371.pdb
+        sha256: 566f5d0bfead5200c1f7f9096d19f7800de04897f770872f7daac103c5da2a04
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1371/CHIKV_MacB-x1371.mtz
+        sha256: 50559cbbe16c0ad11a135bf61766a1c51529131454413e345d26a64ba9fcdf56
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1371/CHIKV_MacB-x1371.cif
+        sha256: d0cccde176373202e9029fef47b1bef56b791e5b87f9f9a32f0162336735f488
+        smiles: NC(=O)c1cccc(Cl)c1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1371/CHIKV_MacB-x1371_1_C_401.ccp4
+        sha256: 6a82d493614e29ffd77cc1a44ab60d1f860030359062eeec096a6cbf7850cc28
+        model: '1'
+        chain: C
+        res: 401
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1371/CHIKV_MacB-x1371_1_C_402.ccp4
+        sha256: 6a82d493614e29ffd77cc1a44ab60d1f860030359062eeec096a6cbf7850cc28
+        model: '1'
+        chain: C
+        res: 402
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1371/CHIKV_MacB-x1371_1_C_403.ccp4
+        sha256: 6a82d493614e29ffd77cc1a44ab60d1f860030359062eeec096a6cbf7850cc28
+        model: '1'
+        chain: C
+        res: 403
+        index: 3
+        bdc: 0.05
+  CHIKV_MacB-x1372:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z239125320
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1372/CHIKV_MacB-x1372.pdb
+        sha256: 88856f274de7e13135aa29a23b8fdb286ce4472b083276d21c98ad066a8bbf75
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1372/CHIKV_MacB-x1372.mtz
+        sha256: 28f09659388ea089044f4eaf6d9a1238a4818c2bc4ca88c1be6b4c84e7ac90f9
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1372/CHIKV_MacB-x1372.cif
+        sha256: d6cd845c7bbf93dc6403b482eeed6189e89f6429fb91f620b147c00541197095
+        smiles: NC(=O)c1cc(Cl)ccc1N
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1372/CHIKV_MacB-x1372_1_A_304.ccp4
+        sha256: 4f32d03d855b462be9726669419170a1f6f00c27251ef5794a8e202c2fd7561f
+        model: '1'
+        chain: A
+        res: 304
+        index: 2
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1372/CHIKV_MacB-x1372_1_B_308.ccp4
+        sha256: 41c3013c80de5d5bb6fb25abfeae248a42317c6b825c7ad53a47e68a96bcdc7a
+        model: '1'
+        chain: B
+        res: 308
+        index: 1
+        bdc: 0.64
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1372/CHIKV_MacB-x1372_1_C_401.ccp4
+        sha256: 4f32d03d855b462be9726669419170a1f6f00c27251ef5794a8e202c2fd7561f
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1372/CHIKV_MacB-x1372_1_D_306.ccp4
+        sha256: 4f32d03d855b462be9726669419170a1f6f00c27251ef5794a8e202c2fd7561f
+        model: '1'
+        chain: D
+        res: 306
+        index: 2
+        bdc: 0.05
+  CHIKV_MacB-x1379:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z440625162
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1379/CHIKV_MacB-x1379.pdb
+        sha256: e782415d42d1db067b4138c8527193c0ef77f83269abc2fb3a505e36a30c7d63
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1379/CHIKV_MacB-x1379.mtz
+        sha256: 35b82ed394bfc6b02f5227d7f7ff5b379ec356b117c76daf4f7118824edbf522
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1379/CHIKV_MacB-x1379.cif
+        sha256: e7e7d0995e9f5bed61bad51bbd8a118222de9a70149843ba62507a2b9cacd7ca
+        smiles: OCc1cccc2c1OCCO2
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1379/CHIKV_MacB-x1379_1_A_305.ccp4
+        sha256: e1460a8c8f6747cad679fa6f553000bec587065666007d1455aa3ad6d95859b1
+        model: '1'
+        chain: A
+        res: 305
+        index: 2
+        bdc: 0.26
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1379/CHIKV_MacB-x1379_1_A_306.ccp4
+        sha256: e1460a8c8f6747cad679fa6f553000bec587065666007d1455aa3ad6d95859b1
+        model: '1'
+        chain: A
+        res: 306
+        index: 2
+        bdc: 0.26
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1379/CHIKV_MacB-x1379_1_B_308.ccp4
+        sha256: e3df432414515dc9edb364de9106a37e14c4c9ce1eba02bbb31897ad89a01a81
+        model: '1'
+        chain: B
+        res: 308
+        index: 3
+        bdc: 0.26
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1379/CHIKV_MacB-x1379_1_C_401.ccp4
+        sha256: e0d97f679b77e2d173c6cc8d9d8945c52fb4e9445f5bf8c8e5f56069fcaf1254
+        model: '1'
+        chain: C
+        res: 401
+        index: 1
+        bdc: 0.1
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1379/CHIKV_MacB-x1379_1_C_501.ccp4
+        sha256: e0d97f679b77e2d173c6cc8d9d8945c52fb4e9445f5bf8c8e5f56069fcaf1254
+        model: '1'
+        chain: C
+        res: 501
+        index: 1
+        bdc: 0.1
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1379/CHIKV_MacB-x1379_1_D_304.ccp4
+        sha256: e1460a8c8f6747cad679fa6f553000bec587065666007d1455aa3ad6d95859b1
+        model: '1'
+        chain: D
+        res: 304
+        index: 2
+        bdc: 0.26
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1379/CHIKV_MacB-x1379_1_D_401.ccp4
+        sha256: e1460a8c8f6747cad679fa6f553000bec587065666007d1455aa3ad6d95859b1
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.26
+  CHIKV_MacB-x1397:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z276614452
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1397/CHIKV_MacB-x1397.pdb
+        sha256: 25a7f88e9226795fd5da4a2f949ead38f15eeb279d124c1b1a0c71529deba58f
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1397/CHIKV_MacB-x1397.mtz
+        sha256: 2e7b5ab0ad075a7dd4ab623a5122c51962233aa3d7c83884a2485c54f77c4751
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1397/CHIKV_MacB-x1397.cif
+        sha256: e42ad7c184209df2567ed1f41303fcaee51bddd508ad8db0f1073624df7b603a
+        smiles: c1ccc2[nH]ncc2c1
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1397/CHIKV_MacB-x1397_1_A_304.ccp4
+        sha256: b2563a1fbaa264466466346f0a46affcd8c5aa1bd3582cffc2f615a0405a5def
+        model: '1'
+        chain: A
+        res: 304
+        index: 2
+        bdc: 0.05
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1397/CHIKV_MacB-x1397_1_D_401.ccp4
+        sha256: c9ef6505dee8b1f120a1691779c7d84247f5ca0f6af95cb5b2f1e7a0b2ddbb51
+        model: '1'
+        chain: D
+        res: 401
+        index: 1
+        bdc: 0.05
+  CHIKV_MacB-x1402:
+    type: model_building
+    last_updated: '2024-03-19 13:09:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z271099378
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1402/CHIKV_MacB-x1402.pdb
+        sha256: 4a8edde65d2a802d580f71562b1d109b02927f5985daef83f38cef7c14854e22
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1402/CHIKV_MacB-x1402.mtz
+        sha256: f2c3e29fcee320170d855b3310bdce1c1ba270206a41aafae6dd07af27ac479e
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1402/CHIKV_MacB-x1402.cif
+        sha256: d83872f79c0e1c5f323e37ba19feec3eb9f7a65ce64b820db8b7b9e97377621a
+        smiles: c1cnc2[nH]ccc2c1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1402/CHIKV_MacB-x1402_1_A_401.ccp4
+        sha256: 128653b3cf7b08972060a83e542d0d401e24e0ed0539494d0dddf767c3e4b0e9
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.48
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1402/CHIKV_MacB-x1402_1_A_501.ccp4
+        sha256: 128653b3cf7b08972060a83e542d0d401e24e0ed0539494d0dddf767c3e4b0e9
+        model: '1'
+        chain: A
+        res: 501
+        index: 2
+        bdc: 0.48
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1402/CHIKV_MacB-x1402_1_B_304.ccp4
+        sha256: e9030660971327aedc62a86a903f8f2646b34b4b8440e04b2924eb5584874d15
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.47
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1402/CHIKV_MacB-x1402_1_B_308.ccp4
+        sha256: e9030660971327aedc62a86a903f8f2646b34b4b8440e04b2924eb5584874d15
+        model: '1'
+        chain: B
+        res: 308
+        index: 1
+        bdc: 0.47
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1402/CHIKV_MacB-x1402_1_C_308.ccp4
+        sha256: 57e87f1a29e1468fa3a61f7017b5e94e616ab208995aa612de159640260d4478
+        model: '1'
+        chain: C
+        res: 308
+        index: 2
+        bdc: 0.24
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1402/CHIKV_MacB-x1402_1_C_309.ccp4
+        sha256: 57e87f1a29e1468fa3a61f7017b5e94e616ab208995aa612de159640260d4478
+        model: '1'
+        chain: C
+        res: 309
+        index: 2
+        bdc: 0.24
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1402/CHIKV_MacB-x1402_1_D_401.ccp4
+        sha256: ff4d08de9416c707405c65594c50928b9dd91e32760252f00ec53077a8dec183
+        model: '1'
+        chain: D
+        res: 401
+        index: 3
+        bdc: 0.25
+  CHIKV_MacB-x1406:
+    type: model_building
+    last_updated: '2024-03-19 13:10:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z104475374
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1406/CHIKV_MacB-x1406.pdb
+        sha256: 87b051d7ee6e712e5aa366c30060595a4e4796984d48118dec42864dfb13fa70
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1406/CHIKV_MacB-x1406.mtz
+        sha256: 0efff0366aaed52d8072a3343f8ccd5a11d46e697b173373fe099cae28765b4c
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1406/CHIKV_MacB-x1406.cif
+        sha256: b39b899c6ba0a4f4912931160dc09d17b14d911293160e9a8bf81b67dc28ddb9
+        smiles: Cc1ccc(N)nc1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1406/CHIKV_MacB-x1406_1_A_304.ccp4
+        sha256: 0c3e4d27a74d74bca657214747c532f3645c64a7f36ea7327284d5304faacc50
+        model: '1'
+        chain: A
+        res: 304
+        index: 2
+        bdc: 0.1
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1406/CHIKV_MacB-x1406_1_B_401.ccp4
+        sha256: 8c70ae6a42b61b7030e0c5c7c4538672ab9cae5ae2c0c83c205332ebabd5f588
+        model: '1'
+        chain: B
+        res: 401
+        index: 1
+        bdc: 0.17
+  CHIKV_MacB-x1410:
+    type: model_building
+    last_updated: '2024-03-19 13:10:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z56899125
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1410/CHIKV_MacB-x1410.pdb
+        sha256: eb691f40fd381c997e3bd6b566a7c672ba4a671fb69dd0b3c60702703298284f
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1410/CHIKV_MacB-x1410.mtz
+        sha256: caccaf701d1487aa1a03f0efa76344483d5d1b9d62ba17199c12f5531665ea4c
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1410/CHIKV_MacB-x1410.cif
+        sha256: aa4cc5eba5f06b0d08205ffaea72d00f366b14a735424c242a141c5925e45905
+        smiles: Nc1nc2ccc(F)cc2s1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1410/CHIKV_MacB-x1410_1_A_401.ccp4
+        sha256: 79f3de1f7590511e4802678e5d626a42c80a8b93b10190e2abef48e730e6f71f
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.32
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1410/CHIKV_MacB-x1410_1_B_304.ccp4
+        sha256: f14bcc8459a3e154be0927abd5fe94f7fd107eb483155efb85babaf73d414a3e
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.6
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1410/CHIKV_MacB-x1410_1_C_308.ccp4
+        sha256: 7e84c21f24fc690532086b9519944f2eab0be9b15d36a752170b84bef092d6cb
+        model: '1'
+        chain: C
+        res: 308
+        index: 3
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1410/CHIKV_MacB-x1410_1_D_401.ccp4
+        sha256: 9bfdcb4baa206d98943352ae58201bc1abc72cf0ae02d89c61fc6f0a908537a7
+        model: '1'
+        chain: D
+        res: 401
+        index: 3
+        bdc: 0.2
+  CHIKV_MacB-x1417:
+    type: model_building
+    last_updated: '2024-03-19 13:10:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1201619441
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1417/CHIKV_MacB-x1417.pdb
+        sha256: 5d52c217b668c86a3e43ce674465721f4472af10ceb2b9ff654aa0ec461f9e65
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1417/CHIKV_MacB-x1417.mtz
+        sha256: 07094333386d5f87be71258af15eb7cf4e7d1dbc32c5d9abea271f9bddabb26b
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1417/CHIKV_MacB-x1417.cif
+        sha256: 2681c46c9002994398242d8b7a38477eb2436aa6d29dd2101dc091fccab75a37
+        smiles: CCOC(=O)c1c(C)n[nH]c1C
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1417/CHIKV_MacB-x1417_1_A_304.ccp4
+        sha256: c525f17a8de7477556a9f33e3071d7106e55617565233c4607c73056f5221da6
+        model: '1'
+        chain: A
+        res: 304
+        index: 3
+        bdc: 0.19
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1417/CHIKV_MacB-x1417_1_B_308.ccp4
+        sha256: 7c3426878732ab6568d9eec322e1aab66650edab9e1fcf989666ce26645cc49f
+        model: '1'
+        chain: B
+        res: 308
+        index: 2
+        bdc: 0.05
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1417/CHIKV_MacB-x1417_1_C_308.ccp4
+        sha256: 49807819e79dbf1e101038eecb1a65fa1e9a217a5961e781c95116b3cd0d6d54
+        model: '1'
+        chain: C
+        res: 308
+        index: 2
+        bdc: 0.18
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1417/CHIKV_MacB-x1417_1_D_401.ccp4
+        sha256: fe66467bbf337abd71adba10e96801f6c41c276f3423d53512420c261b7fe758
+        model: '1'
+        chain: D
+        res: 401
+        index: 1
+        bdc: 0.17
+  CHIKV_MacB-x1421:
+    type: model_building
+    last_updated: '2024-03-19 13:10:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z31721188
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1421/CHIKV_MacB-x1421.pdb
+        sha256: 60705b91980261934cef5b0b0b21da50e7f4948c802d51ba33a0201f8bd586fa
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1421/CHIKV_MacB-x1421.mtz
+        sha256: 5ac1ca576dc5fb4d55d0de0f69e6610705ed5bd248f6188e7b58d89a1346783d
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1421/CHIKV_MacB-x1421.cif
+        sha256: dba4c0a0418bb5ddc478d02505bb2062864b26334c354b25d7e7deef2e16a987
+        smiles: O=C(c1cccc(O)c1)N1CCOCC1
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1421/CHIKV_MacB-x1421_1_A_401.ccp4
+        sha256: 423f748556229151c850465d2abcef79b381a47ef71fa715697bca8de3e4cdb3
+        model: '1'
+        chain: A
+        res: 401
+        index: 3
+        bdc: 0.18
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1421/CHIKV_MacB-x1421_1_C_304.ccp4
+        sha256: 34a6f31d9704d13ed48b0955c4227e3eca84add72cb5ec18f411a4f2a37edb1e
+        model: '1'
+        chain: C
+        res: 304
+        index: 1
+        bdc: 0.3
+  CHIKV_MacB-x1423:
+    type: model_building
+    last_updated: '2024-03-19 13:10:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z728187792
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1423/CHIKV_MacB-x1423.pdb
+        sha256: 6e0a6969bd6474cab2f9fa9a7c2d2b3020a5dd46af752593baaba28c9d1839ee
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1423/CHIKV_MacB-x1423.mtz
+        sha256: ebb5f7939a00ac0c173efdb7e57be5c62b40a0fae11283384e6116679ce530ac
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1423/CHIKV_MacB-x1423.cif
+        sha256: c381fa476c21669896df70cebb1880651733c3f1a1de85d45d11f94274e2bdf1
+        smiles: c1cc(-c2ncc[nH]2)ccn1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1423/CHIKV_MacB-x1423_1_C_304.ccp4
+        sha256: 14859020e359469c6051cc9b915259e7b5c2305fc2fc6d7037cdf7ab942f49ae
+        model: '1'
+        chain: C
+        res: 304
+        index: 1
+        bdc: 0.11
+  CHIKV_MacB-x1431:
+    type: model_building
+    last_updated: '2024-03-19 13:10:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z234895085
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1431/CHIKV_MacB-x1431.pdb
+        sha256: c8d7a7bdc62121de8b789a4b6ce732befd89ba9bdd4f5fb42dc40f589e3c851b
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1431/CHIKV_MacB-x1431.mtz
+        sha256: e8a16e4e5e8400f6830329dbcbfd9968818293315431c13801f36eb2b6d24d2a
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1431/CHIKV_MacB-x1431.cif
+        sha256: 3f57d7dff2a112751dcc2b0b9d150c25b80280619fdf75c03b18d196a0f2f805
+        smiles: Nc1cnc2ccccc2c1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1431/CHIKV_MacB-x1431_1_B_304.ccp4
+        sha256: 20b44464d1059ae1d1a0eada28d4ed82cc83331688d1d1e05a2d081322f5c966
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.38
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1431/CHIKV_MacB-x1431_1_B_308.ccp4
+        sha256: 20b44464d1059ae1d1a0eada28d4ed82cc83331688d1d1e05a2d081322f5c966
+        model: '1'
+        chain: B
+        res: 308
+        index: 1
+        bdc: 0.38
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1431/CHIKV_MacB-x1431_1_D_401.ccp4
+        sha256: 674ebbc84a95e7814f68f156dc8a308d379c768c106bd2a9b087abd94956a271
+        model: '1'
+        chain: D
+        res: 401
+        index: 2
+        bdc: 0.24
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1431/CHIKV_MacB-x1431_1_D_402.ccp4
+        sha256: 674ebbc84a95e7814f68f156dc8a308d379c768c106bd2a9b087abd94956a271
+        model: '1'
+        chain: D
+        res: 402
+        index: 2
+        bdc: 0.24
+  CHIKV_MacB-x1435:
+    type: model_building
+    last_updated: '2024-03-19 13:10:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z415653738
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1435/CHIKV_MacB-x1435.pdb
+        sha256: 7d8508c4beef28e38c2b7e621e5193ff0ae8c09bc7b138def28c43b7de5dc7c7
+      xtal_mtz:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1435/CHIKV_MacB-x1435.mtz
+        sha256: 0912ea550b972c3159937c859e104976d41a06c0a46f5c1c504b413d06ac42cc
+      ligand_cif:
+        file: upload_2/crystallographic_files/CHIKV_MacB-x1435/CHIKV_MacB-x1435.cif
+        sha256: e530013983659dd7a2365f0894b18c5dfd545e9ed16f761fdc2b7ebd3365da04
+        smiles: NC(=O)c1cccc2[nH]ccc12
+      panddas_event_files:
+      - file: upload_2/crystallographic_files/CHIKV_MacB-x1435/CHIKV_MacB-x1435_1_C_401.ccp4
+        sha256: e0730d648f7f1e188cb36026d320359fa5b7188fe4a606fc6c664bed54cd2fff
+        model: '1'
+        chain: C
+        res: 401
+        index: 1
+        bdc: 0.17
+  CHIKV_MacB-x1440:
+    type: model_building
+    last_updated: '2024-03-19 13:10:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z1203162487
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1440/CHIKV_MacB-x1440.pdb
+        sha256: 4a1d84eca8e374d9400e525938b50708aa144ca60285bf449d992739ec542ca5
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1440/CHIKV_MacB-x1440.mtz
+        sha256: 655716e6bea799a2e342acc1ac28973a2b69be49144151270ca8019a9926d659
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1440/CHIKV_MacB-x1440.cif
+        sha256: eb995b4d270c5977f0cc66e0967fefb06c83139554e6ba89c1ff3abcd0fc7572
+        smiles: Nc1nccc2ccccc12
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1440/CHIKV_MacB-x1440_1_A_305.ccp4
+        sha256: 7558737b9d2fadc684d537a4c9dd9baaa3b9f4c193d523c1357d3c55eeeb33d3
+        model: '1'
+        chain: A
+        res: 305
+        index: 1
+        bdc: 0.4
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1440/CHIKV_MacB-x1440_1_A_306.ccp4
+        sha256: 7558737b9d2fadc684d537a4c9dd9baaa3b9f4c193d523c1357d3c55eeeb33d3
+        model: '1'
+        chain: A
+        res: 306
+        index: 1
+        bdc: 0.4
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1440/CHIKV_MacB-x1440_1_B_401.ccp4
+        sha256: ec7b48dda4fbe8fe5707eb5e3fb313c94922e67c3d0f8f1e12ba81e07cff08ff
+        model: '1'
+        chain: B
+        res: 401
+        index: 3
+        bdc: 0.42
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1440/CHIKV_MacB-x1440_1_C_401.ccp4
+        sha256: adaa76acaa14e20a05c08a80dab67eb7e9df882e7d8f496f3768ae1d308d537b
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.18
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1440/CHIKV_MacB-x1440_1_C_501.ccp4
+        sha256: adaa76acaa14e20a05c08a80dab67eb7e9df882e7d8f496f3768ae1d308d537b
+        model: '1'
+        chain: C
+        res: 501
+        index: 2
+        bdc: 0.18
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1440/CHIKV_MacB-x1440_1_D_304.ccp4
+        sha256: 8e7f3c9ead3466bd0f9b06b295f1760b20533711a417c68f5aff2c39bf1762b0
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.3
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1440/CHIKV_MacB-x1440_1_D_401.ccp4
+        sha256: 801df4ecfce412fba30d67b8f767aad6e01aea3f047539626800e78caacee762
+        model: '1'
+        chain: D
+        res: 401
+        index: 3
+        bdc: 0.41
+  CHIKV_MacB-x1444:
+    type: model_building
+    last_updated: '2024-03-19 13:10:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z55692894
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1444/CHIKV_MacB-x1444.pdb
+        sha256: ca3da0e586deb2ceb5e13cc35e6845412dcdcc25b1120923945b83f25a26dab8
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1444/CHIKV_MacB-x1444.mtz
+        sha256: 4a706b4bcccf05230c4d5eee984b5d58de0582c370006306985a8458a5cf6f1a
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1444/CHIKV_MacB-x1444.cif
+        sha256: 4980f6455048b4443abf6c2b7ca6ebb311a0cb6992c800821acc4515fde66a48
+        smiles: Cc1nc2ccccc2[nH]1
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1444/CHIKV_MacB-x1444_1_A_401.ccp4
+        sha256: 3ba80803e7d568da5ff914a697cbc629f338ad681c60da436dd1b26aba71472b
+        model: '1'
+        chain: A
+        res: 401
+        index: 2
+        bdc: 0.15
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1444/CHIKV_MacB-x1444_1_B_304.ccp4
+        sha256: a902dc9ab583c89eb2d5d0e17f7682a56ce34b1d12a2160dc61234ab1247fe6e
+        model: '1'
+        chain: B
+        res: 304
+        index: 1
+        bdc: 0.36
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1444/CHIKV_MacB-x1444_1_D_306.ccp4
+        sha256: ff929287534376a2307b05046ba76f4a1ba6fac9ffbf950f13c6ae2a27b9a177
+        model: '1'
+        chain: D
+        res: 306
+        index: 3
+        bdc: 0.15
+  CHIKV_MacB-x1445:
+    type: model_building
+    last_updated: '2024-03-19 13:10:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z68590124
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1445/CHIKV_MacB-x1445.pdb
+        sha256: 4b63a7a772ac35bcafd9c5bfe9c1dbbec59fd450f19f47901e727f21b7707ccf
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1445/CHIKV_MacB-x1445.mtz
+        sha256: 6fb68456259398cf1e04bf6f9a2100d1b7b50277b6507272f59fe8c6bf6d9714
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1445/CHIKV_MacB-x1445.cif
+        sha256: 9f8e338049f83ac6bbbc382689b5b923351fe3330022e624a6639349cf3e8141
+        smiles: NC(=O)c1ccccc1O
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1445/CHIKV_MacB-x1445_1_A_305.ccp4
+        sha256: 229535fd1bbd51fd72000cd9f97ca16ec5ccc5b0d9ec938e99ebdffaf0f6def9
+        model: '1'
+        chain: A
+        res: 305
+        index: 1
+        bdc: 0.25
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1445/CHIKV_MacB-x1445_1_A_306.ccp4
+        sha256: 229535fd1bbd51fd72000cd9f97ca16ec5ccc5b0d9ec938e99ebdffaf0f6def9
+        model: '1'
+        chain: A
+        res: 306
+        index: 1
+        bdc: 0.25
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1445/CHIKV_MacB-x1445_1_B_401.ccp4
+        sha256: 5a380fb3f358c2cd0cea444e92103da9476a135a2e905fbc80d0468879e6a11b
+        model: '1'
+        chain: B
+        res: 401
+        index: 3
+        bdc: 0.3
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1445/CHIKV_MacB-x1445_1_B_402.ccp4
+        sha256: 5a380fb3f358c2cd0cea444e92103da9476a135a2e905fbc80d0468879e6a11b
+        model: '1'
+        chain: B
+        res: 402
+        index: 3
+        bdc: 0.3
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1445/CHIKV_MacB-x1445_1_C_401.ccp4
+        sha256: 2faa7ede27614f921f9b52c853c55eb61d4226ea7b7dd6d8bfc618ef7904d611
+        model: '1'
+        chain: C
+        res: 401
+        index: 2
+        bdc: 0.26
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1445/CHIKV_MacB-x1445_1_D_304.ccp4
+        sha256: 16a7441b1a7543ba6b6726fbde488c17837c228594b32c967c6e455f6b749eea
+        model: '1'
+        chain: D
+        res: 304
+        index: 1
+        bdc: 0.37
+  CHIKV_MacB-x1454:
+    type: model_building
+    last_updated: '2024-03-19 13:10:00'
+    refinement_outcome: 5 - Deposition ready
+    compound_code: Z57376600
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1454/CHIKV_MacB-x1454.pdb
+        sha256: 80b445573135602e30be7a268cb6dd87676c1acb645fb412ce11f6c16a9fbbb0
+      xtal_mtz:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1454/CHIKV_MacB-x1454.mtz
+        sha256: d0a6433e2221876c0ab535ae176ff0f4fccf07a0ed0a6b677e1a9d59dd4e7a55
+      ligand_cif:
+        file: upload_1/crystallographic_files/CHIKV_MacB-x1454/CHIKV_MacB-x1454.cif
+        sha256: 0c2cbe414180f00d96e19f127cdcdf547469e0fb44d583985869a26387963be3
+        smiles: Cc1nc(N)ccc1Br
+      panddas_event_files:
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1454/CHIKV_MacB-x1454_1_A_401.ccp4
+        sha256: c79d0dbea35b3de844af111e0eccbde7ac92025a5ebe9f393796ca223c0aca03
+        model: '1'
+        chain: A
+        res: 401
+        index: 3
+        bdc: 1.0
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1454/CHIKV_MacB-x1454_1_B_401.ccp4
+        sha256: 8f70fe1d63365223f1faa7487efd63485d3a2e62a6b5a3d1c00f434ba3f55483
+        model: '1'
+        chain: B
+        res: 401
+        index: 1
+        bdc: 1.0
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1454/CHIKV_MacB-x1454_1_C_308.ccp4
+        sha256: 8f70fe1d63365223f1faa7487efd63485d3a2e62a6b5a3d1c00f434ba3f55483
+        model: '1'
+        chain: C
+        res: 308
+        index: 1
+        bdc: 1.0
+      - file: upload_1/crystallographic_files/CHIKV_MacB-x1454/CHIKV_MacB-x1454_1_D_304.ccp4
+        sha256: f0c526cecdedf3a91179594f021f8a18f36d76d535023e262e73f4a6cc35251a
+        model: '1'
+        chain: D
+        res: 304
+        index: 2
+        bdc: 1.0
+  6vuq:
+    code_prefix: c
+    type: manual
+    crystallographic_files:
+      xtal_pdb:
+        file: upload_1/crystallographic_files/6vuq/6vuq.pdb
+        sha256: 9612c6f2c8bd8fd619d26df34c3e117028d26fd478388829ea5e163085b4c115

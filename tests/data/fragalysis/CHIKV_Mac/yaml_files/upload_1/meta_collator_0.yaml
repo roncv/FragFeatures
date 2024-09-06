@@ -1,0 +1,1455 @@
+run_on: '2024-03-12 12:44:28.156273'
+collator_cwd: /dls/labxchem/data/lb32633/lb32633-6/processing/analysis/xchemalign
+collator_config_file: config.yaml
+input_dirs:
+- /dls/labxchem/data/lb32633/lb32633-6
+- /dls/labxchem/data/lb32633/lb32633-6/processing/analysis/xchemalign/references
+output_dir: /dls/labxchem/data/lb32633/lb32633-6/processing/analysis/xchemalign
+version_number: 1
+version_dir: upload_1
+previous_version_dirs: []
+code_prefix_tooltips:
+  c: CHIKV_MacB structures
+crystals:
+  CHIKV_MacB-x0270:
+    type: model_building
+    last_updated: '2024-03-11 13:16:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z100643660
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0270/Refine_0009/refine_9.split.bound-state.pdb
+        sha256: f5004b3860ab7cceae619c3fa56e4cc45e0dab8d20cb9503e50e74585ff3b049
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0270/Refine_0009/refine_9.mtz
+        sha256: 12e6ffe7a42519876a12580a60630dfa182b8871aa134dc7e0665a3fb4e0c9f2
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0270/compound/Z100643660.cif
+        sha256: be57d293c554cfb1e2f4184b8e4272131007f3bdb34b710b41b8d1f9ae4a02a1
+  CHIKV_MacB-x0281:
+    type: model_building
+    last_updated: '2023-11-30 13:51:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1041785508
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0281/Refine_0011/refine_11.split.bound-state.pdb
+        sha256: f75ef02d98c108693e85439c82d45d382bfacbb6aaea56496d9e01d85343b81b
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0281/Refine_0011/refine_11.mtz
+        sha256: 3a02d732372977ff1e4e688227c23b7aff2f0116f652235d0d61d9b837eb6003
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0281/compound/Z1041785508.cif
+        sha256: 0ea8b733f7c19a354063368a3bb09858ac354f0493b822ba7b37f4604f8f39b5
+  CHIKV_MacB-x0289:
+    type: model_building
+    last_updated: '2024-01-30 08:50:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z104492884
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0289/Refine_0011/refine_11.split.bound-state.pdb
+        sha256: 8b65491e18747a9e9cf056067f54a260167109e0c4b778411984e14f2cef8fdd
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0289/Refine_0011/refine_11.mtz
+        sha256: 22964ceca22c2c75596425260f538f8ea717d8918165d716896a292b54444ccf
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0289/compound/Z104492884.cif
+        sha256: 712ab21413b1218c6cff6424cf40fbcab813b4398a5dde6b1bd42d701d6747f8
+  CHIKV_MacB-x0294:
+    type: model_building
+    last_updated: '2023-12-06 05:56:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1079168976
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0294/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: 47cc5b76427b103c2f7cec71d977552a31885e90b42f4ffa6dedd2f2d273e2b8
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0294/Refine_0010/refine_10.mtz
+        sha256: efadda26376ad91968a9bee028c33822c57b68f0693e772ba2d1ffd984e9155c
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0294/compound/Z1079168976.cif
+        sha256: 7a9c3c6ec41741d5db4dfed4b02976533fedf2c4be47bcc55a0a02673cc3cecc
+  CHIKV_MacB-x0295:
+    type: model_building
+    last_updated: '2023-11-30 13:51:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1079512010
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0295/Refine_0006/refine_6.split.bound-state.pdb
+        sha256: 71ff6299f0d3fe7269573e3addcbf2dad36088ed7c78e0e64c4552bf1a8f5634
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0295/Refine_0006/refine_6.mtz
+        sha256: 589e18375fec1835b1402f1d5ca76c0dc980e893469ae20cded65826e037e40a
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0295/compound/Z1079512010.cif
+        sha256: acd720c59d7f88ca5c9fb0cb2f1c83d0f610ab00e51e902373406c7bb273f9c6
+  CHIKV_MacB-x0300:
+    type: model_building
+    last_updated: '2023-11-30 13:51:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1102357527
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0300/Refine_0008/refine_8.split.bound-state.pdb
+        sha256: 1b59b38f1e88d487f1decc941363f2736eccabd6e64217f47bdd82cdf027f50f
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0300/Refine_0008/refine_8.mtz
+        sha256: 535e94bd6c34040722bb7e9b827ecf9694519c230c3734567cbace7958078f79
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0300/compound/Z1102357527.cif
+        sha256: b63dd6c4974d56cd60c02842f25797cabadbd0590a9ce638de1aec1fdeaa8bdb
+  CHIKV_MacB-x0305:
+    type: model_building
+    last_updated: '2024-02-01 14:46:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1129283193
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0305/Refine_0012/refine_12.split.bound-state.pdb
+        sha256: 51ea34ac1c89b09415aafb214f274855d27740a52fa2a47e8c7bfd2c3ad135d0
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0305/Refine_0012/refine_12.mtz
+        sha256: f7309b895378f1df78977a252939432571794f757fa0a6ef307889f726b3b01c
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0305/compound/Z1129283193.cif
+        sha256: d8c5af2c69b42c13e62e907530ac7c3657f57cb18b8a1cad6db3e682f4946039
+  CHIKV_MacB-x0312:
+    type: model_building
+    last_updated: '2024-02-13 10:02:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1148165337
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0312/Refine_0017/refine_17.split.bound-state.pdb
+        sha256: b9581864838734df38a975b022605e31a85d949303fd411bab2f0a2ac1c34560
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0312/Refine_0017/refine_17.mtz
+        sha256: fc131194669c3565af6f114973a612f791053bca54631e68f1349965b39c3401
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0312/compound/Z1148165337.cif
+        sha256: f3f3a5236e5b263c975015885e0818ff5f5a24348603bd5dfe1a2d16f3173fb2
+  CHIKV_MacB-x0314:
+    type: model_building
+    last_updated: '2024-02-09 08:23:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1154747269
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0314/Refine_0009/refine_9.split.bound-state.pdb
+        sha256: 500cd8dcd27066280031dda9b64aa567027ac44561c8b8930ee2abdf9f7a48f7
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0314/Refine_0009/refine_9.mtz
+        sha256: 8ab29f16ca731c8b82ec163c7b28308a176b1a1db4d4a637b11dc2fa56a1e09a
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0314/compound/Z1154747269.cif
+        sha256: 2fcb027564f3f2c7a0e9d75fdc74e8cd4043886ee4d830f45c7b1e034c1334e2
+  CHIKV_MacB-x0316:
+    type: model_building
+    last_updated: '2024-02-01 11:02:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1162778919
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0316/Refine_0012/refine_12.split.bound-state.pdb
+        sha256: 51cb63db1217acbc4c74402ec933b2670f5a423e53b66166ed552d2213317d27
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0316/Refine_0012/refine_12.mtz
+        sha256: 9d7dd8af6b46518aff81cea402532ebcb253fec13026078ff4ed947e6a07ba4b
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0316/compound/Z1162778919.cif
+        sha256: 4d1ffa65ba2210e2854d89336103428f0ee6b7cfe86033bef1ae4d1552be338e
+  CHIKV_MacB-x0317:
+    type: model_building
+    last_updated: '2024-02-07 13:55:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1165350851
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0317/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: ebcc7d20f2afe07df70a407d11fb9b09296f0ae3c51b6d6e60ad572c338b6ae7
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0317/Refine_0010/refine_10.mtz
+        sha256: 2508ee5ae5dc1846c88613f9db3189338a41d59a3840279526ad6c1cc9154e3c
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0317/compound/Z1165350851.cif
+        sha256: d01445eeae1540f1b7f87e71d5694f560eb40cd22e1de66f9ce6659d7b437a10
+  CHIKV_MacB-x0353:
+    type: model_building
+    last_updated: '2024-02-01 11:27:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1216833237
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0353/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: f56ed20ce876152f62163edebea6aa12498e92d80a2db70f734ef31613fcc141
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0353/Refine_0010/refine_10.mtz
+        sha256: b545f7fc26e35785b8d4da40ba8c3caebff6fe57633a4ef5f3fba84eb58fcd41
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0353/compound/Z1216833237.cif
+        sha256: 9b0c745bdcc9850f505b40e8096a69f86ef5bb88ab60217fb80f900f5945527e
+  CHIKV_MacB-x0394:
+    type: model_building
+    last_updated: '2024-02-01 14:16:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1262633486
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0394/Refine_0008/refine_8.split.bound-state.pdb
+        sha256: 8bcd174941f1c1df8718bbd2c5906855fa678b9d9186d6525ee159ee4e83785c
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0394/Refine_0008/refine_8.mtz
+        sha256: fef5e5128b2ebce943172136fcb34798a9b81cf69e54163c209f1c9a3ff7d6f6
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0394/compound/Z1262633486.cif
+        sha256: 2f923619afab05b618ee2805846308668e7168423726e4843f0c30f25cd612a4
+  CHIKV_MacB-x0398:
+    type: model_building
+    last_updated: '2024-02-14 12:34:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1267773765
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0398/Refine_0012/refine_12.split.bound-state.pdb
+        sha256: 8e7d5ed4707a7584a5e4ffef7f795e3bf5177afbd5a932dd13840812450f7ded
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0398/Refine_0012/refine_12.mtz
+        sha256: efdfdb82262fa65f09432ca5a28cf8bde05893a3d7505021266f75f4ab454997
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0398/compound/Z1267773765.cif
+        sha256: bb7fdddfbed65f9f0f6be6e71218038158bda1511c7108a4470692b3e0296afd
+  CHIKV_MacB-x0399:
+    type: model_building
+    last_updated: '2024-02-02 09:33:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1267800292
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0399/Refine_0017/refine_17.split.bound-state.pdb
+        sha256: c66deabc2d78638629bc85a64fedd059c0060b3d68d6058b729d5c7cb332c2bc
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0399/Refine_0017/refine_17.mtz
+        sha256: fdcbc7e03f4870ed6cf430878ec5b7d8eedca654fa23deb874202875b6c741d9
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0399/compound/Z1267800292.cif
+        sha256: bf518602aed20470affe2237e1639e4ef3d57d069af66bd3ae63fc2f206c9327
+  CHIKV_MacB-x0404:
+    type: model_building
+    last_updated: '2024-02-02 09:35:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1270393711
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0404/Refine_0013/refine_13.split.bound-state.pdb
+        sha256: 6e7655157e8cecf9cb4a6e78bac4c32fc8d5809e9a90b38385613b47a3c6f574
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0404/Refine_0013/refine_13.mtz
+        sha256: 85a971d4c65ada5184c56c919eaf149faf5870d325c2e8eed3bdda9f39d8f479
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0404/compound/Z1270393711.cif
+        sha256: 1e7c9b1fd305cf6b544a90d5b99454ecca361eace77b55849485605aca9cd01e
+  CHIKV_MacB-x0406:
+    type: model_building
+    last_updated: '2024-02-07 13:55:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1272494722
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0406/Refine_0016/refine_16.split.bound-state.pdb
+        sha256: 9085134eeec87a9732b51847b2fc05dc06a32fad95a63531b036d4c5cab5f339
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0406/Refine_0016/refine_16.mtz
+        sha256: e7e9a46608392ed5fba1311a69401097a1363e75442e30739f74b7bf7678a2c6
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0406/compound/Z1272494722.cif
+        sha256: 7d44305264197da40423ac053cb9c48c3810da80ecee635320633ff5d6745a8a
+  CHIKV_MacB-x0436:
+    type: model_building
+    last_updated: '2024-02-02 14:53:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1400796579
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0436/Refine_0011/refine_11.split.bound-state.pdb
+        sha256: 5eba56e7e48f5ba9a61e181f31e3ed748346289a2319c1366d2ff0e7651ed15b
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0436/Refine_0011/refine_11.mtz
+        sha256: 2d7a9e56a869824e8b7d3f6fa601a108cdde1cf9ec4759ff8788b97cf0767d15
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0436/compound/Z1400796579.cif
+        sha256: 510a7710c293b4b4f41bcfefc9c8d57229103f33bd2a4d938ffcf3c46fd203bf
+  CHIKV_MacB-x0441:
+    type: model_building
+    last_updated: '2024-02-02 13:03:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1416571195
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0441/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: 1c6e2bcde12543e0e57b7898fbcd14334964512f24cf224c82e7d434b733f11f
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0441/Refine_0007/refine_7.mtz
+        sha256: 611e833c8c675c9bfc86a2b7c5921e9ffad93d7b43c2e6ae9efcea0ddb095ec5
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0441/compound/Z1416571195.cif
+        sha256: cd3cedfa2ac57533ac9b6c3eada7ebd6c1df753ce6b9146b3e9af397d151ed85
+  CHIKV_MacB-x0477:
+    type: model_building
+    last_updated: '2024-02-14 12:35:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1562205518
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0477/Refine_0013/refine_13.split.bound-state.pdb
+        sha256: 736a8d169be69de7a449267489d70c48f5b07daa86d58bd5e34447221d3ed195
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0477/Refine_0013/refine_13.mtz
+        sha256: e509afbb65be2022537d38350c7dc6027adbc6de2826495ee671356ebe42073d
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0477/compound/Z1562205518.cif
+        sha256: 8d28c8d243b5e203909013eaae72dcdd7ba6c58c5f58322eb20ff605015e3cfb
+  CHIKV_MacB-x0505:
+    type: model_building
+    last_updated: '2024-02-14 12:35:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1730522163
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0505/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: fc84e7d258ea56c1f933c215b3983846660a41215cafe56b2200d6b6d1a11e5e
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0505/Refine_0010/refine_10.mtz
+        sha256: e779ab20ce5a08e00bab2feff2d4c91df545ff7ccf20072ab8a252f18b51efa6
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0505/compound/Z1730522163.cif
+        sha256: 8b5d81319388be064087a65949ef77bb9e8d35852dab60693db03900f230a17c
+  CHIKV_MacB-x0522:
+    type: model_building
+    last_updated: '2024-02-07 13:55:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z184825330
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0522/Refine_0009/refine_9.split.bound-state.pdb
+        sha256: 0ae49fca771e38ebfc7a49a003fca9973d9a1efee4af79ba1fcb9775f1b2f128
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0522/Refine_0009/refine_9.mtz
+        sha256: 30e09316b278943c9f7158262710258c22c9e614073bff263d903d31b2201399
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0522/compound/Z184825330.cif
+        sha256: a702699e7af57c689449898e23664eb3b7329ebf0df14114171dc3851aaca255
+  CHIKV_MacB-x0540:
+    type: model_building
+    last_updated: '2024-02-29 12:49:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z19755216
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0540/Refine_0009/refine_9.split.bound-state.pdb
+        sha256: 87e02234d33b06eccf806a6547c0644d200b9387f8e7d1cea957181912efb614
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0540/Refine_0009/refine_9.mtz
+        sha256: 4442d48181af5f573dcf1ffd5ea9d5a209321b8195c130610375c7a1de209116
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0540/compound/Z19755216.cif
+        sha256: 99d8460499c06711a39f2d824917e2df75e0c46d25dae50a0c34363cc8281916
+  CHIKV_MacB-x0543:
+    type: model_building
+    last_updated: '2024-02-14 12:36:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z198194396
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0543/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: b3c9172a0ddd3c9e8cef857dd995d4d010803951c85ce8ff4ae9856053bd6703
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0543/Refine_0010/refine_10.mtz
+        sha256: 5a59d6130a859949749329f55218131c1b19ce457ee889bc48759a65f901883e
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0543/compound/Z198194396.cif
+        sha256: 356c656de92a48489c8563a028ad900f93610b4f0569f04242bca8b01a051da7
+  CHIKV_MacB-x0544:
+    type: model_building
+    last_updated: '2024-02-07 13:56:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z198195770
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0544/Refine_0009/refine_9.split.bound-state.pdb
+        sha256: da437e076e3caab125bd45c8bd9bdfaa9da81331611f38f0ef71639cfa2fc09f
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0544/Refine_0009/refine_9.mtz
+        sha256: 9f594c0549aef01f49812420d0e20fd7de1f16d4afabd6754bf7519b4ad1a8db
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0544/compound/Z198195770.cif
+        sha256: da3a3c8ec217fa2d4788888b0e318aff7c0eca084637278d741f47ea445aea08
+  CHIKV_MacB-x0553:
+    type: model_building
+    last_updated: '2024-02-13 09:01:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z2033637875
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0553/Refine_0011/refine_11.split.bound-state.pdb
+        sha256: 074e74982682d7891e97a18b4f2336af5a5f02d1dd1d7fb6b7f709880e707538
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0553/Refine_0011/refine_11.mtz
+        sha256: 0e1ec21b32415da69642732a448b326ab1c8b591297bed501a1c89965e125654
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0553/compound/Z2033637875.cif
+        sha256: 12c31625f91726fdd9d8aa3c295af6fae68235a6246ea913c1a0c27fc2bf061a
+  CHIKV_MacB-x0585:
+    type: model_building
+    last_updated: '2024-02-14 12:36:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z228586974
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0585/Refine_0012/refine_12.split.bound-state.pdb
+        sha256: a5576b5ee9bdc2576dce5e60771f7418fbd242fe8c2a773f540fd84a8b58ca4e
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0585/Refine_0012/refine_12.mtz
+        sha256: e356b460ab5e7e37301ee202f59a03e45b29cf66794fbab0d0d19f9103a3a420
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0585/compound/Z228586974.cif
+        sha256: 1c2663c9b3dbfcfef87fa9f80fc6bf76ba1a19bd86e6d9d6093b259b5181a07a
+  CHIKV_MacB-x0620:
+    type: model_building
+    last_updated: '2024-02-01 12:57:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z26333434
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0620/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: 5c011e47ae6c66083ab6e728fcb00ee70c7b8eb53b7ebe90fed270920b465bf2
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0620/Refine_0007/refine_7.mtz
+        sha256: 34794271f3d5072db860a409389ce923e96fb35c631d4ecadaf1d6a1f04f179d
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0620/compound/Z26333434.cif
+        sha256: ee44b195f048ef5486f15647e3e5023df2c347dd3dee0213050c488199e65f85
+  CHIKV_MacB-x0632:
+    type: model_building
+    last_updated: '2024-02-07 13:56:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z2692078340
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0632/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: 1814bb5720462acd8a6823e75fb59b5b5bb4d216f6d71e583bbdaf9306951642
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0632/Refine_0010/refine_10.mtz
+        sha256: 156806c925559e2bb0703b1607fa4193195c337b08be7da31e4bc38524bd7228
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0632/compound/Z2692078340.cif
+        sha256: 73b5f3cc63f5c1af9d5b2793f067b8b6ba4aaac19393595570cf205c887b320f
+  CHIKV_MacB-x0692:
+    type: model_building
+    last_updated: '2024-02-14 12:36:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z31504642
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0692/Refine_0009/refine_9.split.bound-state.pdb
+        sha256: 2777e83c5a3f8e3fafd5d59cc2536dde0537aa3b04f70c1039ae59d131a57076
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0692/Refine_0009/refine_9.mtz
+        sha256: 3777c1b707b785dbd89c8814fcadb260f403c62da85f865e1483f5094ad564c4
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0692/compound/Z31504642.cif
+        sha256: 07209930f2a85e1110401f7a4003891a0ffb6afcf3c541ed042cf5f2e096317c
+  CHIKV_MacB-x0721:
+    type: model_building
+    last_updated: '2024-02-13 09:23:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z422410426
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0721/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: 119c9d2bdcc4232c0cbc26deafd4b684fee5fd87d2342697cc464e8510f4dff9
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0721/Refine_0007/refine_7.mtz
+        sha256: 7f36b599759802b8a10556e04bdc4d688b5f8d2a3e45e6f25698df59abecb31a
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0721/compound/Z422410426.cif
+        sha256: 59e4aed0502682bf37afecbd885738276bf846ea13f93388a7cfd88da916fa8b
+  CHIKV_MacB-x0732:
+    type: model_building
+    last_updated: '2024-02-15 11:13:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z432057220
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0732/Refine_0005/refine_5.split.bound-state.pdb
+        sha256: 059d0b5eba44f08482a5a8ae04b6c0053f410b0ba712204bb5119d23311a53b3
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0732/Refine_0005/refine_5.mtz
+        sha256: d4872735936913ca0c0bacbbcdb55c144140a3fb9e1435c4eadf7f3816e94ea4
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0732/compound/Z432057220.cif
+        sha256: 643c02a9b3ae5c888a78c319b4f766f7df8ad7e2a00d9d3f9705d1bf8fcd4762
+  CHIKV_MacB-x0756:
+    type: model_building
+    last_updated: '2024-02-13 09:17:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z4628744292
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0756/Refine_0009/refine_9.split.bound-state.pdb
+        sha256: efa6046c0d287ae9401b87a66c597192563ba34d8a2ab9ac9524608217a1b636
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0756/Refine_0009/refine_9.mtz
+        sha256: be484572c43d6b6d6b48a7a4963cec9e2e9d2ab4ae77147f692c023ebd7b8b18
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0756/compound/Z4628744292.cif
+        sha256: 8905c377f1ba9152b1adaa1d48a928755e877c24270a89aa0df0d573d5312a1f
+  CHIKV_MacB-x0760:
+    type: model_building
+    last_updated: '2024-02-13 09:28:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z50145861
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0760/Refine_0006/refine_6.split.bound-state.pdb
+        sha256: b6745b0f446c2a4b96f2f20eca9e6898225d7da3eb215d136a47fdf1d68f12dc
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0760/Refine_0006/refine_6.mtz
+        sha256: 12ca721b114abc1e6ea49a6531798808920a0a048fbcec0f25a3a248e71e3676
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0760/compound/Z50145861.cif
+        sha256: 8f5b41d6ce7f787f2213b4ba476972a13510f52ca7a6175720aa2c737dad9740
+  CHIKV_MacB-x0824:
+    type: model_building
+    last_updated: '2024-02-13 09:40:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z606937774
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0824/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: 9b7b6b4bc7302c0f7a2bc0109afeef9e2eddeb6957f0c9d9c859c9711934a777
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0824/Refine_0007/refine_7.mtz
+        sha256: 8145a1b5847ad1bc641646cb1e9c732795c7545d60ae7c1ff4f953d7bca83acb
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0824/compound/Z606937774.cif
+        sha256: f6eaa2ed30b4f44c45bc7fdbee04ecef446a69945bcd00581a76a4ec6348c75e
+  CHIKV_MacB-x0839:
+    type: model_building
+    last_updated: '2024-02-13 09:36:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z728939702
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0839/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: fc7ecd3ff8e1bd59f32ebb7d151b5f2df1b8b059a779ec6c07f3a8fbd2e13b08
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0839/Refine_0007/refine_7.mtz
+        sha256: eb095a25acb6545e6519a631395aff3f03e5d5fdb244641887dbe85c35f6c37e
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0839/compound/Z728939702.cif
+        sha256: 80c4801688990324210af760a8d1679cdb80a93d2664c684928991182268e85c
+  CHIKV_MacB-x0864:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z815437698
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0864/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: 727d8e80ff1816fc853b2c5e56037eaf102bd3bd8f4e18f33748d6e14cc46437
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0864/Refine_0007/refine_7.mtz
+        sha256: e8304d2ac0ad04f6b2f700bf9b04256d2621983db028aef5e88e171c87e8b9c4
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0864/compound/Z815437698.cif
+        sha256: 90fdcce40dd54a9f63cc5349a5f0e6b7affe3849a8448093a21e53779eafa2e8
+  CHIKV_MacB-x0892:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z915492990
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0892/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: 84277033425f95b6199666d90acfc6e4a9399e3987fe4a85791ba2d311acf473
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0892/Refine_0010/refine_10.mtz
+        sha256: 024ab8c6746fbf0219003dd21a9b7588f9f6bbe43a8c799e75fc1bd5126f3e3d
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0892/compound/Z915492990.cif
+        sha256: a73547493c0c68895cbf48c8e3223241ee331c8eee94ef603eabddb2dde404d9
+  CHIKV_MacB-x0894:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z952016136
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0894/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: 027d4c81faf103ce63ace0ea50dee63251e0a928f49122cd02a36ec9505c5c3e
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0894/Refine_0010/refine_10.mtz
+        sha256: d253528eb29bd154dfccd1d5df35cc66ed86553007c67c967cdbcea9be31c886
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0894/compound/Z952016136.cif
+        sha256: 90a3f7fd40a771151804b49cb5e796bb93e2ee4953827371d4b2324b9e5dd1a1
+  CHIKV_MacB-x0935:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z335807570
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0935/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: 6b0c201d5093001a664c28a47ce74309581b536ec909a35c772cbc1d3c938aae
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0935/Refine_0007/refine_7.mtz
+        sha256: c2b0ccf252868abc45e87240b621180c68d9698427be75f677aa3c8166d26c0c
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0935/compound/Z335807570.cif
+        sha256: 4e7acb12a4e389826b9e8f7d653ec6a2a92976bd27926ef8aad3471df1ba4218
+  CHIKV_MacB-x0969:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z385370362
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0969/Refine_0005/refine_5.split.bound-state.pdb
+        sha256: f32a0aad5aa894fd9bfbe4dab7e4389c105de720d5afd0892fe7339c832aeb35
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0969/Refine_0005/refine_5.mtz
+        sha256: 732e2767617b273eb170ec8b3c962ea7c63c804b7264f73452cb40e6ff12d358
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x0969/compound/Z385370362.cif
+        sha256: 00e917ea934f7c05284407be10244d9a9ff3c482e2115ef9ce795686cbe64b31
+  CHIKV_MacB-x1075:
+    type: model_building
+    last_updated: '2024-02-09 08:25:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: NCL-00023823
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1075/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: 989ace3198302059d5b877833813e8283e3e98af222972531fdbd1bda117bc80
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1075/Refine_0010/refine_10.mtz
+        sha256: cdf1575618b02657cfdbe671488db870b90041ffdecfa7cb585d33a00278d46e
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1075/compound/NCL-00023823.cif
+        sha256: 9b46b96057f7c590be2d1ea410d8ca19a1250b2dcc6abefef7cbef6ca186cccf
+  CHIKV_MacB-x1076:
+    type: model_building
+    last_updated: '2024-02-07 13:56:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: NCL-00023825
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1076/Refine_0009/refine_9.split.bound-state.pdb
+        sha256: b510a4e507be4f793b7321452fb61ecddce59c0f0cdc844d9bc98e5597fe2819
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1076/Refine_0009/refine_9.mtz
+        sha256: 7d0e1189d356e6381d888749080a79fd8e9a52a4f409408479a1e9e4bd29e550
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1076/compound/NCL-00023825.cif
+        sha256: a050880c8761d9e7ed6af55ce8475eba311ae69c4f5788b9d33950270750a8fd
+  CHIKV_MacB-x1091:
+    type: model_building
+    last_updated: '2024-02-08 14:08:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: NCL-00024672
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1091/Refine_0009/refine_9.split.bound-state.pdb
+        sha256: 6d680db0c5d9a6ae948fdfc680e35fb44f51a40c276affc0e6fd4a7ccfaa2e4e
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1091/Refine_0009/refine_9.mtz
+        sha256: 85574d12c7ef4c4c703bdffa9f499d622b159aa461c751d5d701cdde95a22dd3
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1091/compound/NCL-00024672.cif
+        sha256: 638d38538fb08e06d2e96dc1b8e13ac26c4615e567d058d055cc36aee2fe916b
+  CHIKV_MacB-x1103:
+    type: model_building
+    last_updated: '2024-02-07 13:56:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1198386795
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1103/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: c79afc05a7b4e3ee087da6ae442816f0aab40c8ffb36d0bedd078ecf7eff50fe
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1103/Refine_0007/refine_7.mtz
+        sha256: 93d298e0489c4fe8d2a9e819a4aaec0d6e29bedbe28bc001d8fe17d94339882d
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1103/compound/Z1198386795.cif
+        sha256: 5de502525244c64478299a146d0b4e03ea30f80d77ba4d7fb77bad3864c1ca54
+  CHIKV_MacB-x1108:
+    type: model_building
+    last_updated: '2024-02-07 13:56:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1741970824
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1108/Refine_0008/refine_8.split.bound-state.pdb
+        sha256: df1a8e53ccdfeb95ebf04b46a5af216b4a66c0bdda7edf8f0fbea7b0c6046403
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1108/Refine_0008/refine_8.mtz
+        sha256: 1b8683719ac90ebc8a26b1efb2173e4fd7304f95e5edba8c7ec8ddbffd9faada
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1108/compound/Z1741970824.cif
+        sha256: 13d352035d1bb6ed3c2203862ba382921bf1f53a765cf26271136a22504ff481
+  CHIKV_MacB-x1112:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z57127349
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1112/Refine_0008/refine_8.split.bound-state.pdb
+        sha256: 765ad6e5e317587cdb4a733d7f65e412cfa90e5e2c12d09c1af9f0443d631ef5
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1112/Refine_0008/refine_8.mtz
+        sha256: e23722909e2fc9e1c29e70ed3e07d9cf96e3f2da97eb53bbcac45b84e4af14d6
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1112/compound/Z57127349.cif
+        sha256: db5db8185b526f488748600ec919b9906c8b2e739d41400663dce4ac210ca078
+  CHIKV_MacB-x1114:
+    type: model_building
+    last_updated: '2024-02-08 14:08:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z940713508
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1114/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: 0e5810b34d01985e69651cd897053da19e97fad7468a09a7d24f8b70500dd252
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1114/Refine_0010/refine_10.mtz
+        sha256: 88d88570808baa6c68a14d381da322cf67c6fe85adb486c2c63eeced5abec426
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1114/compound/Z940713508.cif
+        sha256: d463384258e9e0a6b18a3a4a4a65d47aa3243abb620819247b5e48d438d7c95c
+  CHIKV_MacB-x1116:
+    type: model_building
+    last_updated: '2024-02-26 09:16:00'
+    refinement_outcome: 6 - Deposited
+    compound_code: Z275118248
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1116/Refine_0009/refine_9.split.bound-state.pdb
+        sha256: da0b4055f362cc0aef2f7aad31066107a555dc60723967ee5fcc021c56dc7126
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1116/Refine_0009/refine_9.mtz
+        sha256: 92d41a90dcad39cdbe9b4f9ba5ff9d64857c3ec688b11e6c7b790135e3874a7d
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1116/compound/Z275118248.cif
+        sha256: 97ad6c09eb7f52fce84332248444cfff5e85650c4d398cae66a823515d93b950
+  CHIKV_MacB-x1118:
+    type: model_building
+    last_updated: '2024-02-08 14:08:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1741982125
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1118/Refine_0011/refine_11.split.bound-state.pdb
+        sha256: 9091ac7302d862dc6a90e6af9723bedb02c6d6b0d26867ec90844ca747e13d1d
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1118/Refine_0011/refine_11.mtz
+        sha256: 16031a0265308ac2d856d3f83f240af04951d3ac24b9278ffb1996ed0bedd90f
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1118/compound/Z1741982125.cif
+        sha256: 7afaa4b2bc0e10a321ca9a94084c912953325507c41831a1d2ff5623142b497a
+  CHIKV_MacB-x1123:
+    type: model_building
+    last_updated: '2024-02-09 14:43:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z56866006
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1123/Refine_0011/refine_11.split.bound-state.pdb
+        sha256: 782578f3db377a6ebd9d84b058659aa159a799122d8e701d05b462c1b077d29f
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1123/Refine_0011/refine_11.mtz
+        sha256: d0db2d7bdb987406666bd5d879590179c6853adfbcf43caa09c74364638bccb4
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1123/compound/Z56866006.cif
+        sha256: cf9cce54ea97adef8201b03701fab6c6cffdb0a14ea7e6fc491c912559496d2a
+  CHIKV_MacB-x1131:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z56968535
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1131/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: 0e8046b2278fbb33719c6626386ab472c75b8d77f02aa25d05b54d2c320892da
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1131/Refine_0007/refine_7.mtz
+        sha256: 68a6fe4b6ae2ba8a5b2204a65e85905f5a9f14e6c7e41e036eb628d355b901f0
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1131/compound/Z56968535.cif
+        sha256: 8cb8196bf92b4a277a23f1aae682b3ca26f0538248403a8dc205c256a0cd99b0
+  CHIKV_MacB-x1132:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1741968196
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1132/Refine_0009/refine_9.split.bound-state.pdb
+        sha256: 6a277ae34a424af4cf420ded871fd8b97dd2f8e56e5d71bc585a4d16f98e1d70
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1132/Refine_0009/refine_9.mtz
+        sha256: 56171bacbb9b15b47074eb0e9816eeb3df946888c03d60c31bb6397d2205347b
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1132/compound/Z1741968196.cif
+        sha256: aca39adf063729d2fbc394b8f6e639bec1080603ab1681f693da27d7cc37d72a
+  CHIKV_MacB-x1134:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1741972444
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1134/Refine_0008/refine_8.split.bound-state.pdb
+        sha256: 4e7d39ccb40193fa0b11df4f4c6d65d7707a25de8a3b88e8f15ae37f7ec58838
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1134/Refine_0008/refine_8.mtz
+        sha256: 25fa1684876b218ef56b62eb934840b0c86256d836ec4d04dbaa2818feaa93a1
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1134/compound/Z1741972444.cif
+        sha256: 7ccfd56f2e0017eac9aa220bad3c7c913fbc76102911ef186bcfb58a6303529f
+  CHIKV_MacB-x1135:
+    type: model_building
+    last_updated: '2024-02-08 14:08:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z3219959731
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1135/Refine_0013/refine_13.split.bound-state.pdb
+        sha256: 3f2002c82c021ae7f70baa562959fc8e56f88be5ce7d7d49444c6f34ee5ed2fe
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1135/Refine_0013/refine_13.mtz
+        sha256: db6ecbb70f3f8279ae865d40515590c152211322c9daf7c7905f8fc80643922a
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1135/compound/Z3219959731.cif
+        sha256: c2001b080c8124ce2e7adf6b9be7049b065d07f2bb06ae8b3cf36ebb8f2efe1f
+  CHIKV_MacB-x1139:
+    type: model_building
+    last_updated: '2024-02-15 11:17:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z3225843273
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1139/Refine_0006/refine_6.split.bound-state.pdb
+        sha256: 3165d3b5fe2b5d1f5505307d196d84c57c431bf6d152414be0d9c00664731896
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1139/Refine_0006/refine_6.mtz
+        sha256: a1c63311bf2fea5a3f4a812423cab5bbc3db97c85ffdd9e74d35e6cb34666c5f
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1139/compound/Z3225843273.cif
+        sha256: feaddf3dd0b326773323551aa4e33b0c021b3f1d7d4aea1c7056a6afe59a8ae4
+  CHIKV_MacB-x1145:
+    type: model_building
+    last_updated: '2024-02-08 14:08:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z241119328
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1145/Refine_0009/refine_9.split.bound-state.pdb
+        sha256: 97a8f9fc3a343de5e20e62490af4915beb5c781e294ba95072c2e513d921bb07
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1145/Refine_0009/refine_9.mtz
+        sha256: 45cd1d899df3cec5656ddb0b4f887c7b94cb03745bd743d64d04558168cba22a
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1145/compound/Z241119328.cif
+        sha256: 86203d488f0432fb00b118959b7c54c758b1e2f12d8b77c27b2acbe1e7221d7a
+  CHIKV_MacB-x1151:
+    type: model_building
+    last_updated: '2024-02-09 14:59:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1741976468
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1151/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: e3314aa5433e56ab885ccdb790469288f4ee2bb3160b09548115c28ede6128bd
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1151/Refine_0010/refine_10.mtz
+        sha256: a8d8dcd0b76b7f02cea6a3ee8b4fbbdf5b0c7525f9028b82f7237e2bc08b4002
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1151/compound/Z1741976468.cif
+        sha256: fe3d8e5b1d6682da61592079d70c5589e7832a7afc2765a7cc3762f06fb93aa3
+  CHIKV_MacB-x1182:
+    type: model_building
+    last_updated: '2024-02-09 08:25:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z303754556
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1182/Refine_0009/refine_9.split.bound-state.pdb
+        sha256: 8c073b5b232a730ce2c66d465c530d927a17f78c4ea66b72e47923ae125bd954
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1182/Refine_0009/refine_9.mtz
+        sha256: fec78b8f8ee08eeee63ba19953ad2937ac5a015c77c542e143c2c69d34cfbe34
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1182/compound/Z303754556.cif
+        sha256: 0e0952f70bbf044a0f28f19c15d6b4d2e587409365c229d54499d0d8ca85db05
+  CHIKV_MacB-x1183:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z57299966
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1183/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: aaf1c12905d8481615f22e8e8feb62025145264f1cb28ccbc082dc02200f9c4d
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1183/Refine_0010/refine_10.mtz
+        sha256: d4c1037e182b653d66b11a07e353d864ab110d277b658bea6c936c7d360d5bf8
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1183/compound/Z57299966.cif
+        sha256: 5f722e7caff8ed6ceeef688cdfd46858144b8e01bfa2feea5546ee8ea0ca3cd3
+  CHIKV_MacB-x1194:
+    type: model_building
+    last_updated: '2024-02-08 14:08:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z362772344
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1194/Refine_0008/refine_8.split.bound-state.pdb
+        sha256: c700fe1fcf8a6a0406a130bd1a5a248bfb3b2b584a40dd23097700e4c8456e0b
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1194/Refine_0008/refine_8.mtz
+        sha256: a9d2ade4da3f6f5cc2319d4865a2ef23270b523e89ad3170e1ea409749a56fe7
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1194/compound/Z362772344.cif
+        sha256: 0f843d5ffbf4829196056bc6214499792e81eee791fec4353a7dd3cda05682c3
+  CHIKV_MacB-x1203:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z56791928
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1203/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: 053403dee095f9219898e36f951cde069e0c4393654192ec45f8d266e0cd115f
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1203/Refine_0010/refine_10.mtz
+        sha256: bfdfa5359be926a48712cb60c957b497815aa72226143acd12fde7ea93644513
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1203/compound/Z56791928.cif
+        sha256: 1fc59c76584eb18f2fcde6c7ce88adbf6b5f44d51307263825ab1980d35e1cc6
+  CHIKV_MacB-x1213:
+    type: model_building
+    last_updated: '2024-02-08 08:32:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z212053854
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1213/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: 157f77a29fc71cb3a9f50b88c22f70bc4605fb7eed593ec7d2aec6ccbc405104
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1213/Refine_0007/refine_7.mtz
+        sha256: a66420861f7b896f8d95be216c325fca903b95a7c5df4a6dca355f6ee12efff7
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1213/compound/Z212053854.cif
+        sha256: f442eb4f1eeae11af6becfc6b8ee45ad9c8eda8acec7891f96cc6420b96fd55b
+  CHIKV_MacB-x1260:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z255114686
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1260/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: 4e6e05e4666e8bccf48aafd012fe3498cb440d2ead4cd749516590802569d689
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1260/Refine_0007/refine_7.mtz
+        sha256: 41f113d25cfc05a95636c6fece4efbae5a413ce0e3eae4f319460baaf6e283eb
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1260/compound/Z255114686.cif
+        sha256: c5ca2c1b0ab9bb900075be0116e69ca9de92a051e48bff4a970ae0bedc80793d
+  CHIKV_MacB-x1268:
+    type: model_building
+    last_updated: '2024-02-08 08:23:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1203748449
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1268/Refine_0008/refine_8.split.bound-state.pdb
+        sha256: 33b2b4ada5ccf833d4f44a5ee5b7badf93c555ecff5cc7886c4f1665004e4599
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1268/Refine_0008/refine_8.mtz
+        sha256: 948d7af50f36298ffd396bae25eb601ed15fef455455dcf36903809237c17d4f
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1268/compound/Z1203748449.cif
+        sha256: beafb6209a51edddfb81c137a30bc7bb2bb66fd0dd5ee1b322ec6e6e2077adc4
+  CHIKV_MacB-x1271:
+    type: model_building
+    last_updated: '2024-02-08 08:38:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z56912586
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1271/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: 3326badd6c230939a2f4bb07eada0dcda8c2b257179365a6f01afa70e7908d6c
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1271/Refine_0007/refine_7.mtz
+        sha256: 0ac14661a7b3f48b053f2312c033846995dcf3592c922eb9632099b535445f68
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1271/compound/Z56912586.cif
+        sha256: 8dfb8f3a31fbc53e93fe89ca7bdcb716e742187ecd8a1b86f5aa0e54bf9e3635
+  CHIKV_MacB-x1278:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1079133092
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1278/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: 385ff844c6e4a6a1994e8e2480e811b3c0c9b609d98575f45cec769c3134010b
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1278/Refine_0007/refine_7.mtz
+        sha256: 509ee7526cad90f5975f14666f0adf11e2f7d7c6a60985e57e0a28d4be12af92
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1278/compound/Z1079133092.cif
+        sha256: 32a737c09c7b4842177c5f0a9dda34194638fc20d9f6e692ec8ac43202d49197
+  CHIKV_MacB-x1288:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z218760918
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1288/Refine_0008/refine_8.split.bound-state.pdb
+        sha256: b67d239d102b5e35acdf2d5b5ab0177bc3e40dbda7a05189b9f1ad483a2555ac
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1288/Refine_0008/refine_8.mtz
+        sha256: ef8636f4207681021198cba73ff600b6918046d5150ecf06986958708f409ae2
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1288/compound/Z218760918.cif
+        sha256: a9d8ff2aaa5234d643714b26f20cb33f97de05dae927ee47301e9bd5c81ac0ce
+  CHIKV_MacB-x1298:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z104507896
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1298/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: ca72e6f723d420bbd32e3b5cb07e9fe31e70448315faaa2d8ba2f1cf19c79556
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1298/Refine_0010/refine_10.mtz
+        sha256: ebe745bc2c6eb66d2c9d09a50051ae174585989dfc0aa02f862d18ebbcfdce71
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1298/compound/Z104507896.cif
+        sha256: e431a63f34341a9a3d7909bc55d78e8acdfa91c1df0227b4d12c3458792e63ca
+  CHIKV_MacB-x1299:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z367659362
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1299/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: 90537fa3e5f21861066981fbd08b4af06484ccce9e55459487116c7bcd8f4c2c
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1299/Refine_0007/refine_7.mtz
+        sha256: d4a041e3e8e4a1176cc74eb2207c864245b0e4fa1da7bf00120f3a2639f95fcf
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1299/compound/Z367659362.cif
+        sha256: 8ebe073b08c05aaacabae67e49953bf9fa2062c9b243a329e88bfcc4ffc4739d
+  CHIKV_MacB-x1305:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z104473678
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1305/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: 69cc7416af83f7aa4eba7b6adb73f2cf3f861153b99bdaf5679f291132debb16
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1305/Refine_0010/refine_10.mtz
+        sha256: 54eb48b3060479d7cac6e4a34d70cf3a152ff453146a61257b977d16141e8b24
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1305/compound/Z104473678.cif
+        sha256: 7df21441c0797a3d1374e8a7fb5cbcae4eb9f1e5e2dc00430727eb067c035cb5
+  CHIKV_MacB-x1316:
+    type: model_building
+    last_updated: '2024-02-09 08:26:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z19674820
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1316/Refine_0006/refine_6.split.bound-state.pdb
+        sha256: a9c5f6eebf29ae05441f119fed0b1004473da20d4b166c9ea42c32361a9d560f
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1316/Refine_0006/refine_6.mtz
+        sha256: 8cfb458754ee8fb032dbafe9ed201a368fcf8389973c6fdc68a696cfceadfdcc
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1316/compound/Z19674820.cif
+        sha256: 6ec9e8f552cc21002d50fa5e5a09adce1fd10031f4c8e504e3aa4f5dbaf9c3fc
+  CHIKV_MacB-x1320:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z57169486
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1320/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: f9971c9294437697575e5e8489d141f14a169cdb33e8c3a1c366af95b3cea95d
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1320/Refine_0010/refine_10.mtz
+        sha256: 07edc2a8ec3c89cbf9664f7f084c8adb5ddcaff30db0f899528cb265f4f20c4b
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1320/compound/Z57169486.cif
+        sha256: b92c52b73cd6a5de103f933e725f65edf44d8a614e10ad4efc5c4e176966d4e4
+  CHIKV_MacB-x1338:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z56347237
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1338/Refine_0005/refine_5.split.bound-state.pdb
+        sha256: 9c69c5bcf56d001e3d4d3f5390577641db14b463b0118950346f659b0c228989
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1338/Refine_0005/refine_5.mtz
+        sha256: e3d168d4303ab5256e5cb0adb8d0dcde44e2b21d6c14181915fec1f89dd9a0c5
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1338/compound/Z56347237.cif
+        sha256: 4cea3ae28c00256a3862d9185865baa1eb65ae554cf3b75fc03083e17400481e
+  CHIKV_MacB-x1353:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z104472798
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1353/Refine_0005/refine_5.split.bound-state.pdb
+        sha256: 97d256183536ed408fdecb04e6567799bf7181b99185d060070720835ed8f719
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1353/Refine_0005/refine_5.mtz
+        sha256: 78d3bc3545caca62c62d79ba0dba815a8737a029bb38b1e046359a9f22c20c50
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1353/compound/Z104472798.cif
+        sha256: 3570c3401c33dd1bb4828f191616b120e9afc8439f72a4f003d478c70b590be2
+  CHIKV_MacB-x1365:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z56889474
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1365/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: 7404c1d02cd68f93c27dd8bb1748753e1b4e1d1fbcee5cab5b68880688880ff8
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1365/Refine_0007/refine_7.mtz
+        sha256: 32578dc24fb968971f9cc9e71452fba2761f1831d44d1c9dc56be116528a872f
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1365/compound/Z56889474.cif
+        sha256: c9d327e3034cc22e1fc78aa578612c32209f01a70b1618046f176645dfa98920
+  CHIKV_MacB-x1371:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z33546479
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1371/Refine_0009/refine_9.split.bound-state.pdb
+        sha256: 566f5d0bfead5200c1f7f9096d19f7800de04897f770872f7daac103c5da2a04
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1371/Refine_0009/refine_9.mtz
+        sha256: 50559cbbe16c0ad11a135bf61766a1c51529131454413e345d26a64ba9fcdf56
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1371/compound/Z33546479.cif
+        sha256: d0cccde176373202e9029fef47b1bef56b791e5b87f9f9a32f0162336735f488
+  CHIKV_MacB-x1372:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z239125320
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1372/Refine_0006/refine_6.split.bound-state.pdb
+        sha256: 88856f274de7e13135aa29a23b8fdb286ce4472b083276d21c98ad066a8bbf75
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1372/Refine_0006/refine_6.mtz
+        sha256: 28f09659388ea089044f4eaf6d9a1238a4818c2bc4ca88c1be6b4c84e7ac90f9
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1372/compound/Z239125320.cif
+        sha256: d6cd845c7bbf93dc6403b482eeed6189e89f6429fb91f620b147c00541197095
+  CHIKV_MacB-x1379:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z440625162
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1379/Refine_0006/refine_6.split.bound-state.pdb
+        sha256: e782415d42d1db067b4138c8527193c0ef77f83269abc2fb3a505e36a30c7d63
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1379/Refine_0006/refine_6.mtz
+        sha256: 35b82ed394bfc6b02f5227d7f7ff5b379ec356b117c76daf4f7118824edbf522
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1379/compound/Z440625162.cif
+        sha256: e7e7d0995e9f5bed61bad51bbd8a118222de9a70149843ba62507a2b9cacd7ca
+  CHIKV_MacB-x1402:
+    type: model_building
+    last_updated: '2024-02-23 10:13:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z271099378
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1402/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: 4a8edde65d2a802d580f71562b1d109b02927f5985daef83f38cef7c14854e22
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1402/Refine_0007/refine_7.mtz
+        sha256: f2c3e29fcee320170d855b3310bdce1c1ba270206a41aafae6dd07af27ac479e
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1402/compound/Z271099378.cif
+        sha256: d83872f79c0e1c5f323e37ba19feec3eb9f7a65ce64b820db8b7b9e97377621a
+  CHIKV_MacB-x1406:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z104475374
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1406/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: 87b051d7ee6e712e5aa366c30060595a4e4796984d48118dec42864dfb13fa70
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1406/Refine_0010/refine_10.mtz
+        sha256: 0efff0366aaed52d8072a3343f8ccd5a11d46e697b173373fe099cae28765b4c
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1406/compound/Z104475374.cif
+        sha256: b39b899c6ba0a4f4912931160dc09d17b14d911293160e9a8bf81b67dc28ddb9
+  CHIKV_MacB-x1410:
+    type: model_building
+    last_updated: '2024-02-23 10:13:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z56899125
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1410/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: eb691f40fd381c997e3bd6b566a7c672ba4a671fb69dd0b3c60702703298284f
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1410/Refine_0010/refine_10.mtz
+        sha256: caccaf701d1487aa1a03f0efa76344483d5d1b9d62ba17199c12f5531665ea4c
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1410/compound/Z56899125.cif
+        sha256: aa4cc5eba5f06b0d08205ffaea72d00f366b14a735424c242a141c5925e45905
+  CHIKV_MacB-x1417:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1201619441
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1417/Refine_0011/refine_11.split.bound-state.pdb
+        sha256: 5d52c217b668c86a3e43ce674465721f4472af10ceb2b9ff654aa0ec461f9e65
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1417/Refine_0011/refine_11.mtz
+        sha256: 07094333386d5f87be71258af15eb7cf4e7d1dbc32c5d9abea271f9bddabb26b
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1417/compound/Z1201619441.cif
+        sha256: 2681c46c9002994398242d8b7a38477eb2436aa6d29dd2101dc091fccab75a37
+  CHIKV_MacB-x1423:
+    type: model_building
+    last_updated: '2024-02-14 14:00:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z728187792
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1423/Refine_0011/refine_11.split.bound-state.pdb
+        sha256: 6e0a6969bd6474cab2f9fa9a7c2d2b3020a5dd46af752593baaba28c9d1839ee
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1423/Refine_0011/refine_11.mtz
+        sha256: ebb5f7939a00ac0c173efdb7e57be5c62b40a0fae11283384e6116679ce530ac
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1423/compound/Z728187792.cif
+        sha256: c381fa476c21669896df70cebb1880651733c3f1a1de85d45d11f94274e2bdf1
+  CHIKV_MacB-x1431:
+    type: model_building
+    last_updated: '2024-02-23 10:13:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z234895085
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1431/Refine_0007/refine_7.split.bound-state.pdb
+        sha256: c8d7a7bdc62121de8b789a4b6ce732befd89ba9bdd4f5fb42dc40f589e3c851b
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1431/Refine_0007/refine_7.mtz
+        sha256: e8a16e4e5e8400f6830329dbcbfd9968818293315431c13801f36eb2b6d24d2a
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1431/compound/Z234895085.cif
+        sha256: 3f57d7dff2a112751dcc2b0b9d150c25b80280619fdf75c03b18d196a0f2f805
+  CHIKV_MacB-x1440:
+    type: model_building
+    last_updated: '2024-02-23 10:13:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z1203162487
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1440/Refine_0005/refine_5.split.bound-state.pdb
+        sha256: 4a1d84eca8e374d9400e525938b50708aa144ca60285bf449d992739ec542ca5
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1440/Refine_0005/refine_5.mtz
+        sha256: 655716e6bea799a2e342acc1ac28973a2b69be49144151270ca8019a9926d659
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1440/compound/Z1203162487.cif
+        sha256: eb995b4d270c5977f0cc66e0967fefb06c83139554e6ba89c1ff3abcd0fc7572
+  CHIKV_MacB-x1444:
+    type: model_building
+    last_updated: '2024-02-23 10:13:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z55692894
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1444/Refine_0009/refine_9.split.bound-state.pdb
+        sha256: ca3da0e586deb2ceb5e13cc35e6845412dcdcc25b1120923945b83f25a26dab8
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1444/Refine_0009/refine_9.mtz
+        sha256: 4a706b4bcccf05230c4d5eee984b5d58de0582c370006306985a8458a5cf6f1a
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1444/compound/Z55692894.cif
+        sha256: 4980f6455048b4443abf6c2b7ca6ebb311a0cb6992c800821acc4515fde66a48
+  CHIKV_MacB-x1445:
+    type: model_building
+    last_updated: '2024-02-23 10:13:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z68590124
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1445/Refine_0011/refine_11.split.bound-state.pdb
+        sha256: 4b63a7a772ac35bcafd9c5bfe9c1dbbec59fd450f19f47901e727f21b7707ccf
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1445/Refine_0011/refine_11.mtz
+        sha256: 6fb68456259398cf1e04bf6f9a2100d1b7b50277b6507272f59fe8c6bf6d9714
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1445/compound/Z68590124.cif
+        sha256: 9f8e338049f83ac6bbbc382689b5b923351fe3330022e624a6639349cf3e8141
+  CHIKV_MacB-x1454:
+    type: model_building
+    last_updated: '2024-02-23 10:13:00'
+    refinement_outcome: 4 - CompChem ready
+    compound_code: Z57376600
+    code_prefix: c
+    crystallographic_files:
+      xtal_pdb:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1454/Refine_0010/refine_10.split.bound-state.pdb
+        sha256: 80b445573135602e30be7a268cb6dd87676c1acb645fb412ce11f6c16a9fbbb0
+      xtal_mtz:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1454/Refine_0010/refine_10.mtz
+        sha256: d0a6433e2221876c0ab535ae176ff0f4fccf07a0ed0a6b677e1a9d59dd4e7a55
+      ligand_cif:
+        file: dls/labxchem/data/lb32633/lb32633-6/processing/analysis/model_building/CHIKV_MacB-x1454/compound/Z57376600.cif
+        sha256: 0c2cbe414180f00d96e19f127cdcdf547469e0fb44d583985869a26387963be3
+  6vuq:
+    code_prefix: c
+    type: manual
+    crystallographic_files:
+      xtal_pdb:
+        file: !!python/object/apply:pathlib.PosixPath
+        - dls
+        - labxchem
+        - data
+        - lb32633
+        - lb32633-6
+        - processing
+        - analysis
+        - xchemalign
+        - references
+        - 6vuq
+        - 6vuq.pdb
+        sha256: 9612c6f2c8bd8fd619d26df34c3e117028d26fd478388829ea5e163085b4c115

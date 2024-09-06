@@ -1,0 +1,21 @@
+assemblies:
+    monomer:
+        reference: 6vuq
+        biomol: A
+        chains: A
+crystalforms:
+    P31-4fold-NCS:
+        reference: 6vuq 
+        assemblies:
+            A:
+                assembly: monomer
+                chains: A 
+            B:
+                assembly: monomer
+                chains: B 
+            C:
+                assembly: monomer
+                chains: C 
+            D:
+                assembly: monomer
+                chains: D

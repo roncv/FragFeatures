@@ -40,6 +40,12 @@ class TargetParser:
             logger.info("\nGetting all compounds in the target...")
         return self.metadata["Code"].tolist()
 
+    def check_compound_dirs(self):
+        """
+        Check that all compound directories have the necessary files.
+        """
+        pass
+
     def get_compound(self, code):
         """
         Return a compound's metadata with the given code.

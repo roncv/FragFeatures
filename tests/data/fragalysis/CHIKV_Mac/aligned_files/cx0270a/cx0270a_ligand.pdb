@@ -1,0 +1,26 @@
+COMPND    CHIKV_MacB-x0270_A_304_CHIKV_MacB-x0300+A+401+1
+HETATM    1  O1  UNL     1      15.449  10.847  12.304  1.00  0.00           O  
+HETATM    2  C1  UNL     1      16.378  11.036  11.513  1.00  0.00           C  
+HETATM    3  N1  UNL     1      16.518  10.325  10.396  1.00  0.00           N  
+HETATM    4  C2  UNL     1      15.778   9.097  10.167  1.00  0.00           C  
+HETATM    5  C3  UNL     1      17.398  12.115  11.759  1.00  0.00           C  
+HETATM    6  C4  UNL     1      18.786  12.187  11.346  1.00  0.00           C  
+HETATM    7  C5  UNL     1      19.307  13.376  11.884  1.00  0.00           C  
+HETATM    8  N2  UNL     1      18.297  14.010  12.575  1.00  0.00           N  
+HETATM    9  C6  UNL     1      18.420  15.280  13.280  1.00  0.00           C  
+HETATM   10  C7  UNL     1      17.163  13.246  12.494  1.00  0.00           C  
+HETATM   11  C8  UNL     1      19.634  11.363  10.602  1.00  0.00           C  
+HETATM   12  C9  UNL     1      20.967  11.721  10.430  1.00  0.00           C  
+HETATM   13  C10 UNL     1      21.463  12.893  10.984  1.00  0.00           C  
+HETATM   14  C11 UNL     1      20.637  13.738  11.711  1.00  0.00           C  
+CONECT    1    2    2
+CONECT    2    3    5
+CONECT    3    4
+CONECT    5    6   10   10
+CONECT    6    7   11   11
+CONECT    7    8   14   14
+CONECT    8    9   10
+CONECT   11   12
+CONECT   12   13   13
+CONECT   13   14
+END
