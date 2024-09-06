@@ -46,7 +46,7 @@ Subcommands:
 
 The modules accept inputs as command line arguments, yaml functionality is yet to be implemented.
 
-### Prepare DUck input
+### Prepare DUck Experiment
 
 To extract features from a target and prepare a directory for simulation, you can use the `prepare-duck` module. This module requires the following arguments:
 
