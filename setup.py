@@ -19,12 +19,11 @@ requirements = [
 	# 'MDAnalysis',
 	# 'tqdm',
 	# 'matplotlib'
-    # 'prolif',
-    # 'rdkit',
+    'rdkit',
     # 'molparse',
     # 'pandas',
-    # 'openmm',
-    # 'prolif',
+    'openmm',
+    'prolif',
 	]
 
 # TODO: Add long description linked to README.md

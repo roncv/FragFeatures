@@ -1,5 +1,5 @@
 """
-Module to handle ProLIF feature metadata
+Module to handle ProLIF feature metadata from a fingerprint.
 """
 
 import logging

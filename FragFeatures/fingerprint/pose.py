@@ -1,7 +1,5 @@
 """
-Main script for extracting compound/fragment fingerprints.
-
-Inspired by https://github.com/mwinokan/HIPPO
+Module for generating compound/fragment fingerprints from protein-ligand complexes.
 """
 
 import logging

@@ -1,5 +1,5 @@
 """
-Console Script for FragFeatures - preparing and summarising experiments.
+Console Script for FragFeatures - preparing, summarising, and analysing experiments.
 """
 
 import argparse

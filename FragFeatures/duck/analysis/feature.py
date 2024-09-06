@@ -1,5 +1,5 @@
 """
-Process the duck output for a feature of a compound.
+Process the duck output for the feature of a compound.
 """
 
 import json
