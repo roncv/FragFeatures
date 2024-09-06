@@ -3,8 +3,10 @@ Console Script for FragFeatures - preparing and summarising experiments.
 """
 
 import argparse
+import time
 
-# import yaml # NOTE: PyYAML is a dependency??
+from FragFeatures.duck.experiment import DUckExperiment
+from FragFeatures.duck.input import DUckInput
 from FragFeatures.utils import timefunction
 
 
@@ -28,11 +30,7 @@ def prepare_duck_experiment(compound_selection, experiment_name, target_dir):
     target_dir : str
             Path to the Fragalysis target's directory.
     """
-    from FragFeatures.duck.input import DUckInput
-
     # Add some timing
-    import time
-
     start_time = time.time()
 
     # Prepare the input for DUck simulation
@@ -53,11 +51,7 @@ def summarize_duck_experiment(experiment_dir, output_dir, wqb_filename):
     """Parse the output of a DUck simulation."""
     print("Parsing the output of a DUck simulation..")
 
-    from FragFeatures.duck.experiment import DUckExperiment
-
     # Add some timing
-    import time
-
     start_time = time.time()
 
     # Iniitialise the DUck experiment

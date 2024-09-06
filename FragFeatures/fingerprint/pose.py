@@ -22,7 +22,7 @@ from rdkit import Chem, RDConfig
 from rdkit.Chem import AllChem, Draw, MolFromSmiles
 
 from FragFeatures.core.tools import sanitise_mol
-from FragFeatures.prolif_feature import PLFeature
+from FragFeatures.fingerprint.prolif_feature import PLFeature
 from FragFeatures.sanitisation.protein_preparation import ProteinPreparation
 from FragFeatures.utils import timefunction
 
@@ -618,7 +618,7 @@ class InvalidMolError(Exception): ...
 
 # Test
 if __name__ == "__main__":
-    from FragFeatures.target_parser import TargetParser
+    from FragFeatures.fragalysis.target_parser import TargetParser
 
     target = TargetParser(
         "/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac"

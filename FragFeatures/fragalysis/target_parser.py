@@ -14,7 +14,7 @@ logger = logging.getLogger("FragFeatures")
 # TODO: Option to specify location of metadata.csv
 class TargetParser:
     """
-    Parse through an XChem target's directory.
+    Parse through an Fragalysis target's directory.
 
     Directory given should be the parent directory containing the target's metadata.csv file.
     """
