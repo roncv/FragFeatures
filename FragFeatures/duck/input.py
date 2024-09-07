@@ -265,6 +265,19 @@ class DUckInput:
                     protein_pdb_path=f"../{compound.protein_filename}",
                     ligand_mol_path=f"../{compound.prepared_ligand_filename}",
                     output_dir=feature_dir,
+                    filename="input_0.yaml",
+                    gpu_id=0,
+                )
+
+                # DUck simulation input
+                self.generate_duck_input(
+                    compound_code=compound_code,
+                    feature=feature_name,
+                    protein_pdb_path=f"../{compound.protein_filename}",
+                    ligand_mol_path=f"../{compound.prepared_ligand_filename}",
+                    output_dir=feature_dir,
+                    filename="input_1.yaml",
+                    gpu_id=1,
                 )
 
                 ### FEATURE LEVEL METADATA ###
@@ -319,6 +332,130 @@ class DUckInput:
             print("\n")
             logger.warning("No additional compounds prepared.")
             print("\n")
+
+        # Print summaries
+        print("\n")
+        print(f"Number of Compounds: {compound_tally}")
+        print(f"Number of Features: {feature_tally}")
+        print(f"Number of DUDs: {dud_tally}")
+        print(f"Failed Compounds: {compound_fails}")
+        print("\n")
+
+        if self.verbose:
+            print(f"Interaction Types Summary: \n{interaction_types_summary}\n")
+
+    def generate_feat_mdata_plf(self, feature_name, feature, output_dir):
+        """
+        Generate metadata for a feature. Protein -> Multiple liand features.
+        """
+        # TODO: Ensure these are compatible with pandas
+        feature_details = {
+            "DUck_feature": feature_name,
+            "prot_feature_family": feature.interaction_type,
+            "prot_residue_name": feature.prot_atom_resname,
+            "prot_res_num": feature.prot_atom_resid,
+            "prot_chain": feature.prot_atom_chainID,
+            "prot_atom_name": feature.prot_atom_name,
+            "prot_atom_names": list(feature.prot_atom_names),
+            "prot_atom_idx": feature.prot_idx,
+            "prot_atom_idxs": feature.protein_indices,
+            "lig_atom_idxs": feature.ligand_indices,
+        }
+
+        # Write protein_feature_details dict to a json file
+        dict_to_json(feature_details, f"{output_dir}/feature_metadata.json")
+
+        # Ligand features
+        ligand_feature_details = {
+            "DUck_feature": feature_name,
+            "prot_feature_family": feature.interaction_type,
+            "atom_nums": feature.ligand_indices,
+            "atom_names": feature.ligand_atom_symbols,
+            "atom_charges": feature.ligand_atom_charges,
+            "interaction_distance": feature.interaction_distance,
+            "dha_angle": feature.dha_angle,
+            "atom_smarts": feature.ligand_atom_smarts,
+            "smarts_substructure": feature.smarts_substructure,
+            "explicit_hydrogens": feature.ligand_atom_num_explicit_hs,
+        }
+
+        dict_to_json(
+            ligand_feature_details, f"{output_dir}/ligand_feature_metadata.json"
+        )
+
+    def generate_compound_mdata_plf(self, compound, compound_code, compound_dir):
+        """
+        Generate metadata for the compounds.
+        """
+        compound_metadata = {
+            "compound_code": compound_code,
+            "protein": compound.protein_path,
+            "prepared_protein": compound.prepared_protein_path,
+            "termini_present": compound.protein_termini,
+            "ligand": compound.mol_path,
+            "prepared_ligand": compound.prepared_ligand_path,
+            "SMILES": compound.smiles,
+            "features": compound.duck_feature_names_plf,
+            "num_features": compound.number_of_interactions_plf,
+        }
+
+        # Write compound_metadata dict to a json file
+        dict_to_json(compound_metadata, f"{compound_dir}/{compound_code}_metadata.json")
+
+        # Save an RDKit image of the ligand
+        compound.draw_mol3d(f"{compound_dir}/{compound_code}_3d.png")
+        compound.draw_mol(f"{compound_dir}/{compound_code}_2d.png")
+
+    # @timeit
+    def generate_duck_input(
+        self,
+        compound_code,
+        feature, protein_pdb_path,
+        ligand_mol_path,
+        output_dir,
+        filename,
+        gpu_id: int
+    ):
+        """
+        Generate the .yaml input for a DUck simulation.
+        """
+        # TODO: Add more options for the input file
+        # TODO: Work on flexibillity and linking to the openduck repo
+        # TEST: Test with openduck repo - v. quick simulation - or even just setup / prep?
+        input_file = f"""# DuCK input file for {feature} feature from {compound_code}\n
+# Main Arguments
+interaction : {feature}
+receptor_pdb : {protein_pdb_path}
+ligand_mol : {ligand_mol_path}
+gpu_id : {gpu_id}
+
+# Chunking Arguments
+do_chunk : True
+cutoff : 10
+ignore_buffers : False
+
+# Preparation Arguments
+small_molecule_forcefield : smirnoff
+protein_forcefield : amber14-all
+water_model : tip3p
+ionic_strength : 0.05
+waters_to_retain : waters_to_retain.pdb
+solvent_buffer_distance : 15
+force_constant_eq : 1
+
+# Production Arguments
+smd_cycles : 20
+md_length : 0.5
+wqb_threshold : 6
+init_velocities : 0.00001
+init_distance : 2.5
+fix_ligand : True"""
+
+        # Write the input file
+        with open(f"{output_dir}/{filename}", "w") as f:
+            f.write(input_file)
+
+
 
     def prepare_experiment(self):
         """
@@ -401,45 +538,6 @@ class DUckInput:
         tallies = {"num_compounds": compound_tally, "num_features": feature_tally}
         dict_to_json(tallies, f"{experiment_dir}/tallies.json")
 
-    def generate_feat_mdata_plf(self, feature_name, feature, output_dir):
-        """
-        Generate metadata for a feature. Protein -> Multiple liand features.
-        """
-        # TODO: Ensure these are compatible with pandas
-        feature_details = {
-            "DUck_feature": feature_name,
-            "prot_feature_family": feature.interaction_type,
-            "prot_residue_name": feature.prot_atom_resname,
-            "prot_res_num": feature.prot_atom_resid,
-            "prot_chain": feature.prot_atom_chainID,
-            "prot_atom_name": feature.prot_atom_name,
-            "prot_atom_names": list(feature.prot_atom_names),
-            "prot_atom_idx": feature.prot_idx,
-            "prot_atom_idxs": feature.protein_indices,
-            "lig_atom_idxs": feature.ligand_indices,
-        }
-
-        # Write protein_feature_details dict to a json file
-        dict_to_json(feature_details, f"{output_dir}/feature_metadata.json")
-
-        # Ligand features
-        ligand_feature_details = {
-            "DUck_feature": feature_name,
-            "prot_feature_family": feature.interaction_type,
-            "atom_nums": feature.ligand_indices,
-            "atom_names": feature.ligand_atom_symbols,
-            "atom_charges": feature.ligand_atom_charges,
-            "interaction_distance": feature.interaction_distance,
-            "dha_angle": feature.dha_angle,
-            "atom_smarts": feature.ligand_atom_smarts,
-            "smarts_substructure": feature.smarts_substructure,
-            "explicit_hydrogens": feature.ligand_atom_num_explicit_hs,
-        }
-
-        dict_to_json(
-            ligand_feature_details, f"{output_dir}/ligand_feature_metadata.json"
-        )
-
     def generate_feature_metadata(
         self, feature, expanded_feature, protein_feature, ligand_features, output_dir
     ):
@@ -513,29 +611,6 @@ class DUckInput:
                 ligand_feature_details, f"{output_dir}/ligand_feature_metadata_{i}.json"
             )
 
-    def generate_compound_mdata_plf(self, compound, compound_code, compound_dir):
-        """
-        Generate metadata for the compounds.
-        """
-        compound_metadata = {
-            "compound_code": compound_code,
-            "protein": compound.protein_path,
-            "prepared_protein": compound.prepared_protein_path,
-            "termini_present": compound.protein_termini,
-            "ligand": compound.mol_path,
-            "prepared_ligand": compound.prepared_ligand_path,
-            "SMILES": compound.smiles,
-            "features": compound.duck_feature_names_plf,
-            "num_features": compound.number_of_interactions_plf,
-        }
-
-        # Write compound_metadata dict to a json file
-        dict_to_json(compound_metadata, f"{compound_dir}/{compound_code}_metadata.json")
-
-        # Save an RDKit image of the ligand
-        compound.draw_mol3d(f"{compound_dir}/{compound_code}_3d.png")
-        compound.draw_mol(f"{compound_dir}/{compound_code}_2d.png")
-
     # FIXME: This needs to be reverted back to the original version
     def generate_compound_metadata(self, compound, compound_code, compound_dir):
         """
@@ -559,48 +634,6 @@ class DUckInput:
         compound.draw_mol3d(f"{compound_dir}/{compound_code}_3d.png")
         compound.draw_mol(f"{compound_dir}/{compound_code}_2d.png")
 
-    # @timeit
-    def generate_duck_input(
-        self, compound_code, feature, protein_pdb_path, ligand_mol_path, output_dir
-    ):
-        """
-        Generate the .yaml input for a DUck simulation.
-        """
-        # TODO: Add more options for the input file
-        # TODO: Work on flexibillity and linking to the openduck repo
-        # TEST: Test with openduck repo - v. quick simulation - or even just setup / prep?
-        input_file = f"""# DuCK input file for {feature} feature from {compound_code}\n
-# Main Arguments
-interaction : {feature}
-receptor_pdb : {protein_pdb_path}
-ligand_mol : {ligand_mol_path}
-gpu_id : 0
-
-# Chunking Arguments
-do_chunk : True
-cutoff : 10
-ignore_buffers : False
-
-# Preparation Arguments
-small_molecule_forcefield : smirnoff
-protein_forcefield : amber14-all
-water_model : tip3p
-ionic_strength : 0.05
-waters_to_retain : waters_to_retain.pdb
-solvent_buffer_distance : 15
-force_constant_eq : 1
-
-# Production Arguments
-smd_cycles : 20
-md_length : 0.5
-wqb_threshold : 6
-init_velocities : 0.00001
-init_distance : 2.5
-fix_ligand : True"""
-
-        # Write the input file
-        with open(f"{output_dir}/input.yaml", "w") as f:
-            f.write(input_file)
 
 
 if __name__ == "__main__":
@@ -613,7 +646,7 @@ if __name__ == "__main__":
     duck_input = DUckInput(
         # compound_selection=['cx0270a', 'cx0281a', 'cx0756c', 'cx0858a'],
         # compound_selection=['cx1091b'], # issues with termini
-        compound_selection=['cx0270a', 'cx0316a', 'cx0294b'],
+        compound_selection=['cx0270a', 'cx0316a', 'cx0294b', 'cx0281a', 'cx0394a'],
         # compound_selection=['cx1103b'], # issues with lignetwork - no ligand features
         # compound_selection=['cx1151e'], # issues with plf.from_mda
         # compound_selection=['cx1183a'], # Explicit valence for atom # 1239 H, 2

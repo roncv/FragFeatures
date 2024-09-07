@@ -171,7 +171,7 @@ class Pose:
                 "XBDonor",
                 "Anionic",
                 "Cationic",
-                "CationPi",
+                "PiCation",
                 ]
         elif selected_interactions == "-aromatic":
             interaction_types = [
@@ -181,7 +181,7 @@ class Pose:
                 "XBDonor",
                 "Anionic",
                 "Cationic",
-                "CationPi",
+                "PiCation",
                 "Hydrophobic",
                 "MetalAcceptor",
                 "MetalDonor",
@@ -210,7 +210,7 @@ class Pose:
             output_dir=output_dir,
             protein_id=self.compound_code,
             minimize=True,
-            pH=7.8,
+            pH=7.8, # NOTE: This is hardcoded
             verbose=self.verbose,
             verbose_l2=self.verbose_l2,
         )
