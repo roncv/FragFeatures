@@ -216,8 +216,10 @@ class Pose:
         )
         protein_prep.prepare_protein()
         prepared_protein_path = protein_prep.get_prepared_protein_path()
+        protein_filename = protein_prep.get_protein_filename()
         self.protein_termini = protein_prep.termini
         self.prepared_protein_path = prepared_protein_path
+        self.protein_filename = protein_filename
 
         if rdkit_protein:
             try:
@@ -352,6 +354,7 @@ class Pose:
         if output_dir:
             mol_path = os.path.join(output_dir, f"{self.id}_Hs.mol")
             self.prepared_ligand_path = mol_path
+            self.prepared_ligand_filename = os.path.basename(mol_path)
             out = Chem.SDWriter(mol_path)
             out.write(m)
             out.close()

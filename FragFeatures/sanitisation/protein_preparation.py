@@ -76,7 +76,7 @@ class ProteinPreparation:
         self.prepared_protein_path = self.protein_output_path.replace(
             ".pdb", "_prepared.pdb"
         )
-        protein_filename = os.path.basename(self.prepared_protein_path)
+        self.protein_filename = os.path.basename(self.prepared_protein_path)
 
         shutil.copy(self.protein_output_path, self.prepared_protein_path)
 
@@ -154,7 +154,7 @@ class ProteinPreparation:
             simulation.minimizeEnergy(maxIterations=100)
 
         if self.verbose:
-            print(f"Saving {protein_filename}...")
+            print(f"Saving {self.protein_filename}...")
         positions = simulation.context.getState(getPositions=True).getPositions()
         PDBFile.writeFile(
             simulation.topology, positions, open(self.prepared_protein_path, "w")
@@ -168,6 +168,12 @@ class ProteinPreparation:
         Return the path to the prepared protein.
         """
         return self.prepared_protein_path
+
+    def get_protein_filename(self):
+        """
+        Return the name of the protein file.
+        """
+        return self.protein_filename
 
     def cleanup(self):
         """

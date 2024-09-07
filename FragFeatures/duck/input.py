@@ -262,8 +262,8 @@ class DUckInput:
                 self.generate_duck_input(
                     compound_code=compound_code,
                     feature=feature_name,
-                    protein_pdb_path=f"{compound.prepared_protein_path}",
-                    ligand_mol_path=f"{compound.prepared_ligand_path}",
+                    protein_pdb_path=f"../{compound.protein_filename}",
+                    ligand_mol_path=f"../{compound.prepared_ligand_filename}",
                     output_dir=feature_dir,
                 )
 
@@ -288,6 +288,7 @@ class DUckInput:
             )
 
         ### EXPERIMENT LEVEL METADATA ###
+        # TODO: Add pH for protonation as well
         tallies = {
             "num_compounds": compound_tally,
             "num_features": feature_tally,
