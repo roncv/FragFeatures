@@ -15,6 +15,7 @@ def prepare_duck_experiment(
         experiment_name,
         target_dir,
         all_compounds,
+        selected_interactions,
         verbosity
         ):
     """Prepare an experiment for DUck.
@@ -46,6 +47,7 @@ def prepare_duck_experiment(
         experiment_name=experiment_name,
         target_dir=target_dir,
         all_compounds=all_compounds,
+        selected_interactions=selected_interactions,
         verbose=verbose,
         verbose_l2=verbose_l2,
     )
@@ -169,6 +171,15 @@ def parse_input():
         help='Increase verbosity. Use -v for verbose and -vv for additional verbosity.'
         )
 
+    # TODO: Add available interaction types
+    prepare_duck.add_argument(
+        "-i",
+        "--interaction-types",
+        type=str,
+        default="hbonds+",
+        help="Selected interaction types for the experiment.",
+    )
+
     prepare_duck.set_defaults(mode="prepare-duck")
 
 
@@ -219,6 +230,7 @@ def main():
             experiment_name=args.experiment_name,
             target_dir=args.target_dir,
             all_compounds=args.all_compounds,
+            selected_interactions=args.interaction_types,
             verbosity=args.verbose
         )
 

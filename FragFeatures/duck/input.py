@@ -31,6 +31,7 @@ class DUckInput:
         experiment_name: str,
         target_dir: str,
         all_compounds: bool = False,
+        selected_interactions: str = "hbonds+",
         verbose: bool = False,
         verbose_l2: bool = False,
     ):
@@ -38,6 +39,7 @@ class DUckInput:
         self.experiment_name = experiment_name
         self.target_dir = target_dir
         self.all_compounds = all_compounds
+        self.selected_interactions = selected_interactions
         self.verbose = verbose
         self.verbose_l2 = verbose_l2
         self.target = TargetParser(
@@ -125,6 +127,7 @@ class DUckInput:
         compound = Pose(
             self.target_dir,
             compound_code,
+            selected_interactions=self.selected_interactions,
             verbose=self.verbose,
             verbose_l2=self.verbose_l2,
         )
@@ -614,7 +617,8 @@ if __name__ == "__main__":
         # compound_selection=['cx1151e'], # issues with plf.from_mda
         # compound_selection=['cx1183a'], # Explicit valence for atom # 1239 H, 2
         # compound_selection="all",
-        experiment_name="Experiment2",
+        selected_interactions="hbonds+",
+        experiment_name="Experiment3",
         target_dir="/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac",
         verbose=True,
         verbose_l2=True,

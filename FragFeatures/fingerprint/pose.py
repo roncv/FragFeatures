@@ -70,7 +70,6 @@ FEATURE_PAIR_CUTOFFS = {
 
 
 # TODO: Evaluate cutoffs and feature selection
-# TODO: Allow for easy mofdiciation of feature type selection
 # TODO: Consider a an alternative way to define directory structures
 class Pose:
     """
@@ -81,7 +80,7 @@ class Pose:
         self,
         target_dir,
         compound_code,
-        interaction_types="hbonds+",
+        selected_interactions="hbonds+",
         verbose=False,
         verbose_l2=False,
     ):
@@ -97,14 +96,16 @@ class Pose:
         self.smi_path = (
             f"{target_dir}/aligned_files/{compound_code}/{compound_code}_ligand.smi"
         )
+        # FIXME: Outdated?? - Delete??
+        # self.feature_families, self.complementary_features, self.ligand_families = (
+        #     self.define_interaction_types_(interaction_types)
+        # )
+        self.verbose = verbose
+        self.verbose_l2 = verbose_l2
+        self.plf_interaction_types = self.define_prolif_interation_types(selected_interactions)
         self.protein_system = mp.parse(
             self.protein_path, verbosity=False
         ).protein_system
-        self.feature_families, self.complementary_features, self.ligand_families = (
-            self.define_interaction_types(interaction_types)
-        )
-        self.verbose = verbose
-        self.verbose_l2 = verbose_l2
 
         # self.complex_system = None
         # self.reference = None
@@ -120,6 +121,79 @@ class Pose:
         self.fingerprint_ext = None
 
         self._mol = None  # TODO: Why is there an underscore here? Ask Max
+
+    def define_prolif_interation_types(self, selected_interactions):
+        """
+        Define interaction types for the pose from groupings of prolif feature families.
+        """
+        feature_families = [
+            'Anionic',
+            'CationPi',
+            'Cationic',
+            'EdgeToFace',
+            'FaceToFace',
+            'HBAcceptor',
+            'HBDonor',
+            'Hydrophobic',
+            'MetalAcceptor',
+            'MetalDonor',
+            'PiCation',
+            'PiStacking',
+            'VdWContact',
+            'XBAcceptor',
+            'XBDonor'
+            ]
+
+        valid_interactions_selections = [
+            "hbonds",
+            "hbonds+",
+            "-aromatic",
+            "all",
+            ]
+
+        if selected_interactions not in valid_interactions_selections:
+            raise ValueError(
+                f"Invalid interaction types: {selected_interactions}. Valid options are: {valid_interactions_selections}"
+            )
+
+        if selected_interactions == "hbonds":
+            interaction_types = [
+                "HBDonor",
+                "HBAcceptor",
+                "XBAcceptor",
+                "XBDonor",
+                ]
+        elif selected_interactions == "hbonds+":
+            interaction_types = [
+                "HBDonor",
+                "HBAcceptor",
+                "XBAcceptor",
+                "XBDonor",
+                "Anionic",
+                "Cationic",
+                "CationPi",
+                ]
+        elif selected_interactions == "-aromatic":
+            interaction_types = [
+                "HBDonor",
+                "HBAcceptor",
+                "XBAcceptor",
+                "XBDonor",
+                "Anionic",
+                "Cationic",
+                "CationPi",
+                "Hydrophobic",
+                "MetalAcceptor",
+                "MetalDonor",
+                "VdWContact",
+                ]
+        elif selected_interactions == "all":
+            interaction_types = feature_families
+        
+        if self.verbose:
+            print(f"\nProLIF Interaction Types: {interaction_types}")
+
+        return plf.Fingerprint(interaction_types)
 
     @timefunction
     def calculate_prolif_fp(self, output_dir, rdkit_protein=True):
@@ -159,9 +233,7 @@ class Pose:
             u = mda.Universe(prepared_protein_path)
             protein_mol = plf.Molecule.from_mda(u)
 
-        # FIXME: Add option to specify interactions
-        # fp = plf.Fingerprint(["HBDonor", "HBAcceptor", "CationPi", "Cationic", "Anionic"])
-        fp = plf.Fingerprint()  # FIXME: just for testing
+        fp = self.plf_interaction_types
 
         self.plf_fp_obj = fp
 
@@ -183,7 +255,12 @@ class Pose:
         # Remove duplicates
         unique_res_lig_interactions = list(set(res_lig_interactions))
 
-        self.number_of_interactions_plf = len(df.columns)
+        self.number_of_interactions_plf = len(df.columns)\
+        # FIXME: How to deal with this better
+        if self.number_of_interactions_plf == 0:
+            logger.warning(
+                f"No interactions found for {self.compound_code} using ProLIF."
+            )
         self.plf_fp_keys = unique_res_lig_interactions
 
         if self.verbose:
@@ -235,8 +312,15 @@ class Pose:
         """
         Return the interactive protein-ligand interaction network plot for the pose
         """
-        fp.plot_lignetwork(self.ligand_mol, kind="frame", frame=0)
-        network_plot = fp.plot_lignetwork(self.ligand_mol, kind="frame", frame=0)
+        try:
+            fp.plot_lignetwork(self.ligand_mol, kind="frame", frame=0)
+            network_plot = fp.plot_lignetwork(self.ligand_mol, kind="frame", frame=0)
+        except:
+            # FIXME: Raise an exception if there are no interactions??
+            # logger.warning(
+            #     f"Could not plot the interactive protein-ligand interaction network for {self.compound_code}."
+            # )
+            return
 
         # Assuming 'output_dir' is your directory path where you want to save the HTML file
         html_file_path = os.path.join(
@@ -354,7 +438,7 @@ class Pose:
 
         return draw_mols(mols)
 
-    def define_interaction_types(self, selected_interaction_types):
+    def define_interaction_types_(self, selected_interaction_types):
         """Define the interaction types for the pose by picking feature families"""
         # Check if the selected interaction types are valid
         feature_families = list(FEATURE_FAMILIES)
