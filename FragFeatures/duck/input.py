@@ -179,6 +179,7 @@ class DUckInput:
         dud_tally = 0
 
         ### COMPOUNDS ###
+        # TODO: Create logfiles for each compound
         for compound_code in self.compound_codes:
             print(f"\nPreparing {compound_code}...\n")
             compound_dir = os.path.join(experiment_dir, compound_code)
@@ -309,6 +310,7 @@ class DUckInput:
             "compound_fails": compound_fails,
             "lig_network_fails": interactive_lig_network_fails,
         }
+        # TODO: Add cut proteins and pH to the metadata
 
         # If no compounds were prepares, don't write the metadata
         if compound_tally + dud_tally > 0:
