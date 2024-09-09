@@ -101,7 +101,7 @@ class DUckExperiment:
 # Test
 if __name__ == "__main__":
     duck = DUckExperiment(
-        "/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac_simulations/Experiment",
+        "/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac_Simulations_09_09_24/Experiment",
         wqb_filename="wqb.txt",
     )
     print(duck.compound_dirs)
@@ -110,7 +110,7 @@ if __name__ == "__main__":
     import pandas as pd
 
     df = pd.read_json(
-        "/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac_simulations/Experiment/analysis/experiment_summary.json"
+        "/Users/nfo24278/Documents/dphil/diamond/DuCK/structures/CHIKV_Mac_Simulations_09_09_24/Experiment/analysis/experiment_summary.json"
     )
 
     # Display the DataFrame

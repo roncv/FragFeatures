@@ -169,6 +169,7 @@ class ProteinPreparation:
         """
         return self.prepared_protein_path
 
+
     def get_protein_filename(self):
         """
         Return the name of the protein file.

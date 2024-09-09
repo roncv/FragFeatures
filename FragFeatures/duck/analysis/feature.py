@@ -44,51 +44,62 @@ class DUckFeature:
         """
         Return the feature metadata for a compound.
         """
-        protein_features = self.json_to_dict(filename="protein_feature_metadata.json")
+        protein_features = self.json_to_dict(filename="feature_metadata.json")
         self.DUck_feature = protein_features["DUck_feature"]
-        self.protein_feature_family = protein_features["feature_family"]
-        self.residue_name = protein_features["residue_name"]
-        self.res_num = protein_features["res_num"]
-        self.res_chain = protein_features["chain"]
-        self.atom_nums = protein_features["atom_nums"]
+        self.protein_feature_family = protein_features["prot_feature_family"]
+        self.residue_name = protein_features["prot_residue_name"]
+        self.res_num = protein_features["prot_res_num"]
+        self.res_chain = protein_features["prot_chain"]
+        self.atom_nums = protein_features["prot_atom_idxs"]
 
-        ligand_feature_families = []
-        ligand_atom_names = []
-        ligand_interaction_distances = []
-        for lig_feat in self.get_ligand_feature_files():
-            ligand_features = self.json_to_dict(filename=lig_feat)
-            ligand_feature_families.append(ligand_features["feature_family"])
-            ligand_atom_names.append(ligand_features["atoms_names"])
-            ligand_interaction_distances.append(
-                sum(ligand_features["interaction_distances"])
-                / len(ligand_features["interaction_distances"])
-            )
 
-        self.ligand_feature_families = ligand_feature_families
-        self.ligand_atom_names = ligand_atom_names
-        self.ligand_interaction_distances = ligand_interaction_distances
+        ligand_features = self.json_to_dict(filename="ligand_feature_metadata.json")
+        self.ligand_atom_names = ligand_features["atom_names"]
+        # NOTE: Attribute name change
+        self.ligand_interaction_distance = ligand_features["interaction_distance"]
+        self.ligand_atom_charges = ligand_features["atom_charges"]
+        self.ligand_smarts_substructure = ligand_features["smarts_substructure"]
+        self.dha_angle = ligand_features["dha_angle"]
 
-        # Determine what kind of interaction it is from INTERACTION_TYPES
-        interaction_types = []
-        for ligand_feature_family in self.ligand_feature_families:
-            feature_pair = frozenset(
-                [ligand_feature_family, self.protein_feature_family]
-            )
-            interaction_type = INTERACTION_TYPES.get(feature_pair)
-            if interaction_type:
-                interaction_types.append(interaction_type)
-            else:
-                interaction_types.append("Unknown")
-        self.interaction_types = interaction_types
+        # ligand_feature_families = []
+        # ligand_atom_names = []
+        # ligand_interaction_distances = []
+        # for lig_feat in self.get_ligand_feature_files():
+        #     ligand_features = self.json_to_dict(filename=lig_feat)
+        #     ligand_feature_families.append(ligand_features["feature_family"])
+        #     ligand_atom_names.append(ligand_features["atoms_names"])
+        #     ligand_interaction_distances.append(
+        #         sum(ligand_features["interaction_distances"])
+        #         / len(ligand_features["interaction_distances"])
+        #     )
+
+        # self.ligand_feature_families = ligand_feature_families
+        # self.ligand_atom_names = ligand_atom_names
+        # self.ligand_interaction_distances = ligand_interaction_distances
+
+        # # Determine what kind of interaction it is from INTERACTION_TYPES
+        # # TODO: Is there a way to get this from ProLIF?
+        # interaction_types = []
+        # for ligand_feature_family in self.ligand_feature_families:
+        #     feature_pair = frozenset(
+        #         [ligand_feature_family, self.protein_feature_family]
+        #     )
+        #     interaction_type = INTERACTION_TYPES.get(feature_pair)
+        #     if interaction_type:
+        #         interaction_types.append(interaction_type)
+        #     else:
+        #         interaction_types.append("Unknown")
+        # self.interaction_types = interaction_types
+
 
         # Check if all the items in self.interaction_types are the same value
         # self.interaction_type is a single interaction type
-        if len(set(self.interaction_types)) == 1:
-            self.mixed = False
-            self.interaction_type = self.interaction_types[0]
-        else:
-            self.mixed = True
-            self.interaction_type = None
+        # if len(set(self.interaction_types)) == 1:
+        #     self.mixed = False
+        #     self.interaction_type = self.interaction_types[0]
+        # else:
+        #     self.mixed = True
+        #     self.interaction_type = None
 
     # TODO: Move to utils.py??
     def json_to_dict(self, filename=None):
