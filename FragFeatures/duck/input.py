@@ -19,7 +19,6 @@ from FragFeatures.utils import dict_to_json  # NOTE: Necessary?
 
 logger = logging.getLogger("FragFeatures")
 
-
 class DUckInput:
     """
     Prepare the input for DUck simulation from a Fragalysis target.
@@ -646,9 +645,9 @@ if __name__ == "__main__":
     start_time = time.time()
 
     duck_input = DUckInput(
-        # compound_selection=['cx0270a', 'cx0281a', 'cx0756c', 'cx0858a'],
+        compound_selection=['cx0270a'],
         # compound_selection=['cx1091b'], # issues with termini
-        compound_selection=['cx0270a', 'cx0316a', 'cx0294b', 'cx0281a', 'cx0394a'],
+        # compound_selection=['cx0270a', 'cx0316a', 'cx0294b', 'cx0281a', 'cx0394a'],
         # compound_selection=['cx1103b'], # issues with lignetwork - no ligand features
         # compound_selection=['cx1151e'], # issues with plf.from_mda
         # compound_selection=['cx1183a'], # Explicit valence for atom # 1239 H, 2
